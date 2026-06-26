@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>InSight-doc Demo Display</title>
+  <style>
+    html, body {
+      margin: 0;
+      width: 100%;
+      height: 100%;
+      background: #0f1117;
+      color: #e8ecf4;
+      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+    }
+    .bar {
+      height: 44px;
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+      padding: 0 14px;
+      border-bottom: 1px solid #2a3042;
+      background: #1a1d27;
+      font-size: 14px;
+    }
+    .hint {
+      color: #8b95a8;
+      font-size: 12px;
+    }
+    iframe {
+      width: 100%;
+      height: calc(100% - 45px);
+      border: 0;
+      display: block;
+      background: #0f1117;
+    }
+  </style>
+</head>
+<body>
+  <div class="bar">
+    <div>InSight-doc Demo</div>
+    <div class="hint">Requires local server: http://127.0.0.1:8765/</div>
+  </div>
+  <iframe src="http://127.0.0.1:8765/" title="InSight-doc demo"></iframe>
+</body>
+</html>
