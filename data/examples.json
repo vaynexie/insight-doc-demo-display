@@ -5,20 +5,20 @@
   "baseline_label": "Qwen3-VL-8B",
   "insight_rescale": 0.35,
   "baseline_rescale": 0.7,
-  "default_example_id": "075_longdocurl_longdocurl_free_gpt4o_4081036_1_30_11",
+  "default_example_id": "062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6",
   "examples": [
     {
-      "id": "075_longdocurl_longdocurl_free_gpt4o_4081036_1_30_11",
+      "id": "062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6",
       "benchmark": "longdocurl",
-      "label": "LongDocURL · SeaChange equity",
-      "question": "What was difference value between the total stockholders' equity and total liabilities for SeaChange International, Inc. for April 30, 2021?",
+      "label": "LongDocURL · contest prize money",
+      "question": "Calculate the total prize money for winners in the Senior King and Queen Contest and the Pet Photo Contest.",
       "page_count": 30,
-      "path": "data/examples/075_longdocurl_longdocurl_free_gpt4o_4081036_1_30_11.json",
-      "insight_wall_time_s": 13.894200437702239,
-      "baseline_wall_time_s": 36.703821388073266,
-      "insight_answer": "$28,626",
-      "baseline_answer": "$45,322",
-      "ground_truth": "$28626 thousand"
+      "path": "data/examples/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6.json",
+      "insight_wall_time_s": 20.177017881534994,
+      "baseline_wall_time_s": 46.468526559881866,
+      "insight_answer": "$300.00",
+      "baseline_answer": "$150.00",
+      "ground_truth": "$300"
     },
     {
       "id": "073_longdocurl_longdocurl_free_gpt4o_4127644_8_37_3",
@@ -58,6 +58,45 @@
       "insight_answer": "26%",
       "baseline_answer": "54%",
       "ground_truth": "26%"
+    },
+    {
+      "id": "053_mmlongbench_mmlongbench_842",
+      "benchmark": "mmlongbench",
+      "label": "MMLongBench · album volume gap",
+      "question": "What is the difference in total volume between the rank 1 and rank 19 top albums?",
+      "page_count": 36,
+      "path": "data/examples/053_mmlongbench_mmlongbench_842.json",
+      "insight_wall_time_s": 14.294693729840219,
+      "baseline_wall_time_s": 43.511237144470215,
+      "insight_answer": "1,194,000",
+      "baseline_answer": "1,481,000",
+      "ground_truth": "1194000"
+    },
+    {
+      "id": "050_mmlongbench_mmlongbench_107",
+      "benchmark": "mmlongbench",
+      "label": "MMLongBench · Skyskraoeren goblets",
+      "question": "How many goblets appear in the figure showing Skyskraoeren?",
+      "page_count": 40,
+      "path": "data/examples/050_mmlongbench_mmlongbench_107.json",
+      "insight_wall_time_s": 13.466525356285274,
+      "baseline_wall_time_s": 56.26647561509162,
+      "insight_answer": "7 goblets",
+      "baseline_answer": "15",
+      "ground_truth": "7"
+    },
+    {
+      "id": "056_mmlongbench_mmlongbench_688",
+      "benchmark": "mmlongbench",
+      "label": "MMLongBench · campaign grade",
+      "question": "Who has a higher median campaign grade? Trump or Clinton?",
+      "page_count": 40,
+      "path": "data/examples/056_mmlongbench_mmlongbench_688.json",
+      "insight_wall_time_s": 19.335201101377606,
+      "baseline_wall_time_s": 91.05294058378786,
+      "insight_answer": "Clinton has the higher median campaign grade.",
+      "baseline_answer": "Hillary Clinton has a higher median campaign grade than Donald Trump.",
+      "ground_truth": "Clinton"
     },
     {
       "id": "035_mpdocvqa_mpdocvqa_63159",

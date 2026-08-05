@@ -418,7 +418,7 @@
     showWaiting(
       side,
       isInsight
-        ? "Preparing InSight-doc-8B trajectory…"
+        ? "Waiting for InSight-doc-8B first token…"
         : "Waiting for Qwen3-VL-8B first token…"
     );
 

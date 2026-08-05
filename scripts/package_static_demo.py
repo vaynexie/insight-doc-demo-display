@@ -19,9 +19,9 @@ DATA_ROOT = OUT_ROOT / "data"
 
 EXAMPLE_SPECS = [
     {
-        "id": "075_longdocurl_longdocurl_free_gpt4o_4081036_1_30_11",
+        "id": "062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6",
         "benchmark": "longdocurl",
-        "label": "LongDocURL · SeaChange equity",
+        "label": "LongDocURL · contest prize money",
     },
     {
         "id": "073_longdocurl_longdocurl_free_gpt4o_4127644_8_37_3",
@@ -37,6 +37,21 @@ EXAMPLE_SPECS = [
         "id": "048_mmlongbench_mmlongbench_344",
         "benchmark": "mmlongbench",
         "label": "MMLongBench · Trump confidence",
+    },
+    {
+        "id": "053_mmlongbench_mmlongbench_842",
+        "benchmark": "mmlongbench",
+        "label": "MMLongBench · album volume gap",
+    },
+    {
+        "id": "050_mmlongbench_mmlongbench_107",
+        "benchmark": "mmlongbench",
+        "label": "MMLongBench · Skyskraoeren goblets",
+    },
+    {
+        "id": "056_mmlongbench_mmlongbench_688",
+        "benchmark": "mmlongbench",
+        "label": "MMLongBench · campaign grade",
     },
     {
         "id": "035_mpdocvqa_mpdocvqa_63159",
