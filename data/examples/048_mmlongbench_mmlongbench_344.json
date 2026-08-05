@@ -1,0 +1,2182 @@
+{
+  "id": "048_mmlongbench_mmlongbench_344",
+  "benchmark": "mmlongbench",
+  "label": "MMLongBench · Trump confidence",
+  "question": "What is the proportion of people who say they are very confident in Trump's ability to handle an international crisis?",
+  "ground_truth": "26%",
+  "document_id": "048_mmlongbench_mmlongbench_344",
+  "page_count": 28,
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 9.130329604260623,
+    "core_time_s": 5.647314426489174,
+    "extracted_answer": "26%",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/52a658d8de442b8e_000000.jpg",
+        "thumb": "thumbs/52a658d8de442b8e_000000.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/9640e17ecc62240e_000001.jpg",
+        "thumb": "thumbs/9640e17ecc62240e_000001.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/5be66013bd2a3fd1_000002.jpg",
+        "thumb": "thumbs/5be66013bd2a3fd1_000002.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/2b2c0ed306696a63_000003.jpg",
+        "thumb": "thumbs/2b2c0ed306696a63_000003.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/b822d9b05b7008cd_000004.jpg",
+        "thumb": "thumbs/b822d9b05b7008cd_000004.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/14294db236ae8c20_000005.jpg",
+        "thumb": "thumbs/14294db236ae8c20_000005.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/783f68c346bd06f5_000006.jpg",
+        "thumb": "thumbs/783f68c346bd06f5_000006.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/5fb7c30aa2f92014_000007.jpg",
+        "thumb": "thumbs/5fb7c30aa2f92014_000007.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/f914902099dfab51_000008.jpg",
+        "thumb": "thumbs/f914902099dfab51_000008.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/af30f532f433567c_000009.jpg",
+        "thumb": "thumbs/af30f532f433567c_000009.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/782e24f27883b59b_000010.jpg",
+        "thumb": "thumbs/782e24f27883b59b_000010.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/8c9d948a6ff65bdf_000011.jpg",
+        "thumb": "thumbs/8c9d948a6ff65bdf_000011.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/d50c6ddf28eb4d39_000012.jpg",
+        "thumb": "thumbs/d50c6ddf28eb4d39_000012.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/58462c81713ae285_000013.jpg",
+        "thumb": "thumbs/58462c81713ae285_000013.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/ae07c0e22b3de089_000014.jpg",
+        "thumb": "thumbs/ae07c0e22b3de089_000014.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/b2047925271ac5b9_000015.jpg",
+        "thumb": "thumbs/b2047925271ac5b9_000015.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/e2ce96e6384325da_000016.jpg",
+        "thumb": "thumbs/e2ce96e6384325da_000016.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/81d7f5060e1501d7_000017.jpg",
+        "thumb": "thumbs/81d7f5060e1501d7_000017.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/390295197555e975_000018.jpg",
+        "thumb": "thumbs/390295197555e975_000018.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/1cc0901d2f30ef7d_000019.jpg",
+        "thumb": "thumbs/1cc0901d2f30ef7d_000019.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/5a139557521ce01d_000020.jpg",
+        "thumb": "thumbs/5a139557521ce01d_000020.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/d9405065c196acf2_000021.jpg",
+        "thumb": "thumbs/d9405065c196acf2_000021.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/19ef68e5c546a80d_000022.jpg",
+        "thumb": "thumbs/19ef68e5c546a80d_000022.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/5b263e89eb084381_000023.jpg",
+        "thumb": "thumbs/5b263e89eb084381_000023.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/7d49110723ae4354_000024.jpg",
+        "thumb": "thumbs/7d49110723ae4354_000024.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/6636f391717ea95f_000025.jpg",
+        "thumb": "thumbs/6636f391717ea95f_000025.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/305c47018b4028b9_000026.jpg",
+        "thumb": "thumbs/305c47018b4028b9_000026.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/c10d1ef1ccbd9e43_000027.jpg",
+        "thumb": "thumbs/c10d1ef1ccbd9e43_000027.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 28,
+        "kind": "region_crop",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          606,
+          571,
+          1494,
+          1571
+        ],
+        "display_size": [
+          622,
+          700
+        ],
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "presented_img_idx": 29,
+        "kind": "region_crop",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          637,
+          1180,
+          1464,
+          1252
+        ],
+        "display_size": [
+          1158,
+          102
+        ],
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 3.4535122625529766,
+        "end_s": 6.393226469866931,
+        "time_to_first_token_s": 0.6148359980434179,
+        "duration_s": 2.939714207313955,
+        "think": "I need to read the specific bar for \"Handle an international crisis\" in the chart on image 6. I'll zoom into the right-side chart area showing those bars.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " specific",
+          " bar",
+          " for",
+          " \"",
+          "Handle",
+          " an",
+          " international",
+          " crisis",
+          "\"",
+          " in",
+          " the",
+          " chart",
+          " on",
+          " image",
+          " ",
+          "6",
+          ".",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " right",
+          "-side",
+          " chart",
+          " area",
+          " showing",
+          " those",
+          " bars",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "bar",
+          " chart",
+          " of",
+          " Trump",
+          "'s",
+          " ability",
+          " on",
+          " various",
+          " issues",
+          " (",
+          "right",
+          " side",
+          " of",
+          " page",
+          ",",
+          " center",
+          "-right",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "3",
+          "5",
+          "7",
+          ",",
+          " ",
+          "2",
+          "6",
+          "0",
+          ",",
+          " ",
+          "8",
+          "7",
+          "9",
+          ",",
+          " ",
+          "7",
+          "1",
+          "4",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "6",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 6.3958558943122625,
+            "end_s": 6.417614888399839,
+            "duration_s": 0.021758994087576866,
+            "ok": true,
+            "arguments": {
+              "label": "bar chart of Trump's ability on various issues (right side of page, center-right)",
+              "bbox_2d": [
+                357,
+                260,
+                879,
+                714
+              ],
+              "img_idx": 6
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              357,
+              260,
+              879,
+              714
+            ],
+            "img_idx": 6,
+            "label": "bar chart of Trump's ability on various issues (right side of page, center-right)"
+          }
+        },
+        "crop_presented_indices": [
+          28
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 6.428055031225085,
+        "end_s": 8.417211282998323,
+        "time_to_first_token_s": 0.09597178921103477,
+        "duration_s": 1.9891562517732382,
+        "think": "I will zoom into the middle-left area of the chart to read the exact numbers for the \"Handle an international crisis\" bar (focus on the dark brown 'Very' segment).",
+        "display_chunks": [
+          "I",
+          " will",
+          " zoom",
+          " into",
+          " the",
+          " middle",
+          "-left",
+          " area",
+          " of",
+          " the",
+          " chart",
+          " to",
+          " read",
+          " the",
+          " exact",
+          " numbers",
+          " for",
+          " the",
+          " \"",
+          "Handle",
+          " an",
+          " international",
+          " crisis",
+          "\"",
+          " bar",
+          " (",
+          "focus",
+          " on",
+          " the",
+          " dark",
+          " brown",
+          " '",
+          "Very",
+          "'",
+          " segment",
+          ").\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "middle",
+          " of",
+          " the",
+          " chart",
+          " around",
+          " the",
+          " row",
+          " labeled",
+          " '",
+          "Handle",
+          " an",
+          " international",
+          " crisis",
+          "'",
+          " (",
+          "center",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "3",
+          "5",
+          ",",
+          " ",
+          "6",
+          "0",
+          "9",
+          ",",
+          " ",
+          "9",
+          "6",
+          "7",
+          ",",
+          " ",
+          "6",
+          "8",
+          "1",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "2",
+          "8",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 8.420805457048118,
+            "end_s": 8.423183876089752,
+            "duration_s": 0.002378419041633606,
+            "ok": true,
+            "arguments": {
+              "label": "middle of the chart around the row labeled 'Handle an international crisis' (center)",
+              "bbox_2d": [
+                35,
+                609,
+                967,
+                681
+              ],
+              "img_idx": 28
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              35,
+              609,
+              967,
+              681
+            ],
+            "img_idx": 28,
+            "label": "middle of the chart around the row labeled 'Handle an international crisis' (center)"
+          }
+        },
+        "crop_presented_indices": [
+          29
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "answer",
+        "start_s": 8.436274951323867,
+        "end_s": 9.129287204705179,
+        "time_to_first_token_s": 0.12683986965566874,
+        "duration_s": 0.6930122533813119,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " chart",
+          ",",
+          " ",
+          "2",
+          "6",
+          "%",
+          " of",
+          " respondents",
+          " say",
+          " they",
+          " are",
+          " very",
+          " confident",
+          " in",
+          " Trump",
+          "'s",
+          " ability",
+          " to",
+          " handle",
+          " an",
+          " international",
+          " crisis",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the chart, 26% of respondents say they are very confident in Trump's ability to handle an international crisis."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 43.21174896880984,
+    "core_time_s": 35.36045675817877,
+    "extracted_answer": "54%",
+    "accuracy": 0.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/52a658d8de442b8e_000000.jpg",
+        "thumb": "thumbs/52a658d8de442b8e_000000.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/9640e17ecc62240e_000001.jpg",
+        "thumb": "thumbs/9640e17ecc62240e_000001.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/5be66013bd2a3fd1_000002.jpg",
+        "thumb": "thumbs/5be66013bd2a3fd1_000002.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/2b2c0ed306696a63_000003.jpg",
+        "thumb": "thumbs/2b2c0ed306696a63_000003.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/b822d9b05b7008cd_000004.jpg",
+        "thumb": "thumbs/b822d9b05b7008cd_000004.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/14294db236ae8c20_000005.jpg",
+        "thumb": "thumbs/14294db236ae8c20_000005.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/783f68c346bd06f5_000006.jpg",
+        "thumb": "thumbs/783f68c346bd06f5_000006.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/5fb7c30aa2f92014_000007.jpg",
+        "thumb": "thumbs/5fb7c30aa2f92014_000007.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/f914902099dfab51_000008.jpg",
+        "thumb": "thumbs/f914902099dfab51_000008.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/af30f532f433567c_000009.jpg",
+        "thumb": "thumbs/af30f532f433567c_000009.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/782e24f27883b59b_000010.jpg",
+        "thumb": "thumbs/782e24f27883b59b_000010.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/8c9d948a6ff65bdf_000011.jpg",
+        "thumb": "thumbs/8c9d948a6ff65bdf_000011.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/d50c6ddf28eb4d39_000012.jpg",
+        "thumb": "thumbs/d50c6ddf28eb4d39_000012.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/58462c81713ae285_000013.jpg",
+        "thumb": "thumbs/58462c81713ae285_000013.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/ae07c0e22b3de089_000014.jpg",
+        "thumb": "thumbs/ae07c0e22b3de089_000014.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/b2047925271ac5b9_000015.jpg",
+        "thumb": "thumbs/b2047925271ac5b9_000015.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/e2ce96e6384325da_000016.jpg",
+        "thumb": "thumbs/e2ce96e6384325da_000016.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/81d7f5060e1501d7_000017.jpg",
+        "thumb": "thumbs/81d7f5060e1501d7_000017.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/390295197555e975_000018.jpg",
+        "thumb": "thumbs/390295197555e975_000018.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/1cc0901d2f30ef7d_000019.jpg",
+        "thumb": "thumbs/1cc0901d2f30ef7d_000019.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/5a139557521ce01d_000020.jpg",
+        "thumb": "thumbs/5a139557521ce01d_000020.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/d9405065c196acf2_000021.jpg",
+        "thumb": "thumbs/d9405065c196acf2_000021.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/19ef68e5c546a80d_000022.jpg",
+        "thumb": "thumbs/19ef68e5c546a80d_000022.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/5b263e89eb084381_000023.jpg",
+        "thumb": "thumbs/5b263e89eb084381_000023.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/7d49110723ae4354_000024.jpg",
+        "thumb": "thumbs/7d49110723ae4354_000024.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/6636f391717ea95f_000025.jpg",
+        "thumb": "thumbs/6636f391717ea95f_000025.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/305c47018b4028b9_000026.jpg",
+        "thumb": "thumbs/305c47018b4028b9_000026.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/c10d1ef1ccbd9e43_000027.jpg",
+        "thumb": "thumbs/c10d1ef1ccbd9e43_000027.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 7.84882496483624,
+        "end_s": 43.20932210236788,
+        "time_to_first_token_s": 8.132413359358907,
+        "duration_s": 35.36049713753164,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " provided",
+          " document",
+          ",",
+          " specifically",
+          " Image",
+          " ",
+          "6",
+          ",",
+          " which",
+          " contains",
+          " a",
+          " chart",
+          " titled",
+          " \"",
+          "Public",
+          " more",
+          " confident",
+          " in",
+          " Trump",
+          " on",
+          " trade",
+          ",",
+          " economy",
+          " than",
+          " immigration",
+          " and",
+          " dealing",
+          " with",
+          " Congress",
+          "\",",
+          " we",
+          " can",
+          " find",
+          " the",
+          " data",
+          " for",
+          " Trump",
+          "'s",
+          " ability",
+          " to",
+          " handle",
+          " an",
+          " international",
+          " crisis",
+          ".\n\n",
+          "The",
+          " chart",
+          " shows",
+          " the",
+          " percentage",
+          " of",
+          " people",
+          " who",
+          " are",
+          " \"",
+          "Very",
+          "\"",
+          " confident",
+          " in",
+          " Trump",
+          "'s",
+          " ability",
+          " on",
+          " various",
+          " issues",
+          ".",
+          " For",
+          " the",
+          " category",
+          " \"",
+          "Handle",
+          " an",
+          " international",
+          " crisis",
+          "\",",
+          " the",
+          " bar",
+          " corresponding",
+          " to",
+          " \"",
+          "Very",
+          "\"",
+          " confidence",
+          " has",
+          " the",
+          " number",
+          " **",
+          "5",
+          "4",
+          "**",
+          " next",
+          " to",
+          " it",
+          ".\n\n",
+          "Therefore",
+          ",",
+          " the",
+          " proportion",
+          " of",
+          " people",
+          " who",
+          " say",
+          " they",
+          " are",
+          " very",
+          " confident",
+          " in",
+          " Trump",
+          "'s",
+          " ability",
+          " to",
+          " handle",
+          " an",
+          " international",
+          " crisis",
+          " is",
+          " **",
+          "5",
+          "4",
+          "%",
+          "**",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the provided document, specifically Image 6, which contains a chart titled \"Public more confident in Trump on trade, economy than immigration and dealing with Congress\", we can find the data for Trump's ability to handle an international crisis.\n\nThe chart shows the percentage of people who are \"Very\" confident in Trump's ability on various issues. For the category \"Handle an international crisis\", the bar corresponding to \"Very\" confidence has the number **54** next to it.\n\nTherefore, the proportion of people who say they are very confident in Trump's ability to handle an international crisis is **54%**."
+      }
+    ]
+  }
+}

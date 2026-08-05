@@ -1,0 +1,1338 @@
+{
+  "id": "055_mmlongbench_mmlongbench_289",
+  "benchmark": "mmlongbench",
+  "label": "MMLongBench · HOVER gap",
+  "question": "What is the average performance gap between the ProgramFC performance and our proposed system in the HOVER dataset? Please write down the answer in float format with 2 decimals.",
+  "ground_truth": "0.45",
+  "document_id": "055_mmlongbench_mmlongbench_289",
+  "page_count": 10,
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 9.491574523970485,
+    "core_time_s": 7.924277153797448,
+    "extracted_answer": "0.45",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/7707768fed1ec596_000000.jpg",
+        "thumb": "thumbs/7707768fed1ec596_000000.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/649d13a597497f77_000001.jpg",
+        "thumb": "thumbs/649d13a597497f77_000001.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/355792cdccf5b8b7_000002.jpg",
+        "thumb": "thumbs/355792cdccf5b8b7_000002.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/84a61ad5f4369936_000003.jpg",
+        "thumb": "thumbs/84a61ad5f4369936_000003.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/354374497bb4839b_000004.jpg",
+        "thumb": "thumbs/354374497bb4839b_000004.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/d860b45094879dc9_000005.jpg",
+        "thumb": "thumbs/d860b45094879dc9_000005.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/e841f03a073dfcd7_000006.jpg",
+        "thumb": "thumbs/e841f03a073dfcd7_000006.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/2b719cf1b5ad229a_000007.jpg",
+        "thumb": "thumbs/2b719cf1b5ad229a_000007.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/54495b988453fa39_000008.jpg",
+        "thumb": "thumbs/54495b988453fa39_000008.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/d8f2f614b6a8d602_000009.jpg",
+        "thumb": "thumbs/d8f2f614b6a8d602_000009.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          579,
+          819
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "region_crop",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          160,
+          188,
+          820,
+          640
+        ],
+        "display_size": [
+          462,
+          316
+        ],
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "region_crop",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          230,
+          486,
+          747,
+          553
+        ],
+        "display_size": [
+          724,
+          94
+        ],
+        "original_size": [
+          1654,
+          2339
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 1.5462229549884796,
+        "end_s": 4.526570254936814,
+        "time_to_first_token_s": 0.5293865548446774,
+        "duration_s": 2.9803472999483347,
+        "think": "I need to read the table in image 5 showing F1 scores for different models (including ProgramFC and QACheck) on HOVER, then compute the average performance gap between ProgramFC and QACheck. I'll zoom into the top-left area of image 5 where the table is located.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " table",
+          " in",
+          " image",
+          " ",
+          "5",
+          " showing",
+          " F",
+          "1",
+          " scores",
+          " for",
+          " different",
+          " models",
+          " (",
+          "including",
+          " Program",
+          "FC",
+          " and",
+          " Q",
+          "AC",
+          "heck",
+          ")",
+          " on",
+          " HO",
+          "VER",
+          ",",
+          " then",
+          " compute",
+          " the",
+          " average",
+          " performance",
+          " gap",
+          " between",
+          " Program",
+          "FC",
+          " and",
+          " Q",
+          "AC",
+          "heck",
+          ".",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " top",
+          "-left",
+          " area",
+          " of",
+          " image",
+          " ",
+          "5",
+          " where",
+          " the",
+          " table",
+          " is",
+          " located",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "top",
+          "-left",
+          " quadrant",
+          " containing",
+          " the",
+          " evaluation",
+          " table",
+          " with",
+          " model",
+          " names",
+          " and",
+          " F",
+          "1",
+          " scores",
+          " (",
+          "Table",
+          " ",
+          "1",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "9",
+          "7",
+          ",",
+          " ",
+          "8",
+          "0",
+          ",",
+          " ",
+          "4",
+          "9",
+          "6",
+          ",",
+          " ",
+          "2",
+          "7",
+          "4",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "5",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 4.5286638317629695,
+            "end_s": 4.535714992322028,
+            "duration_s": 0.007051160559058189,
+            "ok": true,
+            "arguments": {
+              "label": "top-left quadrant containing the evaluation table with model names and F1 scores (Table 1)",
+              "bbox_2d": [
+                97,
+                80,
+                496,
+                274
+              ],
+              "img_idx": 5
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              97,
+              80,
+              496,
+              274
+            ],
+            "img_idx": 5,
+            "label": "top-left quadrant containing the evaluation table with model names and F1 scores (Table 1)"
+          }
+        },
+        "crop_presented_indices": [
+          10
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 4.5459722289815545,
+        "end_s": 7.543844182044268,
+        "time_to_first_token_s": 0.06929444801062346,
+        "duration_s": 2.997871953062713,
+        "think": "I will zoom into the table area to read the HOVER 2-hop, 3-hop, and 4-hop scores for ProgramFC and QAcheck precisely.",
+        "display_chunks": [
+          "I",
+          " will",
+          " zoom",
+          " into",
+          " the",
+          " table",
+          " area",
+          " to",
+          " read",
+          " the",
+          " HO",
+          "VER",
+          " ",
+          "2",
+          "-hop",
+          ",",
+          " ",
+          "3",
+          "-hop",
+          ",",
+          " and",
+          " ",
+          "4",
+          "-hop",
+          " scores",
+          " for",
+          " Program",
+          "FC",
+          " and",
+          " QA",
+          "check",
+          " precisely",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "center",
+          " of",
+          " the",
+          " table",
+          " showing",
+          " rows",
+          " '",
+          "Program",
+          "FC",
+          "'",
+          " and",
+          " '",
+          "Q",
+          "AC",
+          "heck",
+          "'",
+          " with",
+          " columns",
+          " '",
+          "2",
+          "-hop",
+          "',",
+          " '",
+          "3",
+          "-hop",
+          "',",
+          " '",
+          "4",
+          "-hop",
+          "'",
+          " under",
+          " HO",
+          "VER",
+          "\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "1",
+          "0",
+          "7",
+          ",",
+          " ",
+          "6",
+          "5",
+          "9",
+          ",",
+          " ",
+          "8",
+          "8",
+          "9",
+          ",",
+          " ",
+          "8",
+          "0",
+          "7",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "1",
+          "0",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 7.545964379794896,
+            "end_s": 7.5472010634839535,
+            "duration_s": 0.001236683689057827,
+            "ok": true,
+            "arguments": {
+              "label": "center of the table showing rows 'ProgramFC' and 'QACheck' with columns '2-hop', '3-hop', '4-hop' under HOVER",
+              "bbox_2d": [
+                107,
+                659,
+                889,
+                807
+              ],
+              "img_idx": 10
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              107,
+              659,
+              889,
+              807
+            ],
+            "img_idx": 10,
+            "label": "center of the table showing rows 'ProgramFC' and 'QACheck' with columns '2-hop', '3-hop', '4-hop' under HOVER"
+          }
+        },
+        "crop_presented_indices": [
+          11
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "answer",
+        "start_s": 7.552279349416494,
+        "end_s": 9.47986837849021,
+        "time_to_first_token_s": 0.09587313700467348,
+        "duration_s": 1.9275890290737152,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " table",
+          ",",
+          " Program",
+          "FC",
+          " scores",
+          " are",
+          " ",
+          "5",
+          "4",
+          ".",
+          "2",
+          "7",
+          " (",
+          "2",
+          "-hop",
+          "),",
+          " ",
+          "5",
+          "4",
+          ".",
+          "1",
+          "8",
+          " (",
+          "3",
+          "-hop",
+          "),",
+          " and",
+          " ",
+          "5",
+          "2",
+          ".",
+          "8",
+          "8",
+          " (",
+          "4",
+          "-hop",
+          ")",
+          " with",
+          " an",
+          " average",
+          " of",
+          " ",
+          "5",
+          "3",
+          ".",
+          "7",
+          "8",
+          ".",
+          " Q",
+          "AC",
+          "heck",
+          " scores",
+          " are",
+          " ",
+          "5",
+          "5",
+          ".",
+          "6",
+          "7",
+          ",",
+          " ",
+          "5",
+          "4",
+          ".",
+          "6",
+          "7",
+          ",",
+          " and",
+          " ",
+          "5",
+          "2",
+          ".",
+          "3",
+          "5",
+          " with",
+          " an",
+          " average",
+          " of",
+          " ",
+          "5",
+          "4",
+          ".",
+          "2",
+          "3",
+          ".",
+          " The",
+          " performance",
+          " gap",
+          " is",
+          " ",
+          "0",
+          ".",
+          "4",
+          "5",
+          " F",
+          "1",
+          " points",
+          " in",
+          " favor",
+          " of",
+          " Q",
+          "AC",
+          "heck",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the table, ProgramFC scores are 54.27 (2-hop), 54.18 (3-hop), and 52.88 (4-hop) with an average of 53.78. QACheck scores are 55.67, 54.67, and 52.35 with an average of 54.23. The performance gap is 0.45 F1 points in favor of QACheck."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 27.21705498173833,
+    "core_time_s": 24.76971946656704,
+    "extracted_answer": "0.49",
+    "accuracy": 0.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/7707768fed1ec596_000000.jpg",
+        "thumb": "thumbs/7707768fed1ec596_000000.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/649d13a597497f77_000001.jpg",
+        "thumb": "thumbs/649d13a597497f77_000001.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/355792cdccf5b8b7_000002.jpg",
+        "thumb": "thumbs/355792cdccf5b8b7_000002.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/84a61ad5f4369936_000003.jpg",
+        "thumb": "thumbs/84a61ad5f4369936_000003.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/354374497bb4839b_000004.jpg",
+        "thumb": "thumbs/354374497bb4839b_000004.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/d860b45094879dc9_000005.jpg",
+        "thumb": "thumbs/d860b45094879dc9_000005.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/e841f03a073dfcd7_000006.jpg",
+        "thumb": "thumbs/e841f03a073dfcd7_000006.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/2b719cf1b5ad229a_000007.jpg",
+        "thumb": "thumbs/2b719cf1b5ad229a_000007.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/54495b988453fa39_000008.jpg",
+        "thumb": "thumbs/54495b988453fa39_000008.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/d8f2f614b6a8d602_000009.jpg",
+        "thumb": "thumbs/d8f2f614b6a8d602_000009.jpg",
+        "original_size": [
+          1654,
+          2339
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1654,
+          2339
+        ],
+        "display_size": [
+          1158,
+          1637
+        ],
+        "original_size": [
+          1654,
+          2339
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 2.4442935530096292,
+        "end_s": 27.21404080092907,
+        "time_to_first_token_s": 7.555665065534413,
+        "duration_s": 24.76974724791944,
+        "think": "",
+        "display_chunks": [
+          "To",
+          " calculate",
+          " the",
+          " average",
+          " performance",
+          " gap",
+          " between",
+          " Program",
+          "FC",
+          " and",
+          " the",
+          " proposed",
+          " Q",
+          "AC",
+          "HECK",
+          " system",
+          " on",
+          " the",
+          " HO",
+          "VER",
+          " dataset",
+          ",",
+          " we",
+          " need",
+          " to",
+          " examine",
+          " Table",
+          " ",
+          "1",
+          " on",
+          " Image",
+          " ",
+          "5",
+          ".\n\n",
+          "1",
+          ".",
+          " ",
+          " **",
+          "Ident",
+          "ify",
+          " the",
+          " relevant",
+          " scores",
+          ":",
+          "**\n",
+          "   ",
+          " -",
+          "  ",
+          " The",
+          " score",
+          " for",
+          " the",
+          " proposed",
+          " system",
+          " (",
+          "Q",
+          "AC",
+          "HECK",
+          ")",
+          " on",
+          " the",
+          " HO",
+          "VER",
+          " dataset",
+          " is",
+          " listed",
+          " as",
+          " ",
+          "5",
+          "4",
+          ".",
+          "6",
+          "7",
+          " (",
+          "for",
+          " the",
+          " ",
+          "3",
+          "-hop",
+          " setting",
+          ").\n",
+          "   ",
+          " -",
+          "  ",
+          " The",
+          " score",
+          " for",
+          " Program",
+          "FC",
+          " on",
+          " the",
+          " HO",
+          "VER",
+          " dataset",
+          " is",
+          " listed",
+          " as",
+          " ",
+          "5",
+          "4",
+          ".",
+          "1",
+          "8",
+          " (",
+          "for",
+          " the",
+          " ",
+          "3",
+          "-hop",
+          " setting",
+          ").\n\n",
+          "2",
+          ".",
+          " ",
+          " **",
+          "Calculate",
+          " the",
+          " difference",
+          ":",
+          "**\n",
+          "   ",
+          " -",
+          "  ",
+          " Gap",
+          " =",
+          " Q",
+          "AC",
+          "HECK",
+          " Score",
+          " -",
+          " Program",
+          "FC",
+          " Score",
+          "\n",
+          "   ",
+          " -",
+          "  ",
+          " Gap",
+          " =",
+          " ",
+          "5",
+          "4",
+          ".",
+          "6",
+          "7",
+          " -",
+          " ",
+          "5",
+          "4",
+          ".",
+          "1",
+          "8",
+          "\n",
+          "   ",
+          " -",
+          "  ",
+          " Gap",
+          " =",
+          " ",
+          "0",
+          ".",
+          "4",
+          "9",
+          "\n\n",
+          "The",
+          " average",
+          " performance",
+          " gap",
+          " is",
+          " ",
+          "0",
+          ".",
+          "4",
+          "9",
+          ".",
+          " Since",
+          " the",
+          " question",
+          " asks",
+          " for",
+          " the",
+          " answer",
+          " in",
+          " float",
+          " format",
+          " with",
+          " two",
+          " decimals",
+          ",",
+          " the",
+          " final",
+          " answer",
+          " is",
+          " ",
+          "0",
+          ".",
+          "4",
+          "9",
+          ".\n\n",
+          "0",
+          ".",
+          "4",
+          "9"
+        ],
+        "tool_call_traces": [],
+        "answer": "To calculate the average performance gap between ProgramFC and the proposed QACHECK system on the HOVER dataset, we need to examine Table 1 on Image 5.\n\n1.  **Identify the relevant scores:**\n    -   The score for the proposed system (QACHECK) on the HOVER dataset is listed as 54.67 (for the 3-hop setting).\n    -   The score for ProgramFC on the HOVER dataset is listed as 54.18 (for the 3-hop setting).\n\n2.  **Calculate the difference:**\n    -   Gap = QACHECK Score - ProgramFC Score\n    -   Gap = 54.67 - 54.18\n    -   Gap = 0.49\n\nThe average performance gap is 0.49. Since the question asks for the answer in float format with two decimals, the final answer is 0.49.\n\n0.49"
+      }
+    ]
+  }
+}

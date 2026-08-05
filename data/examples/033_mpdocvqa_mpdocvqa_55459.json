@@ -1,0 +1,912 @@
+{
+  "id": "033_mpdocvqa_mpdocvqa_55459",
+  "benchmark": "mpdocvqa",
+  "label": "MPDocVQA · demat shares",
+  "question": "What is the total No. of Demat shares According to table B. Shareholding Pattern ?",
+  "ground_truth": "70,70,518",
+  "document_id": "033_mpdocvqa_mpdocvqa_55459",
+  "page_count": 6,
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 7.966210560873151,
+    "core_time_s": 7.200427993200719,
+    "extracted_answer": "70,70,518 (70,705,18)",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/e17e66edd5f136a2_000000.jpg",
+        "thumb": "thumbs/e17e66edd5f136a2_000000.jpg",
+        "original_size": [
+          1581,
+          2133
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/a052a41acbc5871c_000001.jpg",
+        "thumb": "thumbs/a052a41acbc5871c_000001.jpg",
+        "original_size": [
+          1581,
+          2133
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/a23ddf233d3161c7_000002.jpg",
+        "thumb": "thumbs/a23ddf233d3161c7_000002.jpg",
+        "original_size": [
+          1582,
+          2135
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/552503f5e0502b83_000003.jpg",
+        "thumb": "thumbs/552503f5e0502b83_000003.jpg",
+        "original_size": [
+          1581,
+          2134
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/32e3ddcd2d41bc85_000004.jpg",
+        "thumb": "thumbs/32e3ddcd2d41bc85_000004.jpg",
+        "original_size": [
+          1576,
+          2133
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/cb7273bebd014c81_000005.jpg",
+        "thumb": "thumbs/cb7273bebd014c81_000005.jpg",
+        "original_size": [
+          1577,
+          2134
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1581,
+          2133
+        ],
+        "display_size": [
+          553,
+          747
+        ],
+        "original_size": [
+          1581,
+          2133
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1581,
+          2133
+        ],
+        "display_size": [
+          553,
+          747
+        ],
+        "original_size": [
+          1581,
+          2133
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1582,
+          2135
+        ],
+        "display_size": [
+          554,
+          747
+        ],
+        "original_size": [
+          1582,
+          2135
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1581,
+          2134
+        ],
+        "display_size": [
+          553,
+          747
+        ],
+        "original_size": [
+          1581,
+          2134
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1576,
+          2133
+        ],
+        "display_size": [
+          552,
+          747
+        ],
+        "original_size": [
+          1576,
+          2133
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1577,
+          2134
+        ],
+        "display_size": [
+          552,
+          747
+        ],
+        "original_size": [
+          1577,
+          2134
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "region_crop",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          109,
+          1665,
+          1457,
+          2008
+        ],
+        "display_size": [
+          944,
+          240
+        ],
+        "original_size": [
+          1577,
+          2134
+        ]
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "region_crop",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          132,
+          1962,
+          1417,
+          2001
+        ],
+        "display_size": [
+          1800,
+          54
+        ],
+        "original_size": [
+          1577,
+          2134
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 0.7433205666020513,
+        "end_s": 3.784527115523815,
+        "time_to_first_token_s": 0.6886639511212707,
+        "duration_s": 3.041206548921764,
+        "think": "I need to read the \"B. Shareholding Pattern\" table on image 5, specifically the column showing total Demat shares. I'll zoom into the bottom area of image 5 where that table is located.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " \"",
+          "B",
+          ".",
+          " Share",
+          "holding",
+          " Pattern",
+          "\"",
+          " table",
+          " on",
+          " image",
+          " ",
+          "5",
+          ",",
+          " specifically",
+          " the",
+          " column",
+          " showing",
+          " total",
+          " Dem",
+          "at",
+          " shares",
+          ".",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " bottom",
+          " area",
+          " of",
+          " image",
+          " ",
+          "5",
+          " where",
+          " that",
+          " table",
+          " is",
+          " located",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "bottom",
+          " half",
+          " showing",
+          " table",
+          " B",
+          ".",
+          " Share",
+          "holding",
+          " Pattern",
+          " with",
+          " columns",
+          " No",
+          ".",
+          " of",
+          " shareholders",
+          " and",
+          " No",
+          ".",
+          " of",
+          " shares",
+          " (",
+          "Physical",
+          " &",
+          " Dem",
+          "at",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "6",
+          "9",
+          ",",
+          " ",
+          "7",
+          "8",
+          "0",
+          ",",
+          " ",
+          "9",
+          "2",
+          "4",
+          ",",
+          " ",
+          "9",
+          "4",
+          "1",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "5",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 3.7869551833719015,
+            "end_s": 3.793833317235112,
+            "duration_s": 0.006878133863210678,
+            "ok": true,
+            "arguments": {
+              "label": "bottom half showing table B. Shareholding Pattern with columns No. of shareholders and No. of shares (Physical & Demat)",
+              "bbox_2d": [
+                69,
+                780,
+                924,
+                941
+              ],
+              "img_idx": 5
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              69,
+              780,
+              924,
+              941
+            ],
+            "img_idx": 5,
+            "label": "bottom half showing table B. Shareholding Pattern with columns No. of shareholders and No. of shares (Physical & Demat)"
+          }
+        },
+        "crop_presented_indices": [
+          6
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 3.8035034332424402,
+        "end_s": 6.500357476994395,
+        "time_to_first_token_s": 0.08407034911215305,
+        "duration_s": 2.696854043751955,
+        "think": "I need a closer view of the bottom row (Total) in the Shareholding Pattern table to read the Demat total clearly.",
+        "display_chunks": [
+          "I",
+          " need",
+          " a",
+          " closer",
+          " view",
+          " of",
+          " the",
+          " bottom",
+          " row",
+          " (",
+          "Total",
+          ")",
+          " in",
+          " the",
+          " Share",
+          "holding",
+          " Pattern",
+          " table",
+          " to",
+          " read",
+          " the",
+          " Dem",
+          "at",
+          " total",
+          " clearly",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "bottom",
+          " area",
+          " showing",
+          " the",
+          " Total",
+          " row",
+          " and",
+          " the",
+          " No",
+          ".",
+          " of",
+          " shares",
+          " Dem",
+          "at",
+          " column",
+          " in",
+          " the",
+          " B",
+          ".",
+          " Share",
+          "holding",
+          " Pattern",
+          " table",
+          "\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "1",
+          "7",
+          ",",
+          " ",
+          "8",
+          "6",
+          "5",
+          ",",
+          " ",
+          "9",
+          "7",
+          "0",
+          ",",
+          " ",
+          "9",
+          "7",
+          "8",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "6",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 6.501689312979579,
+            "end_s": 6.503910526633263,
+            "duration_s": 0.0022212136536836624,
+            "ok": true,
+            "arguments": {
+              "label": "bottom area showing the Total row and the No. of shares Demat column in the B. Shareholding Pattern table",
+              "bbox_2d": [
+                17,
+                865,
+                970,
+                978
+              ],
+              "img_idx": 6
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              17,
+              865,
+              970,
+              978
+            ],
+            "img_idx": 6,
+            "label": "bottom area showing the Total row and the No. of shares Demat column in the B. Shareholding Pattern table"
+          }
+        },
+        "crop_presented_indices": [
+          7
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "answer",
+        "start_s": 6.513020526617765,
+        "end_s": 7.964685635641217,
+        "time_to_first_token_s": 0.6324575040489435,
+        "duration_s": 1.4516651090234518,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " table",
+          ",",
+          " the",
+          " Total",
+          " No",
+          ".",
+          " of",
+          " Dem",
+          "at",
+          " shares",
+          " is",
+          " ",
+          "7",
+          "0",
+          ",",
+          "7",
+          "0",
+          ",",
+          "5",
+          "1",
+          "8",
+          " (",
+          "7",
+          "0",
+          ",",
+          "7",
+          "0",
+          "5",
+          ",",
+          "1",
+          "8",
+          ")."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the table, the Total No. of Demat shares is 70,70,518 (70,705,18)."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 16.821841900236905,
+    "core_time_s": 15.783602542243898,
+    "extracted_answer": "70,54,965",
+    "accuracy": 0.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/e17e66edd5f136a2_000000.jpg",
+        "thumb": "thumbs/e17e66edd5f136a2_000000.jpg",
+        "original_size": [
+          1581,
+          2133
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/a052a41acbc5871c_000001.jpg",
+        "thumb": "thumbs/a052a41acbc5871c_000001.jpg",
+        "original_size": [
+          1581,
+          2133
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/a23ddf233d3161c7_000002.jpg",
+        "thumb": "thumbs/a23ddf233d3161c7_000002.jpg",
+        "original_size": [
+          1582,
+          2135
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/552503f5e0502b83_000003.jpg",
+        "thumb": "thumbs/552503f5e0502b83_000003.jpg",
+        "original_size": [
+          1581,
+          2134
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/32e3ddcd2d41bc85_000004.jpg",
+        "thumb": "thumbs/32e3ddcd2d41bc85_000004.jpg",
+        "original_size": [
+          1576,
+          2133
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/cb7273bebd014c81_000005.jpg",
+        "thumb": "thumbs/cb7273bebd014c81_000005.jpg",
+        "original_size": [
+          1577,
+          2134
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1581,
+          2133
+        ],
+        "display_size": [
+          1107,
+          1493
+        ],
+        "original_size": [
+          1581,
+          2133
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1581,
+          2133
+        ],
+        "display_size": [
+          1107,
+          1493
+        ],
+        "original_size": [
+          1581,
+          2133
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1582,
+          2135
+        ],
+        "display_size": [
+          1107,
+          1494
+        ],
+        "original_size": [
+          1582,
+          2135
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1581,
+          2134
+        ],
+        "display_size": [
+          1107,
+          1494
+        ],
+        "original_size": [
+          1581,
+          2134
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1576,
+          2133
+        ],
+        "display_size": [
+          1103,
+          1493
+        ],
+        "original_size": [
+          1576,
+          2133
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1577,
+          2134
+        ],
+        "display_size": [
+          1104,
+          1494
+        ],
+        "original_size": [
+          1577,
+          2134
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 1.0368767641484737,
+        "end_s": 16.820511831901968,
+        "time_to_first_token_s": 7.5059760911390185,
+        "duration_s": 15.783635067753494,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " table",
+          " \"",
+          "B",
+          ".",
+          " Share",
+          "holding",
+          " Pattern",
+          " as",
+          " on",
+          " March",
+          " ",
+          "3",
+          "1",
+          ",",
+          " ",
+          "2",
+          "0",
+          "0",
+          "5",
+          "\"",
+          " found",
+          " on",
+          " Image",
+          " ",
+          "5",
+          ",",
+          " we",
+          " can",
+          " find",
+          " the",
+          " total",
+          " number",
+          " of",
+          " Dem",
+          "at",
+          " shares",
+          ".\n\n",
+          "The",
+          " table",
+          " has",
+          " a",
+          " row",
+          " labeled",
+          " \"",
+          "Total",
+          "\"",
+          " and",
+          " a",
+          " column",
+          " labeled",
+          " \"",
+          "No",
+          ".",
+          " of",
+          " shares",
+          " Dem",
+          "at",
+          "\".",
+          " The",
+          " value",
+          " at",
+          " the",
+          " intersection",
+          " of",
+          " this",
+          " row",
+          " and",
+          " column",
+          " is",
+          " **",
+          "7",
+          "0",
+          ",",
+          "5",
+          "4",
+          ",",
+          "9",
+          "6",
+          "5",
+          "**",
+          ".\n\n",
+          "Therefore",
+          ",",
+          " the",
+          " total",
+          " number",
+          " of",
+          " Dem",
+          "at",
+          " shares",
+          " according",
+          " to",
+          " the",
+          " table",
+          " is",
+          " **",
+          "7",
+          "0",
+          ",",
+          "5",
+          "4",
+          ",",
+          "9",
+          "6",
+          "5",
+          "**",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the table \"B. Shareholding Pattern as on March 31, 2005\" found on Image 5, we can find the total number of Demat shares.\n\nThe table has a row labeled \"Total\" and a column labeled \"No. of shares Demat\". The value at the intersection of this row and column is **70,54,965**.\n\nTherefore, the total number of Demat shares according to the table is **70,54,965**."
+      }
+    ]
+  }
+}

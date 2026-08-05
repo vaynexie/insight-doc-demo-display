@@ -1,0 +1,407 @@
+:root {
+  --bg: #0f1117;
+  --surface: #1a1d27;
+  --border: #2a3042;
+  --text: #e8ecf4;
+  --muted: #8b95a8;
+  --accent: #5b9cff;
+  --accent-dim: #3d6fbf;
+  --baseline: #c9a227;
+  --insight: #4ec9a0;
+  --danger: #f07178;
+  --ok: #4ec9a0;
+  --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
+  --mono: "IBM Plex Mono", "Consolas", monospace;
+}
+
+html {
+  font-size: 100%;
+}
+
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+  font-family: var(--font);
+  font-size: 16px;
+  background: var(--bg);
+  color: var(--text);
+  min-height: 100vh;
+  line-height: 1.6;
+}
+
+.header {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  background: var(--surface);
+}
+
+.header h1 { font-size: 1.9rem; font-weight: 600; }
+.controls { display: flex; gap: 0.75rem; align-items: center; flex-wrap: wrap; }
+
+.example-picker {
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  color: var(--muted);
+  font-size: 1rem;
+}
+
+.example-picker select {
+  max-width: min(42vw, 420px);
+  background: var(--bg);
+  color: var(--text);
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.55rem 0.7rem;
+  font-size: 1rem;
+}
+
+.btn {
+  border: 1px solid var(--border);
+  background: var(--bg);
+  color: var(--text);
+  padding: 0.65rem 1.15rem;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 1.15rem;
+}
+.btn:hover:not(:disabled) { border-color: var(--accent); }
+.btn:disabled { opacity: 0.45; cursor: not-allowed; }
+.btn.primary { background: var(--accent-dim); border-color: var(--accent); }
+
+.input-panel {
+  padding: 1rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+}
+
+.question-block h2 { font-size: 1.05rem; text-transform: uppercase; letter-spacing: 0.06em; color: var(--muted); }
+#questionText { margin-top: 0.5rem; font-size: 1.35rem; }
+.meta { margin-top: 0.5rem; font-size: 1.05rem; color: var(--muted); }
+
+.pdf-viewer-block {
+  margin-top: 1rem;
+}
+
+.pdf-viewer-block h3 {
+  font-size: 1.1rem;
+  color: var(--muted);
+  margin-bottom: 0.4rem;
+}
+
+.pdf-thumb-grid {
+  margin-top: 0.6rem;
+  display: grid;
+  gap: 0.5rem;
+  grid-template-columns: repeat(14, minmax(0, 1fr));
+}
+
+@media (max-width: 1400px) {
+  .pdf-thumb-grid { grid-template-columns: repeat(10, minmax(0, 1fr)); }
+}
+
+@media (max-width: 1100px) {
+  .pdf-thumb-grid { grid-template-columns: repeat(7, minmax(0, 1fr)); }
+}
+
+@media (max-width: 800px) {
+  .pdf-thumb-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+}
+
+.pdf-thumb {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: #101524;
+  padding: 0.25rem;
+  cursor: zoom-in;
+}
+
+.pdf-thumb img {
+  width: 100%;
+  height: auto;
+  display: block;
+  border-radius: 6px;
+}
+
+.pdf-thumb-label {
+  margin-top: 0.2rem;
+  font-size: 0.78rem;
+  color: var(--muted);
+  text-align: center;
+}
+
+.pdf-viewer-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(10, 12, 18, 0.85);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 999;
+  padding: 1rem;
+}
+
+.pdf-viewer-modal[hidden] {
+  display: none;
+}
+
+.pdf-viewer-dialog {
+  background: #0e1220;
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  width: min(95vw, 1400px);
+  max-height: 95vh;
+  overflow: auto;
+  padding: 0.75rem;
+  position: relative;
+}
+
+.pdf-viewer-close {
+  position: absolute;
+  top: 0.4rem;
+  right: 0.6rem;
+  border: 0;
+  background: transparent;
+  color: var(--text);
+  font-size: 1.8rem;
+  cursor: pointer;
+}
+
+.pdf-viewer-caption {
+  color: var(--muted);
+  font-size: 0.95rem;
+  margin-bottom: 0.5rem;
+  padding-right: 2rem;
+}
+
+.pdf-viewer-image {
+  width: 100%;
+  height: auto;
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.panes {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1px;
+  background: var(--border);
+  min-height: 55vh;
+}
+@media (max-width: 1000px) {
+  .panes { grid-template-columns: 1fr; }
+}
+
+.pane {
+  background: var(--bg);
+  display: flex;
+  flex-direction: column;
+  min-height: 400px;
+}
+
+.pane-header {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  background: var(--surface);
+  border-bottom: 1px solid var(--border);
+}
+.pane-header h2 { font-size: 1.4rem; flex: 1; }
+
+.badge {
+  font-size: 1.05rem;
+  padding: 0.25rem 0.6rem;
+  border-radius: 4px;
+  background: rgba(201, 162, 39, 0.2);
+  color: var(--baseline);
+  font-family: var(--mono);
+}
+.badge.accent {
+  background: rgba(78, 201, 160, 0.15);
+  color: var(--insight);
+}
+
+.status {
+  font-size: 1.05rem;
+  color: var(--muted);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+.status.running { color: var(--accent); }
+.status.waiting { color: #f6c177; }
+.status.done { color: var(--ok); }
+.status.error { color: var(--danger); }
+
+.insight-round-tabs {
+  display: flex;
+  gap: 0.4rem;
+  flex-wrap: nowrap;
+  overflow-x: auto;
+  padding: 0.55rem 0.8rem;
+  border-bottom: 1px solid var(--border);
+  background: #111521;
+}
+
+.insight-round-tabs:empty::before {
+  content: "InSight-doc-8B rounds will appear here";
+  color: var(--muted);
+  font-size: 1.1rem;
+}
+
+.round-tab {
+  flex: 0 0 auto;
+  border: 1px solid var(--border);
+  background: var(--surface);
+  color: var(--text);
+  border-radius: 999px;
+  padding: 0.35rem 0.85rem;
+  font-size: 1.1rem;
+  cursor: pointer;
+}
+
+.round-tab.active {
+  border-color: var(--insight);
+  background: rgba(78, 201, 160, 0.14);
+}
+
+.round-tab:disabled {
+  opacity: 0.6;
+  cursor: default;
+}
+
+.stream {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1.15rem;
+  font-family: var(--mono);
+  font-size: 1.25rem;
+  white-space: pre-wrap;
+  word-break: break-word;
+}
+
+.stream.interleaved {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+}
+
+.insight-round-view,
+.insight-live-round {
+  display: flex;
+  flex-direction: column;
+  gap: 0.6rem;
+  border-left: 3px solid rgba(78, 201, 160, 0.55);
+  padding-left: 0.65rem;
+  margin-bottom: 0.8rem;
+}
+
+.insight-round-view[hidden] {
+  display: none;
+}
+
+.insight-round-title,
+.insight-live-round-title {
+  color: var(--insight);
+  font-family: var(--font);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.event-card {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 0.75rem 0.85rem;
+  background: var(--surface);
+  white-space: pre-wrap;
+  font-size: 1.22rem;
+}
+
+.event-card h4 {
+  font-family: var(--font);
+  font-size: 1.05rem;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 0.35rem;
+  color: var(--muted);
+}
+
+.event-card.think {
+  border-left: 3px solid #6d768b;
+}
+
+.event-card.tool {
+  border-left: 3px solid var(--insight);
+}
+
+.event-card.answer {
+  border-left: 3px solid var(--accent);
+  background: rgba(91, 156, 255, 0.08);
+}
+
+.event-card img {
+  display: block;
+  margin-top: 0.45rem;
+  width: min(100%, 420px);
+  border-radius: 6px;
+  border: 1px solid var(--border);
+}
+
+.tool-images-grid {
+  margin-top: 0.5rem;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 0.5rem;
+}
+
+.tool-image-item {
+  background: #101524;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  padding: 0.35rem;
+}
+
+.tool-image-item .tool-image-label {
+  color: var(--muted);
+  font-size: 1rem;
+  margin-bottom: 0.25rem;
+}
+
+.event-meta {
+  color: var(--muted);
+  margin-top: 0.2rem;
+}
+
+.comparison {
+  padding: 1.5rem;
+  border-top: 1px solid var(--border);
+  background: var(--surface);
+}
+.comparison h2 { font-size: 1.45rem; margin-bottom: 1rem; }
+
+.metrics-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+}
+@media (max-width: 800px) {
+  .metrics-grid { grid-template-columns: 1fr; }
+}
+
+.metric-card {
+  background: var(--bg);
+  border: 1px solid var(--border);
+  border-radius: 10px;
+  padding: 1rem;
+}
+.metric-card.highlight { border-color: var(--insight); }
+.metric-card h3 { font-size: 1.15rem; color: var(--muted); text-transform: uppercase; }
+.metric-value { font-size: 2.05rem; font-weight: 600; margin: 0.35rem 0; }
+.metric-label { font-size: 1.1rem; color: var(--muted); }
+.metric-answer { font-size: 1.2rem; margin-top: 0.75rem; font-family: var(--mono); }

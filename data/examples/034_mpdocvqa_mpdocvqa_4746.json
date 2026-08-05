@@ -1,0 +1,996 @@
+{
+  "id": "034_mpdocvqa_mpdocvqa_4746",
+  "benchmark": "mpdocvqa",
+  "label": "MPDocVQA · cellular telephone",
+  "question": "What is the Cellular Telephone No.?",
+  "ground_truth": "859-497-4935",
+  "document_id": "034_mpdocvqa_mpdocvqa_4746",
+  "page_count": 9,
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 11.932222220115364,
+    "core_time_s": 7.681193258613348,
+    "extracted_answer": "859-497-4935",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/e2f3d3f01e68e81c_000000.jpg",
+        "thumb": "thumbs/e2f3d3f01e68e81c_000000.jpg",
+        "original_size": [
+          1713,
+          2210
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/292d3ca8e4071a0d_000001.jpg",
+        "thumb": "thumbs/292d3ca8e4071a0d_000001.jpg",
+        "original_size": [
+          1714,
+          2211
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/b9a6e7ff7eff49c7_000002.jpg",
+        "thumb": "thumbs/b9a6e7ff7eff49c7_000002.jpg",
+        "original_size": [
+          1702,
+          2202
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/e9b454a0a30fe487_000003.jpg",
+        "thumb": "thumbs/e9b454a0a30fe487_000003.jpg",
+        "original_size": [
+          1713,
+          2210
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/afbae70023234644_000004.jpg",
+        "thumb": "thumbs/afbae70023234644_000004.jpg",
+        "original_size": [
+          1717,
+          2213
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/e95afac44f477e12_000005.jpg",
+        "thumb": "thumbs/e95afac44f477e12_000005.jpg",
+        "original_size": [
+          1711,
+          2209
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/71edb37b87e8cf7e_000006.jpg",
+        "thumb": "thumbs/71edb37b87e8cf7e_000006.jpg",
+        "original_size": [
+          1712,
+          2209
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/8e6dda397b8570d7_000007.jpg",
+        "thumb": "thumbs/8e6dda397b8570d7_000007.jpg",
+        "original_size": [
+          1713,
+          2210
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/47896386b4bedcbd_000008.jpg",
+        "thumb": "thumbs/47896386b4bedcbd_000008.jpg",
+        "original_size": [
+          2226,
+          1733
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1713,
+          2210
+        ],
+        "display_size": [
+          600,
+          774
+        ],
+        "original_size": [
+          1713,
+          2210
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1714,
+          2211
+        ],
+        "display_size": [
+          600,
+          774
+        ],
+        "original_size": [
+          1714,
+          2211
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1702,
+          2202
+        ],
+        "display_size": [
+          596,
+          771
+        ],
+        "original_size": [
+          1702,
+          2202
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1713,
+          2210
+        ],
+        "display_size": [
+          600,
+          774
+        ],
+        "original_size": [
+          1713,
+          2210
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1717,
+          2213
+        ],
+        "display_size": [
+          601,
+          775
+        ],
+        "original_size": [
+          1717,
+          2213
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1711,
+          2209
+        ],
+        "display_size": [
+          599,
+          773
+        ],
+        "original_size": [
+          1711,
+          2209
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1712,
+          2209
+        ],
+        "display_size": [
+          599,
+          773
+        ],
+        "original_size": [
+          1712,
+          2209
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1713,
+          2210
+        ],
+        "display_size": [
+          600,
+          774
+        ],
+        "original_size": [
+          1713,
+          2210
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          2226,
+          1733
+        ],
+        "display_size": [
+          779,
+          607
+        ],
+        "original_size": [
+          2226,
+          1733
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "region_crop",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          83,
+          286,
+          1314,
+          642
+        ],
+        "display_size": [
+          862,
+          250
+        ],
+        "original_size": [
+          2226,
+          1733
+        ]
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "region_crop",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          103,
+          441,
+          1287,
+          596
+        ],
+        "display_size": [
+          1658,
+          218
+        ],
+        "original_size": [
+          2226,
+          1733
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 4.223099386319518,
+        "end_s": 6.95718686375767,
+        "time_to_first_token_s": 0.3968865377828479,
+        "duration_s": 2.734087477438152,
+        "think": "I need to zoom into the top-left area of Image 8 where the contact phone numbers (Home Telephone, Cellular Telephone, Fax) are listed to read the Cellular Telephone No.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " zoom",
+          " into",
+          " the",
+          " top",
+          "-left",
+          " area",
+          " of",
+          " Image",
+          " ",
+          "8",
+          " where",
+          " the",
+          " contact",
+          " phone",
+          " numbers",
+          " (",
+          "Home",
+          " Telephone",
+          ",",
+          " Cellular",
+          " Telephone",
+          ",",
+          " Fax",
+          ")",
+          " are",
+          " listed",
+          " to",
+          " read",
+          " the",
+          " Cellular",
+          " Telephone",
+          " No",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "top",
+          "-left",
+          " quadrant",
+          " showing",
+          " mailing",
+          " address",
+          " and",
+          " telephone",
+          " numbers",
+          " (",
+          "Home",
+          " Telephone",
+          " No",
+          ".,",
+          " Cellular",
+          " Telephone",
+          " No",
+          ".,",
+          " Fax",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "3",
+          "7",
+          ",",
+          " ",
+          "1",
+          "6",
+          "4",
+          ",",
+          " ",
+          "5",
+          "9",
+          "0",
+          ",",
+          " ",
+          "3",
+          "7",
+          "0",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "8",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 6.959462797269225,
+            "end_s": 6.966613148339093,
+            "duration_s": 0.007150351069867611,
+            "ok": true,
+            "arguments": {
+              "label": "top-left quadrant showing mailing address and telephone numbers (Home Telephone No., Cellular Telephone No., Fax)",
+              "bbox_2d": [
+                37,
+                164,
+                590,
+                370
+              ],
+              "img_idx": 8
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              37,
+              164,
+              590,
+              370
+            ],
+            "img_idx": 8,
+            "label": "top-left quadrant showing mailing address and telephone numbers (Home Telephone No., Cellular Telephone No., Fax)"
+          }
+        },
+        "crop_presented_indices": [
+          9
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 6.975435454398394,
+        "end_s": 11.226817799732089,
+        "time_to_first_token_s": 0.12199052702635527,
+        "duration_s": 4.251382345333695,
+        "think": "I need a closer zoom on the handwritten phone numbers (Home, Cellular, Fax) to read the Cellular Telephone No. clearly.",
+        "display_chunks": [
+          "I",
+          " need",
+          " a",
+          " closer",
+          " zoom",
+          " on",
+          " the",
+          " handwritten",
+          " phone",
+          " numbers",
+          " (",
+          "Home",
+          ",",
+          " Cellular",
+          ",",
+          " Fax",
+          ")",
+          " to",
+          " read",
+          " the",
+          " Cellular",
+          " Telephone",
+          " No",
+          ".",
+          " clearly",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "hand",
+          "written",
+          " phone",
+          " numbers",
+          " area",
+          " showing",
+          " Home",
+          " Telephone",
+          " No",
+          ".,",
+          " Cellular",
+          " Telephone",
+          " No",
+          ".,",
+          " and",
+          " Fax",
+          " Telephone",
+          " No",
+          ".\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "1",
+          "6",
+          ",",
+          " ",
+          "4",
+          "3",
+          "5",
+          ",",
+          " ",
+          "9",
+          "7",
+          "8",
+          ",",
+          " ",
+          "8",
+          "7",
+          "0",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "9",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 11.230694435536861,
+            "end_s": 11.237184146419168,
+            "duration_s": 0.006489710882306099,
+            "ok": true,
+            "arguments": {
+              "label": "handwritten phone numbers area showing Home Telephone No., Cellular Telephone No., and Fax Telephone No.",
+              "bbox_2d": [
+                16,
+                435,
+                978,
+                870
+              ],
+              "img_idx": 9
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              16,
+              435,
+              978,
+              870
+            ],
+            "img_idx": 9,
+            "label": "handwritten phone numbers area showing Home Telephone No., Cellular Telephone No., and Fax Telephone No."
+          }
+        },
+        "crop_presented_indices": [
+          10
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "answer",
+        "start_s": 11.248800948262215,
+        "end_s": 11.929267367348075,
+        "time_to_first_token_s": 0.11307075805962086,
+        "duration_s": 0.6804664190858603,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " document",
+          " image",
+          ",",
+          " the",
+          " Cellular",
+          " Telephone",
+          " No",
+          ".",
+          " is",
+          " ",
+          "8",
+          "5",
+          "9",
+          "-",
+          "4",
+          "9",
+          "7",
+          "-",
+          "4",
+          "9",
+          "3",
+          "5",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the document image, the Cellular Telephone No. is 859-497-4935."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 19.121297534555197,
+    "core_time_s": 16.770745928399265,
+    "extracted_answer": "859-491-4935",
+    "accuracy": 0.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/e2f3d3f01e68e81c_000000.jpg",
+        "thumb": "thumbs/e2f3d3f01e68e81c_000000.jpg",
+        "original_size": [
+          1713,
+          2210
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/292d3ca8e4071a0d_000001.jpg",
+        "thumb": "thumbs/292d3ca8e4071a0d_000001.jpg",
+        "original_size": [
+          1714,
+          2211
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/b9a6e7ff7eff49c7_000002.jpg",
+        "thumb": "thumbs/b9a6e7ff7eff49c7_000002.jpg",
+        "original_size": [
+          1702,
+          2202
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/e9b454a0a30fe487_000003.jpg",
+        "thumb": "thumbs/e9b454a0a30fe487_000003.jpg",
+        "original_size": [
+          1713,
+          2210
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/afbae70023234644_000004.jpg",
+        "thumb": "thumbs/afbae70023234644_000004.jpg",
+        "original_size": [
+          1717,
+          2213
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/e95afac44f477e12_000005.jpg",
+        "thumb": "thumbs/e95afac44f477e12_000005.jpg",
+        "original_size": [
+          1711,
+          2209
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/71edb37b87e8cf7e_000006.jpg",
+        "thumb": "thumbs/71edb37b87e8cf7e_000006.jpg",
+        "original_size": [
+          1712,
+          2209
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/8e6dda397b8570d7_000007.jpg",
+        "thumb": "thumbs/8e6dda397b8570d7_000007.jpg",
+        "original_size": [
+          1713,
+          2210
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/47896386b4bedcbd_000008.jpg",
+        "thumb": "thumbs/47896386b4bedcbd_000008.jpg",
+        "original_size": [
+          2226,
+          1733
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1713,
+          2210
+        ],
+        "display_size": [
+          1199,
+          1547
+        ],
+        "original_size": [
+          1713,
+          2210
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1714,
+          2211
+        ],
+        "display_size": [
+          1200,
+          1548
+        ],
+        "original_size": [
+          1714,
+          2211
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1702,
+          2202
+        ],
+        "display_size": [
+          1191,
+          1541
+        ],
+        "original_size": [
+          1702,
+          2202
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1713,
+          2210
+        ],
+        "display_size": [
+          1199,
+          1547
+        ],
+        "original_size": [
+          1713,
+          2210
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1717,
+          2213
+        ],
+        "display_size": [
+          1202,
+          1549
+        ],
+        "original_size": [
+          1717,
+          2213
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1711,
+          2209
+        ],
+        "display_size": [
+          1198,
+          1546
+        ],
+        "original_size": [
+          1711,
+          2209
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1712,
+          2209
+        ],
+        "display_size": [
+          1198,
+          1546
+        ],
+        "original_size": [
+          1712,
+          2209
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1713,
+          2210
+        ],
+        "display_size": [
+          1199,
+          1547
+        ],
+        "original_size": [
+          1713,
+          2210
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          2226,
+          1733
+        ],
+        "display_size": [
+          1558,
+          1213
+        ],
+        "original_size": [
+          2226,
+          1733
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 2.34954883903265,
+        "end_s": 19.120338769629598,
+        "time_to_first_token_s": 7.235558767803013,
+        "duration_s": 16.770789930596948,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " provided",
+          " document",
+          ",",
+          " specifically",
+          " **",
+          "Image",
+          " ",
+          "8",
+          "**",
+          " which",
+          " displays",
+          " **",
+          "Attachment",
+          " ",
+          "1",
+          ":",
+          " Bur",
+          "ley",
+          " Grow",
+          "er",
+          " Profile",
+          "**,",
+          " the",
+          " Cellular",
+          " Telephone",
+          " No",
+          ".",
+          " is",
+          " listed",
+          " as",
+          ":\n\n",
+          "**",
+          "8",
+          "5",
+          "9",
+          "-",
+          "4",
+          "9",
+          "1",
+          "-",
+          "4",
+          "9",
+          "3",
+          "5",
+          "**"
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the provided document, specifically **Image 8** which displays **Attachment 1: Burley Grower Profile**, the Cellular Telephone No. is listed as:\n\n**859-491-4935**"
+      }
+    ]
+  }
+}

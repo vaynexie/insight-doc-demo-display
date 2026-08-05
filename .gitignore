@@ -1,0 +1,15 @@
+# Local-only / non-Pages content (root paths only)
+.DS_Store
+/demo
+/demo的副本/
+/demo的副本2/
+/demo的副本3
+/exported_conversations
+/images
+/manifest.json
+/gradio_space的副本/
+/insight-doc-online-demo的副本/
+/kv_cache_prechange_20260704_110911/
+**/__pycache__/
+*.pyc
+.Python

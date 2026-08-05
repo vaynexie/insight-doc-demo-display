@@ -1,0 +1,681 @@
+{
+  "id": "035_mpdocvqa_mpdocvqa_63159",
+  "benchmark": "mpdocvqa",
+  "label": "MPDocVQA · males in 21-A",
+  "question": "What is the number of males in 21-A?",
+  "ground_truth": "2,485",
+  "document_id": "035_mpdocvqa_mpdocvqa_63159",
+  "page_count": 3,
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 5.3188008069992065,
+    "core_time_s": 4.842168019153178,
+    "extracted_answer": "2,485",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/01eb2dcf676aa9f2_000000.jpg",
+        "thumb": "thumbs/01eb2dcf676aa9f2_000000.jpg",
+        "original_size": [
+          1787,
+          2287
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/df2081b3969544da_000001.jpg",
+        "thumb": "thumbs/df2081b3969544da_000001.jpg",
+        "original_size": [
+          1783,
+          2281
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/13ed2eab688353e2_000002.jpg",
+        "thumb": "thumbs/13ed2eab688353e2_000002.jpg",
+        "original_size": [
+          1792,
+          2290
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1787,
+          2287
+        ],
+        "display_size": [
+          625,
+          800
+        ],
+        "original_size": [
+          1787,
+          2287
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1783,
+          2281
+        ],
+        "display_size": [
+          624,
+          798
+        ],
+        "original_size": [
+          1783,
+          2281
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1792,
+          2290
+        ],
+        "display_size": [
+          627,
+          802
+        ],
+        "original_size": [
+          1792,
+          2290
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "region_crop",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          149,
+          909,
+          1615,
+          2050
+        ],
+        "display_size": [
+          1026,
+          798
+        ],
+        "original_size": [
+          1787,
+          2287
+        ]
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "region_crop",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          172,
+          1409,
+          882,
+          1601
+        ],
+        "display_size": [
+          994,
+          268
+        ],
+        "original_size": [
+          1787,
+          2287
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 0.4430852923542261,
+        "end_s": 2.602162417024374,
+        "time_to_first_token_s": 0.1412196783348918,
+        "duration_s": 2.159077124670148,
+        "think": "I need to zoom into the demographic table on image 0 to read the \"Male\" count for tract 21-A. I'll request a zoom of the central table area.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " zoom",
+          " into",
+          " the",
+          " demographic",
+          " table",
+          " on",
+          " image",
+          " ",
+          "0",
+          " to",
+          " read",
+          " the",
+          " \"",
+          "Male",
+          "\"",
+          " count",
+          " for",
+          " tract",
+          " ",
+          "2",
+          "1",
+          "-A",
+          ".",
+          " I",
+          "'ll",
+          " request",
+          " a",
+          " zoom",
+          " of",
+          " the",
+          " central",
+          " table",
+          " area",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "center",
+          " table",
+          " showing",
+          " characteristics",
+          " and",
+          " census",
+          " tract",
+          " columns",
+          " (",
+          "Health",
+          " District",
+          " ",
+          "2",
+          "1",
+          " and",
+          " tr",
+          "acts",
+          " ",
+          "2",
+          "1",
+          "-A",
+          ",",
+          " ",
+          "2",
+          "1",
+          "-B",
+          ",",
+          " ",
+          "2",
+          "1",
+          "-C",
+          ",",
+          " ",
+          "2",
+          "1",
+          "-D",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "8",
+          "3",
+          ",",
+          " ",
+          "3",
+          "9",
+          "7",
+          ",",
+          " ",
+          "9",
+          "0",
+          "4",
+          ",",
+          " ",
+          "8",
+          "9",
+          "6",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "0",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 2.6038265004754066,
+            "end_s": 2.627782292664051,
+            "duration_s": 0.02395579218864441,
+            "ok": true,
+            "arguments": {
+              "label": "center table showing characteristics and census tract columns (Health District 21 and tracts 21-A, 21-B, 21-C, 21-D)",
+              "bbox_2d": [
+                83,
+                397,
+                904,
+                896
+              ],
+              "img_idx": 0
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              83,
+              397,
+              904,
+              896
+            ],
+            "img_idx": 0,
+            "label": "center table showing characteristics and census tract columns (Health District 21 and tracts 21-A, 21-B, 21-C, 21-D)"
+          }
+        },
+        "crop_presented_indices": [
+          3
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 2.641409708186984,
+        "end_s": 4.758378908969462,
+        "time_to_first_token_s": 0.08097162283957005,
+        "duration_s": 2.116969200782478,
+        "think": "I will zoom into the middle-left area of the table where the \"Male\" row and 21-A column values are located to read the number clearly.",
+        "display_chunks": [
+          "I",
+          " will",
+          " zoom",
+          " into",
+          " the",
+          " middle",
+          "-left",
+          " area",
+          " of",
+          " the",
+          " table",
+          " where",
+          " the",
+          " \"",
+          "Male",
+          "\"",
+          " row",
+          " and",
+          " ",
+          "2",
+          "1",
+          "-A",
+          " column",
+          " values",
+          " are",
+          " located",
+          " to",
+          " read",
+          " the",
+          " number",
+          " clearly",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "center",
+          "-left",
+          " region",
+          " showing",
+          " Sex",
+          " rows",
+          " (",
+          "Male",
+          ",",
+          " Female",
+          ")",
+          " and",
+          " columns",
+          " for",
+          " Health",
+          " District",
+          " ",
+          "2",
+          "1",
+          " and",
+          " ",
+          "2",
+          "1",
+          "-A",
+          "\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "1",
+          "6",
+          ",",
+          " ",
+          "4",
+          "3",
+          "8",
+          ",",
+          " ",
+          "5",
+          "0",
+          "0",
+          ",",
+          " ",
+          "6",
+          "0",
+          "7",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "3",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 4.759763428941369,
+            "end_s": 4.7687296606600285,
+            "duration_s": 0.008966231718659401,
+            "ok": true,
+            "arguments": {
+              "label": "center-left region showing Sex rows (Male, Female) and columns for Health District 21 and 21-A",
+              "bbox_2d": [
+                16,
+                438,
+                500,
+                607
+              ],
+              "img_idx": 3
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              16,
+              438,
+              500,
+              607
+            ],
+            "img_idx": 3,
+            "label": "center-left region showing Sex rows (Male, Female) and columns for Health District 21 and 21-A"
+          }
+        },
+        "crop_presented_indices": [
+          4
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "answer",
+        "start_s": 4.78506807051599,
+        "end_s": 5.317558951675892,
+        "time_to_first_token_s": 0.08668958116322756,
+        "duration_s": 0.5324908811599016,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " table",
+          ",",
+          " under",
+          " Sex",
+          ":",
+          " Male",
+          " for",
+          " tract",
+          " ",
+          "2",
+          "1",
+          "-A",
+          " the",
+          " number",
+          " is",
+          " ",
+          "2",
+          ",",
+          "4",
+          "8",
+          "5",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the table, under Sex: Male for tract 21-A the number is 2,485."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 13.797935544513166,
+    "core_time_s": 9.81981695909053,
+    "extracted_answer": "2,435",
+    "accuracy": 0.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/01eb2dcf676aa9f2_000000.jpg",
+        "thumb": "thumbs/01eb2dcf676aa9f2_000000.jpg",
+        "original_size": [
+          1787,
+          2287
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/df2081b3969544da_000001.jpg",
+        "thumb": "thumbs/df2081b3969544da_000001.jpg",
+        "original_size": [
+          1783,
+          2281
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/13ed2eab688353e2_000002.jpg",
+        "thumb": "thumbs/13ed2eab688353e2_000002.jpg",
+        "original_size": [
+          1792,
+          2290
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1787,
+          2287
+        ],
+        "display_size": [
+          1251,
+          1601
+        ],
+        "original_size": [
+          1787,
+          2287
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1783,
+          2281
+        ],
+        "display_size": [
+          1248,
+          1597
+        ],
+        "original_size": [
+          1783,
+          2281
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1792,
+          2290
+        ],
+        "display_size": [
+          1254,
+          1603
+        ],
+        "original_size": [
+          1792,
+          2290
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 3.9770939545705914,
+        "end_s": 13.796947465278208,
+        "time_to_first_token_s": 4.646185042336583,
+        "duration_s": 9.819853510707617,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " demographic",
+          " table",
+          " provided",
+          " in",
+          " Image",
+          " ",
+          "0",
+          ",",
+          " under",
+          " the",
+          " \"",
+          "HE",
+          "ALTH",
+          " DIST",
+          "RICT",
+          " ",
+          "2",
+          "1",
+          "\"",
+          " column",
+          " and",
+          " the",
+          " \"",
+          "Sex",
+          "\"",
+          " category",
+          " for",
+          " \"",
+          "Male",
+          "\",",
+          " the",
+          " number",
+          " listed",
+          " for",
+          " tract",
+          " \"",
+          "2",
+          "1",
+          "-A",
+          "\"",
+          " is",
+          " **",
+          "2",
+          ",",
+          "4",
+          "3",
+          "5",
+          "**",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the demographic table provided in Image 0, under the \"HEALTH DISTRICT 21\" column and the \"Sex\" category for \"Male\", the number listed for tract \"21-A\" is **2,435**."
+      }
+    ]
+  }
+}

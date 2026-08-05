@@ -3,44 +3,88 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>InSight-doc Demo Display</title>
-  <style>
-    html, body {
-      margin: 0;
-      width: 100%;
-      height: 100%;
-      background: #0f1117;
-      color: #e8ecf4;
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-    }
-    .bar {
-      height: 44px;
-      display: flex;
-      align-items: center;
-      justify-content: space-between;
-      padding: 0 14px;
-      border-bottom: 1px solid #2a3042;
-      background: #1a1d27;
-      font-size: 14px;
-    }
-    .hint {
-      color: #8b95a8;
-      font-size: 12px;
-    }
-    iframe {
-      width: 100%;
-      height: calc(100% - 45px);
-      border: 0;
-      display: block;
-      background: #0f1117;
-    }
-  </style>
+  <title>InSight-doc-8B vs Qwen3-VL-8B</title>
+  <link rel="stylesheet" href="./static/styles.css" />
 </head>
 <body>
-  <div class="bar">
-    <div>InSight-doc Demo</div>
-    <div class="hint">Requires local server: http://127.0.0.1:8765/</div>
+  <header class="header">
+    <div class="header-inner">
+      <h1>InSight-doc-8B vs Qwen3-VL-8B</h1>
+    </div>
+    <div class="controls">
+      <label class="example-picker">
+        <span>Example</span>
+        <select id="exampleSelect"></select>
+      </label>
+      <button id="btnRun" class="btn primary">Run comparison</button>
+      <button id="btnReset" class="btn" disabled>Reset</button>
+    </div>
+  </header>
+
+  <section class="input-panel">
+    <div class="question-block">
+      <h2>Question</h2>
+      <p id="questionText">Loading examples…</p>
+      <p class="meta" id="caseMeta"></p>
+      <div class="pdf-viewer-block">
+        <h3>PDF Pages (Downsampled)</h3>
+        <p class="meta">Click any page thumbnail to view the original image.</p>
+        <div id="pdfThumbGrid" class="pdf-thumb-grid">Loading pages…</div>
+      </div>
+    </div>
+  </section>
+
+  <section class="panes">
+    <article class="pane baseline" id="paneBaseline">
+      <header class="pane-header">
+        <h2>Qwen3-VL-8B</h2>
+        <span class="badge" id="baselineRes">r=0.7</span>
+        <span class="status" id="baselineStatus">idle</span>
+      </header>
+      <div class="stream" id="baselineStream"></div>
+    </article>
+
+    <article class="pane insight" id="paneInsight">
+      <header class="pane-header">
+        <h2>InSight-doc-8B</h2>
+        <span class="badge accent" id="insightRes">r=0.35</span>
+        <span class="status" id="insightStatus">idle</span>
+      </header>
+      <div class="stream interleaved" id="insightStream"></div>
+    </article>
+  </section>
+
+  <section class="comparison" id="comparisonCard" hidden>
+    <h2>Results</h2>
+    <div class="metrics-grid">
+      <div class="metric-card">
+        <h3>Qwen3-VL-8B</h3>
+        <p class="metric-value" id="metricBaselineTime">—</p>
+        <p class="metric-label">Wall time</p>
+        <p class="metric-answer" id="metricBaselineAnswer"></p>
+      </div>
+      <div class="metric-card highlight">
+        <h3>InSight-doc-8B</h3>
+        <p class="metric-value" id="metricInsightTime">—</p>
+        <p class="metric-label">Wall time · <span id="metricZoomRounds">0</span> zoom rounds</p>
+        <p class="metric-answer" id="metricInsightAnswer"></p>
+      </div>
+      <div class="metric-card ground-truth">
+        <h3>Ground truth</h3>
+        <p class="metric-value" id="metricGroundTruth">—</p>
+        <p class="metric-label">Gold answer</p>
+      </div>
+    </div>
+  </section>
+
+  <div id="pdfViewerModal" class="pdf-viewer-modal" hidden>
+    <div class="pdf-viewer-dialog">
+      <button id="pdfViewerClose" class="pdf-viewer-close" type="button" aria-label="Close viewer">×</button>
+      <div id="pdfViewerCaption" class="pdf-viewer-caption"></div>
+      <img id="pdfViewerImage" class="pdf-viewer-image" alt="Original PDF page" />
+    </div>
   </div>
-  <iframe src="http://127.0.0.1:8765/" title="InSight-doc demo"></iframe>
+
+  <script src="./static/app.js"></script>
 </body>
 </html>

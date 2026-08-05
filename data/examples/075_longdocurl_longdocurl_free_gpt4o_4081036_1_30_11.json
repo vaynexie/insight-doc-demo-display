@@ -1,0 +1,2447 @@
+{
+  "id": "075_longdocurl_longdocurl_free_gpt4o_4081036_1_30_11",
+  "benchmark": "longdocurl",
+  "label": "LongDocURL · SeaChange equity",
+  "question": "What was difference value between the total stockholders' equity and total liabilities for SeaChange International, Inc. for April 30, 2021?",
+  "ground_truth": "$28626 thousand",
+  "document_id": "075_longdocurl_longdocurl_free_gpt4o_4081036_1_30_11",
+  "page_count": 30,
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 13.894200437702239,
+    "core_time_s": 8.733305416069925,
+    "extracted_answer": "$28,626",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/77e5a99095a99004_000000.jpg",
+        "thumb": "thumbs/77e5a99095a99004_000000.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/4b69a1b0d6a32c96_000001.jpg",
+        "thumb": "thumbs/4b69a1b0d6a32c96_000001.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/ee3f75b85a8df0c3_000002.jpg",
+        "thumb": "thumbs/ee3f75b85a8df0c3_000002.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/ed603f4b574b01a8_000003.jpg",
+        "thumb": "thumbs/ed603f4b574b01a8_000003.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/496ee055f247d859_000004.jpg",
+        "thumb": "thumbs/496ee055f247d859_000004.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/ffaef97ae6b2201d_000005.jpg",
+        "thumb": "thumbs/ffaef97ae6b2201d_000005.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/3aaec43506c982f7_000006.jpg",
+        "thumb": "thumbs/3aaec43506c982f7_000006.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/dcee6598a39984aa_000007.jpg",
+        "thumb": "thumbs/dcee6598a39984aa_000007.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/6dbe2eeca61c27b7_000008.jpg",
+        "thumb": "thumbs/6dbe2eeca61c27b7_000008.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/8b53b8459be79fa6_000009.jpg",
+        "thumb": "thumbs/8b53b8459be79fa6_000009.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/d6e6c2cef6fac390_000010.jpg",
+        "thumb": "thumbs/d6e6c2cef6fac390_000010.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/dbdc9e346a60b198_000011.jpg",
+        "thumb": "thumbs/dbdc9e346a60b198_000011.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/1d7c69980a794280_000012.jpg",
+        "thumb": "thumbs/1d7c69980a794280_000012.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/b10c006102bd015f_000013.jpg",
+        "thumb": "thumbs/b10c006102bd015f_000013.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/704d2e00dc92a5cf_000014.jpg",
+        "thumb": "thumbs/704d2e00dc92a5cf_000014.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/bbacd6cfb265a3da_000015.jpg",
+        "thumb": "thumbs/bbacd6cfb265a3da_000015.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/6f8f29e6efe65732_000016.jpg",
+        "thumb": "thumbs/6f8f29e6efe65732_000016.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/d3c2e99b8d7766d2_000017.jpg",
+        "thumb": "thumbs/d3c2e99b8d7766d2_000017.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/d72a84f641389ebd_000018.jpg",
+        "thumb": "thumbs/d72a84f641389ebd_000018.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/1e7b1b9f1a08ba8d_000019.jpg",
+        "thumb": "thumbs/1e7b1b9f1a08ba8d_000019.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/078e9ebb04b5ba54_000020.jpg",
+        "thumb": "thumbs/078e9ebb04b5ba54_000020.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/560b0dcb1cb48393_000021.jpg",
+        "thumb": "thumbs/560b0dcb1cb48393_000021.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/a4ef61266ce0e8b2_000022.jpg",
+        "thumb": "thumbs/a4ef61266ce0e8b2_000022.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/d3cb836da23985bf_000023.jpg",
+        "thumb": "thumbs/d3cb836da23985bf_000023.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/e35e3dc151f7b733_000024.jpg",
+        "thumb": "thumbs/e35e3dc151f7b733_000024.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/569477f66286ee1d_000025.jpg",
+        "thumb": "thumbs/569477f66286ee1d_000025.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/c79d66151aa1cc46_000026.jpg",
+        "thumb": "thumbs/c79d66151aa1cc46_000026.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/40ab0c970155b5ff_000027.jpg",
+        "thumb": "thumbs/40ab0c970155b5ff_000027.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 28,
+        "src": "images/b18a95fee39b24b2_000028.jpg",
+        "thumb": "thumbs/b18a95fee39b24b2_000028.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 29,
+        "src": "images/3b9d052236d86aad_000029.jpg",
+        "thumb": "thumbs/3b9d052236d86aad_000029.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 28,
+        "kind": "initial",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 29,
+        "kind": "initial",
+        "source_original_img_idx": 29,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 30,
+        "kind": "region_crop",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          117,
+          309,
+          1560,
+          1477
+        ],
+        "display_size": [
+          1010,
+          818
+        ],
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "presented_img_idx": 31,
+        "kind": "region_crop",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          153,
+          1416,
+          1540,
+          1461
+        ],
+        "display_size": [
+          1942,
+          64
+        ],
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 5.121596687473357,
+        "end_s": 9.303046451881528,
+        "time_to_first_token_s": 1.5403843903914094,
+        "duration_s": 4.181449764408171,
+        "think": "I need to read the total liabilities and total stockholders' equity amounts for April 30, 2021 from the Consolidated Balance Sheets (image 2). I'll zoom into the balance sheet area on image 2.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " total",
+          " liabilities",
+          " and",
+          " total",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          " amounts",
+          " for",
+          " April",
+          " ",
+          "3",
+          "0",
+          ",",
+          " ",
+          "2",
+          "0",
+          "2",
+          "1",
+          " from",
+          " the",
+          " Consolid",
+          "ated",
+          " Balance",
+          " Sheets",
+          " (",
+          "image",
+          " ",
+          "2",
+          ").",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " balance",
+          " sheet",
+          " area",
+          " on",
+          " image",
+          " ",
+          "2",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "center",
+          " area",
+          " showing",
+          " Assets",
+          ",",
+          " Li",
+          "abilities",
+          " and",
+          " Stock",
+          "holders",
+          "'",
+          " Equity",
+          " table",
+          " (",
+          "top",
+          " half",
+          " of",
+          " page",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "6",
+          "9",
+          ",",
+          " ",
+          "1",
+          "4",
+          "0",
+          ",",
+          " ",
+          "9",
+          "1",
+          "8",
+          ",",
+          " ",
+          "6",
+          "7",
+          "2",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "2",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 9.304819096811116,
+            "end_s": 9.336976227350533,
+            "duration_s": 0.03215713053941727,
+            "ok": true,
+            "arguments": {
+              "label": "center area showing Assets, Liabilities and Stockholders' Equity table (top half of page)",
+              "bbox_2d": [
+                69,
+                140,
+                918,
+                672
+              ],
+              "img_idx": 2
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              69,
+              140,
+              918,
+              672
+            ],
+            "img_idx": 2,
+            "label": "center area showing Assets, Liabilities and Stockholders' Equity table (top half of page)"
+          }
+        },
+        "crop_presented_indices": [
+          30
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 9.366180821321905,
+        "end_s": 11.728258135728538,
+        "time_to_first_token_s": 0.1842462131753564,
+        "duration_s": 2.3620773144066334,
+        "think": "I will zoom into the bottom-right area of Image 30 to clearly read the total liabilities and total stockholders' equity numbers for April 30, 2021.",
+        "display_chunks": [
+          "I",
+          " will",
+          " zoom",
+          " into",
+          " the",
+          " bottom",
+          "-right",
+          " area",
+          " of",
+          " Image",
+          " ",
+          "3",
+          "0",
+          " to",
+          " clearly",
+          " read",
+          " the",
+          " total",
+          " liabilities",
+          " and",
+          " total",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          " numbers",
+          " for",
+          " April",
+          " ",
+          "3",
+          "0",
+          ",",
+          " ",
+          "2",
+          "0",
+          "2",
+          "1",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "bottom",
+          "-right",
+          " area",
+          " showing",
+          " '",
+          "Total",
+          " liabilities",
+          "'",
+          " and",
+          " '",
+          "Total",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          "'",
+          " lines",
+          " and",
+          " their",
+          " amounts",
+          "\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "2",
+          "5",
+          ",",
+          " ",
+          "9",
+          "4",
+          "7",
+          ",",
+          " ",
+          "9",
+          "8",
+          "6",
+          ",",
+          " ",
+          "9",
+          "8",
+          "7",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "3",
+          "0",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 11.729986714199185,
+            "end_s": 11.732688816264272,
+            "duration_s": 0.0027021020650863647,
+            "ok": true,
+            "arguments": {
+              "label": "bottom-right area showing 'Total liabilities' and 'Total stockholders' equity' lines and their amounts",
+              "bbox_2d": [
+                25,
+                947,
+                986,
+                987
+              ],
+              "img_idx": 30
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              25,
+              947,
+              986,
+              987
+            ],
+            "img_idx": 30,
+            "label": "bottom-right area showing 'Total liabilities' and 'Total stockholders' equity' lines and their amounts"
+          }
+        },
+        "crop_presented_indices": [
+          31
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "answer",
+        "start_s": 11.739064440131187,
+        "end_s": 13.89254801813513,
+        "time_to_first_token_s": 0.1563373077660799,
+        "duration_s": 2.153483578003943,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " balance",
+          " sheet",
+          ",",
+          " Total",
+          " liabilities",
+          " =",
+          " $",
+          "1",
+          "6",
+          ",",
+          "6",
+          "9",
+          "6",
+          " and",
+          " Total",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          " =",
+          " $",
+          "4",
+          "5",
+          ",",
+          "3",
+          "2",
+          "2",
+          " for",
+          " April",
+          " ",
+          "3",
+          "0",
+          ",",
+          " ",
+          "2",
+          "0",
+          "2",
+          "1",
+          ".",
+          " The",
+          " difference",
+          " (",
+          "equ",
+          "ity",
+          " minus",
+          " liabilities",
+          ")",
+          " is",
+          " $",
+          "4",
+          "5",
+          ",",
+          "3",
+          "2",
+          "2",
+          " −",
+          " $",
+          "1",
+          "6",
+          ",",
+          "6",
+          "9",
+          "6",
+          " =",
+          " $",
+          "2",
+          "8",
+          ",",
+          "6",
+          "2",
+          "6",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the balance sheet, Total liabilities = $16,696 and Total stockholders' equity = $45,322 for April 30, 2021. The difference (equity minus liabilities) is $45,322 − $16,696 = $28,626."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 36.703821388073266,
+    "core_time_s": 29.722004138864577,
+    "extracted_answer": "$45,322",
+    "accuracy": 0.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/77e5a99095a99004_000000.jpg",
+        "thumb": "thumbs/77e5a99095a99004_000000.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/4b69a1b0d6a32c96_000001.jpg",
+        "thumb": "thumbs/4b69a1b0d6a32c96_000001.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/ee3f75b85a8df0c3_000002.jpg",
+        "thumb": "thumbs/ee3f75b85a8df0c3_000002.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/ed603f4b574b01a8_000003.jpg",
+        "thumb": "thumbs/ed603f4b574b01a8_000003.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/496ee055f247d859_000004.jpg",
+        "thumb": "thumbs/496ee055f247d859_000004.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/ffaef97ae6b2201d_000005.jpg",
+        "thumb": "thumbs/ffaef97ae6b2201d_000005.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/3aaec43506c982f7_000006.jpg",
+        "thumb": "thumbs/3aaec43506c982f7_000006.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/dcee6598a39984aa_000007.jpg",
+        "thumb": "thumbs/dcee6598a39984aa_000007.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/6dbe2eeca61c27b7_000008.jpg",
+        "thumb": "thumbs/6dbe2eeca61c27b7_000008.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/8b53b8459be79fa6_000009.jpg",
+        "thumb": "thumbs/8b53b8459be79fa6_000009.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/d6e6c2cef6fac390_000010.jpg",
+        "thumb": "thumbs/d6e6c2cef6fac390_000010.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/dbdc9e346a60b198_000011.jpg",
+        "thumb": "thumbs/dbdc9e346a60b198_000011.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/1d7c69980a794280_000012.jpg",
+        "thumb": "thumbs/1d7c69980a794280_000012.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/b10c006102bd015f_000013.jpg",
+        "thumb": "thumbs/b10c006102bd015f_000013.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/704d2e00dc92a5cf_000014.jpg",
+        "thumb": "thumbs/704d2e00dc92a5cf_000014.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/bbacd6cfb265a3da_000015.jpg",
+        "thumb": "thumbs/bbacd6cfb265a3da_000015.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/6f8f29e6efe65732_000016.jpg",
+        "thumb": "thumbs/6f8f29e6efe65732_000016.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/d3c2e99b8d7766d2_000017.jpg",
+        "thumb": "thumbs/d3c2e99b8d7766d2_000017.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/d72a84f641389ebd_000018.jpg",
+        "thumb": "thumbs/d72a84f641389ebd_000018.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/1e7b1b9f1a08ba8d_000019.jpg",
+        "thumb": "thumbs/1e7b1b9f1a08ba8d_000019.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/078e9ebb04b5ba54_000020.jpg",
+        "thumb": "thumbs/078e9ebb04b5ba54_000020.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/560b0dcb1cb48393_000021.jpg",
+        "thumb": "thumbs/560b0dcb1cb48393_000021.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/a4ef61266ce0e8b2_000022.jpg",
+        "thumb": "thumbs/a4ef61266ce0e8b2_000022.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/d3cb836da23985bf_000023.jpg",
+        "thumb": "thumbs/d3cb836da23985bf_000023.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/e35e3dc151f7b733_000024.jpg",
+        "thumb": "thumbs/e35e3dc151f7b733_000024.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/569477f66286ee1d_000025.jpg",
+        "thumb": "thumbs/569477f66286ee1d_000025.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/c79d66151aa1cc46_000026.jpg",
+        "thumb": "thumbs/c79d66151aa1cc46_000026.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/40ab0c970155b5ff_000027.jpg",
+        "thumb": "thumbs/40ab0c970155b5ff_000027.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 28,
+        "src": "images/b18a95fee39b24b2_000028.jpg",
+        "thumb": "thumbs/b18a95fee39b24b2_000028.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 29,
+        "src": "images/3b9d052236d86aad_000029.jpg",
+        "thumb": "thumbs/3b9d052236d86aad_000029.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 28,
+        "kind": "initial",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 29,
+        "kind": "initial",
+        "source_original_img_idx": 29,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 6.978851626627147,
+        "end_s": 36.700895139947534,
+        "time_to_first_token_s": 12.309772806242108,
+        "duration_s": 29.722043513320386,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " consolidated",
+          " balance",
+          " sheet",
+          " for",
+          " Sea",
+          "Change",
+          " International",
+          ",",
+          " Inc",
+          ".",
+          " as",
+          " of",
+          " April",
+          " ",
+          "3",
+          "0",
+          ",",
+          " ",
+          "2",
+          "0",
+          "2",
+          "1",
+          " (",
+          "Image",
+          " ",
+          "2",
+          "),",
+          " we",
+          " can",
+          " find",
+          " the",
+          " required",
+          " values",
+          ":\n\n",
+          "*",
+          "  ",
+          " **",
+          "Total",
+          " liabilities",
+          " and",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          ":**",
+          " $",
+          "6",
+          "2",
+          ",",
+          "0",
+          "1",
+          "8",
+          " (",
+          "This",
+          " is",
+          " the",
+          " total",
+          " value",
+          " of",
+          " the",
+          " company",
+          "'s",
+          " assets",
+          ").\n",
+          "*",
+          "  ",
+          " **",
+          "Total",
+          " liabilities",
+          ":**",
+          " $",
+          "1",
+          "6",
+          ",",
+          "6",
+          "9",
+          "6",
+          "\n\n",
+          "To",
+          " find",
+          " the",
+          " difference",
+          " between",
+          " total",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          " and",
+          " total",
+          " liabilities",
+          ",",
+          " we",
+          " can",
+          " subtract",
+          " the",
+          " total",
+          " liabilities",
+          " from",
+          " the",
+          " total",
+          " liabilities",
+          " and",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          ".\n\n",
+          "Calc",
+          "ulation",
+          ":\n",
+          "$",
+          "6",
+          "2",
+          ",",
+          "0",
+          "1",
+          "8",
+          " -",
+          " $",
+          "1",
+          "6",
+          ",",
+          "6",
+          "9",
+          "6",
+          " =",
+          " $",
+          "4",
+          "5",
+          ",",
+          "3",
+          "2",
+          "2",
+          "\n\n",
+          "This",
+          " result",
+          " matches",
+          " the",
+          " \"",
+          "Total",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          "\"",
+          " figure",
+          " listed",
+          " on",
+          " the",
+          " same",
+          " balance",
+          " sheet",
+          ",",
+          " which",
+          " is",
+          " also",
+          " $",
+          "4",
+          "5",
+          ",",
+          "3",
+          "2",
+          "2",
+          ".\n\n",
+          "Therefore",
+          ",",
+          " the",
+          " difference",
+          " between",
+          " the",
+          " total",
+          " stock",
+          "holders",
+          "'",
+          " equity",
+          " and",
+          " total",
+          " liabilities",
+          " for",
+          " April",
+          " ",
+          "3",
+          "0",
+          ",",
+          " ",
+          "2",
+          "0",
+          "2",
+          "1",
+          ",",
+          " was",
+          " **",
+          "$",
+          "4",
+          "5",
+          ",",
+          "3",
+          "2",
+          "2",
+          "**",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the consolidated balance sheet for SeaChange International, Inc. as of April 30, 2021 (Image 2), we can find the required values:\n\n*   **Total liabilities and stockholders' equity:** $62,018 (This is the total value of the company's assets).\n*   **Total liabilities:** $16,696\n\nTo find the difference between total stockholders' equity and total liabilities, we can subtract the total liabilities from the total liabilities and stockholders' equity.\n\nCalculation:\n$62,018 - $16,696 = $45,322\n\nThis result matches the \"Total stockholders' equity\" figure listed on the same balance sheet, which is also $45,322.\n\nTherefore, the difference between the total stockholders' equity and total liabilities for April 30, 2021, was **$45,322**."
+      }
+    ]
+  }
+}
