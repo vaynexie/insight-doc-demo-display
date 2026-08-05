@@ -34,6 +34,19 @@
       "ground_truth": "7"
     },
     {
+      "id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1",
+      "benchmark": "longdocurl0507_highpage",
+      "label": "LongDocURL highpage · canvas weight",
+      "question": "What are the maximum weight capacities for canvases on the M/20, M/25, and M/22 models, respectively?\n(A). 10kg, 8kg, 8kg\n(B). 8kg, 10kg, 10kg\n(C). 22lbs, 22lbs, 17.5lbs\n(D). 22lbs, 22lbs, 85.5lbs\nChoose the letter name in front of the right option from A, B, C, D.",
+      "page_count": 108,
+      "path": "data/examples/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1.json",
+      "insight_wall_time_s": 121.02093730866909,
+      "baseline_wall_time_s": 201.72712353710085,
+      "insight_answer": "C",
+      "baseline_answer": "A",
+      "ground_truth": "\"C\""
+    },
+    {
       "id": "055_mmlongbench_mmlongbench_289",
       "benchmark": "mmlongbench",
       "label": "MMLongBench · HOVER gap",
@@ -97,6 +110,32 @@
       "insight_answer": "Clinton has the higher median campaign grade.",
       "baseline_answer": "Hillary Clinton has a higher median campaign grade than Donald Trump.",
       "ground_truth": "Clinton"
+    },
+    {
+      "id": "004_mmlongbench0507_highpage_mmlongbench_871",
+      "benchmark": "mmlongbench0507_highpage",
+      "label": "MMLongBench highpage · Fig.4 efficiency",
+      "question": "According to this paper, among nice different datasets in Fig 4, which one can reflect the highest efficiency?",
+      "page_count": 117,
+      "path": "data/examples/004_mmlongbench0507_highpage_mmlongbench_871.json",
+      "insight_wall_time_s": 60.149354747496545,
+      "baseline_wall_time_s": 124.36605489999056,
+      "insight_answer": "The question is unanswerable from the provided document. The paper’s Figure 4 plots depth (reasoning) vs breadth (knowledge), not “efficiency,” so it does not support identifying which dataset reflects the highest efficiency. (For reference, the figure does show MMMU at the top-right and other datasets lower-left, but that relates to depth/breadth, not efficiency.)",
+      "baseline_answer": "MMMU",
+      "ground_truth": "\"Not answerable\""
+    },
+    {
+      "id": "018_mmlongbench0507_highpage_mmlongbench_779",
+      "benchmark": "mmlongbench0507_highpage",
+      "label": "MMLongBench highpage · QK-norm spike",
+      "question": "At which step, the loss spikes when without QK-norm?",
+      "page_count": 27,
+      "path": "data/examples/018_mmlongbench0507_highpage_mmlongbench_779.json",
+      "insight_wall_time_s": 33.467253940179944,
+      "baseline_wall_time_s": 234.37937868572772,
+      "insight_answer": "step 150k",
+      "baseline_answer": "Therefore, the loss spikes at approximately step 100k when QK-Norm is not used.",
+      "ground_truth": "\"150k\""
     },
     {
       "id": "035_mpdocvqa_mpdocvqa_63159",

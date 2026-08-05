@@ -1,5 +1,5 @@
 #!/usr/bin/env python3
-"""Package the nine curated trajectory pairs into a portable static Pages data tree."""
+"""Package curated trajectory pairs into a portable static Pages data tree."""
 
 from __future__ import annotations
 
@@ -10,10 +10,16 @@ from typing import Any
 
 from PIL import Image
 
-BUNDLE_ROOT = Path(
-    "/Users/xieweiyan/Downloads/rl_ckpt700_actor_merged_hf_broad_fast_rescale025_20260525"
-    "/demo_trajectory_candidates_rl_r035_base_r07_legacy_prompt_v2_20260804"
-)
+BUNDLE_ROOTS = {
+    "default": Path(
+        "/Users/xieweiyan/Downloads/rl_ckpt700_actor_merged_hf_broad_fast_rescale025_20260525"
+        "/demo_trajectory_candidates_rl_r035_base_r07_legacy_prompt_v2_20260804"
+    ),
+    "highpage": Path(
+        "/Users/xieweiyan/Downloads/rl_ckpt700_actor_merged_hf_broad_fast_rescale025_20260525"
+        "/demo_trajectory_candidates_highpage30_rl_r035_base_r07_legacy_prompt_v2_20260805"
+    ),
+}
 OUT_ROOT = Path(__file__).resolve().parent.parent
 DATA_ROOT = OUT_ROOT / "data"
 
@@ -22,61 +28,91 @@ EXAMPLE_SPECS = [
         "id": "062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6",
         "benchmark": "longdocurl",
         "label": "LongDocURL · contest prize money",
+        "bundle": "default",
     },
     {
         "id": "073_longdocurl_longdocurl_free_gpt4o_4127644_8_37_3",
         "benchmark": "longdocurl",
         "label": "LongDocURL · Vistra retirements",
+        "bundle": "default",
+    },
+    {
+        "id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1",
+        "benchmark": "longdocurl0507_highpage",
+        "label": "LongDocURL highpage · canvas weight",
+        "bundle": "highpage",
     },
     {
         "id": "055_mmlongbench_mmlongbench_289",
         "benchmark": "mmlongbench",
         "label": "MMLongBench · HOVER gap",
+        "bundle": "default",
     },
     {
         "id": "048_mmlongbench_mmlongbench_344",
         "benchmark": "mmlongbench",
         "label": "MMLongBench · Trump confidence",
+        "bundle": "default",
     },
     {
         "id": "053_mmlongbench_mmlongbench_842",
         "benchmark": "mmlongbench",
         "label": "MMLongBench · album volume gap",
+        "bundle": "default",
     },
     {
         "id": "050_mmlongbench_mmlongbench_107",
         "benchmark": "mmlongbench",
         "label": "MMLongBench · Skyskraoeren goblets",
+        "bundle": "default",
     },
     {
         "id": "056_mmlongbench_mmlongbench_688",
         "benchmark": "mmlongbench",
         "label": "MMLongBench · campaign grade",
+        "bundle": "default",
+    },
+    {
+        "id": "004_mmlongbench0507_highpage_mmlongbench_871",
+        "benchmark": "mmlongbench0507_highpage",
+        "label": "MMLongBench highpage · Fig.4 efficiency",
+        "bundle": "highpage",
+    },
+    {
+        "id": "018_mmlongbench0507_highpage_mmlongbench_779",
+        "benchmark": "mmlongbench0507_highpage",
+        "label": "MMLongBench highpage · QK-norm spike",
+        "bundle": "highpage",
     },
     {
         "id": "035_mpdocvqa_mpdocvqa_63159",
         "benchmark": "mpdocvqa",
         "label": "MPDocVQA · males in 21-A",
+        "bundle": "default",
     },
     {
         "id": "034_mpdocvqa_mpdocvqa_4746",
         "benchmark": "mpdocvqa",
         "label": "MPDocVQA · cellular telephone",
+        "bundle": "default",
     },
     {
         "id": "033_mpdocvqa_mpdocvqa_55459",
         "benchmark": "mpdocvqa",
         "label": "MPDocVQA · demat shares",
+        "bundle": "default",
     },
     {
         "id": "113_o3bench0502_o3bench_chart_312",
         "benchmark": "o3bench0502",
         "label": "O3Bench · Speakers customer",
+        "bundle": "default",
     },
     {
         "id": "089_mmlite_Reasoning_Autonomous_Driving_Attention_TrafficSignal_0073",
         "benchmark": "mmlite",
         "label": "MMLite · traffic signal",
+        "bundle": "default",
     },
 ]
 
@@ -84,8 +120,15 @@ THUMB_SCALE = 0.2
 THUMB_QUALITY = 78
 
 
-def load_record(side: str, benchmark: str, example_id: str) -> dict[str, Any]:
-    path = BUNDLE_ROOT / "exported_conversations" / side / benchmark / f"{example_id}.json"
+def resolve_bundle(spec: dict[str, Any]) -> Path:
+    key = spec.get("bundle") or "default"
+    if key not in BUNDLE_ROOTS:
+        raise KeyError(f"Unknown bundle key: {key}")
+    return BUNDLE_ROOTS[key]
+
+
+def load_record(bundle_root: Path, side: str, benchmark: str, example_id: str) -> dict[str, Any]:
+    path = bundle_root / "exported_conversations" / side / benchmark / f"{example_id}.json"
     if not path.exists():
         raise FileNotFoundError(path)
     return json.loads(path.read_text(encoding="utf-8"))
@@ -239,14 +282,15 @@ def compact_side(record: dict[str, Any], side: str) -> dict[str, Any]:
     }
 
 
-def ensure_image_assets(relative_values: set[str]) -> None:
+def ensure_image_assets(image_refs: set[tuple[str, str]]) -> None:
     images_dir = DATA_ROOT / "images"
     thumbs_dir = DATA_ROOT / "thumbs"
     images_dir.mkdir(parents=True, exist_ok=True)
     thumbs_dir.mkdir(parents=True, exist_ok=True)
 
-    for value in sorted(relative_values):
-        src = BUNDLE_ROOT / value
+    for bundle_key, value in sorted(image_refs):
+        bundle_root = BUNDLE_ROOTS[bundle_key]
+        src = bundle_root / value
         if not src.exists():
             raise FileNotFoundError(f"Missing image: {src}")
         filename = Path(value).name
@@ -262,7 +306,7 @@ def ensure_image_assets(relative_values: set[str]) -> None:
             width, height = rgb.size
             resized = rgb.resize(
                 (max(1, int(width * THUMB_SCALE)), max(1, int(height * THUMB_SCALE))),
-                Image.LANCZOS,
+                Image.Resampling.LANCZOS,
             )
             resized.save(thumb_path, format="JPEG", quality=THUMB_QUALITY, optimize=True)
 
@@ -273,19 +317,21 @@ def package() -> None:
     examples_dir = DATA_ROOT / "examples"
     examples_dir.mkdir(parents=True, exist_ok=True)
 
-    all_images: set[str] = set()
+    all_images: set[tuple[str, str]] = set()
     manifest_examples: list[dict[str, Any]] = []
 
     for spec in EXAMPLE_SPECS:
         example_id = spec["id"]
         benchmark = spec["benchmark"]
-        rl = load_record("rl", benchmark, example_id)
-        base = load_record("base", benchmark, example_id)
+        bundle_key = spec.get("bundle") or "default"
+        bundle_root = resolve_bundle(spec)
+        rl = load_record(bundle_root, "rl", benchmark, example_id)
+        base = load_record(bundle_root, "base", benchmark, example_id)
 
         for ref in (rl.get("image_references") or {}).get("input_images") or []:
             value = ref.get("value")
             if value:
-                all_images.add(value)
+                all_images.add((bundle_key, value))
 
         compact = {
             "id": example_id,
