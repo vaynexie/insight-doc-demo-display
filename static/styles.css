@@ -144,6 +144,9 @@ body {
   cursor: pointer;
   font-size: 0.95rem;
 }
+#btnRun {
+  width: 9.6rem;
+}
 .btn:hover:not(:disabled) { border-color: var(--accent); }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
 .btn.primary { background: var(--accent-dim); border-color: var(--accent); }
@@ -197,12 +200,18 @@ body {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
+.pdf-thumb-grid.collapsed .pdf-thumb:nth-child(n+25) {
+  display: none;
+}
+
 @media (max-width: 1100px) {
   .pdf-thumb-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
+  .pdf-thumb-grid.collapsed .pdf-thumb:nth-child(n+17) { display: none; }
 }
 
 @media (max-width: 800px) {
   .pdf-thumb-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
+  .pdf-thumb-grid.collapsed .pdf-thumb:nth-child(n+11) { display: none; }
 }
 
 .pdf-thumb {
@@ -225,6 +234,42 @@ body {
   font-size: 0.72rem;
   color: var(--muted);
   text-align: center;
+}
+
+.thumb-toggle {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.35rem;
+  margin-top: 0.55rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: var(--bg);
+  color: var(--text);
+  cursor: pointer;
+  font-size: 0.88rem;
+  padding: 0.35rem 0.55rem;
+}
+
+.thumb-toggle::after {
+  content: "";
+  width: 0;
+  height: 0;
+  border-left: 0.28rem solid transparent;
+  border-right: 0.28rem solid transparent;
+  border-top: 0.34rem solid currentColor;
+  transform-origin: center;
+}
+
+.thumb-toggle.is-expanded::after {
+  transform: rotate(180deg);
+}
+
+.thumb-toggle:hover {
+  border-color: var(--accent);
+}
+
+.thumb-toggle[hidden] {
+  display: none;
 }
 
 .pdf-viewer-modal {

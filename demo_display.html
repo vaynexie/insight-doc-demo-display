@@ -4,7 +4,7 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InSight-doc-8B vs Qwen3-VL-8B</title>
-  <link rel="stylesheet" href="./static/styles.css?v=20260806-3" />
+  <link rel="stylesheet" href="./static/styles.css?v=20260806-6" />
 </head>
 <body>
   <main class="page-shell">
@@ -19,7 +19,7 @@
             aria-describedby="replayTimingTooltip"
           >i</button>
           <span id="replayTimingTooltip" class="title-tooltip-content" role="tooltip">
-            Trajectories are replayed, not generated in real time. Timing is recreated 1:1 from actual generation under the same generation settings for both models. r=0.7 is used for Qwen3-VL-8B and r=0.35 is used for InSight-doc-8B to match their prediction accuracies on the benchmarks.
+            Trajectories are replayed, not generated in real time. Timing is recreated 1:1 from actual generation under the same generation settings for both models, except that r=0.7 (high resolution) is used for Qwen3-VL-8B and r=0.35 (medium-low resolution) is used for InSight-doc-8B to match their overall accuracies on the benchmarks.
           </span>
         </span>
       </div>
@@ -39,6 +39,9 @@
           <h3>PDF Pages (Downsampled)</h3>
           <p class="meta">Click any page thumbnail to view the original image.</p>
           <div id="pdfThumbGrid" class="pdf-thumb-grid">Loading pages…</div>
+          <button id="pdfThumbToggle" class="thumb-toggle" type="button" hidden aria-expanded="false" aria-controls="pdfThumbGrid">
+            Show all pages
+          </button>
         </div>
         <h2>Question</h2>
         <p id="questionText">Loading examples…</p>
@@ -75,6 +78,6 @@
     </div>
   </div>
 
-  <script src="./static/app.js?v=20260806-3"></script>
+  <script src="./static/app.js?v=20260806-6"></script>
 </body>
 </html>

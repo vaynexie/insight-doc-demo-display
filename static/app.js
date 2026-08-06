@@ -2,7 +2,7 @@
   "use strict";
 
   const DATA_BASE = "./data";
-  const DATA_VERSION = "20260806-3";
+  const DATA_VERSION = "20260806-6";
   const IMAGE_CACHE = new Map();
 
   const state = {
@@ -20,6 +20,7 @@
       activeRoundIndex: -1,
       zoomRounds: 0,
     },
+    pdfThumbsExpanded: false,
     pdfViewerObjectUrl: null,
   };
 
@@ -30,6 +31,7 @@
     questionText: document.getElementById("questionText"),
     caseMeta: document.getElementById("caseMeta"),
     pdfThumbGrid: document.getElementById("pdfThumbGrid"),
+    pdfThumbToggle: document.getElementById("pdfThumbToggle"),
     baselineRes: document.getElementById("baselineRes"),
     insightRes: document.getElementById("insightRes"),
     baselineStatus: document.getElementById("baselineStatus"),
@@ -748,9 +750,38 @@
     syncControls();
   }
 
+  function collapsedThumbLimit() {
+    if (window.matchMedia("(max-width: 800px)").matches) return 10;
+    if (window.matchMedia("(max-width: 1100px)").matches) return 16;
+    return 24;
+  }
+
+  function setPdfThumbsExpanded(expanded) {
+    state.pdfThumbsExpanded = expanded;
+    els.pdfThumbGrid.classList.toggle("collapsed", !expanded);
+    els.pdfThumbToggle.textContent = expanded ? "Show fewer pages" : "Show all pages";
+    els.pdfThumbToggle.classList.toggle("is-expanded", expanded);
+    els.pdfThumbToggle.setAttribute("aria-expanded", String(expanded));
+  }
+
+  function updatePdfThumbToggle() {
+    const pageCount = els.pdfThumbGrid.querySelectorAll(".pdf-thumb").length;
+    const canExpand = pageCount > collapsedThumbLimit();
+    els.pdfThumbToggle.hidden = !canExpand;
+    if (!canExpand) {
+      els.pdfThumbGrid.classList.remove("collapsed");
+      els.pdfThumbToggle.classList.remove("is-expanded");
+      els.pdfThumbToggle.setAttribute("aria-expanded", "false");
+      return;
+    }
+    setPdfThumbsExpanded(state.pdfThumbsExpanded);
+  }
+
   function renderPdfThumbnails(example) {
     const pages = example?.insight?.pages || [];
     els.pdfThumbGrid.innerHTML = "";
+    state.pdfThumbsExpanded = false;
+    els.pdfThumbToggle.hidden = true;
     if (!pages.length) {
       els.pdfThumbGrid.textContent = "No pages available.";
       return;
@@ -772,6 +803,7 @@
       thumb.addEventListener("click", () => openPdfViewer(page, idx));
       els.pdfThumbGrid.appendChild(thumb);
     });
+    updatePdfThumbToggle();
   }
 
   function closePdfViewer() {
@@ -815,6 +847,7 @@
     syncControls();
     els.questionText.textContent = "Loading example…";
     els.pdfThumbGrid.textContent = "Loading pages…";
+    els.pdfThumbToggle.hidden = true;
     const meta = (state.manifest.examples || []).find((item) => item.id === exampleId);
     const path = meta?.path || `data/examples/${exampleId}.json`;
     try {
@@ -862,6 +895,10 @@
   els.btnReset.addEventListener("click", () => {
     stopAndReset();
   });
+  els.pdfThumbToggle.addEventListener("click", () => {
+    setPdfThumbsExpanded(!state.pdfThumbsExpanded);
+  });
+  window.addEventListener("resize", updatePdfThumbToggle);
   els.exampleSelect.addEventListener("change", async () => {
     try {
       await loadExample(els.exampleSelect.value);
