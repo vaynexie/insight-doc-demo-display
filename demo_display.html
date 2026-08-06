@@ -7,75 +7,54 @@
   <link rel="stylesheet" href="./static/styles.css" />
 </head>
 <body>
-  <header class="header">
-    <div class="header-inner">
-      <h1>InSight-doc-8B vs Qwen3-VL-8B</h1>
-    </div>
-    <div class="controls">
-      <label class="example-picker">
-        <span>Example</span>
-        <select id="exampleSelect"></select>
-      </label>
-      <button id="btnRun" class="btn primary">Run comparison</button>
-      <button id="btnReset" class="btn" disabled>Reset</button>
-    </div>
-  </header>
-
-  <section class="input-panel">
-    <div class="question-block">
-      <div class="pdf-viewer-block">
-        <h3>PDF Pages (Downsampled)</h3>
-        <p class="meta">Click any page thumbnail to view the original image.</p>
-        <div id="pdfThumbGrid" class="pdf-thumb-grid">Loading pages…</div>
+  <main class="page-shell">
+    <header class="header">
+      <div class="header-inner">
+        <h1>InSight-doc-8B vs Qwen3-VL-8B</h1>
       </div>
-      <h2>Question</h2>
-      <p id="questionText">Loading examples…</p>
-      <p class="meta" id="caseMeta"></p>
-    </div>
-  </section>
-
-  <section class="panes">
-    <article class="pane baseline" id="paneBaseline">
-      <header class="pane-header">
-        <h2>Qwen3-VL-8B</h2>
-        <span class="badge" id="baselineRes">r=0.7</span>
-        <span class="status" id="baselineStatus">idle</span>
-      </header>
-      <div class="stream" id="baselineStream"></div>
-    </article>
-
-    <article class="pane insight" id="paneInsight">
-      <header class="pane-header">
-        <h2>InSight-doc-8B</h2>
-        <span class="badge accent" id="insightRes">r=0.35</span>
-        <span class="status" id="insightStatus">idle</span>
-      </header>
-      <div class="stream interleaved" id="insightStream"></div>
-    </article>
-  </section>
-
-  <section class="comparison" id="comparisonCard" hidden>
-    <h2>Results</h2>
-    <div class="metrics-grid">
-      <div class="metric-card">
-        <h3>Qwen3-VL-8B</h3>
-        <p class="metric-value" id="metricBaselineTime">—</p>
-        <p class="metric-label">Wall time</p>
-        <p class="metric-answer" id="metricBaselineAnswer"></p>
+      <div class="controls">
+        <label class="example-picker">
+          <span>Example</span>
+          <select id="exampleSelect"></select>
+        </label>
+        <button id="btnRun" class="btn primary">Run comparison</button>
+        <button id="btnReset" class="btn" disabled>Reset</button>
       </div>
-      <div class="metric-card highlight">
-        <h3>InSight-doc-8B</h3>
-        <p class="metric-value" id="metricInsightTime">—</p>
-        <p class="metric-label">Wall time · <span id="metricZoomRounds">0</span> zoom rounds</p>
-        <p class="metric-answer" id="metricInsightAnswer"></p>
+    </header>
+
+    <section class="input-panel">
+      <div class="question-block">
+        <div class="pdf-viewer-block">
+          <h3>PDF Pages (Downsampled)</h3>
+          <p class="meta">Click any page thumbnail to view the original image.</p>
+          <div id="pdfThumbGrid" class="pdf-thumb-grid">Loading pages…</div>
+        </div>
+        <h2>Question</h2>
+        <p id="questionText">Loading examples…</p>
+        <p class="meta" id="caseMeta"></p>
       </div>
-      <div class="metric-card ground-truth">
-        <h3>Ground truth</h3>
-        <p class="metric-value" id="metricGroundTruth">—</p>
-        <p class="metric-label">Gold answer</p>
-      </div>
-    </div>
-  </section>
+    </section>
+
+    <section class="panes">
+      <article class="pane baseline" id="paneBaseline">
+        <header class="pane-header">
+          <h2>Qwen3-VL-8B</h2>
+          <span class="badge" id="baselineRes">r=0.7</span>
+          <span class="status" id="baselineStatus">idle</span>
+        </header>
+        <div class="stream" id="baselineStream"></div>
+      </article>
+
+      <article class="pane insight" id="paneInsight">
+        <header class="pane-header">
+          <h2>InSight-doc-8B</h2>
+          <span class="badge accent" id="insightRes">r=0.35</span>
+          <span class="status" id="insightStatus">idle</span>
+        </header>
+        <div class="stream interleaved" id="insightStream"></div>
+      </article>
+    </section>
+  </main>
 
   <div id="pdfViewerModal" class="pdf-viewer-modal" hidden>
     <div class="pdf-viewer-dialog">

@@ -32,13 +32,6 @@
     insightStatus: document.getElementById("insightStatus"),
     baselineStream: document.getElementById("baselineStream"),
     insightStream: document.getElementById("insightStream"),
-    comparisonCard: document.getElementById("comparisonCard"),
-    metricBaselineTime: document.getElementById("metricBaselineTime"),
-    metricInsightTime: document.getElementById("metricInsightTime"),
-    metricZoomRounds: document.getElementById("metricZoomRounds"),
-    metricBaselineAnswer: document.getElementById("metricBaselineAnswer"),
-    metricInsightAnswer: document.getElementById("metricInsightAnswer"),
-    metricGroundTruth: document.getElementById("metricGroundTruth"),
     pdfViewerModal: document.getElementById("pdfViewerModal"),
     pdfViewerImage: document.getElementById("pdfViewerImage"),
     pdfViewerCaption: document.getElementById("pdfViewerCaption"),
@@ -88,6 +81,27 @@
     return match ? match[1] : text;
   }
 
+  function normalizeText(value) {
+    return String(value ?? "")
+      .replace(/\r\n/g, "\n")
+      .replace(/\\n/g, "\n");
+  }
+
+  function escapeHtml(value) {
+    return String(value ?? "")
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;");
+  }
+
+  function renderPlainMarkdown(el, value) {
+    let html = escapeHtml(normalizeText(value));
+    html = html.replace(/\*\*(.+?)\*\*/g, "<strong>$1</strong>");
+    html = html.replace(/\n/g, "<br>");
+    el.classList.add("rich-text");
+    el.innerHTML = html;
+  }
+
   function streamEl(side) {
     return side === "insight" ? els.insightStream : els.baselineStream;
   }
@@ -115,10 +129,10 @@
 
   function showWaiting(side, message) {
     clearWaiting(side);
-    const { card, body } = addEventCard(side, "think", "Waiting");
+    const { card, body } = addEventCard(side, "think", "Running");
     body.textContent = message;
     card.dataset.waiting = "1";
-    setStatus(side, "waiting", "waiting");
+    setStatus(side, "running", "running");
   }
 
   function clearWaiting(side) {
@@ -130,7 +144,7 @@
   function startInsightRound(roundNumber) {
     const idx = roundNumber - 1;
     if (!state.insight.rounds[idx]) {
-      state.insight.rounds[idx] = { label: `Run ${roundNumber}` };
+      state.insight.rounds[idx] = { label: `Turn ${roundNumber}` };
     }
     const round = state.insight.rounds[idx];
     if (!round.el) {
@@ -154,13 +168,6 @@
     els.baselineStream.innerHTML = "";
     els.insightStream.innerHTML = "";
     state.insight = { rounds: [], activeRoundIndex: -1, zoomRounds: 0 };
-    els.comparisonCard.hidden = true;
-    els.metricBaselineTime.textContent = "—";
-    els.metricInsightTime.textContent = "—";
-    els.metricZoomRounds.textContent = "0";
-    els.metricBaselineAnswer.textContent = "";
-    els.metricInsightAnswer.textContent = "";
-    els.metricGroundTruth.textContent = "—";
     setStatus("baseline", "idle");
     setStatus("insight", "idle");
   }
@@ -329,7 +336,7 @@
     for (const item of items) {
       if (!item?.url) continue;
       const wrap = document.createElement("div");
-      wrap.className = "tool-image-item";
+      wrap.className = `tool-image-item ${item.kind === "bbox" ? "bbox-item" : "crop-item"}`;
       const label = document.createElement("div");
       label.className = "tool-image-label";
       label.textContent = item.label;
@@ -347,60 +354,48 @@
     streamEl(side).scrollTop = streamEl(side).scrollHeight;
   }
 
-  async function streamText(side, body, text, durationMs, token) {
-    const content = String(text || "");
-    if (!content) return;
-    if (durationMs <= 0 || content.length <= 1) {
-      body.textContent = content;
-      scrollSide(side);
-      return;
-    }
-    const chunkSize = Math.max(
-      1,
-      Math.ceil(content.length / Math.max(1, Math.floor(durationMs / 28)))
-    );
-    const chunks = [];
-    for (let i = 0; i < content.length; i += chunkSize) {
-      chunks.push(content.slice(i, i + chunkSize));
-    }
-    const step = durationMs / chunks.length;
-    body.textContent = "";
-    for (const chunk of chunks) {
-      if (token !== state.runToken) return;
-      body.textContent += chunk;
-      scrollSide(side);
-      await sleep(step, token);
-    }
-  }
-
   async function streamChunks(side, body, chunks, durationMs, token) {
     const list = Array.isArray(chunks) ? chunks.filter((c) => c != null && c !== "") : [];
-    if (!list.length) return;
+    if (!list.length) return "";
+    body.classList.remove("rich-text");
     if (durationMs <= 0 || list.length === 1) {
-      body.textContent = list.join("");
+      const text = list.join("");
+      body.textContent = text;
       scrollSide(side);
-      return;
+      return text;
     }
     const step = durationMs / list.length;
     body.textContent = "";
     for (const chunk of list) {
-      if (token !== state.runToken) return;
+      if (token !== state.runToken) return body.textContent;
       body.textContent += chunk;
       scrollSide(side);
       await sleep(step, token);
     }
+    return body.textContent;
   }
 
-  function chunksBeforeToolCall(chunks) {
-    const list = Array.isArray(chunks) ? chunks : [];
-    const out = [];
-    let joined = "";
-    for (const chunk of list) {
-      joined += chunk;
-      if (joined.includes("<tool_call>")) break;
-      out.push(chunk);
+  async function streamTextAsTokens(side, body, text, durationMs, token) {
+    // Fallback only when display_chunks are missing: approximate token-like pieces.
+    const content = normalizeText(text);
+    if (!content) return "";
+    const approx = content.match(/\s+|\S+/g) || [content];
+    return streamChunks(side, body, approx, durationMs, token);
+  }
+
+  function appendAnswerFooter(card, sideData, finalAnswer, zoomRound) {
+    const footer = document.createElement("div");
+    footer.className = "answer-footer";
+    const gt = formatGroundTruth(state.example?.ground_truth || "—");
+    const lines = [
+      `<div><strong>Ground truth:</strong> ${escapeHtml(gt)}</div>`,
+      `<div><strong>Total generation time:</strong> ${escapeHtml(formatSeconds(sideData.wall_time_s))}</div>`,
+    ];
+    if (sideData.side === "rl" || zoomRound > 0) {
+      lines.push(`<div><strong>Tool turns:</strong> ${zoomRound}</div>`);
     }
-    return out;
+    footer.innerHTML = lines.join("");
+    card.appendChild(footer);
   }
 
   async function waitUntil(elapsedTargetS, startedAt, token) {
@@ -414,17 +409,12 @@
 
   async function replaySide(side, sideData, token, startedAt) {
     const isInsight = side === "insight";
-    setStatus(side, "waiting", "waiting");
-    showWaiting(
-      side,
-      isInsight
-        ? "Waiting for InSight-doc-8B first token…"
-        : "Waiting for Qwen3-VL-8B first token…"
-    );
+    showWaiting(side, "Prefilling… waiting for decoding to start");
 
     const turns = sideData.turns || [];
     let zoomRound = 0;
     let finalAnswer = sideData.extracted_answer || "";
+    let lastAnswerCard = null;
 
     for (let turnIndex = 0; turnIndex < turns.length; turnIndex += 1) {
       if (token !== state.runToken) return;
@@ -453,26 +443,23 @@
       if (token !== state.runToken) return;
 
       const streamBudgetMs = Math.max(0, (duration - ttft) * 1000);
-      const thinkText = (turn.think || "").trim();
-      const answerText = (turn.answer || "").trim();
+      const responseChunks = turn.display_chunks || [];
 
       if (turn.type === "tool_call") {
-        if (thinkText || (turn.display_chunks || []).length) {
-          const thinkCard = addEventCard(side, "think", "Thinking");
-          const thinkChunks = chunksBeforeToolCall(turn.display_chunks);
-          if (thinkChunks.length) {
-            await streamChunks(side, thinkCard.body, thinkChunks, streamBudgetMs, token);
-            if (!thinkCard.body.textContent.trim() && thinkText) {
-              thinkCard.body.textContent = thinkText;
-            }
-          } else {
-            await streamText(side, thinkCard.body, thinkText, streamBudgetMs, token);
-          }
+        // Stream the full assistant response tokens, including raw <tool_call> markup.
+        const responseCard = addEventCard(side, "think", "Response");
+        if (responseChunks.length) {
+          await streamChunks(side, responseCard.body, responseChunks, streamBudgetMs, token);
+        } else {
+          const fallback = [turn.think || "", turn.tool_call ? `\n<tool_call>\n${JSON.stringify(turn.tool_call)}\n</tool_call>` : ""]
+            .join("")
+            .trim();
+          await streamTextAsTokens(side, responseCard.body, fallback, streamBudgetMs, token);
         }
 
         const tool = turn.tool_call || {};
         const args = tool.arguments || {};
-        const toolCard = addEventCard(side, "tool", `Tool Call · Round ${zoomRound}`);
+        const toolCard = addEventCard(side, "tool", `Tool Call · Turn ${zoomRound}`);
         const meta = document.createElement("div");
         meta.className = "event-meta";
         meta.textContent = [
@@ -496,7 +483,7 @@
         if (Array.isArray(args.bbox_2d) && typeof args.img_idx === "number") {
           try {
             const overlay = await renderBboxOverlay(sideData, args.img_idx, args.bbox_2d);
-            appendToolImages(toolCard.body, [{ label: "BBox overlay", url: overlay }]);
+            appendToolImages(toolCard.body, [{ label: "BBox overlay", url: overlay, kind: "bbox" }]);
           } catch (err) {
             const note = document.createElement("div");
             note.className = "event-meta";
@@ -515,7 +502,9 @@
         for (const cropIdx of cropIdxs) {
           try {
             const cropUrl = await renderPresentedImage(sideData, cropIdx);
-            appendToolImages(toolCard.body, [{ label: `Crop · image ${cropIdx}`, url: cropUrl }]);
+            appendToolImages(toolCard.body, [
+              { label: `Crop · image ${cropIdx}`, url: cropUrl, kind: "crop" },
+            ]);
           } catch (err) {
             const note = document.createElement("div");
             note.className = "event-meta";
@@ -524,25 +513,30 @@
           }
         }
       } else {
-        if (thinkText) {
-          const thinkCard = addEventCard(side, "think", "Thinking");
-          await streamText(side, thinkCard.body, thinkText, streamBudgetMs * 0.4, token);
-        }
-        const answerCard = addEventCard(side, "answer", "Answer");
-        const answerBudget = thinkText ? streamBudgetMs * 0.6 : streamBudgetMs;
-        if ((turn.display_chunks || []).length && !answerText) {
-          await streamChunks(side, answerCard.body, turn.display_chunks, answerBudget, token);
-        } else {
-          await streamText(
+        const answerCard = addEventCard(side, "answer", "Response");
+        lastAnswerCard = answerCard;
+        let streamed = "";
+        if (responseChunks.length) {
+          streamed = await streamChunks(
             side,
             answerCard.body,
-            answerText || finalAnswer,
-            answerBudget,
+            responseChunks,
+            streamBudgetMs,
+            token
+          );
+        } else {
+          streamed = await streamTextAsTokens(
+            side,
+            answerCard.body,
+            turn.answer || finalAnswer,
+            streamBudgetMs,
             token
           );
         }
-        if (answerCard.body.textContent.trim()) {
-          finalAnswer = answerCard.body.textContent.trim();
+        const raw = streamed || turn.answer || finalAnswer || "";
+        if (raw.trim()) {
+          finalAnswer = raw.trim();
+          renderPlainMarkdown(answerCard.body, raw);
         }
         await waitUntil(turn.end_s || 0, startedAt, token);
       }
@@ -552,21 +546,20 @@
     if (token !== state.runToken) return;
     clearWaiting(side);
     setStatus(side, "done", "done");
+
+    if (!lastAnswerCard) {
+      lastAnswerCard = addEventCard(side, "answer", "Response");
+      renderPlainMarkdown(
+        lastAnswerCard.body,
+        finalAnswer || sideData.extracted_answer || "—"
+      );
+    }
+    appendAnswerFooter(lastAnswerCard.card, sideData, finalAnswer, zoomRound);
     return {
       wallTime: sideData.wall_time_s,
       answer: finalAnswer || sideData.extracted_answer || "",
       zoomRounds: zoomRound,
     };
-  }
-
-  function renderResults(baselineResult, insightResult) {
-    els.comparisonCard.hidden = false;
-    els.metricBaselineTime.textContent = formatSeconds(baselineResult?.wallTime);
-    els.metricInsightTime.textContent = formatSeconds(insightResult?.wallTime);
-    els.metricZoomRounds.textContent = String(insightResult?.zoomRounds ?? state.insight.zoomRounds ?? 0);
-    els.metricBaselineAnswer.textContent = baselineResult?.answer || state.example?.baseline?.extracted_answer || "";
-    els.metricInsightAnswer.textContent = insightResult?.answer || state.example?.insight?.extracted_answer || "";
-    els.metricGroundTruth.textContent = formatGroundTruth(state.example?.ground_truth || "");
   }
 
   async function runComparison() {
@@ -582,13 +575,10 @@
 
     const startedAt = performance.now();
     try {
-      const [baselineResult, insightResult] = await Promise.all([
+      await Promise.all([
         replaySide("baseline", state.example.baseline, token, startedAt),
         replaySide("insight", state.example.insight, token, startedAt),
       ]);
-      if (token === state.runToken) {
-        renderResults(baselineResult, insightResult);
-      }
     } catch (err) {
       if (token === state.runToken) {
         setStatus("baseline", "error", "error");
@@ -686,11 +676,10 @@
     state.example = example;
     state.exampleId = example.id;
     els.exampleSelect.value = example.id;
-    els.questionText.textContent = example.question || "";
+    renderPlainMarkdown(els.questionText, example.question || "");
     els.caseMeta.textContent = `${example.label} · ${example.benchmark} · ${example.page_count} pages`;
     els.baselineRes.textContent = `r=${Number(example.baseline?.initial_rescale ?? 0.7)}`;
     els.insightRes.textContent = `r=${Number(example.insight?.initial_rescale ?? 0.35)}`;
-    els.metricGroundTruth.textContent = formatGroundTruth(example.ground_truth || "");
     renderPdfThumbnails(example);
   }
 
