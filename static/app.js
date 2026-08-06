@@ -9,7 +9,9 @@
     example: null,
     exampleId: null,
     running: false,
+    loadingExample: false,
     runToken: 0,
+    loadToken: 0,
     timers: new Set(),
     insight: {
       rounds: [],
@@ -170,6 +172,19 @@
     state.insight = { rounds: [], activeRoundIndex: -1, zoomRounds: 0 };
     setStatus("baseline", "idle");
     setStatus("insight", "idle");
+  }
+
+  function isActiveToken(token) {
+    return token === state.runToken;
+  }
+
+  function syncControls() {
+    const busy = state.running || state.loadingExample;
+    els.btnRun.disabled = busy || !state.example;
+    els.btnReset.disabled =
+      !state.running && !els.baselineStream.childElementCount && !els.insightStream.childElementCount;
+    // Keep example switching available so users can abort a run by changing cases.
+    els.exampleSelect.disabled = state.loadingExample;
   }
 
   function loadImage(url) {
@@ -456,6 +471,7 @@
             .trim();
           await streamTextAsTokens(side, responseCard.body, fallback, streamBudgetMs, token);
         }
+        if (!isActiveToken(token)) return;
 
         const tool = turn.tool_call || {};
         const args = tool.arguments || {};
@@ -478,13 +494,15 @@
         if (trace) {
           await waitUntil(trace.start_s || turn.end_s || 0, startedAt, token);
         }
-        if (token !== state.runToken) return;
+        if (!isActiveToken(token)) return;
 
         if (Array.isArray(args.bbox_2d) && typeof args.img_idx === "number") {
           try {
             const overlay = await renderBboxOverlay(sideData, args.img_idx, args.bbox_2d);
+            if (!isActiveToken(token)) return;
             appendToolImages(toolCard.body, [{ label: "BBox overlay", url: overlay, kind: "bbox" }]);
           } catch (err) {
+            if (!isActiveToken(token)) return;
             const note = document.createElement("div");
             note.className = "event-meta";
             note.textContent = `BBox overlay unavailable (${err.message})`;
@@ -497,15 +515,17 @@
         } else {
           await waitUntil(turn.end_s || 0, startedAt, token);
         }
-        if (token !== state.runToken) return;
+        if (!isActiveToken(token)) return;
 
         for (const cropIdx of cropIdxs) {
           try {
             const cropUrl = await renderPresentedImage(sideData, cropIdx);
+            if (!isActiveToken(token)) return;
             appendToolImages(toolCard.body, [
               { label: `Crop · image ${cropIdx}`, url: cropUrl, kind: "crop" },
             ]);
           } catch (err) {
+            if (!isActiveToken(token)) return;
             const note = document.createElement("div");
             note.className = "event-meta";
             note.textContent = `Crop ${cropIdx} unavailable (${err.message})`;
@@ -533,17 +553,19 @@
             token
           );
         }
+        if (!isActiveToken(token)) return;
         const raw = streamed || turn.answer || finalAnswer || "";
         if (raw.trim()) {
           finalAnswer = raw.trim();
           renderPlainMarkdown(answerCard.body, raw);
         }
         await waitUntil(turn.end_s || 0, startedAt, token);
+        if (!isActiveToken(token)) return;
       }
     }
 
     await waitUntil(sideData.wall_time_s || 0, startedAt, token);
-    if (token !== state.runToken) return;
+    if (!isActiveToken(token)) return;
     clearWaiting(side);
     setStatus(side, "done", "done");
 
@@ -563,34 +585,37 @@
   }
 
   async function runComparison() {
-    if (!state.example || state.running) return;
+    if (!state.example || state.running || state.loadingExample) return;
+    const example = state.example;
+    const exampleId = state.exampleId;
     state.running = true;
     state.runToken += 1;
     const token = state.runToken;
     clearTimers();
     resetStreams();
-    els.btnRun.disabled = true;
-    els.btnReset.disabled = false;
-    els.exampleSelect.disabled = true;
+    syncControls();
 
     const startedAt = performance.now();
     try {
       await Promise.all([
-        replaySide("baseline", state.example.baseline, token, startedAt),
-        replaySide("insight", state.example.insight, token, startedAt),
+        replaySide("baseline", example.baseline, token, startedAt),
+        replaySide("insight", example.insight, token, startedAt),
       ]);
     } catch (err) {
-      if (token === state.runToken) {
+      if (isActiveToken(token)) {
         setStatus("baseline", "error", "error");
         setStatus("insight", "error", "error");
         const { body } = addEventCard("baseline", "think", "Error");
         body.textContent = err.message || String(err);
       }
     } finally {
-      if (token === state.runToken) {
+      if (isActiveToken(token)) {
         state.running = false;
-        els.btnRun.disabled = false;
-        els.exampleSelect.disabled = false;
+        // If the example changed mid-run, discard any leftover stream from the old case.
+        if (state.exampleId !== exampleId) {
+          resetStreams();
+        }
+        syncControls();
       }
     }
   }
@@ -600,9 +625,7 @@
     state.running = false;
     clearTimers();
     resetStreams();
-    els.btnRun.disabled = false;
-    els.btnReset.disabled = true;
-    els.exampleSelect.disabled = false;
+    syncControls();
   }
 
   function renderPdfThumbnails(example) {
@@ -665,33 +688,48 @@
   }
 
   async function loadExample(exampleId) {
+    state.loadToken += 1;
+    const loadToken = state.loadToken;
+    state.loadingExample = true;
     stopAndReset();
+    syncControls();
     els.questionText.textContent = "Loading example…";
     els.pdfThumbGrid.textContent = "Loading pages…";
     const meta = (state.manifest.examples || []).find((item) => item.id === exampleId);
     const path = meta?.path || `data/examples/${exampleId}.json`;
-    const res = await fetch(`./${path.replace(/^\.\//, "")}`);
-    if (!res.ok) throw new Error(`Failed to load example (${res.status})`);
-    const example = await res.json();
-    state.example = example;
-    state.exampleId = example.id;
-    els.exampleSelect.value = example.id;
-    renderPlainMarkdown(els.questionText, example.question || "");
-    els.caseMeta.textContent = `${example.label} · ${example.benchmark} · ${example.page_count} pages`;
-    els.baselineRes.textContent = `r=${Number(example.baseline?.initial_rescale ?? 0.7)}`;
-    els.insightRes.textContent = `r=${Number(example.insight?.initial_rescale ?? 0.35)}`;
-    renderPdfThumbnails(example);
+    try {
+      const res = await fetch(`./${path.replace(/^\.\//, "")}`);
+      if (!res.ok) throw new Error(`Failed to load example (${res.status})`);
+      const example = await res.json();
+      // A newer example selection superseded this fetch.
+      if (loadToken !== state.loadToken) return;
+      state.example = example;
+      state.exampleId = example.id;
+      els.exampleSelect.value = example.id;
+      // Clear again in case a stale run wrote into the streams during fetch.
+      resetStreams();
+      renderPlainMarkdown(els.questionText, example.question || "");
+      els.caseMeta.textContent = `${example.label} · ${example.benchmark} · ${example.page_count} pages`;
+      els.baselineRes.textContent = `r=${Number(example.baseline?.initial_rescale ?? 0.7)}`;
+      els.insightRes.textContent = `r=${Number(example.insight?.initial_rescale ?? 0.35)}`;
+      renderPdfThumbnails(example);
+    } finally {
+      if (loadToken === state.loadToken) {
+        state.loadingExample = false;
+        syncControls();
+      }
+    }
   }
 
   async function init() {
-    els.btnRun.disabled = true;
+    state.loadingExample = true;
+    syncControls();
     const res = await fetch(`${DATA_BASE}/examples.json`);
     if (!res.ok) throw new Error(`Failed to load examples.json (${res.status})`);
     state.manifest = await res.json();
     populateExampleSelect(state.manifest);
     const initialId = state.manifest.default_example_id || state.manifest.examples?.[0]?.id;
     await loadExample(initialId);
-    els.btnRun.disabled = false;
   }
 
   els.btnRun.addEventListener("click", () => {
