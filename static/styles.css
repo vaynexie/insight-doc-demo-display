@@ -332,6 +332,27 @@ body {
   background: rgba(91, 156, 255, 0.08);
 }
 
+.event-card.summary {
+  border-left: 3px solid #c9a227;
+  background: rgba(201, 162, 39, 0.08);
+}
+
+.event-card.summary .event-body {
+  font-family: var(--font);
+  font-size: 1.15rem;
+  line-height: 1.65;
+  white-space: normal;
+}
+
+.event-card.summary .event-body div + div {
+  margin-top: 0.25rem;
+}
+
+.event-card.summary .event-body strong {
+  color: var(--text);
+  font-weight: 700;
+}
+
 .event-body {
   white-space: pre-wrap;
   word-break: break-word;
@@ -393,20 +414,4 @@ body {
   color: var(--muted);
   margin-top: 0.2rem;
   font-size: 0.85rem;
-}
-
-.answer-footer {
-  margin-top: 0.55rem;
-  padding-top: 0.45rem;
-  border-top: 1px solid var(--border);
-  color: var(--muted);
-  font-family: var(--font);
-  font-size: 0.88rem;
-  white-space: normal;
-  line-height: 1.5;
-}
-
-.answer-footer strong {
-  color: var(--text);
-  font-weight: 650;
 }

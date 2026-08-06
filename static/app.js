@@ -398,9 +398,8 @@
     return streamChunks(side, body, approx, durationMs, token);
   }
 
-  function appendAnswerFooter(card, sideData, finalAnswer, zoomRound) {
-    const footer = document.createElement("div");
-    footer.className = "answer-footer";
+  function appendAnswerFooter(side, sideData, zoomRound) {
+    const { card, body } = addEventCard(side, "summary", "Summary");
     const gt = formatGroundTruth(state.example?.ground_truth || "—");
     const lines = [
       `<div><strong>Ground truth:</strong> ${escapeHtml(gt)}</div>`,
@@ -409,8 +408,9 @@
     if (sideData.side === "rl" || zoomRound > 0) {
       lines.push(`<div><strong>Tool turns:</strong> ${zoomRound}</div>`);
     }
-    footer.innerHTML = lines.join("");
-    card.appendChild(footer);
+    body.classList.add("rich-text");
+    body.innerHTML = lines.join("");
+    return card;
   }
 
   async function waitUntil(elapsedTargetS, startedAt, token) {
@@ -576,7 +576,7 @@
         finalAnswer || sideData.extracted_answer || "—"
       );
     }
-    appendAnswerFooter(lastAnswerCard.card, sideData, finalAnswer, zoomRound);
+    appendAnswerFooter(side, sideData, zoomRound);
     return {
       wallTime: sideData.wall_time_s,
       answer: finalAnswer || sideData.extracted_answer || "",
