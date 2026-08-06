@@ -373,19 +373,26 @@
     const list = Array.isArray(chunks) ? chunks.filter((c) => c != null && c !== "") : [];
     if (!list.length) return "";
     body.classList.remove("rich-text");
-    if (durationMs <= 0 || list.length === 1) {
-      const text = list.join("");
-      body.textContent = text;
-      scrollSide(side);
-      return text;
-    }
-    const step = durationMs / list.length;
     body.textContent = "";
-    for (const chunk of list) {
-      if (token !== state.runToken) return body.textContent;
-      body.textContent += chunk;
+
+    // Pace against this turn's own clock so we keep the JSON inter-token gaps
+    // even if earlier turns/tools made the global wall clock drift late.
+    // Using cumulative targets avoids setTimeout drift making later tokens rush.
+    const streamStartedAt = performance.now();
+    const n = list.length;
+    for (let i = 0; i < n; i += 1) {
+      if (!isActiveToken(token)) return body.textContent;
+      body.textContent += list[i];
       scrollSide(side);
-      await sleep(step, token);
+      if (i >= n - 1) break;
+      const targetOffsetMs = ((i + 1) / n) * durationMs;
+      const elapsedMs = performance.now() - streamStartedAt;
+      const remainMs = targetOffsetMs - elapsedMs;
+      if (remainMs > 0) {
+        await sleep(remainMs, token);
+      }
+      // If remainMs <= 0 we are behind within this turn (e.g. main-thread stall);
+      // emit the next token immediately and let later cumulative targets re-sync.
     }
     return body.textContent;
   }
@@ -432,13 +439,15 @@
     let lastAnswerCard = null;
 
     for (let turnIndex = 0; turnIndex < turns.length; turnIndex += 1) {
-      if (token !== state.runToken) return;
+      if (!isActiveToken(token)) return;
       const turn = turns[turnIndex];
-      await waitUntil(turn.start_s || 0, startedAt, token);
-      if (token !== state.runToken) return;
 
-      clearWaiting(side);
+      // Hold / re-show Prefilling until this turn's first decode token.
+      showWaiting(side, "Prefilling… waiting for decoding to start");
       setStatus(side, "running", "running");
+
+      await waitUntil(turn.start_s || 0, startedAt, token);
+      if (!isActiveToken(token)) return;
 
       if (isInsight) {
         if (turn.type === "tool_call") {
@@ -454,8 +463,11 @@
 
       const ttft = Math.max(0, Number(turn.time_to_first_token_s) || 0);
       const duration = Math.max(0, Number(turn.duration_s) || 0);
+      // Stay in Prefilling through TTFT; only then start emitting tokens.
       await waitUntil((turn.start_s || 0) + ttft, startedAt, token);
-      if (token !== state.runToken) return;
+      if (!isActiveToken(token)) return;
+
+      clearWaiting(side);
 
       const streamBudgetMs = Math.max(0, (duration - ttft) * 1000);
       const responseChunks = turn.display_chunks || [];
@@ -473,8 +485,20 @@
         }
         if (!isActiveToken(token)) return;
 
+        // After generation finishes, wait for the recorded tool window before visuals.
         const tool = turn.tool_call || {};
         const args = tool.arguments || {};
+        const traces = turn.tool_call_traces || [];
+        const trace = traces[0] || null;
+        const cropIdxs = turn.crop_presented_indices || [];
+
+        if (trace) {
+          await waitUntil(trace.start_s || turn.end_s || 0, startedAt, token);
+        } else {
+          await waitUntil(turn.end_s || 0, startedAt, token);
+        }
+        if (!isActiveToken(token)) return;
+
         const toolCard = addEventCard(side, "tool", `Tool Call · Turn ${zoomRound}`);
         const meta = document.createElement("div");
         meta.className = "event-meta";
@@ -486,15 +510,6 @@
           .filter(Boolean)
           .join(" · ");
         toolCard.body.appendChild(meta);
-
-        const traces = turn.tool_call_traces || [];
-        const trace = traces[0] || null;
-        const cropIdxs = turn.crop_presented_indices || [];
-
-        if (trace) {
-          await waitUntil(trace.start_s || turn.end_s || 0, startedAt, token);
-        }
-        if (!isActiveToken(token)) return;
 
         if (Array.isArray(args.bbox_2d) && typeof args.img_idx === "number") {
           try {
@@ -512,8 +527,6 @@
 
         if (trace) {
           await waitUntil(trace.end_s || turn.end_s || 0, startedAt, token);
-        } else {
-          await waitUntil(turn.end_s || 0, startedAt, token);
         }
         if (!isActiveToken(token)) return;
 
