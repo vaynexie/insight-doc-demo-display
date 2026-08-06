@@ -12,7 +12,7 @@
   --ok: #4ec9a0;
   --font: "IBM Plex Sans", "Segoe UI", system-ui, sans-serif;
   --mono: "IBM Plex Mono", "Consolas", monospace;
-  --page-max: 1180px;
+  --page-max: 1320px;
 }
 
 html {
@@ -147,6 +147,11 @@ body {
 .btn:hover:not(:disabled) { border-color: var(--accent); }
 .btn:disabled { opacity: 0.45; cursor: not-allowed; }
 .btn.primary { background: var(--accent-dim); border-color: var(--accent); }
+.btn.fast-forward {
+  background: rgba(201, 162, 39, 0.18);
+  border-color: var(--baseline);
+  color: var(--text);
+}
 
 .input-panel {
   padding: 0.9rem 1.15rem;
@@ -383,21 +388,11 @@ body {
   color: var(--muted);
 }
 
-.event-card.think {
-  border-left: 3px solid #6d768b;
-}
-
-.event-card.tool {
-  border-left: 3px solid var(--insight);
-}
-
 .event-card.answer {
-  border-left: 3px solid var(--accent);
   background: rgba(91, 156, 255, 0.08);
 }
 
 .event-card.summary {
-  border-left: 3px solid #c9a227;
   background: rgba(201, 162, 39, 0.08);
 }
 

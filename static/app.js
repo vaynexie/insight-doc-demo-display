@@ -2,7 +2,7 @@
   "use strict";
 
   const DATA_BASE = "./data";
-  const DATA_VERSION = "20260806-2";
+  const DATA_VERSION = "20260806-3";
   const IMAGE_CACHE = new Map();
 
   const state = {
@@ -10,6 +10,7 @@
     example: null,
     exampleId: null,
     running: false,
+    fastForward: false,
     loadingExample: false,
     runToken: 0,
     loadToken: 0,
@@ -52,23 +53,55 @@
   }
 
   function sleep(ms, token) {
+    if (token !== state.runToken || state.fastForward) return Promise.resolve();
     return new Promise((resolve) => {
-      const id = setTimeout(() => {
-        state.timers.delete(id);
-        resolve();
-      }, ms);
-      state.timers.add(id);
-      if (token !== state.runToken) {
-        clearTimeout(id);
-        state.timers.delete(id);
-        resolve();
+      const timer = {
+        id: null,
+        done: false,
+        resolve: () => {
+          if (timer.done) return;
+          timer.done = true;
+          clearTimeout(timer.id);
+          state.timers.delete(timer);
+          resolve();
+        },
+      };
+      timer.id = setTimeout(() => {
+        timer.resolve();
+      }, Math.max(0, ms));
+      state.timers.add(timer);
+      if (token !== state.runToken || state.fastForward) {
+        timer.resolve();
       }
     });
   }
 
+  function wakeTimers() {
+    for (const timer of Array.from(state.timers)) {
+      timer.resolve();
+    }
+  }
+
   function clearTimers() {
-    for (const id of state.timers) clearTimeout(id);
-    state.timers.clear();
+    wakeTimers();
+  }
+
+  function fastForwardReplay() {
+    if (!state.running) return;
+    state.fastForward = true;
+    wakeTimers();
+    syncControls();
+  }
+
+  function isFastForward(token) {
+    return token === state.runToken && state.fastForward;
+  }
+
+  function setRunButtonMode() {
+    const fastForwarding = state.running;
+    els.btnRun.textContent = fastForwarding ? "Fast-forward" : "Run comparison";
+    els.btnRun.title = fastForwarding ? "Finish this replay instantly" : "";
+    els.btnRun.classList.toggle("fast-forward", fastForwarding);
   }
 
   function setStatus(side, text, cls = "") {
@@ -237,8 +270,8 @@
   }
 
   function syncControls() {
-    const busy = state.running || state.loadingExample;
-    els.btnRun.disabled = busy || !state.example;
+    els.btnRun.disabled = state.loadingExample || !state.example;
+    setRunButtonMode();
     els.btnReset.disabled =
       !state.running && !els.baselineStream.childElementCount && !els.insightStream.childElementCount;
     // Keep example switching available so users can abort a run by changing cases.
@@ -440,6 +473,11 @@
     const n = list.length;
     for (let i = 0; i < n; i += 1) {
       if (!isActiveToken(token)) return body.textContent;
+      if (isFastForward(token)) {
+        body.textContent += list.slice(i).join("");
+        scrollSide(side);
+        return body.textContent;
+      }
       body.textContent += list[i];
       scrollSide(side);
       if (i >= n - 1) break;
@@ -483,6 +521,7 @@
 
   async function waitUntil(elapsedTargetS, startedAt, token) {
     while (token === state.runToken) {
+      if (isFastForward(token)) return;
       const elapsed = (performance.now() - startedAt) / 1000;
       const remain = elapsedTargetS - elapsed;
       if (remain <= 0) return;
@@ -659,10 +698,15 @@
   }
 
   async function runComparison() {
-    if (!state.example || state.running || state.loadingExample) return;
+    if (!state.example || state.loadingExample) return;
+    if (state.running) {
+      fastForwardReplay();
+      return;
+    }
     const example = state.example;
     const exampleId = state.exampleId;
     state.running = true;
+    state.fastForward = false;
     state.runToken += 1;
     const token = state.runToken;
     clearTimers();
@@ -685,6 +729,7 @@
     } finally {
       if (isActiveToken(token)) {
         state.running = false;
+        state.fastForward = false;
         // If the example changed mid-run, discard any leftover stream from the old case.
         if (state.exampleId !== exampleId) {
           resetStreams();
@@ -697,6 +742,7 @@
   function stopAndReset() {
     state.runToken += 1;
     state.running = false;
+    state.fastForward = false;
     clearTimers();
     resetStreams();
     syncControls();
@@ -807,7 +853,11 @@
   }
 
   els.btnRun.addEventListener("click", () => {
-    runComparison();
+    if (state.running) {
+      fastForwardReplay();
+    } else {
+      runComparison();
+    }
   });
   els.btnReset.addEventListener("click", () => {
     stopAndReset();

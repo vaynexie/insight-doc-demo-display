@@ -86,19 +86,6 @@
       "ground_truth": "1194000"
     },
     {
-      "id": "050_mmlongbench_mmlongbench_107",
-      "benchmark": "mmlongbench",
-      "label": "MMLongBench-Doc · Skyskraoeren goblets",
-      "question": "How many goblets appear in the figure showing Skyskraoeren?",
-      "page_count": 40,
-      "path": "data/examples/050_mmlongbench_mmlongbench_107.json",
-      "insight_wall_time_s": 13.466525356285274,
-      "baseline_wall_time_s": 56.26647561509162,
-      "insight_answer": "7 goblets",
-      "baseline_answer": "15",
-      "ground_truth": "7"
-    },
-    {
       "id": "056_mmlongbench_mmlongbench_688",
       "benchmark": "mmlongbench",
       "label": "MMLongBench-Doc · campaign grade",

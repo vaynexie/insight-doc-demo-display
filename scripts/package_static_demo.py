@@ -61,12 +61,6 @@ EXAMPLE_SPECS = [
         "bundle": "default",
     },
     {
-        "id": "050_mmlongbench_mmlongbench_107",
-        "benchmark": "mmlongbench",
-        "label": "MMLongBench-Doc · Skyskraoeren goblets",
-        "bundle": "default",
-    },
-    {
         "id": "056_mmlongbench_mmlongbench_688",
         "benchmark": "mmlongbench",
         "label": "MMLongBench-Doc · campaign grade",
