@@ -1,7 +1,7 @@
 {
   "id": "050_mmlongbench_mmlongbench_107",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench · Skyskraoeren goblets",
+  "label": "MMLongBench-Doc · Skyskraoeren goblets",
   "question": "How many goblets appear in the figure showing Skyskraoeren?",
   "ground_truth": "7",
   "document_id": "050_mmlongbench_mmlongbench_107",

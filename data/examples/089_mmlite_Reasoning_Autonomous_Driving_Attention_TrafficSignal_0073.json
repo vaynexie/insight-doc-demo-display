@@ -1,7 +1,7 @@
 {
   "id": "089_mmlite_Reasoning_Autonomous_Driving_Attention_TrafficSignal_0073",
   "benchmark": "mmlite",
-  "label": "MMLite · traffic signal",
+  "label": "MME-RealWorld-Lite · traffic signal",
   "question": "This image shows the front view of the ego car. What is the traffic signal that the ego vehicle should pay attention to?\n(A) Green light.\n(B) No parking.\n(C) Crosswalk.\n(D) Go straight.\n(E) The image does not feature the object.",
   "ground_truth": "A",
   "document_id": "089_mmlite_Reasoning_Autonomous_Driving_Attention_TrafficSignal_0073",

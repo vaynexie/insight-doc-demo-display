@@ -1,7 +1,7 @@
 {
   "id": "018_mmlongbench0507_highpage_mmlongbench_779",
   "benchmark": "mmlongbench0507_highpage",
-  "label": "MMLongBench highpage · QK-norm spike",
+  "label": "MMLongBench-Doc highpage · QK-norm spike",
   "question": "At which step, the loss spikes when without QK-norm?",
   "ground_truth": "\"150k\"",
   "document_id": "018_mmlongbench0507_highpage_mmlongbench_779",

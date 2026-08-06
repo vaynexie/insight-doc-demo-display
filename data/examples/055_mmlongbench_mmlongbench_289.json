@@ -1,7 +1,7 @@
 {
   "id": "055_mmlongbench_mmlongbench_289",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench · HOVER gap",
+  "label": "MMLongBench-Doc · HOVER gap",
   "question": "What is the average performance gap between the ProgramFC performance and our proposed system in the HOVER dataset? Please write down the answer in float format with 2 decimals.",
   "ground_truth": "0.45",
   "document_id": "055_mmlongbench_mmlongbench_289",

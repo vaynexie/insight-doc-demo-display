@@ -1,7 +1,7 @@
 {
   "id": "004_mmlongbench0507_highpage_mmlongbench_871",
   "benchmark": "mmlongbench0507_highpage",
-  "label": "MMLongBench highpage · Fig.4 efficiency",
+  "label": "MMLongBench-Doc highpage · Fig.4 efficiency",
   "question": "According to this paper, among nice different datasets in Fig 4, which one can reflect the highest efficiency?",
   "ground_truth": "\"Not answerable\"",
   "document_id": "004_mmlongbench0507_highpage_mmlongbench_871",

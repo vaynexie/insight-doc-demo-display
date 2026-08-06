@@ -1,7 +1,7 @@
 {
   "id": "056_mmlongbench_mmlongbench_688",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench · campaign grade",
+  "label": "MMLongBench-Doc · campaign grade",
   "question": "Who has a higher median campaign grade? Trump or Clinton?",
   "ground_truth": "Clinton",
   "document_id": "056_mmlongbench_mmlongbench_688",

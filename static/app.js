@@ -76,11 +76,43 @@
     return `${n.toFixed(2)}s`;
   }
 
+  function formatCorrectness(value) {
+    const score = Number(value);
+    if (!Number.isFinite(score)) return { label: "Unknown", className: "unknown" };
+    return score >= 0.5
+      ? { label: "Correct", className: "correct" }
+      : { label: "Wrong", className: "wrong" };
+  }
+
   function formatGroundTruth(value) {
     if (Array.isArray(value)) return value.map(String).join(", ");
     const text = String(value ?? "");
     const match = text.match(/^\[\s*['\"](.*)['\"]\s*\]$/);
     return match ? match[1] : text;
+  }
+
+  function formatBenchmarkName(value) {
+    const key = String(value ?? "");
+    if (key.startsWith("mmlongbench")) {
+      return key.includes("highpage") ? "MMLongBench-Doc highpage" : "MMLongBench-Doc";
+    }
+    if (key === "mmlite") return "MME-RealWorld-Lite";
+    return key;
+  }
+
+  function formatCaseMeta(example) {
+    const label = String(example.label || "");
+    const benchmark = formatBenchmarkName(example.benchmark);
+    const parts = [label || benchmark].filter(Boolean);
+    if (
+      benchmark &&
+      label &&
+      !label.toLocaleLowerCase().startsWith(benchmark.toLocaleLowerCase())
+    ) {
+      parts.push(benchmark);
+    }
+    parts.push(`${example.page_count} pages`);
+    return parts.join(" · ");
   }
 
   function normalizeText(value) {
@@ -336,7 +368,7 @@
     ctx.drawImage(img, 0, 0);
     const [x1, y1, x2, y2] = projectBbox(bbox2d, presented, canvas.width, canvas.height);
     ctx.strokeStyle = "rgb(255, 80, 60)";
-    ctx.lineWidth = Math.max(2, Math.round(Math.min(canvas.width, canvas.height) / 180));
+    ctx.lineWidth = Math.max(6, Math.round(Math.min(canvas.width, canvas.height) / 90));
     ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
     return canvas.toDataURL("image/jpeg", 0.88);
   }
@@ -405,11 +437,14 @@
     return streamChunks(side, body, approx, durationMs, token);
   }
 
-  function appendAnswerFooter(side, sideData, zoomRound) {
+  function appendAnswerFooter(side, sideData, zoomRound, finalAnswer) {
     const { card, body } = addEventCard(side, "summary", "Summary");
     const gt = formatGroundTruth(state.example?.ground_truth || "—");
+    const predicted = formatGroundTruth(sideData.extracted_answer || finalAnswer || "—");
+    const correctness = formatCorrectness(sideData.accuracy);
     const lines = [
       `<div><strong>Ground truth:</strong> ${escapeHtml(gt)}</div>`,
+      `<div><strong>Predicted answer:</strong> ${escapeHtml(predicted)} <span class="answer-result ${correctness.className}">${correctness.label}</span></div>`,
       `<div><strong>Total generation time:</strong> ${escapeHtml(formatSeconds(sideData.wall_time_s))}</div>`,
     ];
     if (sideData.side === "rl" || zoomRound > 0) {
@@ -589,7 +624,7 @@
         finalAnswer || sideData.extracted_answer || "—"
       );
     }
-    appendAnswerFooter(side, sideData, zoomRound);
+    appendAnswerFooter(side, sideData, zoomRound, finalAnswer);
     return {
       wallTime: sideData.wall_time_s,
       answer: finalAnswer || sideData.extracted_answer || "",
@@ -722,7 +757,7 @@
       // Clear again in case a stale run wrote into the streams during fetch.
       resetStreams();
       renderPlainMarkdown(els.questionText, example.question || "");
-      els.caseMeta.textContent = `${example.label} · ${example.benchmark} · ${example.page_count} pages`;
+      els.caseMeta.textContent = formatCaseMeta(example);
       els.baselineRes.textContent = `r=${Number(example.baseline?.initial_rescale ?? 0.7)}`;
       els.insightRes.textContent = `r=${Number(example.insight?.initial_rescale ?? 0.35)}`;
       renderPdfThumbnails(example);

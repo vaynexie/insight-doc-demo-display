@@ -353,6 +353,32 @@ body {
   font-weight: 700;
 }
 
+.answer-result {
+  display: inline-block;
+  margin-left: 0.35rem;
+  padding: 0.05rem 0.35rem;
+  border-radius: 4px;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1.25;
+  vertical-align: 0.08em;
+}
+
+.answer-result.correct {
+  background: rgba(78, 201, 160, 0.16);
+  color: var(--ok);
+}
+
+.answer-result.wrong {
+  background: rgba(255, 95, 86, 0.16);
+  color: var(--danger);
+}
+
+.answer-result.unknown {
+  background: rgba(153, 162, 181, 0.16);
+  color: var(--muted);
+}
+
 .event-body {
   white-space: pre-wrap;
   word-break: break-word;

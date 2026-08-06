@@ -45,43 +45,43 @@ EXAMPLE_SPECS = [
     {
         "id": "055_mmlongbench_mmlongbench_289",
         "benchmark": "mmlongbench",
-        "label": "MMLongBench · HOVER gap",
+        "label": "MMLongBench-Doc · HOVER gap",
         "bundle": "default",
     },
     {
         "id": "048_mmlongbench_mmlongbench_344",
         "benchmark": "mmlongbench",
-        "label": "MMLongBench · Trump confidence",
+        "label": "MMLongBench-Doc · Trump confidence",
         "bundle": "default",
     },
     {
         "id": "053_mmlongbench_mmlongbench_842",
         "benchmark": "mmlongbench",
-        "label": "MMLongBench · album volume gap",
+        "label": "MMLongBench-Doc · album volume gap",
         "bundle": "default",
     },
     {
         "id": "050_mmlongbench_mmlongbench_107",
         "benchmark": "mmlongbench",
-        "label": "MMLongBench · Skyskraoeren goblets",
+        "label": "MMLongBench-Doc · Skyskraoeren goblets",
         "bundle": "default",
     },
     {
         "id": "056_mmlongbench_mmlongbench_688",
         "benchmark": "mmlongbench",
-        "label": "MMLongBench · campaign grade",
+        "label": "MMLongBench-Doc · campaign grade",
         "bundle": "default",
     },
     {
         "id": "004_mmlongbench0507_highpage_mmlongbench_871",
         "benchmark": "mmlongbench0507_highpage",
-        "label": "MMLongBench highpage · Fig.4 efficiency",
+        "label": "MMLongBench-Doc highpage · Fig.4 efficiency",
         "bundle": "highpage",
     },
     {
         "id": "018_mmlongbench0507_highpage_mmlongbench_779",
         "benchmark": "mmlongbench0507_highpage",
-        "label": "MMLongBench highpage · QK-norm spike",
+        "label": "MMLongBench-Doc highpage · QK-norm spike",
         "bundle": "highpage",
     },
     {
@@ -111,7 +111,7 @@ EXAMPLE_SPECS = [
     {
         "id": "089_mmlite_Reasoning_Autonomous_Driving_Attention_TrafficSignal_0073",
         "benchmark": "mmlite",
-        "label": "MMLite · traffic signal",
+        "label": "MME-RealWorld-Lite · traffic signal",
         "bundle": "default",
     },
 ]

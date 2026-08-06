@@ -1,7 +1,7 @@
 {
   "id": "048_mmlongbench_mmlongbench_344",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench · Trump confidence",
+  "label": "MMLongBench-Doc · Trump confidence",
   "question": "What is the proportion of people who say they are very confident in Trump's ability to handle an international crisis?",
   "ground_truth": "26%",
   "document_id": "048_mmlongbench_mmlongbench_344",

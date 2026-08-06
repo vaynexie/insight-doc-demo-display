@@ -49,7 +49,7 @@
     {
       "id": "055_mmlongbench_mmlongbench_289",
       "benchmark": "mmlongbench",
-      "label": "MMLongBench · HOVER gap",
+      "label": "MMLongBench-Doc · HOVER gap",
       "question": "What is the average performance gap between the ProgramFC performance and our proposed system in the HOVER dataset? Please write down the answer in float format with 2 decimals.",
       "page_count": 10,
       "path": "data/examples/055_mmlongbench_mmlongbench_289.json",
@@ -62,7 +62,7 @@
     {
       "id": "048_mmlongbench_mmlongbench_344",
       "benchmark": "mmlongbench",
-      "label": "MMLongBench · Trump confidence",
+      "label": "MMLongBench-Doc · Trump confidence",
       "question": "What is the proportion of people who say they are very confident in Trump's ability to handle an international crisis?",
       "page_count": 28,
       "path": "data/examples/048_mmlongbench_mmlongbench_344.json",
@@ -75,7 +75,7 @@
     {
       "id": "053_mmlongbench_mmlongbench_842",
       "benchmark": "mmlongbench",
-      "label": "MMLongBench · album volume gap",
+      "label": "MMLongBench-Doc · album volume gap",
       "question": "What is the difference in total volume between the rank 1 and rank 19 top albums?",
       "page_count": 36,
       "path": "data/examples/053_mmlongbench_mmlongbench_842.json",
@@ -88,7 +88,7 @@
     {
       "id": "050_mmlongbench_mmlongbench_107",
       "benchmark": "mmlongbench",
-      "label": "MMLongBench · Skyskraoeren goblets",
+      "label": "MMLongBench-Doc · Skyskraoeren goblets",
       "question": "How many goblets appear in the figure showing Skyskraoeren?",
       "page_count": 40,
       "path": "data/examples/050_mmlongbench_mmlongbench_107.json",
@@ -101,7 +101,7 @@
     {
       "id": "056_mmlongbench_mmlongbench_688",
       "benchmark": "mmlongbench",
-      "label": "MMLongBench · campaign grade",
+      "label": "MMLongBench-Doc · campaign grade",
       "question": "Who has a higher median campaign grade? Trump or Clinton?",
       "page_count": 40,
       "path": "data/examples/056_mmlongbench_mmlongbench_688.json",
@@ -114,7 +114,7 @@
     {
       "id": "004_mmlongbench0507_highpage_mmlongbench_871",
       "benchmark": "mmlongbench0507_highpage",
-      "label": "MMLongBench highpage · Fig.4 efficiency",
+      "label": "MMLongBench-Doc highpage · Fig.4 efficiency",
       "question": "According to this paper, among nice different datasets in Fig 4, which one can reflect the highest efficiency?",
       "page_count": 117,
       "path": "data/examples/004_mmlongbench0507_highpage_mmlongbench_871.json",
@@ -127,7 +127,7 @@
     {
       "id": "018_mmlongbench0507_highpage_mmlongbench_779",
       "benchmark": "mmlongbench0507_highpage",
-      "label": "MMLongBench highpage · QK-norm spike",
+      "label": "MMLongBench-Doc highpage · QK-norm spike",
       "question": "At which step, the loss spikes when without QK-norm?",
       "page_count": 27,
       "path": "data/examples/018_mmlongbench0507_highpage_mmlongbench_779.json",
@@ -192,7 +192,7 @@
     {
       "id": "089_mmlite_Reasoning_Autonomous_Driving_Attention_TrafficSignal_0073",
       "benchmark": "mmlite",
-      "label": "MMLite · traffic signal",
+      "label": "MME-RealWorld-Lite · traffic signal",
       "question": "This image shows the front view of the ego car. What is the traffic signal that the ego vehicle should pay attention to?\n(A) Green light.\n(B) No parking.\n(C) Crosswalk.\n(D) Go straight.\n(E) The image does not feature the object.",
       "page_count": 1,
       "path": "data/examples/089_mmlite_Reasoning_Autonomous_Driving_Attention_TrafficSignal_0073.json",

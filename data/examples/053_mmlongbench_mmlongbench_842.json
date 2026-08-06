@@ -1,7 +1,7 @@
 {
   "id": "053_mmlongbench_mmlongbench_842",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench · album volume gap",
+  "label": "MMLongBench-Doc · album volume gap",
   "question": "What is the difference in total volume between the rank 1 and rank 19 top albums?",
   "ground_truth": "1194000",
   "document_id": "053_mmlongbench_mmlongbench_842",
