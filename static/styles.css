@@ -50,7 +50,71 @@ body {
   background: var(--surface);
 }
 
-.header h1 { font-size: 1.45rem; font-weight: 600; }
+.header-inner {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 0.45rem;
+  min-width: 0;
+}
+
+.header h1 {
+  font-size: 1.45rem;
+  font-weight: 600;
+  line-height: 1.2;
+}
+
+.title-tooltip {
+  display: inline-flex;
+  align-items: center;
+}
+
+.title-info {
+  width: 1.25rem;
+  height: 1.25rem;
+  border: 1px solid var(--border);
+  border-radius: 50%;
+  background: var(--bg);
+  color: var(--muted);
+  cursor: help;
+  font-size: 0.78rem;
+  font-weight: 700;
+  line-height: 1;
+}
+
+.title-info:hover,
+.title-info:focus-visible {
+  border-color: var(--accent);
+  color: var(--text);
+  outline: none;
+}
+
+.title-tooltip-content {
+  position: absolute;
+  top: calc(100% + 0.5rem);
+  left: 0;
+  z-index: 50;
+  width: min(calc(100vw - 2rem), 34rem);
+  padding: 0.7rem 0.8rem;
+  border: 1px solid var(--border);
+  border-radius: 6px;
+  background: #0e1220;
+  color: var(--text);
+  box-shadow: 0 16px 38px rgba(0, 0, 0, 0.42);
+  font-size: 0.9rem;
+  line-height: 1.45;
+  opacity: 0;
+  pointer-events: none;
+  transform: translateY(-0.15rem);
+  transition: opacity 120ms ease, transform 120ms ease;
+}
+
+.title-tooltip:hover .title-tooltip-content,
+.title-tooltip:focus-within .title-tooltip-content {
+  opacity: 1;
+  transform: translateY(0);
+}
+
 .controls { display: flex; gap: 0.65rem; align-items: center; flex-wrap: wrap; }
 
 .example-picker {

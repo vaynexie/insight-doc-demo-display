@@ -4,13 +4,24 @@
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>InSight-doc-8B vs Qwen3-VL-8B</title>
-  <link rel="stylesheet" href="./static/styles.css" />
+  <link rel="stylesheet" href="./static/styles.css?v=20260806-2" />
 </head>
 <body>
   <main class="page-shell">
     <header class="header">
       <div class="header-inner">
         <h1>InSight-doc-8B vs Qwen3-VL-8B</h1>
+        <span class="title-tooltip">
+          <button
+            class="title-info"
+            type="button"
+            aria-label="About trajectory replay timing"
+            aria-describedby="replayTimingTooltip"
+          >i</button>
+          <span id="replayTimingTooltip" class="title-tooltip-content" role="tooltip">
+            Trajectories are replayed, not generated in real time. Timing is recreated 1:1 from actual generation under the same generation settings for both models. r=0.7 is used for Qwen3-VL-8B and r=0.35 is used for InSight-doc-8B to match their prediction accuracies on the benchmarks.
+          </span>
+        </span>
       </div>
       <div class="controls">
         <label class="example-picker">
@@ -64,6 +75,6 @@
     </div>
   </div>
 
-  <script src="./static/app.js"></script>
+  <script src="./static/app.js?v=20260806-2"></script>
 </body>
 </html>

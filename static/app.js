@@ -2,6 +2,7 @@
   "use strict";
 
   const DATA_BASE = "./data";
+  const DATA_VERSION = "20260806-2";
   const IMAGE_CACHE = new Map();
 
   const state = {
@@ -42,6 +43,12 @@
 
   function assetUrl(relPath) {
     return `${DATA_BASE}/${String(relPath).replace(/^\/+/, "")}`;
+  }
+
+  function dataUrl(relPath) {
+    const path = String(relPath).replace(/^\.\//, "");
+    const sep = path.includes("?") ? "&" : "?";
+    return `./${path}${sep}v=${DATA_VERSION}`;
   }
 
   function sleep(ms, token) {
@@ -91,6 +98,10 @@
     return match ? match[1] : text;
   }
 
+  function formatPredictedAnswer(sideData, finalAnswer) {
+    return formatGroundTruth(sideData.extracted_answer || finalAnswer || "—");
+  }
+
   function formatBenchmarkName(value) {
     const key = String(value ?? "");
     if (key.startsWith("mmlongbench")) {
@@ -100,8 +111,23 @@
     return key;
   }
 
+  function formatExampleLabel(example) {
+    const label = String(example?.label || "");
+    if (!label) return formatBenchmarkName(example?.benchmark);
+    if (/^MMLongBench highpage\b/.test(label)) {
+      return label.replace(/^MMLongBench highpage\b/, "MMLongBench-Doc highpage");
+    }
+    if (/^MMLongBench(?!-Doc)\b/.test(label)) {
+      return label.replace(/^MMLongBench\b/, "MMLongBench-Doc");
+    }
+    if (/^MMLite\b/.test(label)) {
+      return label.replace(/^MMLite\b/, "MME-RealWorld-Lite");
+    }
+    return label;
+  }
+
   function formatCaseMeta(example) {
-    const label = String(example.label || "");
+    const label = formatExampleLabel(example);
     const benchmark = formatBenchmarkName(example.benchmark);
     const parts = [label || benchmark].filter(Boolean);
     if (
@@ -440,7 +466,7 @@
   function appendAnswerFooter(side, sideData, zoomRound, finalAnswer) {
     const { card, body } = addEventCard(side, "summary", "Summary");
     const gt = formatGroundTruth(state.example?.ground_truth || "—");
-    const predicted = formatGroundTruth(sideData.extracted_answer || finalAnswer || "—");
+    const predicted = formatPredictedAnswer(sideData, finalAnswer);
     const correctness = formatCorrectness(sideData.accuracy);
     const lines = [
       `<div><strong>Ground truth:</strong> ${escapeHtml(gt)}</div>`,
@@ -730,7 +756,7 @@
     for (const item of manifest.examples || []) {
       const option = document.createElement("option");
       option.value = item.id;
-      option.textContent = `${item.label} (${item.page_count}p)`;
+      option.textContent = `${formatExampleLabel(item)} (${item.page_count}p)`;
       els.exampleSelect.appendChild(option);
     }
   }
@@ -746,7 +772,7 @@
     const meta = (state.manifest.examples || []).find((item) => item.id === exampleId);
     const path = meta?.path || `data/examples/${exampleId}.json`;
     try {
-      const res = await fetch(`./${path.replace(/^\.\//, "")}`);
+      const res = await fetch(dataUrl(path), { cache: "no-store" });
       if (!res.ok) throw new Error(`Failed to load example (${res.status})`);
       const example = await res.json();
       // A newer example selection superseded this fetch.
@@ -772,7 +798,7 @@
   async function init() {
     state.loadingExample = true;
     syncControls();
-    const res = await fetch(`${DATA_BASE}/examples.json`);
+    const res = await fetch(dataUrl(`${DATA_BASE}/examples.json`), { cache: "no-store" });
     if (!res.ok) throw new Error(`Failed to load examples.json (${res.status})`);
     state.manifest = await res.json();
     populateExampleSelect(state.manifest);
