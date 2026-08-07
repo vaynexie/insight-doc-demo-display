@@ -4,6 +4,8 @@
   const DATA_BASE = "./data";
   const IMAGE_CACHE = new Map();
   const AUTO_FOLLOW_THRESHOLD_PX = 32;
+  const SCROLL_BACK_KEYS = new Set(["ArrowUp", "PageUp", "Home"]);
+  const SCROLL_FORWARD_KEYS = new Set(["ArrowDown", "PageDown", "End"]);
 
   const state = {
     manifest: null,
@@ -20,6 +22,10 @@
       insight: null,
     },
     autoFollow: {
+      baseline: true,
+      insight: true,
+    },
+    autoFollowResumeReady: {
       baseline: true,
       insight: true,
     },
@@ -561,7 +567,12 @@
   }
 
   function scrollSide(side) {
-    if (!state.autoFollow[side]) return;
+    if (!state.autoFollow[side]) {
+      if (!isStreamNearBottom(side)) {
+        state.autoFollowResumeReady[side] = true;
+      }
+      return;
+    }
     const el = streamEl(side);
     el.scrollTop = el.scrollHeight;
     requestAnimationFrame(() => {
@@ -573,12 +584,124 @@
   function resetAutoFollow() {
     state.autoFollow.baseline = true;
     state.autoFollow.insight = true;
+    state.autoFollowResumeReady.baseline = true;
+    state.autoFollowResumeReady.insight = true;
   }
 
-  function updateAutoFollowFromScroll(side) {
+  function isStreamNearBottom(side) {
     const el = streamEl(side);
     const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
-    state.autoFollow[side] = distanceFromBottom <= AUTO_FOLLOW_THRESHOLD_PX;
+    return distanceFromBottom <= AUTO_FOLLOW_THRESHOLD_PX;
+  }
+
+  function pauseAutoFollow(side) {
+    const el = streamEl(side);
+    if (el.scrollHeight <= el.clientHeight + AUTO_FOLLOW_THRESHOLD_PX) return;
+    state.autoFollow[side] = false;
+    state.autoFollowResumeReady[side] = false;
+  }
+
+  function resumeAutoFollowIfNearBottom(side) {
+    if (!isStreamNearBottom(side)) return false;
+    state.autoFollow[side] = true;
+    state.autoFollowResumeReady[side] = true;
+    return true;
+  }
+
+  function updateAutoFollowFromScroll(side, scrollingForward) {
+    const nearBottom = isStreamNearBottom(side);
+    if (!nearBottom) {
+      state.autoFollow[side] = false;
+      state.autoFollowResumeReady[side] = true;
+      return;
+    }
+    if (state.autoFollow[side] || state.autoFollowResumeReady[side] || scrollingForward) {
+      state.autoFollow[side] = true;
+      state.autoFollowResumeReady[side] = true;
+    }
+  }
+
+  function isPointerOnVerticalScrollbar(event, el) {
+    const scrollbarWidth = el.offsetWidth - el.clientWidth;
+    if (scrollbarWidth <= 0) return false;
+    const rect = el.getBoundingClientRect();
+    return event.clientX >= rect.right - scrollbarWidth;
+  }
+
+  function bindStreamAutoFollow(side, el) {
+    let lastTouchY = null;
+    let lastScrollTop = el.scrollTop;
+
+    el.addEventListener(
+      "wheel",
+      (event) => {
+        if (event.deltaY < 0) {
+          pauseAutoFollow(side);
+        } else if (event.deltaY > 0) {
+          state.autoFollowResumeReady[side] = true;
+          resumeAutoFollowIfNearBottom(side);
+        }
+      },
+      { passive: true }
+    );
+    el.addEventListener(
+      "touchstart",
+      (event) => {
+        lastTouchY = event.touches[0]?.clientY ?? null;
+      },
+      { passive: true }
+    );
+    el.addEventListener(
+      "touchmove",
+      (event) => {
+        const nextY = event.touches[0]?.clientY ?? null;
+        const movingBack = lastTouchY != null && nextY != null && nextY > lastTouchY;
+        const movingForward = lastTouchY != null && nextY != null && nextY < lastTouchY;
+        if (movingBack) {
+          pauseAutoFollow(side);
+        } else if (movingForward) {
+          state.autoFollowResumeReady[side] = true;
+          resumeAutoFollowIfNearBottom(side);
+        }
+        lastTouchY = nextY;
+      },
+      { passive: true }
+    );
+    el.addEventListener(
+      "touchend",
+      () => {
+        lastTouchY = null;
+      },
+      { passive: true }
+    );
+    el.addEventListener(
+      "touchcancel",
+      () => {
+        lastTouchY = null;
+      },
+      { passive: true }
+    );
+    el.addEventListener("pointerdown", (event) => {
+      if (isPointerOnVerticalScrollbar(event, el)) {
+        pauseAutoFollow(side);
+      }
+    });
+    el.addEventListener("keydown", (event) => {
+      if (event.defaultPrevented) return;
+      const movingBack = SCROLL_BACK_KEYS.has(event.key) || (event.key === " " && event.shiftKey);
+      const movingForward = SCROLL_FORWARD_KEYS.has(event.key) || (event.key === " " && !event.shiftKey);
+      if (movingBack) {
+        pauseAutoFollow(side);
+      } else if (movingForward) {
+        state.autoFollowResumeReady[side] = true;
+        resumeAutoFollowIfNearBottom(side);
+      }
+    });
+    el.addEventListener("scroll", () => {
+      const scrollingForward = el.scrollTop > lastScrollTop;
+      updateAutoFollowFromScroll(side, scrollingForward);
+      lastScrollTop = el.scrollTop;
+    });
   }
 
   async function streamChunks(side, body, chunks, durationMs, token) {
@@ -1070,12 +1193,8 @@
   els.pdfThumbToggle.addEventListener("click", () => {
     setPdfThumbsExpanded(!state.pdfThumbsExpanded);
   });
-  els.baselineStream.addEventListener("scroll", () => {
-    updateAutoFollowFromScroll("baseline");
-  });
-  els.insightStream.addEventListener("scroll", () => {
-    updateAutoFollowFromScroll("insight");
-  });
+  bindStreamAutoFollow("baseline", els.baselineStream);
+  bindStreamAutoFollow("insight", els.insightStream);
   window.addEventListener("resize", () => {
     if (!state.loadingExample) renderPdfThumbGrid();
   });
