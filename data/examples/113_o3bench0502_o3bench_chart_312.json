@@ -1,7 +1,7 @@
 {
   "id": "113_o3bench0502_o3bench_chart_312",
   "benchmark": "o3bench0502",
-  "label": "O3Bench · Speakers customer",
+  "label": "O3-Bench · Speakers customer",
   "question": "If the colors in Customers Sales Performance correspond to the same categories as in Customer Mix, which category has the worst performance in Speakers?\nA. Tech Spin\nB. Large Mart\nC. Globex\nD. Electronics R Us\nE. Circuit Village\nF. None of the above",
   "ground_truth": "E",
   "document_id": "113_o3bench0502_o3bench_chart_312",

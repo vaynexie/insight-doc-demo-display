@@ -99,7 +99,7 @@ EXAMPLE_SPECS = [
     {
         "id": "113_o3bench0502_o3bench_chart_312",
         "benchmark": "o3bench0502",
-        "label": "O3Bench · Speakers customer",
+        "label": "O3-Bench · Speakers customer",
         "bundle": "default",
     },
     {

@@ -617,7 +617,6 @@
   async function replaySide(side, sideData, token, startedAt) {
     const isInsight = side === "insight";
     startStatusTimer(side, startedAt, sideData.wall_time_s, token);
-    showWaiting(side, "Prefilling… waiting for decoding to start");
 
     const turns = sideData.turns || [];
     let zoomRound = 0;
@@ -627,10 +626,6 @@
     for (let turnIndex = 0; turnIndex < turns.length; turnIndex += 1) {
       if (!isActiveToken(token)) return;
       const turn = turns[turnIndex];
-
-      // Hold / re-show Prefilling until this turn's first decode token.
-      showWaiting(side, "Prefilling… waiting for decoding to start");
-      updateRunningStatus(side);
 
       await waitUntil(turn.start_s || 0, startedAt, token);
       if (!isActiveToken(token)) return;
@@ -646,6 +641,10 @@
           startInsightRound(Math.max(1, turnIndex + 1));
         }
       }
+
+      // Hold / re-show Prefilling in this turn's host until its first decode token.
+      showWaiting(side, "Prefilling… waiting for decoding to start");
+      updateRunningStatus(side);
 
       const ttft = Math.max(0, Number(turn.time_to_first_token_s) || 0);
       const duration = Math.max(0, Number(turn.duration_s) || 0);
