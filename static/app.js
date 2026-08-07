@@ -531,39 +531,87 @@
     return canvas.toDataURL("image/jpeg", 0.88);
   }
 
-  function appendToolImages(body, items) {
+  function ensureToolImagesGrid(body) {
     let grid = body.querySelector(".tool-images-grid");
     if (!grid) {
       grid = document.createElement("div");
       grid.className = "tool-images-grid";
       body.appendChild(grid);
     }
-    for (const item of items) {
-      if (!item?.url) continue;
-      const wrap = document.createElement("div");
-      wrap.className = `tool-image-item ${item.kind === "bbox" ? "bbox-item" : "crop-item"}`;
-      const label = document.createElement("div");
-      label.className = "tool-image-label";
-      label.textContent = item.label;
-      const img = document.createElement("img");
-      img.alt = item.label;
-      img.tabIndex = 0;
-      img.setAttribute("role", "button");
-      img.title = "Open at model-presented size";
-      img.addEventListener("load", () => scrollSide("insight"), { once: true });
-      img.src = item.url;
-      img.addEventListener("click", () => openToolImageViewer(item.url, item.label));
-      img.addEventListener("keydown", (event) => {
-        if (event.key === "Enter" || event.key === " ") {
-          event.preventDefault();
-          openToolImageViewer(item.url, item.label);
-        }
-      });
-      wrap.appendChild(label);
-      wrap.appendChild(img);
-      grid.appendChild(wrap);
+    return grid;
+  }
+
+  function createToolImageElement(side, url, label) {
+    const img = document.createElement("img");
+    img.alt = label;
+    img.tabIndex = 0;
+    img.setAttribute("role", "button");
+    img.title = "Open at model-presented size";
+    img.addEventListener("load", () => scrollSide(side), { once: true });
+    img.src = url;
+    img.addEventListener("click", () => openToolImageViewer(url, label));
+    img.addEventListener("keydown", (event) => {
+      if (event.key === "Enter" || event.key === " ") {
+        event.preventDefault();
+        openToolImageViewer(url, label);
+      }
+    });
+    return img;
+  }
+
+  function appendToolImagePlaceholder(side, body, item) {
+    const grid = ensureToolImagesGrid(body);
+    const wrap = document.createElement("div");
+    wrap.className = `tool-image-item ${item.kind === "bbox" ? "bbox-item" : "crop-item"}`;
+    const label = document.createElement("div");
+    label.className = "tool-image-label";
+    label.textContent = item.label;
+    const placeholder = document.createElement("div");
+    placeholder.className = "tool-image-placeholder";
+    placeholder.textContent = "Rendering image...";
+    wrap.appendChild(label);
+    wrap.appendChild(placeholder);
+    grid.appendChild(wrap);
+    scrollSide(side);
+    return { wrap, placeholder, label: item.label };
+  }
+
+  function setToolImageUrl(side, slot, url) {
+    if (!url || !slot.wrap.isConnected) return;
+    slot.placeholder.replaceWith(createToolImageElement(side, url, slot.label));
+    scrollSide(side);
+  }
+
+  function setToolImageError(side, slot, message) {
+    if (!slot.wrap.isConnected) return;
+    slot.placeholder.classList.add("error");
+    slot.placeholder.textContent = message;
+    scrollSide(side);
+  }
+
+  function renderToolImageIntoSlot(side, slot, render, token, unavailableMessage) {
+    const run = () => {
+      if (!isActiveToken(token)) return;
+      render()
+        .then((url) => {
+          if (!isActiveToken(token)) return;
+          if (url) {
+            setToolImageUrl(side, slot, url);
+          } else {
+            setToolImageError(side, slot, unavailableMessage);
+          }
+        })
+        .catch((err) => {
+          if (!isActiveToken(token)) return;
+          setToolImageError(side, slot, `${unavailableMessage} (${err.message})`);
+        });
+    };
+
+    if (isFastForward(token)) {
+      setTimeout(run, 0);
+    } else {
+      run();
     }
-    scrollSide("insight");
   }
 
   function scrollSide(side) {
@@ -864,17 +912,17 @@
         toolCard.body.appendChild(meta);
 
         if (Array.isArray(args.bbox_2d) && typeof args.img_idx === "number") {
-          try {
-            const overlay = await renderBboxOverlay(sideData, args.img_idx, args.bbox_2d);
-            if (!isActiveToken(token)) return;
-            appendToolImages(toolCard.body, [{ label: "BBox overlay", url: overlay, kind: "bbox" }]);
-          } catch (err) {
-            if (!isActiveToken(token)) return;
-            const note = document.createElement("div");
-            note.className = "event-meta";
-            note.textContent = `BBox overlay unavailable (${err.message})`;
-            toolCard.body.appendChild(note);
-          }
+          const slot = appendToolImagePlaceholder(side, toolCard.body, {
+            label: "BBox overlay",
+            kind: "bbox",
+          });
+          renderToolImageIntoSlot(
+            side,
+            slot,
+            () => renderBboxOverlay(sideData, args.img_idx, args.bbox_2d),
+            token,
+            "BBox overlay unavailable"
+          );
         }
 
         if (trace) {
@@ -883,19 +931,17 @@
         if (!isActiveToken(token)) return;
 
         for (const cropIdx of cropIdxs) {
-          try {
-            const cropUrl = await renderPresentedImage(sideData, cropIdx);
-            if (!isActiveToken(token)) return;
-            appendToolImages(toolCard.body, [
-              { label: `Crop · image ${cropIdx}`, url: cropUrl, kind: "crop" },
-            ]);
-          } catch (err) {
-            if (!isActiveToken(token)) return;
-            const note = document.createElement("div");
-            note.className = "event-meta";
-            note.textContent = `Crop ${cropIdx} unavailable (${err.message})`;
-            toolCard.body.appendChild(note);
-          }
+          const slot = appendToolImagePlaceholder(side, toolCard.body, {
+            label: `Crop · image ${cropIdx}`,
+            kind: "crop",
+          });
+          renderToolImageIntoSlot(
+            side,
+            slot,
+            () => renderPresentedImage(sideData, cropIdx),
+            token,
+            `Crop ${cropIdx} unavailable`
+          );
         }
       } else {
         const answerCard = addEventCard(side, "answer", "Response");
