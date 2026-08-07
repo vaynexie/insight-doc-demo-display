@@ -344,7 +344,7 @@ body {
   background: var(--bg);
   display: flex;
   flex-direction: column;
-  height: clamp(420px, 62vh, 720px);
+  height: clamp(680px, 82vh, 1100px);
   min-height: 0;
 }
 
@@ -397,7 +397,7 @@ body {
 
 @media (max-width: 900px) {
   .pane {
-    height: clamp(360px, 58vh, 620px);
+    height: clamp(560px, 78vh, 920px);
   }
 }
 
