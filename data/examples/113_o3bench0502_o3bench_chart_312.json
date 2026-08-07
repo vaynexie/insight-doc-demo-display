@@ -266,6 +266,30 @@
         },
         "crop_presented_indices": [
           1
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 0,
+            "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              1298,
+              992
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 1",
+            "img_idx": 1,
+            "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_01_crop_1_full.jpg",
+            "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_01_crop_1_thumb.jpg",
+            "display_size": [
+              850,
+              846
+            ]
+          }
         ]
       },
       {
@@ -427,6 +451,30 @@
         },
         "crop_presented_indices": [
           2
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 0,
+            "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              1298,
+              992
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 2",
+            "img_idx": 2,
+            "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_02_crop_2_full.jpg",
+            "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_02_crop_2_thumb.jpg",
+            "display_size": [
+              852,
+              430
+            ]
+          }
         ]
       },
       {
@@ -571,6 +619,30 @@
         },
         "crop_presented_indices": [
           3
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 2,
+            "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_03_bbox_full.jpg",
+            "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_03_bbox_thumb.jpg",
+            "display_size": [
+              852,
+              430
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 3",
+            "img_idx": 3,
+            "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_03_crop_3_full.jpg",
+            "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_03_crop_3_thumb.jpg",
+            "display_size": [
+              234,
+              232
+            ]
+          }
         ]
       },
       {

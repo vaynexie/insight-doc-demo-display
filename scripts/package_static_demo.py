@@ -8,7 +8,7 @@ import shutil
 from pathlib import Path
 from typing import Any
 
-from PIL import Image
+from PIL import Image, ImageDraw
 
 BUNDLE_ROOTS = {
     "default": Path(
@@ -106,6 +106,12 @@ EXAMPLE_SPECS = [
 
 THUMB_SCALE = 0.2
 THUMB_QUALITY = 78
+TOOL_IMAGE_QUALITY = 88
+TOOL_THUMB_QUALITY = 78
+TOOL_THUMB_MAX_WIDTH = {
+    "bbox": 180,
+    "crop": 360,
+}
 
 
 def resolve_bundle(spec: dict[str, Any]) -> Path:
@@ -270,6 +276,231 @@ def compact_side(record: dict[str, Any], side: str) -> dict[str, Any]:
     }
 
 
+def side_page_by_original_idx(side_data: dict[str, Any], original_idx: Any) -> dict[str, Any] | None:
+    for page in side_data.get("pages") or []:
+        if page.get("original_img_idx") == original_idx:
+            return page
+    return None
+
+
+def side_presented_by_idx(side_data: dict[str, Any], presented_idx: Any) -> dict[str, Any] | None:
+    for ref in side_data.get("presented_images") or []:
+        if ref.get("presented_img_idx") == presented_idx:
+            return ref
+    return None
+
+
+def clamp_int(value: Any, lower: int, upper: int) -> int:
+    return max(lower, min(upper, round(float(value))))
+
+
+def render_presented_tool_image(side_data: dict[str, Any], presented_idx: int) -> Image.Image:
+    presented = side_presented_by_idx(side_data, presented_idx)
+    if not presented:
+        raise ValueError(f"Missing presented image {presented_idx}")
+
+    source_idx = presented.get("source_original_img_idx")
+    page = side_page_by_original_idx(side_data, source_idx)
+    if not page:
+        raise ValueError(f"Missing source page for presented image {presented_idx}")
+
+    src = DATA_ROOT / page["src"]
+    with Image.open(src) as raw:
+        image = raw.convert("RGB")
+
+    width, height = image.size
+    sx = 0
+    sy = 0
+    sw = width
+    sh = height
+    bbox = presented.get("bbox_on_original")
+    if isinstance(bbox, list) and len(bbox) == 4:
+        x1 = clamp_int(bbox[0], 0, width)
+        y1 = clamp_int(bbox[1], 0, height)
+        x2 = clamp_int(bbox[2], 0, width)
+        y2 = clamp_int(bbox[3], 0, height)
+        sx = min(x1, x2)
+        sy = min(y1, y2)
+        sw = max(1, abs(x2 - x1))
+        sh = max(1, abs(y2 - y1))
+
+    display_size = presented.get("display_size")
+    dw = sw
+    dh = sh
+    if isinstance(display_size, list) and len(display_size) == 2:
+        dw = max(1, round(float(display_size[0])))
+        dh = max(1, round(float(display_size[1])))
+
+    cropped = image.crop((sx, sy, sx + sw, sy + sh))
+    if cropped.size != (dw, dh):
+        cropped = cropped.resize((dw, dh), Image.Resampling.LANCZOS)
+    return cropped
+
+
+def project_tool_bbox(
+    bbox2d: list[Any],
+    presented: dict[str, Any],
+    canvas_width: int,
+    canvas_height: int,
+) -> tuple[int, int, int, int]:
+    x1 = float(bbox2d[0])
+    y1 = float(bbox2d[1])
+    x2 = float(bbox2d[2])
+    y2 = float(bbox2d[3])
+    bbox_max_x = max(x1, x2)
+    bbox_max_y = max(y1, y2)
+    display_size = presented.get("display_size")
+    original_size = presented.get("original_size")
+
+    if (
+        isinstance(display_size, list)
+        and len(display_size) == 2
+        and min(x1, y1, x2, y2) >= 0
+        and bbox_max_x <= 1000
+        and bbox_max_y <= 1000
+    ):
+        dw = float(display_size[0])
+        dh = float(display_size[1])
+        if dw > 0 and dh > 0:
+            x1 = (x1 * dw) / 1000
+            x2 = (x2 * dw) / 1000
+            y1 = (y1 * dh) / 1000
+            y2 = (y2 * dh) / 1000
+            bbox_max_x = max(x1, x2)
+            bbox_max_y = max(y1, y2)
+
+    if (
+        isinstance(original_size, list)
+        and len(original_size) == 2
+        and isinstance(display_size, list)
+        and len(display_size) == 2
+    ):
+        ow = float(original_size[0])
+        oh = float(original_size[1])
+        dw = float(display_size[0])
+        dh = float(display_size[1])
+        likely_original = (
+            ow > 0
+            and oh > 0
+            and (bbox_max_x > dw or bbox_max_y > dh)
+            and bbox_max_x <= ow
+            and bbox_max_y <= oh
+        )
+        if likely_original:
+            x1 = (x1 * dw) / ow
+            x2 = (x2 * dw) / ow
+            y1 = (y1 * dh) / oh
+            y2 = (y2 * dh) / oh
+
+    if isinstance(display_size, list) and len(display_size) == 2:
+        dw = float(display_size[0])
+        dh = float(display_size[1])
+        if dw > 0 and dh > 0 and (dw != canvas_width or dh != canvas_height):
+            x1 = (x1 * canvas_width) / dw
+            x2 = (x2 * canvas_width) / dw
+            y1 = (y1 * canvas_height) / dh
+            y2 = (y2 * canvas_height) / dh
+
+    x1 = max(0, min(canvas_width - 1, round(x1)))
+    x2 = max(0, min(canvas_width - 1, round(x2)))
+    y1 = max(0, min(canvas_height - 1, round(y1)))
+    y2 = max(0, min(canvas_height - 1, round(y2)))
+    if x1 == x2:
+        x2 = min(canvas_width - 1, x1 + 1)
+    if y1 == y2:
+        y2 = min(canvas_height - 1, y1 + 1)
+    return min(x1, x2), min(y1, y2), max(x1, x2), max(y1, y2)
+
+
+def render_bbox_tool_image(
+    side_data: dict[str, Any],
+    presented_idx: int,
+    bbox2d: list[Any],
+) -> Image.Image:
+    presented = side_presented_by_idx(side_data, presented_idx)
+    if not presented:
+        raise ValueError(f"Missing presented image {presented_idx}")
+    image = render_presented_tool_image(side_data, presented_idx)
+    x1, y1, x2, y2 = project_tool_bbox(bbox2d, presented, image.width, image.height)
+    draw = ImageDraw.Draw(image)
+    line_width = max(6, round(min(image.width, image.height) / 90))
+    draw.rectangle((x1, y1, x2, y2), outline=(255, 80, 60), width=line_width)
+    return image
+
+
+def save_tool_image_pair(
+    image: Image.Image,
+    example_id: str,
+    stem: str,
+    kind: str,
+) -> dict[str, Any]:
+    out_dir = DATA_ROOT / "tool_images" / example_id
+    out_dir.mkdir(parents=True, exist_ok=True)
+    full_rel = f"tool_images/{example_id}/{stem}_full.jpg"
+    thumb_rel = f"tool_images/{example_id}/{stem}_thumb.jpg"
+
+    image.save(DATA_ROOT / full_rel, format="JPEG", quality=TOOL_IMAGE_QUALITY, optimize=True)
+
+    max_width = TOOL_THUMB_MAX_WIDTH[kind]
+    scale = min(1.0, max_width / image.width)
+    thumb_size = (max(1, round(image.width * scale)), max(1, round(image.height * scale)))
+    thumb = image if thumb_size == image.size else image.resize(thumb_size, Image.Resampling.LANCZOS)
+    thumb.save(DATA_ROOT / thumb_rel, format="JPEG", quality=TOOL_THUMB_QUALITY, optimize=True)
+
+    return {
+        "full_src": full_rel,
+        "thumb_src": thumb_rel,
+        "display_size": [image.width, image.height],
+    }
+
+
+def attach_tool_visuals(compact: dict[str, Any], example_id: str) -> None:
+    for side_key in ("insight", "baseline"):
+        side_data = compact.get(side_key) or {}
+        for turn_index, turn in enumerate(side_data.get("turns") or []):
+            if turn.get("type") != "tool_call":
+                turn.pop("tool_visuals", None)
+                continue
+
+            visuals: list[dict[str, Any]] = []
+            args = ((turn.get("tool_call") or {}).get("arguments") or {})
+            stem_prefix = f"{side_key}_turn_{turn_index + 1:02d}"
+            img_idx = args.get("img_idx")
+            bbox2d = args.get("bbox_2d")
+            if isinstance(img_idx, int) and isinstance(bbox2d, list) and len(bbox2d) == 4:
+                image = render_bbox_tool_image(side_data, img_idx, bbox2d)
+                saved = save_tool_image_pair(image, example_id, f"{stem_prefix}_bbox", "bbox")
+                visuals.append(
+                    {
+                        "kind": "bbox",
+                        "label": "BBox overlay",
+                        "img_idx": img_idx,
+                        **saved,
+                    }
+                )
+
+            for crop_idx in turn.get("crop_presented_indices") or []:
+                if not isinstance(crop_idx, int):
+                    continue
+                image = render_presented_tool_image(side_data, crop_idx)
+                saved = save_tool_image_pair(
+                    image,
+                    example_id,
+                    f"{stem_prefix}_crop_{crop_idx}",
+                    "crop",
+                )
+                visuals.append(
+                    {
+                        "kind": "crop",
+                        "label": f"Crop · image {crop_idx}",
+                        "img_idx": crop_idx,
+                        **saved,
+                    }
+                )
+
+            turn["tool_visuals"] = visuals
+
+
 def ensure_image_assets(image_refs: set[tuple[str, str]]) -> None:
     images_dir = DATA_ROOT / "images"
     thumbs_dir = DATA_ROOT / "thumbs"
@@ -306,6 +537,7 @@ def package() -> None:
     examples_dir.mkdir(parents=True, exist_ok=True)
 
     all_images: set[tuple[str, str]] = set()
+    packaged_examples: list[tuple[dict[str, Any], dict[str, Any]]] = []
     manifest_examples: list[dict[str, Any]] = []
 
     for spec in EXAMPLE_SPECS:
@@ -333,6 +565,15 @@ def package() -> None:
             "baseline": compact_side(base, "base"),
         }
 
+        packaged_examples.append((spec, compact))
+
+    ensure_image_assets(all_images)
+
+    for spec, compact in packaged_examples:
+        example_id = spec["id"]
+        benchmark = spec["benchmark"]
+        attach_tool_visuals(compact, example_id)
+
         out_path = examples_dir / f"{example_id}.json"
         out_path.write_text(json.dumps(compact, ensure_ascii=False, indent=2), encoding="utf-8")
 
@@ -352,8 +593,6 @@ def package() -> None:
             }
         )
         print(f"packed {example_id} ({compact['page_count']} pages)")
-
-    ensure_image_assets(all_images)
 
     manifest = {
         "version": 1,

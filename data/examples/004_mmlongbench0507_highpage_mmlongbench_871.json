@@ -3592,6 +3592,30 @@
         },
         "crop_presented_indices": [
           117
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 4,
+            "full_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              595,
+              770
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 117",
+            "img_idx": 117,
+            "full_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_01_crop_117_full.jpg",
+            "thumb_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_01_crop_117_thumb.jpg",
+            "display_size": [
+              980,
+              410
+            ]
+          }
         ]
       },
       {
@@ -3746,6 +3770,30 @@
         },
         "crop_presented_indices": [
           118
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 117,
+            "full_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              980,
+              410
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 118",
+            "img_idx": 118,
+            "full_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_02_crop_118_full.jpg",
+            "thumb_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_02_crop_118_thumb.jpg",
+            "display_size": [
+              974,
+              808
+            ]
+          }
         ]
       },
       {

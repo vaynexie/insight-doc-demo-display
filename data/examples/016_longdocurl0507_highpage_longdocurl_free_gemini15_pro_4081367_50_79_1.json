@@ -3361,6 +3361,30 @@
         },
         "crop_presented_indices": [
           108
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 48,
+            "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              620,
+              819
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 108",
+            "img_idx": 108,
+            "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_01_crop_108_full.jpg",
+            "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_01_crop_108_thumb.jpg",
+            "display_size": [
+              536,
+              122
+            ]
+          }
         ]
       },
       {
@@ -3518,6 +3542,30 @@
         },
         "crop_presented_indices": [
           109
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 52,
+            "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              620,
+              819
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 109",
+            "img_idx": 109,
+            "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_02_crop_109_full.jpg",
+            "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_02_crop_109_thumb.jpg",
+            "display_size": [
+              288,
+              88
+            ]
+          }
         ]
       },
       {
@@ -3673,6 +3721,30 @@
         },
         "crop_presented_indices": [
           110
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 54,
+            "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_03_bbox_full.jpg",
+            "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_03_bbox_thumb.jpg",
+            "display_size": [
+              620,
+              819
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 110",
+            "img_idx": 110,
+            "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_03_crop_110_full.jpg",
+            "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_03_crop_110_thumb.jpg",
+            "display_size": [
+              922,
+              128
+            ]
+          }
         ]
       },
       {

@@ -551,32 +551,6 @@ body {
   max-width: 360px;
 }
 
-.tool-image-placeholder {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 5rem;
-  margin-top: 0.4rem;
-  border: 1px dashed var(--border);
-  border-radius: 6px;
-  background: #0e1220;
-  color: var(--muted);
-  font-size: 0.8rem;
-}
-
-.tool-image-item.bbox-item .tool-image-placeholder {
-  max-width: 180px;
-}
-
-.tool-image-item.crop-item .tool-image-placeholder {
-  min-height: 7rem;
-  max-width: 360px;
-}
-
-.tool-image-placeholder.error {
-  color: var(--danger);
-}
-
 .tool-image-item img {
   cursor: zoom-in;
 }

@@ -2,7 +2,6 @@
   "use strict";
 
   const DATA_BASE = "./data";
-  const IMAGE_CACHE = new Map();
   const AUTO_FOLLOW_THRESHOLD_PX = 32;
   const SCROLL_BACK_KEYS = new Set(["ArrowUp", "PageUp", "Home"]);
   const SCROLL_FORWARD_KEYS = new Set(["ArrowDown", "PageDown", "End"]);
@@ -377,160 +376,6 @@
     els.exampleSelect.disabled = state.loadingExample;
   }
 
-  function loadImage(url) {
-    if (IMAGE_CACHE.has(url)) return IMAGE_CACHE.get(url);
-    const promise = new Promise((resolve, reject) => {
-      const img = new Image();
-      img.onload = () => resolve(img);
-      img.onerror = () => reject(new Error(`Failed to load ${url}`));
-      img.src = url;
-    });
-    IMAGE_CACHE.set(url, promise);
-    return promise;
-  }
-
-  function presentedByIdx(sideData, presentedIdx) {
-    return (sideData.presented_images || []).find(
-      (ref) => ref.presented_img_idx === presentedIdx
-    );
-  }
-
-  function pageByOriginalIdx(sideData, originalIdx) {
-    return (sideData.pages || []).find((page) => page.original_img_idx === originalIdx);
-  }
-
-  function pageSrc(sideData, originalIdx) {
-    const page = pageByOriginalIdx(sideData, originalIdx);
-    return page ? assetUrl(page.src) : null;
-  }
-
-  async function renderPresentedImage(sideData, presentedIdx) {
-    const presented = presentedByIdx(sideData, presentedIdx);
-    if (!presented) return null;
-    const sourceIdx = presented.source_original_img_idx;
-    const src = pageSrc(sideData, sourceIdx);
-    if (!src) return null;
-    const img = await loadImage(src);
-    const canvas = document.createElement("canvas");
-    const ctx = canvas.getContext("2d");
-    const bbox = presented.bbox_on_original;
-    let sx = 0;
-    let sy = 0;
-    let sw = img.naturalWidth;
-    let sh = img.naturalHeight;
-    if (Array.isArray(bbox) && bbox.length === 4) {
-      const x1 = Math.max(0, Math.min(img.naturalWidth, Math.round(bbox[0])));
-      const y1 = Math.max(0, Math.min(img.naturalHeight, Math.round(bbox[1])));
-      const x2 = Math.max(0, Math.min(img.naturalWidth, Math.round(bbox[2])));
-      const y2 = Math.max(0, Math.min(img.naturalHeight, Math.round(bbox[3])));
-      sx = Math.min(x1, x2);
-      sy = Math.min(y1, y2);
-      sw = Math.max(1, Math.abs(x2 - x1));
-      sh = Math.max(1, Math.abs(y2 - y1));
-    }
-    let dw = sw;
-    let dh = sh;
-    if (Array.isArray(presented.display_size) && presented.display_size.length === 2) {
-      dw = Math.max(1, Math.round(presented.display_size[0]));
-      dh = Math.max(1, Math.round(presented.display_size[1]));
-    }
-    canvas.width = dw;
-    canvas.height = dh;
-    ctx.drawImage(img, sx, sy, sw, sh, 0, 0, dw, dh);
-    return canvas.toDataURL("image/jpeg", 0.88);
-  }
-
-  function projectBbox(bbox2d, presented, canvasWidth, canvasHeight) {
-    let x1 = Number(bbox2d[0]);
-    let y1 = Number(bbox2d[1]);
-    let x2 = Number(bbox2d[2]);
-    let y2 = Number(bbox2d[3]);
-    let bboxMaxX = Math.max(x1, x2);
-    let bboxMaxY = Math.max(y1, y2);
-    const displaySize = presented.display_size;
-    const originalSize = presented.original_size;
-
-    if (
-      Array.isArray(displaySize) &&
-      displaySize.length === 2 &&
-      Math.min(x1, y1, x2, y2) >= 0 &&
-      bboxMaxX <= 1000 &&
-      bboxMaxY <= 1000
-    ) {
-      const dw = Number(displaySize[0]);
-      const dh = Number(displaySize[1]);
-      if (dw > 0 && dh > 0) {
-        x1 = (x1 * dw) / 1000;
-        x2 = (x2 * dw) / 1000;
-        y1 = (y1 * dh) / 1000;
-        y2 = (y2 * dh) / 1000;
-        bboxMaxX = Math.max(x1, x2);
-        bboxMaxY = Math.max(y1, y2);
-      }
-    }
-
-    if (
-      Array.isArray(originalSize) &&
-      originalSize.length === 2 &&
-      Array.isArray(displaySize) &&
-      displaySize.length === 2
-    ) {
-      const ow = Number(originalSize[0]);
-      const oh = Number(originalSize[1]);
-      const dw = Number(displaySize[0]);
-      const dh = Number(displaySize[1]);
-      const likelyOriginal =
-        ow > 0 &&
-        oh > 0 &&
-        (bboxMaxX > dw || bboxMaxY > dh) &&
-        bboxMaxX <= ow &&
-        bboxMaxY <= oh;
-      if (likelyOriginal) {
-        x1 = (x1 * dw) / ow;
-        x2 = (x2 * dw) / ow;
-        y1 = (y1 * dh) / oh;
-        y2 = (y2 * dh) / oh;
-      }
-    }
-
-    if (Array.isArray(displaySize) && displaySize.length === 2) {
-      const dw = Number(displaySize[0]);
-      const dh = Number(displaySize[1]);
-      if (dw > 0 && dh > 0 && (dw !== canvasWidth || dh !== canvasHeight)) {
-        x1 = (x1 * canvasWidth) / dw;
-        x2 = (x2 * canvasWidth) / dw;
-        y1 = (y1 * canvasHeight) / dh;
-        y2 = (y2 * canvasHeight) / dh;
-      }
-    }
-
-    x1 = Math.max(0, Math.min(canvasWidth - 1, Math.round(x1)));
-    x2 = Math.max(0, Math.min(canvasWidth - 1, Math.round(x2)));
-    y1 = Math.max(0, Math.min(canvasHeight - 1, Math.round(y1)));
-    y2 = Math.max(0, Math.min(canvasHeight - 1, Math.round(y2)));
-    if (x1 === x2) x2 = Math.min(canvasWidth - 1, x1 + 1);
-    if (y1 === y2) y2 = Math.min(canvasHeight - 1, y1 + 1);
-    return [Math.min(x1, x2), Math.min(y1, y2), Math.max(x1, x2), Math.max(y1, y2)];
-  }
-
-  async function renderBboxOverlay(sideData, imgIdx, bbox2d) {
-    const presented = presentedByIdx(sideData, imgIdx);
-    if (!presented || !Array.isArray(bbox2d) || bbox2d.length !== 4) return null;
-    const baseUrl = await renderPresentedImage(sideData, imgIdx);
-    if (!baseUrl) return null;
-    const img = await loadImage(baseUrl);
-    const canvas = document.createElement("canvas");
-    canvas.width = img.naturalWidth;
-    canvas.height = img.naturalHeight;
-    const ctx = canvas.getContext("2d");
-    ctx.drawImage(img, 0, 0);
-    const [x1, y1, x2, y2] = projectBbox(bbox2d, presented, canvas.width, canvas.height);
-    ctx.strokeStyle = "rgb(255, 80, 60)";
-    ctx.lineWidth = Math.max(6, Math.round(Math.min(canvas.width, canvas.height) / 90));
-    ctx.strokeRect(x1, y1, x2 - x1, y2 - y1);
-    return canvas.toDataURL("image/jpeg", 0.88);
-  }
-
   function ensureToolImagesGrid(body) {
     let grid = body.querySelector(".tool-images-grid");
     if (!grid) {
@@ -541,77 +386,44 @@
     return grid;
   }
 
-  function createToolImageElement(side, url, label) {
+  function createToolImageElement(side, thumbUrl, fullUrl, label) {
     const img = document.createElement("img");
     img.alt = label;
     img.tabIndex = 0;
     img.setAttribute("role", "button");
     img.title = "Open at model-presented size";
+    img.decoding = "async";
     img.addEventListener("load", () => scrollSide(side), { once: true });
-    img.src = url;
-    img.addEventListener("click", () => openToolImageViewer(url, label));
+    img.src = thumbUrl;
+    img.addEventListener("click", () => openToolImageViewer(fullUrl, label));
     img.addEventListener("keydown", (event) => {
       if (event.key === "Enter" || event.key === " ") {
         event.preventDefault();
-        openToolImageViewer(url, label);
+        openToolImageViewer(fullUrl, label);
       }
     });
     return img;
   }
 
-  function appendToolImagePlaceholder(side, body, item) {
+  function appendToolImages(side, body, items) {
+    const list = Array.isArray(items) ? items : [];
+    if (!list.length) return;
     const grid = ensureToolImagesGrid(body);
-    const wrap = document.createElement("div");
-    wrap.className = `tool-image-item ${item.kind === "bbox" ? "bbox-item" : "crop-item"}`;
-    const label = document.createElement("div");
-    label.className = "tool-image-label";
-    label.textContent = item.label;
-    const placeholder = document.createElement("div");
-    placeholder.className = "tool-image-placeholder";
-    placeholder.textContent = "Rendering image...";
-    wrap.appendChild(label);
-    wrap.appendChild(placeholder);
-    grid.appendChild(wrap);
-    scrollSide(side);
-    return { wrap, placeholder, label: item.label };
-  }
-
-  function setToolImageUrl(side, slot, url) {
-    if (!url || !slot.wrap.isConnected) return;
-    slot.placeholder.replaceWith(createToolImageElement(side, url, slot.label));
-    scrollSide(side);
-  }
-
-  function setToolImageError(side, slot, message) {
-    if (!slot.wrap.isConnected) return;
-    slot.placeholder.classList.add("error");
-    slot.placeholder.textContent = message;
-    scrollSide(side);
-  }
-
-  function renderToolImageIntoSlot(side, slot, render, token, unavailableMessage) {
-    const run = () => {
-      if (!isActiveToken(token)) return;
-      render()
-        .then((url) => {
-          if (!isActiveToken(token)) return;
-          if (url) {
-            setToolImageUrl(side, slot, url);
-          } else {
-            setToolImageError(side, slot, unavailableMessage);
-          }
-        })
-        .catch((err) => {
-          if (!isActiveToken(token)) return;
-          setToolImageError(side, slot, `${unavailableMessage} (${err.message})`);
-        });
-    };
-
-    if (isFastForward(token)) {
-      setTimeout(run, 0);
-    } else {
-      run();
+    for (const item of list) {
+      if (!item?.thumb_src || !item?.full_src) continue;
+      const labelText = item.label || "Tool image";
+      const wrap = document.createElement("div");
+      wrap.className = `tool-image-item ${item.kind === "bbox" ? "bbox-item" : "crop-item"}`;
+      const label = document.createElement("div");
+      label.className = "tool-image-label";
+      label.textContent = labelText;
+      wrap.appendChild(label);
+      wrap.appendChild(
+        createToolImageElement(side, assetUrl(item.thumb_src), assetUrl(item.full_src), labelText)
+      );
+      grid.appendChild(wrap);
     }
+    scrollSide(side);
   }
 
   function scrollSide(side) {
@@ -890,7 +702,6 @@
         const args = tool.arguments || {};
         const traces = turn.tool_call_traces || [];
         const trace = traces[0] || null;
-        const cropIdxs = turn.crop_presented_indices || [];
 
         if (trace) {
           await waitUntil(replayTimeS(trace.start_s || turn.end_s || 0), startedAt, token);
@@ -911,38 +722,23 @@
           .join(" · ");
         toolCard.body.appendChild(meta);
 
-        if (Array.isArray(args.bbox_2d) && typeof args.img_idx === "number") {
-          const slot = appendToolImagePlaceholder(side, toolCard.body, {
-            label: "BBox overlay",
-            kind: "bbox",
-          });
-          renderToolImageIntoSlot(
-            side,
-            slot,
-            () => renderBboxOverlay(sideData, args.img_idx, args.bbox_2d),
-            token,
-            "BBox overlay unavailable"
-          );
-        }
+        const toolVisuals = Array.isArray(turn.tool_visuals) ? turn.tool_visuals : [];
+        appendToolImages(
+          side,
+          toolCard.body,
+          toolVisuals.filter((item) => item.kind === "bbox")
+        );
 
         if (trace) {
           await waitUntil(replayTimeS(trace.end_s || turn.end_s || 0), startedAt, token);
         }
         if (!isActiveToken(token)) return;
 
-        for (const cropIdx of cropIdxs) {
-          const slot = appendToolImagePlaceholder(side, toolCard.body, {
-            label: `Crop · image ${cropIdx}`,
-            kind: "crop",
-          });
-          renderToolImageIntoSlot(
-            side,
-            slot,
-            () => renderPresentedImage(sideData, cropIdx),
-            token,
-            `Crop ${cropIdx} unavailable`
-          );
-        }
+        appendToolImages(
+          side,
+          toolCard.body,
+          toolVisuals.filter((item) => item.kind === "crop")
+        );
       } else {
         const answerCard = addEventCard(side, "answer", "Response");
         lastAnswerCard = answerCard;

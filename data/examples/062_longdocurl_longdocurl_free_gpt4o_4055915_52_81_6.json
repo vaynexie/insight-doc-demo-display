@@ -1111,6 +1111,30 @@
         },
         "crop_presented_indices": [
           30
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 7,
+            "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              595,
+              770
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 30",
+            "img_idx": 30,
+            "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_01_crop_30_full.jpg",
+            "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_01_crop_30_thumb.jpg",
+            "display_size": [
+              1026,
+              1250
+            ]
+          }
         ]
       },
       {
@@ -1277,6 +1301,30 @@
         },
         "crop_presented_indices": [
           31
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 30,
+            "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              1026,
+              1250
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 31",
+            "img_idx": 31,
+            "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_02_crop_31_full.jpg",
+            "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_02_crop_31_thumb.jpg",
+            "display_size": [
+              1990,
+              530
+            ]
+          }
         ]
       },
       {
@@ -1475,6 +1523,30 @@
         },
         "crop_presented_indices": [
           32
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 31,
+            "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_03_bbox_full.jpg",
+            "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_03_bbox_thumb.jpg",
+            "display_size": [
+              1990,
+              530
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 32",
+            "img_idx": 32,
+            "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_03_crop_32_full.jpg",
+            "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_03_crop_32_thumb.jpg",
+            "display_size": [
+              3392,
+              184
+            ]
+          }
         ]
       },
       {

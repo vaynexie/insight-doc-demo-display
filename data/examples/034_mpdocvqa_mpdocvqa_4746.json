@@ -470,6 +470,30 @@
         },
         "crop_presented_indices": [
           9
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 8,
+            "full_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              779,
+              607
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 9",
+            "img_idx": 9,
+            "full_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_01_crop_9_full.jpg",
+            "thumb_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_01_crop_9_thumb.jpg",
+            "display_size": [
+              862,
+              250
+            ]
+          }
         ]
       },
       {
@@ -613,6 +637,30 @@
         },
         "crop_presented_indices": [
           10
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 9,
+            "full_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              862,
+              250
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 10",
+            "img_idx": 10,
+            "full_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_02_crop_10_full.jpg",
+            "thumb_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_02_crop_10_thumb.jpg",
+            "display_size": [
+              1658,
+              218
+            ]
+          }
         ]
       },
       {

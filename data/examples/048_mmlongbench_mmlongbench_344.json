@@ -1019,6 +1019,30 @@
         },
         "crop_presented_indices": [
           28
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 6,
+            "full_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              595,
+              770
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 28",
+            "img_idx": 28,
+            "full_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_01_crop_28_full.jpg",
+            "thumb_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_01_crop_28_thumb.jpg",
+            "display_size": [
+              622,
+              700
+            ]
+          }
         ]
       },
       {
@@ -1171,6 +1195,30 @@
         },
         "crop_presented_indices": [
           29
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 28,
+            "full_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              622,
+              700
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 29",
+            "img_idx": 29,
+            "full_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_02_crop_29_full.jpg",
+            "thumb_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_02_crop_29_thumb.jpg",
+            "display_size": [
+              1158,
+              102
+            ]
+          }
         ]
       },
       {
