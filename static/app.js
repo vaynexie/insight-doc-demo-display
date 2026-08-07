@@ -3,6 +3,7 @@
 
   const DATA_BASE = "./data";
   const IMAGE_CACHE = new Map();
+  const AUTO_FOLLOW_THRESHOLD_PX = 32;
 
   const state = {
     manifest: null,
@@ -17,6 +18,10 @@
     statusTimers: {
       baseline: null,
       insight: null,
+    },
+    autoFollow: {
+      baseline: true,
+      insight: true,
     },
     insight: {
       rounds: [],
@@ -94,6 +99,7 @@
   function fastForwardReplay() {
     if (!state.running) return;
     state.fastForward = true;
+    resetAutoFollow();
     wakeTimers();
     updateRunningStatus("baseline");
     updateRunningStatus("insight");
@@ -106,8 +112,8 @@
 
   function setRunButtonMode() {
     const fastForwarding = state.running;
-    els.btnRun.textContent = fastForwarding ? "Fast-forward" : "Run comparison";
-    els.btnRun.title = fastForwarding ? "Finish this replay instantly" : "";
+    els.btnRun.textContent = fastForwarding ? "Skip to end" : "Run comparison";
+    els.btnRun.title = fastForwarding ? "Show final replay state instantly" : "";
     els.btnRun.classList.toggle("fast-forward", fastForwarding);
   }
 
@@ -121,6 +127,17 @@
     const n = Number(value);
     if (!Number.isFinite(n)) return "—";
     return `${n.toFixed(1)}s`;
+  }
+
+  function firstTurnStartS(sideData) {
+    const firstTurn = sideData?.turns?.[0];
+    const startS = Number(firstTurn?.start_s);
+    return Number.isFinite(startS) && startS > 0 ? startS : 0;
+  }
+
+  function replayDurationS(sideData) {
+    const wallTimeS = Number(sideData?.wall_time_s) || 0;
+    return Math.max(0, wallTimeS - firstTurnStartS(sideData));
   }
 
   function replayElapsedSeconds(startedAt, wallTimeS) {
@@ -290,7 +307,7 @@
     card.appendChild(body);
     const host = side === "insight" ? insightActiveHost() : streamEl(side);
     host.appendChild(card);
-    streamEl(side).scrollTop = streamEl(side).scrollHeight;
+    scrollSide(side);
     return { card, body };
   }
 
@@ -328,11 +345,12 @@
       els.insightStream.appendChild(round.el);
     }
     state.insight.activeRoundIndex = idx;
-    els.insightStream.scrollTop = els.insightStream.scrollHeight;
+    scrollSide("insight");
   }
 
   function resetStreams() {
     stopStatusTimers();
+    resetAutoFollow();
     els.baselineStream.innerHTML = "";
     els.insightStream.innerHTML = "";
     state.insight = { rounds: [], activeRoundIndex: -1, zoomRounds: 0 };
@@ -522,11 +540,12 @@
       label.className = "tool-image-label";
       label.textContent = item.label;
       const img = document.createElement("img");
-      img.src = item.url;
       img.alt = item.label;
       img.tabIndex = 0;
       img.setAttribute("role", "button");
       img.title = "Open at model-presented size";
+      img.addEventListener("load", () => scrollSide("insight"), { once: true });
+      img.src = item.url;
       img.addEventListener("click", () => openToolImageViewer(item.url, item.label));
       img.addEventListener("keydown", (event) => {
         if (event.key === "Enter" || event.key === " ") {
@@ -538,11 +557,28 @@
       wrap.appendChild(img);
       grid.appendChild(wrap);
     }
-    els.insightStream.scrollTop = els.insightStream.scrollHeight;
+    scrollSide("insight");
   }
 
   function scrollSide(side) {
-    streamEl(side).scrollTop = streamEl(side).scrollHeight;
+    if (!state.autoFollow[side]) return;
+    const el = streamEl(side);
+    el.scrollTop = el.scrollHeight;
+    requestAnimationFrame(() => {
+      if (!state.autoFollow[side]) return;
+      el.scrollTop = el.scrollHeight;
+    });
+  }
+
+  function resetAutoFollow() {
+    state.autoFollow.baseline = true;
+    state.autoFollow.insight = true;
+  }
+
+  function updateAutoFollowFromScroll(side) {
+    const el = streamEl(side);
+    const distanceFromBottom = el.scrollHeight - el.scrollTop - el.clientHeight;
+    state.autoFollow[side] = distanceFromBottom <= AUTO_FOLLOW_THRESHOLD_PX;
   }
 
   async function streamChunks(side, body, chunks, durationMs, token) {
@@ -586,7 +622,7 @@
     return streamChunks(side, body, approx, durationMs, token);
   }
 
-  function appendAnswerFooter(side, sideData, zoomRound, finalAnswer) {
+  function appendAnswerFooter(side, sideData, zoomRound, finalAnswer, totalTimeS) {
     const { card, body } = addEventCard(side, "summary", "Summary");
     const gt = formatGroundTruth(state.example?.ground_truth || "—");
     const predicted = formatPredictedAnswer(sideData, finalAnswer);
@@ -594,7 +630,7 @@
     const lines = [
       `<div><strong>Ground truth:</strong> ${escapeHtml(gt)}</div>`,
       `<div><strong>Predicted answer:</strong> ${escapeHtml(predicted)} <span class="answer-result ${correctness.className}">${correctness.label}</span></div>`,
-      `<div><strong>Total generation time:</strong> ${escapeHtml(formatSeconds(sideData.wall_time_s))}</div>`,
+      `<div><strong>Total generation time:</strong> ${escapeHtml(formatSeconds(totalTimeS))}</div>`,
     ];
     if (sideData.side === "rl" || zoomRound > 0) {
       lines.push(`<div><strong>Tool turns:</strong> ${zoomRound}</div>`);
@@ -616,7 +652,14 @@
 
   async function replaySide(side, sideData, token, startedAt) {
     const isInsight = side === "insight";
-    startStatusTimer(side, startedAt, sideData.wall_time_s, token);
+    const timelineOffsetS = firstTurnStartS(sideData);
+    const totalTimeS = replayDurationS(sideData);
+    const replayTimeS = (value) => {
+      const n = Number(value);
+      if (!Number.isFinite(n)) return 0;
+      return Math.max(0, n - timelineOffsetS);
+    };
+    startStatusTimer(side, startedAt, totalTimeS, token);
 
     const turns = sideData.turns || [];
     let zoomRound = 0;
@@ -627,7 +670,7 @@
       if (!isActiveToken(token)) return;
       const turn = turns[turnIndex];
 
-      await waitUntil(turn.start_s || 0, startedAt, token);
+      await waitUntil(replayTimeS(turn.start_s), startedAt, token);
       if (!isActiveToken(token)) return;
 
       if (isInsight) {
@@ -649,7 +692,7 @@
       const ttft = Math.max(0, Number(turn.time_to_first_token_s) || 0);
       const duration = Math.max(0, Number(turn.duration_s) || 0);
       // Stay in Prefilling through TTFT; only then start emitting tokens.
-      await waitUntil((turn.start_s || 0) + ttft, startedAt, token);
+      await waitUntil(replayTimeS(turn.start_s) + ttft, startedAt, token);
       if (!isActiveToken(token)) return;
 
       clearWaiting(side);
@@ -678,9 +721,9 @@
         const cropIdxs = turn.crop_presented_indices || [];
 
         if (trace) {
-          await waitUntil(trace.start_s || turn.end_s || 0, startedAt, token);
+          await waitUntil(replayTimeS(trace.start_s || turn.end_s || 0), startedAt, token);
         } else {
-          await waitUntil(turn.end_s || 0, startedAt, token);
+          await waitUntil(replayTimeS(turn.end_s), startedAt, token);
         }
         if (!isActiveToken(token)) return;
 
@@ -711,7 +754,7 @@
         }
 
         if (trace) {
-          await waitUntil(trace.end_s || turn.end_s || 0, startedAt, token);
+          await waitUntil(replayTimeS(trace.end_s || turn.end_s || 0), startedAt, token);
         }
         if (!isActiveToken(token)) return;
 
@@ -757,15 +800,15 @@
           finalAnswer = raw.trim();
           renderPlainMarkdown(answerCard.body, raw);
         }
-        await waitUntil(turn.end_s || 0, startedAt, token);
+        await waitUntil(replayTimeS(turn.end_s), startedAt, token);
         if (!isActiveToken(token)) return;
       }
     }
 
-    await waitUntil(sideData.wall_time_s || 0, startedAt, token);
+    await waitUntil(totalTimeS, startedAt, token);
     if (!isActiveToken(token)) return;
     clearWaiting(side);
-    setDoneStatus(side, sideData.wall_time_s);
+    setDoneStatus(side, totalTimeS);
 
     if (!lastAnswerCard) {
       lastAnswerCard = addEventCard(side, "answer", "Response");
@@ -774,9 +817,9 @@
         finalAnswer || sideData.extracted_answer || "—"
       );
     }
-    appendAnswerFooter(side, sideData, zoomRound, finalAnswer);
+    appendAnswerFooter(side, sideData, zoomRound, finalAnswer, totalTimeS);
     return {
-      wallTime: sideData.wall_time_s,
+      wallTime: totalTimeS,
       answer: finalAnswer || sideData.extracted_answer || "",
       zoomRounds: zoomRound,
     };
@@ -1026,6 +1069,12 @@
   });
   els.pdfThumbToggle.addEventListener("click", () => {
     setPdfThumbsExpanded(!state.pdfThumbsExpanded);
+  });
+  els.baselineStream.addEventListener("scroll", () => {
+    updateAutoFollowFromScroll("baseline");
+  });
+  els.insightStream.addEventListener("scroll", () => {
+    updateAutoFollowFromScroll("insight");
   });
   window.addEventListener("resize", () => {
     if (!state.loadingExample) renderPdfThumbGrid();
