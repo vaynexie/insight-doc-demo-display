@@ -910,11 +910,19 @@
     els.pdfThumbToggle.setAttribute("aria-expanded", String(state.pdfThumbsExpanded));
   }
 
+  function loadPdfThumbImage(thumb) {
+    const img = thumb.querySelector("img[data-src]");
+    if (!img || img.dataset.requested === "true") return;
+    img.dataset.requested = "true";
+    img.src = img.dataset.src;
+  }
+
   function createPdfThumb(page, idx) {
     const thumb = document.createElement("button");
     thumb.type = "button";
     thumb.className = "pdf-thumb";
     thumb.title = `Page ${idx}`;
+    thumb.dataset.pageIndex = String(idx);
     const frame = createImageFrame("thumb-image-frame pdf-thumb-image-frame", page.original_size);
     const img = document.createElement("img");
     img.alt = `Page ${idx}`;
@@ -936,7 +944,7 @@
       },
       { once: true }
     );
-    img.src = assetUrl(page.thumb || page.src);
+    img.dataset.src = assetUrl(page.thumb || page.src);
     const label = document.createElement("div");
     label.className = "pdf-thumb-label";
     label.textContent = `P${idx}`;
@@ -947,21 +955,41 @@
     return thumb;
   }
 
-  function renderPdfThumbGrid() {
+  function buildPdfThumbGrid() {
     els.pdfThumbGrid.innerHTML = "";
+    const fragment = document.createDocumentFragment();
+    for (let idx = 0; idx < state.pdfPages.length; idx += 1) {
+      fragment.appendChild(createPdfThumb(state.pdfPages[idx], idx));
+    }
+    els.pdfThumbGrid.appendChild(fragment);
+    els.pdfThumbGrid.dataset.exampleId = state.exampleId || "";
+  }
+
+  function renderPdfThumbGrid() {
     if (!state.pdfPages.length) {
+      els.pdfThumbGrid.innerHTML = "";
+      delete els.pdfThumbGrid.dataset.exampleId;
       els.pdfThumbGrid.textContent = "No pages available.";
       els.pdfThumbToggle.hidden = true;
       return;
     }
+    if (
+      els.pdfThumbGrid.dataset.exampleId !== (state.exampleId || "") ||
+      els.pdfThumbGrid.children.length !== state.pdfPages.length
+    ) {
+      buildPdfThumbGrid();
+    }
     const visibleCount = state.pdfThumbsExpanded
       ? state.pdfPages.length
       : Math.min(state.pdfPages.length, collapsedThumbLimit());
-    const fragment = document.createDocumentFragment();
-    for (let idx = 0; idx < visibleCount; idx += 1) {
-      fragment.appendChild(createPdfThumb(state.pdfPages[idx], idx));
+    for (const thumb of els.pdfThumbGrid.children) {
+      const idx = Number(thumb.dataset.pageIndex);
+      const visible = idx < visibleCount;
+      thumb.hidden = !visible;
+      if (visible) {
+        loadPdfThumbImage(thumb);
+      }
     }
-    els.pdfThumbGrid.appendChild(fragment);
     updatePdfThumbToggle();
   }
 
