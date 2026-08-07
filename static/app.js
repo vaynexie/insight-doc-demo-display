@@ -14,6 +14,10 @@
     runToken: 0,
     loadToken: 0,
     timers: new Set(),
+    statusTimers: {
+      baseline: null,
+      insight: null,
+    },
     insight: {
       rounds: [],
       activeRoundIndex: -1,
@@ -91,6 +95,8 @@
     if (!state.running) return;
     state.fastForward = true;
     wakeTimers();
+    updateRunningStatus("baseline");
+    updateRunningStatus("insight");
     syncControls();
   }
 
@@ -114,7 +120,50 @@
   function formatSeconds(value) {
     const n = Number(value);
     if (!Number.isFinite(n)) return "—";
-    return `${n.toFixed(2)}s`;
+    return `${n.toFixed(1)}s`;
+  }
+
+  function replayElapsedSeconds(startedAt, wallTimeS) {
+    const elapsed = (performance.now() - startedAt) / 1000;
+    const wallTime = Number(wallTimeS);
+    if (!Number.isFinite(wallTime) || wallTime <= 0) return elapsed;
+    if (state.fastForward) return wallTime;
+    return Math.min(elapsed, wallTime);
+  }
+
+  function updateRunningStatus(side) {
+    const timer = state.statusTimers[side];
+    if (!timer || !isActiveToken(timer.token)) return;
+    const elapsed = replayElapsedSeconds(timer.startedAt, timer.wallTimeS);
+    setStatus(side, `running (${formatSeconds(elapsed)})`, "running");
+  }
+
+  function startStatusTimer(side, startedAt, wallTimeS, token) {
+    stopStatusTimer(side);
+    state.statusTimers[side] = {
+      id: setInterval(() => updateRunningStatus(side), 100),
+      startedAt,
+      wallTimeS,
+      token,
+    };
+    updateRunningStatus(side);
+  }
+
+  function stopStatusTimer(side) {
+    const timer = state.statusTimers[side];
+    if (!timer) return;
+    clearInterval(timer.id);
+    state.statusTimers[side] = null;
+  }
+
+  function stopStatusTimers() {
+    stopStatusTimer("baseline");
+    stopStatusTimer("insight");
+  }
+
+  function setDoneStatus(side, wallTimeS) {
+    stopStatusTimer(side);
+    setStatus(side, `done (${formatSeconds(wallTimeS)})`, "done");
   }
 
   function formatCorrectness(value) {
@@ -250,7 +299,7 @@
     const { card, body } = addEventCard(side, "think", "Running");
     body.textContent = message;
     card.dataset.waiting = "1";
-    setStatus(side, "running", "running");
+    updateRunningStatus(side);
   }
 
   function clearWaiting(side) {
@@ -283,6 +332,7 @@
   }
 
   function resetStreams() {
+    stopStatusTimers();
     els.baselineStream.innerHTML = "";
     els.insightStream.innerHTML = "";
     state.insight = { rounds: [], activeRoundIndex: -1, zoomRounds: 0 };
@@ -566,6 +616,7 @@
 
   async function replaySide(side, sideData, token, startedAt) {
     const isInsight = side === "insight";
+    startStatusTimer(side, startedAt, sideData.wall_time_s, token);
     showWaiting(side, "Prefilling… waiting for decoding to start");
 
     const turns = sideData.turns || [];
@@ -579,7 +630,7 @@
 
       // Hold / re-show Prefilling until this turn's first decode token.
       showWaiting(side, "Prefilling… waiting for decoding to start");
-      setStatus(side, "running", "running");
+      updateRunningStatus(side);
 
       await waitUntil(turn.start_s || 0, startedAt, token);
       if (!isActiveToken(token)) return;
@@ -715,7 +766,7 @@
     await waitUntil(sideData.wall_time_s || 0, startedAt, token);
     if (!isActiveToken(token)) return;
     clearWaiting(side);
-    setStatus(side, "done", "done");
+    setDoneStatus(side, sideData.wall_time_s);
 
     if (!lastAnswerCard) {
       lastAnswerCard = addEventCard(side, "answer", "Response");
@@ -756,6 +807,7 @@
       ]);
     } catch (err) {
       if (isActiveToken(token)) {
+        stopStatusTimers();
         setStatus("baseline", "error", "error");
         setStatus("insight", "error", "error");
         const { body } = addEventCard("baseline", "think", "Error");
@@ -805,7 +857,7 @@
     }
     els.pdfThumbToggle.textContent = state.pdfThumbsExpanded
       ? "Show fewer pages"
-      : "Show all pages";
+      : `Show all ${state.pdfPages.length} pages`;
     els.pdfThumbToggle.classList.toggle("is-expanded", state.pdfThumbsExpanded);
     els.pdfThumbToggle.setAttribute("aria-expanded", String(state.pdfThumbsExpanded));
   }

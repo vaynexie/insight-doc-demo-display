@@ -231,10 +231,11 @@ body {
 }
 
 .thumb-toggle {
-  display: inline-flex;
+  display: flex;
   align-items: center;
+  justify-content: center;
   gap: 0.35rem;
-  margin-top: 0.55rem;
+  margin: 0.65rem auto 0;
   border: 1px solid var(--border);
   border-radius: 6px;
   background: var(--bg);
