@@ -31,12 +31,6 @@ EXAMPLE_SPECS = [
         "bundle": "default",
     },
     {
-        "id": "073_longdocurl_longdocurl_free_gpt4o_4127644_8_37_3",
-        "benchmark": "longdocurl",
-        "label": "LongDocURL · Vistra retirements",
-        "bundle": "default",
-    },
-    {
         "id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1",
         "benchmark": "longdocurl0507_highpage",
         "label": "LongDocURL highpage · canvas weight",

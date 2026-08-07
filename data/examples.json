@@ -21,19 +21,6 @@
       "ground_truth": "$300"
     },
     {
-      "id": "073_longdocurl_longdocurl_free_gpt4o_4127644_8_37_3",
-      "benchmark": "longdocurl",
-      "label": "LongDocURL · Vistra retirements",
-      "question": "How many planned retirement dates did Vistra Corp. announce in 2020?",
-      "page_count": 30,
-      "path": "data/examples/073_longdocurl_longdocurl_free_gpt4o_4127644_8_37_3.json",
-      "insight_wall_time_s": 13.938410646282136,
-      "baseline_wall_time_s": 42.410764277912676,
-      "insight_answer": "seven",
-      "baseline_answer": "one",
-      "ground_truth": "7"
-    },
-    {
       "id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1",
       "benchmark": "longdocurl0507_highpage",
       "label": "LongDocURL highpage · canvas weight",
