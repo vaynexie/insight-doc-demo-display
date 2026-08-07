@@ -760,6 +760,7 @@
     }
     body.classList.add("rich-text");
     body.innerHTML = lines.join("");
+    scrollSide(side);
     return card;
   }
 
