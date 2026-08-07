@@ -1,0 +1,2838 @@
+{
+  "id": "053_mmlongbench_mmlongbench_842__lowconc",
+  "benchmark": "mmlongbench",
+  "label": "MMLongBench-Doc · album volume gap (low-conc rerun)",
+  "question": "What is the difference in total volume between the rank 1 and rank 19 top albums?",
+  "ground_truth": "1194000",
+  "document_id": "053_mmlongbench_mmlongbench_842__lowconc",
+  "page_count": 36,
+  "source_note": "Low-concurrency rerun packaged alongside the original demo example; not a replacement.",
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 12.498876303434372,
+    "core_time_s": 9.285825526341796,
+    "extracted_answer": "1,194,000",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000000.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000000.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000001.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000001.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000002.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000002.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000003.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000003.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000004.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000004.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000005.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000005.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000006.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000006.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000007.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000007.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000008.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000008.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000009.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000009.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000010.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000010.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000011.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000011.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000012.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000012.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000013.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000013.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000014.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000014.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000015.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000015.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000016.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000016.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000017.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000017.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000018.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000018.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000019.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000019.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000020.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000020.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000021.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000021.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000022.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000022.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000023.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000023.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000024.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000024.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000025.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000025.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000026.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000026.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000027.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000027.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 28,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000028.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000028.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 29,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000029.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000029.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 30,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000030.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000030.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 31,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000031.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000031.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 32,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000032.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000032.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 33,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000033.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000033.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 34,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000034.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000034.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 35,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000035.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000035.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 28,
+        "kind": "initial",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 29,
+        "kind": "initial",
+        "source_original_img_idx": 29,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 30,
+        "kind": "initial",
+        "source_original_img_idx": 30,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 31,
+        "kind": "initial",
+        "source_original_img_idx": 31,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 32,
+        "kind": "initial",
+        "source_original_img_idx": 32,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 33,
+        "kind": "initial",
+        "source_original_img_idx": 33,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 34,
+        "kind": "initial",
+        "source_original_img_idx": 34,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 35,
+        "kind": "initial",
+        "source_original_img_idx": 35,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          747,
+          560
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 36,
+        "kind": "region_crop",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          140,
+          363,
+          2057,
+          1437
+        ],
+        "display_size": [
+          1342,
+          752
+        ],
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "presented_img_idx": 37,
+        "kind": "region_crop",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          134,
+          363,
+          2048,
+          1137
+        ],
+        "display_size": [
+          1340,
+          542
+        ],
+        "original_size": [
+          2134,
+          1600
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 3.1741374526172876,
+        "end_s": 8.968869429081678,
+        "time_to_first_token_s": 3.95248213224113,
+        "duration_s": 5.794731976464391,
+        "think": "I need to read the \"Total Volume (000)\" for rank 1 and rank 19 on the table in image 13. I'll zoom into the table area of image 13.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " \"",
+          "Total",
+          " Volume",
+          " (",
+          "0",
+          "0",
+          "0",
+          ")\"",
+          " for",
+          " rank",
+          " ",
+          "1",
+          " and",
+          " rank",
+          " ",
+          "1",
+          "9",
+          " on",
+          " the",
+          " table",
+          " in",
+          " image",
+          " ",
+          "1",
+          "3",
+          ".",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " table",
+          " area",
+          " of",
+          " image",
+          " ",
+          "1",
+          "3",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "table",
+          " showing",
+          " ranks",
+          ",",
+          " artists",
+          ",",
+          " titles",
+          ",",
+          " and",
+          " Total",
+          " Volume",
+          " (",
+          "top",
+          " half",
+          " of",
+          " slide",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "6",
+          "5",
+          ",",
+          " ",
+          "2",
+          "2",
+          "7",
+          ",",
+          " ",
+          "9",
+          "6",
+          "4",
+          ",",
+          " ",
+          "8",
+          "9",
+          "8",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "1",
+          "3",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 8.971342531964183,
+            "end_s": 8.998808642849326,
+            "duration_s": 0.02746611088514328,
+            "ok": true,
+            "arguments": {
+              "label": "table showing ranks, artists, titles, and Total Volume (top half of slide)",
+              "bbox_2d": [
+                65,
+                227,
+                964,
+                898
+              ],
+              "img_idx": 13
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              65,
+              227,
+              964,
+              898
+            ],
+            "img_idx": 13,
+            "label": "table showing ranks, artists, titles, and Total Volume (top half of slide)"
+          }
+        },
+        "crop_presented_indices": [
+          36
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 13,
+            "full_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              747,
+              560
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 36",
+            "img_idx": 36,
+            "full_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_01_crop_36_full.jpg",
+            "thumb_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_01_crop_36_thumb.jpg",
+            "display_size": [
+              1342,
+              752
+            ]
+          }
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 9.017849566414952,
+        "end_s": 11.238275052979589,
+        "time_to_first_token_s": 0.19766543619334698,
+        "duration_s": 2.2204254865646362,
+        "think": "I need to read the Total Volume for rank 19 (Drake - Nothing Was The Same). I'll zoom into the table on image 14 where ranks 12-19 are listed.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " Total",
+          " Volume",
+          " for",
+          " rank",
+          " ",
+          "1",
+          "9",
+          " (",
+          "Dr",
+          "ake",
+          " -",
+          " Nothing",
+          " Was",
+          " The",
+          " Same",
+          ").",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " table",
+          " on",
+          " image",
+          " ",
+          "1",
+          "4",
+          " where",
+          " ranks",
+          " ",
+          "1",
+          "2",
+          "-",
+          "1",
+          "9",
+          " are",
+          " listed",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "table",
+          " showing",
+          " ranks",
+          " and",
+          " total",
+          " volumes",
+          " including",
+          " rows",
+          " around",
+          " rank",
+          " ",
+          "1",
+          "2",
+          ",",
+          " ",
+          "1",
+          "5",
+          ",",
+          " ",
+          "1",
+          "7",
+          ",",
+          " ",
+          "1",
+          "9",
+          " (",
+          "middle",
+          " of",
+          " slide",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "6",
+          "3",
+          ",",
+          " ",
+          "2",
+          "2",
+          "7",
+          ",",
+          " ",
+          "9",
+          "6",
+          "0",
+          ",",
+          " ",
+          "7",
+          "1",
+          "1",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "1",
+          "4",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 11.240491509437561,
+            "end_s": 11.27218303643167,
+            "duration_s": 0.031691526994109154,
+            "ok": true,
+            "arguments": {
+              "label": "table showing ranks and total volumes including rows around rank 12, 15, 17, 19 (middle of slide)",
+              "bbox_2d": [
+                63,
+                227,
+                960,
+                711
+              ],
+              "img_idx": 14
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              63,
+              227,
+              960,
+              711
+            ],
+            "img_idx": 14,
+            "label": "table showing ranks and total volumes including rows around rank 12, 15, 17, 19 (middle of slide)"
+          }
+        },
+        "crop_presented_indices": [
+          37
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 14,
+            "full_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              747,
+              560
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 37",
+            "img_idx": 37,
+            "full_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_02_crop_37_full.jpg",
+            "thumb_src": "tool_images/053_mmlongbench_mmlongbench_842__lowconc/insight_turn_02_crop_37_thumb.jpg",
+            "display_size": [
+              1340,
+              542
+            ]
+          }
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "answer",
+        "start_s": 11.287564627826214,
+        "end_s": 12.49750223197043,
+        "time_to_first_token_s": 0.10827341675758362,
+        "duration_s": 1.2099376041442156,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " table",
+          ",",
+          " rank",
+          " ",
+          "1",
+          " has",
+          " total",
+          " volume",
+          " ",
+          "1",
+          ",",
+          "6",
+          "0",
+          "8",
+          " (",
+          "0",
+          "0",
+          "0",
+          ")",
+          " and",
+          " rank",
+          " ",
+          "1",
+          "9",
+          " has",
+          " ",
+          "4",
+          "1",
+          "4",
+          " (",
+          "0",
+          "0",
+          "0",
+          ").",
+          " The",
+          " difference",
+          " is",
+          " ",
+          "1",
+          ",",
+          "6",
+          "0",
+          "8",
+          " −",
+          " ",
+          "4",
+          "1",
+          "4",
+          " =",
+          " ",
+          "1",
+          ",",
+          "1",
+          "9",
+          "4",
+          " (",
+          "0",
+          "0",
+          "0",
+          "),",
+          " i",
+          ".e",
+          ".,",
+          " ",
+          "1",
+          ",",
+          "1",
+          "9",
+          "4",
+          ",",
+          "0",
+          "0",
+          "0",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the table, rank 1 has total volume 1,608 (000) and rank 19 has 414 (000). The difference is 1,608 − 414 = 1,194 (000), i.e., 1,194,000."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 33.494143418967724,
+    "core_time_s": 26.92578847706318,
+    "extracted_answer": "1,481 (in thousands)",
+    "accuracy": 0.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000000.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000000.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000001.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000001.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000002.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000002.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000003.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000003.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000004.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000004.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000005.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000005.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000006.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000006.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000007.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000007.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000008.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000008.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000009.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000009.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000010.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000010.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000011.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000011.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000012.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000012.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000013.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000013.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000014.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000014.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000015.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000015.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000016.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000016.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000017.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000017.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000018.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000018.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000019.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000019.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000020.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000020.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000021.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000021.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000022.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000022.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000023.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000023.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000024.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000024.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000025.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000025.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000026.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000026.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000027.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000027.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 28,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000028.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000028.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 29,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000029.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000029.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 30,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000030.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000030.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 31,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000031.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000031.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 32,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000032.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000032.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 33,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000033.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000033.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 34,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000034.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000034.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      },
+      {
+        "original_img_idx": 35,
+        "src": "images/053_mmlongbench_mmlongbench_842__lowconc_000035.jpg",
+        "thumb": "thumbs/053_mmlongbench_mmlongbench_842__lowconc_000035.jpg",
+        "original_size": [
+          2134,
+          1600
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 28,
+        "kind": "initial",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 29,
+        "kind": "initial",
+        "source_original_img_idx": 29,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 30,
+        "kind": "initial",
+        "source_original_img_idx": 30,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 31,
+        "kind": "initial",
+        "source_original_img_idx": 31,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 32,
+        "kind": "initial",
+        "source_original_img_idx": 32,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 33,
+        "kind": "initial",
+        "source_original_img_idx": 33,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 34,
+        "kind": "initial",
+        "source_original_img_idx": 34,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 35,
+        "kind": "initial",
+        "source_original_img_idx": 35,
+        "bbox_on_original": [
+          0,
+          0,
+          2134,
+          1600
+        ],
+        "display_size": [
+          1494,
+          1120
+        ],
+        "original_size": [
+          2134,
+          1600
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 6.56629534997046,
+        "end_s": 33.49211676232517,
+        "time_to_first_token_s": 22.44600398465991,
+        "duration_s": 26.925821412354708,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " data",
+          " presented",
+          " in",
+          " Image",
+          " ",
+          "1",
+          "3",
+          ",",
+          " \"",
+          "THE",
+          " TOP",
+          " AL",
+          "BUM",
+          "S",
+          " A",
+          "CH",
+          "IE",
+          "VE",
+          " SUCCESS",
+          " IN",
+          " DIFF",
+          "ER",
+          "ENT",
+          " W",
+          "AYS",
+          "\",",
+          " we",
+          " can",
+          " find",
+          " the",
+          " total",
+          " volume",
+          " for",
+          " the",
+          " albums",
+          " at",
+          " rank",
+          " ",
+          "1",
+          " and",
+          " rank",
+          " ",
+          "1",
+          "9",
+          ".\n\n",
+          "-",
+          " The",
+          " album",
+          " at",
+          " **",
+          "Rank",
+          " ",
+          "1",
+          "**",
+          " is",
+          " Taylor",
+          " Swift",
+          "'s",
+          " *",
+          "1",
+          "9",
+          "8",
+          "9",
+          "*,",
+          " with",
+          " a",
+          " **",
+          "Total",
+          " Volume",
+          " of",
+          " ",
+          "1",
+          ",",
+          "6",
+          "0",
+          "8",
+          " (",
+          "in",
+          " thousands",
+          ")**",
+          ".\n",
+          "-",
+          " The",
+          " album",
+          " at",
+          " **",
+          "Rank",
+          " ",
+          "1",
+          "9",
+          "**",
+          " is",
+          " Drake",
+          "'s",
+          " *",
+          "Nothing",
+          " Was",
+          " the",
+          " Same",
+          "*,",
+          " with",
+          " a",
+          " **",
+          "Total",
+          " Volume",
+          " of",
+          " ",
+          "1",
+          "2",
+          "7",
+          " (",
+          "in",
+          " thousands",
+          ")**",
+          ".\n\n",
+          "To",
+          " find",
+          " the",
+          " difference",
+          ",",
+          " we",
+          " subtract",
+          " the",
+          " volume",
+          " of",
+          " rank",
+          " ",
+          "1",
+          "9",
+          " from",
+          " the",
+          " volume",
+          " of",
+          " rank",
+          " ",
+          "1",
+          ":\n\n",
+          "1",
+          ",",
+          "6",
+          "0",
+          "8",
+          " -",
+          " ",
+          "1",
+          "2",
+          "7",
+          " =",
+          " ",
+          "1",
+          ",",
+          "4",
+          "8",
+          "1",
+          "\n\n",
+          "Therefore",
+          ",",
+          " the",
+          " difference",
+          " in",
+          " total",
+          " volume",
+          " between",
+          " the",
+          " rank",
+          " ",
+          "1",
+          " and",
+          " rank",
+          " ",
+          "1",
+          "9",
+          " top",
+          " albums",
+          " is",
+          " **",
+          "1",
+          ",",
+          "4",
+          "8",
+          "1",
+          " (",
+          "in",
+          " thousands",
+          ")**",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the data presented in Image 13, \"THE TOP ALBUMS ACHIEVE SUCCESS IN DIFFERENT WAYS\", we can find the total volume for the albums at rank 1 and rank 19.\n\n- The album at **Rank 1** is Taylor Swift's *1989*, with a **Total Volume of 1,608 (in thousands)**.\n- The album at **Rank 19** is Drake's *Nothing Was the Same*, with a **Total Volume of 127 (in thousands)**.\n\nTo find the difference, we subtract the volume of rank 19 from the volume of rank 1:\n\n1,608 - 127 = 1,481\n\nTherefore, the difference in total volume between the rank 1 and rank 19 top albums is **1,481 (in thousands)**."
+      }
+    ]
+  }
+}

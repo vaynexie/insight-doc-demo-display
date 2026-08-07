@@ -1,0 +1,3681 @@
+{
+  "id": "056_mmlongbench_mmlongbench_688__lowconc",
+  "benchmark": "mmlongbench",
+  "label": "MMLongBench-Doc · campaign grade (low-conc uncapped rerun)",
+  "question": "Who has a higher median campaign grade? Trump or Clinton?",
+  "ground_truth": "Clinton",
+  "document_id": "056_mmlongbench_mmlongbench_688__lowconc",
+  "page_count": 45,
+  "source_note": "Low-concurrency rerun packaged alongside the original demo example; not a replacement.",
+  "insight": {
+    "side": "rl",
+    "label": "InSight-doc-8B",
+    "initial_rescale": 0.35,
+    "wall_time_s": 17.858795249834657,
+    "core_time_s": 13.865315048024058,
+    "extracted_answer": "Therefore Clinton has the higher median grade.",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000000.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000000.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000001.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000001.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000002.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000002.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000003.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000003.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000004.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000004.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000005.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000005.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000006.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000006.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000007.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000007.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000008.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000008.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000009.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000009.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000010.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000010.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000011.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000011.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000012.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000012.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000013.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000013.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000014.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000014.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000015.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000015.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000016.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000016.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000017.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000017.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000018.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000018.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000019.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000019.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000020.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000020.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000021.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000021.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000022.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000022.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000023.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000023.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000024.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000024.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000025.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000025.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000026.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000026.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000027.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000027.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 28,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000028.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000028.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 29,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000029.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000029.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 30,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000030.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000030.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 31,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000031.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000031.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 32,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000032.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000032.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 33,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000033.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000033.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 34,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000034.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000034.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 35,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000035.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000035.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 36,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000036.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000036.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 37,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000037.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000037.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 38,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000038.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000038.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 39,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000039.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000039.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 40,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000040.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000040.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 41,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000041.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000041.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 42,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000042.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000042.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 43,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000043.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000043.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 44,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000044.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000044.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 28,
+        "kind": "initial",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 29,
+        "kind": "initial",
+        "source_original_img_idx": 29,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 30,
+        "kind": "initial",
+        "source_original_img_idx": 30,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 31,
+        "kind": "initial",
+        "source_original_img_idx": 31,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 32,
+        "kind": "initial",
+        "source_original_img_idx": 32,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 33,
+        "kind": "initial",
+        "source_original_img_idx": 33,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 34,
+        "kind": "initial",
+        "source_original_img_idx": 34,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 35,
+        "kind": "initial",
+        "source_original_img_idx": 35,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 36,
+        "kind": "initial",
+        "source_original_img_idx": 36,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 37,
+        "kind": "initial",
+        "source_original_img_idx": 37,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 38,
+        "kind": "initial",
+        "source_original_img_idx": 38,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 39,
+        "kind": "initial",
+        "source_original_img_idx": 39,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 40,
+        "kind": "initial",
+        "source_original_img_idx": 40,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 41,
+        "kind": "initial",
+        "source_original_img_idx": 41,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 42,
+        "kind": "initial",
+        "source_original_img_idx": 42,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 43,
+        "kind": "initial",
+        "source_original_img_idx": 43,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 44,
+        "kind": "initial",
+        "source_original_img_idx": 44,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          595,
+          770
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.35
+      },
+      {
+        "presented_img_idx": 45,
+        "kind": "region_crop",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          154,
+          411,
+          1523,
+          1920
+        ],
+        "display_size": [
+          958,
+          1056
+        ],
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "presented_img_idx": 46,
+        "kind": "region_crop",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          641,
+          1238,
+          1493,
+          1741
+        ],
+        "display_size": [
+          1192,
+          704
+        ],
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "presented_img_idx": 47,
+        "kind": "region_crop",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          1390,
+          773,
+          1503,
+          1204
+        ],
+        "display_size": [
+          158,
+          604
+        ],
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 2,
+        "type": "tool_call",
+        "start_s": 3.945141090080142,
+        "end_s": 5.82857752405107,
+        "time_to_first_token_s": 0.09364430606365204,
+        "duration_s": 1.8834364339709282,
+        "think": "I need to read the campaign grades chart (image 28) that shows median/average grades for Trump and Clinton across elections. I'll zoom into the bar-chart area on image 28.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " campaign",
+          " grades",
+          " chart",
+          " (",
+          "image",
+          " ",
+          "2",
+          "8",
+          ")",
+          " that",
+          " shows",
+          " median",
+          "/",
+          "average",
+          " grades",
+          " for",
+          " Trump",
+          " and",
+          " Clinton",
+          " across",
+          " elections",
+          ".",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " bar",
+          "-chart",
+          " area",
+          " on",
+          " image",
+          " ",
+          "2",
+          "8",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "bar",
+          " chart",
+          " of",
+          " campaign",
+          " grades",
+          " (",
+          "left",
+          "-center",
+          " area",
+          " showing",
+          " bars",
+          " labeled",
+          " by",
+          " year",
+          " and",
+          " grade",
+          " categories",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "9",
+          "1",
+          ",",
+          " ",
+          "1",
+          "8",
+          "7",
+          ",",
+          " ",
+          "8",
+          "9",
+          "6",
+          ",",
+          " ",
+          "8",
+          "7",
+          "3",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "2",
+          "8",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 5.831322941929102,
+            "end_s": 5.858117263764143,
+            "duration_s": 0.026794321835041046,
+            "ok": true,
+            "arguments": {
+              "label": "bar chart of campaign grades (left-center area showing bars labeled by year and grade categories)",
+              "bbox_2d": [
+                91,
+                187,
+                896,
+                873
+              ],
+              "img_idx": 28
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              91,
+              187,
+              896,
+              873
+            ],
+            "img_idx": 28,
+            "label": "bar chart of campaign grades (left-center area showing bars labeled by year and grade categories)"
+          }
+        },
+        "crop_presented_indices": [
+          45
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 28,
+            "full_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_01_bbox_full.jpg",
+            "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_01_bbox_thumb.jpg",
+            "display_size": [
+              595,
+              770
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 45",
+            "img_idx": 45,
+            "full_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_01_crop_45_full.jpg",
+            "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_01_crop_45_thumb.jpg",
+            "display_size": [
+              958,
+              1056
+            ]
+          }
+        ]
+      },
+      {
+        "message_idx": 4,
+        "type": "tool_call",
+        "start_s": 5.8741149585694075,
+        "end_s": 7.723897250369191,
+        "time_to_first_token_s": 0.1347794272005558,
+        "duration_s": 1.8497822917997837,
+        "think": "I need to read the campaign grades chart for Clinton (losing candidates) and compare the A/B portion to Trump's. I'll zoom into the lower half of the chart showing losing presidential candidates.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " read",
+          " the",
+          " campaign",
+          " grades",
+          " chart",
+          " for",
+          " Clinton",
+          " (",
+          "losing",
+          " candidates",
+          ")",
+          " and",
+          " compare",
+          " the",
+          " A",
+          "/B",
+          " portion",
+          " to",
+          " Trump",
+          "'s",
+          ".",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " lower",
+          " half",
+          " of",
+          " the",
+          " chart",
+          " showing",
+          " losing",
+          " presidential",
+          " candidates",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "lower",
+          " chart",
+          " area",
+          " showing",
+          " '",
+          "L",
+          "osing",
+          " presidential",
+          " candidates",
+          "'",
+          " bars",
+          " (",
+          "bottom",
+          " right",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "3",
+          "5",
+          "6",
+          ",",
+          " ",
+          "5",
+          "4",
+          "8",
+          ",",
+          " ",
+          "9",
+          "7",
+          "8",
+          ",",
+          " ",
+          "8",
+          "8",
+          "2",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "4",
+          "5",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 7.726572761312127,
+            "end_s": 7.738304995000362,
+            "duration_s": 0.011732233688235283,
+            "ok": true,
+            "arguments": {
+              "label": "lower chart area showing 'Losing presidential candidates' bars (bottom right)",
+              "bbox_2d": [
+                356,
+                548,
+                978,
+                882
+              ],
+              "img_idx": 45
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              356,
+              548,
+              978,
+              882
+            ],
+            "img_idx": 45,
+            "label": "lower chart area showing 'Losing presidential candidates' bars (bottom right)"
+          }
+        },
+        "crop_presented_indices": [
+          46
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 45,
+            "full_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_02_bbox_full.jpg",
+            "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_02_bbox_thumb.jpg",
+            "display_size": [
+              958,
+              1056
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 46",
+            "img_idx": 46,
+            "full_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_02_crop_46_full.jpg",
+            "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_02_crop_46_thumb.jpg",
+            "display_size": [
+              1192,
+              704
+            ]
+          }
+        ]
+      },
+      {
+        "message_idx": 6,
+        "type": "tool_call",
+        "start_s": 7.753164870664477,
+        "end_s": 10.87717578932643,
+        "time_to_first_token_s": 2.819947862997651,
+        "duration_s": 3.124010918661952,
+        "think": "I need to compare the A/B (green) portions of the 2016 bars for Trump and Clinton. I'll zoom into the rightmost portion of the top chart (Trump) to read the A/B value.",
+        "display_chunks": [
+          "I",
+          " need",
+          " to",
+          " compare",
+          " the",
+          " A",
+          "/B",
+          " (",
+          "green",
+          ")",
+          " portions",
+          " of",
+          " the",
+          " ",
+          "2",
+          "0",
+          "1",
+          "6",
+          " bars",
+          " for",
+          " Trump",
+          " and",
+          " Clinton",
+          ".",
+          " I",
+          "'ll",
+          " zoom",
+          " into",
+          " the",
+          " right",
+          "most",
+          " portion",
+          " of",
+          " the",
+          " top",
+          " chart",
+          " (",
+          "Trump",
+          ")",
+          " to",
+          " read",
+          " the",
+          " A",
+          "/B",
+          " value",
+          ".\n",
+          "<tool_call>",
+          "\n",
+          "{\"",
+          "name",
+          "\":",
+          " \"",
+          "image",
+          "_zoom",
+          "_in",
+          "_tool",
+          "\",",
+          " \"",
+          "arguments",
+          "\":",
+          " {\"",
+          "label",
+          "\":",
+          " \"",
+          "right",
+          "most",
+          " bar",
+          " in",
+          " the",
+          " '",
+          "Win",
+          "ning",
+          " presidential",
+          " candidates",
+          "'",
+          " chart",
+          " (",
+          "2",
+          "0",
+          "1",
+          "6",
+          ",",
+          " Trump",
+          ")\",",
+          " \"",
+          "bbox",
+          "_",
+          "2",
+          "d",
+          "\":",
+          " [",
+          "9",
+          "0",
+          "3",
+          ",",
+          " ",
+          "2",
+          "4",
+          "0",
+          ",",
+          " ",
+          "9",
+          "8",
+          "5",
+          ",",
+          " ",
+          "5",
+          "2",
+          "6",
+          "],",
+          " \"",
+          "img",
+          "_idx",
+          "\":",
+          " ",
+          "4",
+          "5",
+          "}}\n",
+          "</tool_call>"
+        ],
+        "tool_call_traces": [
+          {
+            "name": "image_zoom_in_tool",
+            "start_s": 10.879369439557195,
+            "end_s": 10.881280366331339,
+            "duration_s": 0.0019109267741441727,
+            "ok": true,
+            "arguments": {
+              "label": "rightmost bar in the 'Winning presidential candidates' chart (2016, Trump)",
+              "bbox_2d": [
+                903,
+                240,
+                985,
+                526
+              ],
+              "img_idx": 45
+            },
+            "new_presented_images": 1
+          }
+        ],
+        "tool_call": {
+          "name": "image_zoom_in_tool",
+          "arguments": {
+            "bbox_2d": [
+              903,
+              240,
+              985,
+              526
+            ],
+            "img_idx": 45,
+            "label": "rightmost bar in the 'Winning presidential candidates' chart (2016, Trump)"
+          }
+        },
+        "crop_presented_indices": [
+          47
+        ],
+        "tool_visuals": [
+          {
+            "kind": "bbox",
+            "label": "BBox overlay",
+            "img_idx": 45,
+            "full_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_03_bbox_full.jpg",
+            "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_03_bbox_thumb.jpg",
+            "display_size": [
+              958,
+              1056
+            ]
+          },
+          {
+            "kind": "crop",
+            "label": "Crop · image 47",
+            "img_idx": 47,
+            "full_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_03_crop_47_full.jpg",
+            "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688__lowconc/insight_turn_03_crop_47_thumb.jpg",
+            "display_size": [
+              158,
+              604
+            ]
+          }
+        ]
+      },
+      {
+        "message_idx": 8,
+        "type": "answer",
+        "start_s": 10.891620000824332,
+        "end_s": 17.857052149251103,
+        "time_to_first_token_s": 5.920172432437539,
+        "duration_s": 6.965432148426771,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " charts",
+          ",",
+          " Clinton",
+          " has",
+          " the",
+          " higher",
+          " median",
+          " campaign",
+          " grade",
+          ".",
+          " In",
+          " ",
+          "2",
+          "0",
+          "1",
+          "6",
+          ",",
+          " Trump",
+          "’s",
+          " A",
+          "/B",
+          " share",
+          " is",
+          " about",
+          " ",
+          "3",
+          "0",
+          "%",
+          " (",
+          "losing",
+          "-c",
+          "andidate",
+          " chart",
+          "),",
+          " while",
+          " Clinton",
+          "’s",
+          " A",
+          "/B",
+          " share",
+          " in",
+          " ",
+          "2",
+          "0",
+          "1",
+          "6",
+          " is",
+          " about",
+          " ",
+          "4",
+          "3",
+          "%",
+          " (",
+          "losing",
+          "-c",
+          "andidate",
+          " chart",
+          ").",
+          " Therefore",
+          " Clinton",
+          " has",
+          " the",
+          " higher",
+          " median",
+          " grade",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the charts, Clinton has the higher median campaign grade. In 2016, Trump’s A/B share is about 30% (losing-candidate chart), while Clinton’s A/B share in 2016 is about 43% (losing-candidate chart). Therefore Clinton has the higher median grade."
+      }
+    ]
+  },
+  "baseline": {
+    "side": "base",
+    "label": "Qwen3-VL-8B",
+    "initial_rescale": 0.7,
+    "wall_time_s": 39.104616874828935,
+    "core_time_s": 29.950642565265298,
+    "extracted_answer": "Hillary Clinton has a higher median campaign grade than Donald Trump.",
+    "accuracy": 1.0,
+    "pages": [
+      {
+        "original_img_idx": 0,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000000.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000000.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 1,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000001.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000001.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 2,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000002.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000002.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 3,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000003.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000003.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 4,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000004.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000004.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 5,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000005.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000005.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 6,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000006.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000006.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 7,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000007.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000007.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 8,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000008.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000008.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 9,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000009.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000009.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 10,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000010.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000010.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 11,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000011.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000011.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 12,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000012.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000012.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 13,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000013.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000013.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 14,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000014.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000014.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 15,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000015.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000015.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 16,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000016.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000016.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 17,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000017.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000017.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 18,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000018.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000018.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 19,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000019.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000019.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 20,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000020.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000020.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 21,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000021.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000021.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 22,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000022.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000022.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 23,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000023.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000023.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 24,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000024.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000024.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 25,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000025.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000025.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 26,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000026.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000026.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 27,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000027.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000027.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 28,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000028.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000028.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 29,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000029.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000029.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 30,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000030.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000030.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 31,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000031.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000031.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 32,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000032.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000032.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 33,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000033.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000033.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 34,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000034.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000034.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 35,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000035.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000035.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 36,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000036.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000036.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 37,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000037.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000037.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 38,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000038.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000038.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 39,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000039.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000039.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 40,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000040.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000040.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 41,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000041.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000041.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 42,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000042.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000042.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 43,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000043.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000043.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      },
+      {
+        "original_img_idx": 44,
+        "src": "images/056_mmlongbench_mmlongbench_688__lowconc_000044.jpg",
+        "thumb": "thumbs/056_mmlongbench_mmlongbench_688__lowconc_000044.jpg",
+        "original_size": [
+          1700,
+          2200
+        ]
+      }
+    ],
+    "presented_images": [
+      {
+        "presented_img_idx": 0,
+        "kind": "initial",
+        "source_original_img_idx": 0,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 1,
+        "kind": "initial",
+        "source_original_img_idx": 1,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 2,
+        "kind": "initial",
+        "source_original_img_idx": 2,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 3,
+        "kind": "initial",
+        "source_original_img_idx": 3,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 4,
+        "kind": "initial",
+        "source_original_img_idx": 4,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 5,
+        "kind": "initial",
+        "source_original_img_idx": 5,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 6,
+        "kind": "initial",
+        "source_original_img_idx": 6,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 7,
+        "kind": "initial",
+        "source_original_img_idx": 7,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 8,
+        "kind": "initial",
+        "source_original_img_idx": 8,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 9,
+        "kind": "initial",
+        "source_original_img_idx": 9,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 10,
+        "kind": "initial",
+        "source_original_img_idx": 10,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 11,
+        "kind": "initial",
+        "source_original_img_idx": 11,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 12,
+        "kind": "initial",
+        "source_original_img_idx": 12,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 13,
+        "kind": "initial",
+        "source_original_img_idx": 13,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 14,
+        "kind": "initial",
+        "source_original_img_idx": 14,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 15,
+        "kind": "initial",
+        "source_original_img_idx": 15,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 16,
+        "kind": "initial",
+        "source_original_img_idx": 16,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 17,
+        "kind": "initial",
+        "source_original_img_idx": 17,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 18,
+        "kind": "initial",
+        "source_original_img_idx": 18,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 19,
+        "kind": "initial",
+        "source_original_img_idx": 19,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 20,
+        "kind": "initial",
+        "source_original_img_idx": 20,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 21,
+        "kind": "initial",
+        "source_original_img_idx": 21,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 22,
+        "kind": "initial",
+        "source_original_img_idx": 22,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 23,
+        "kind": "initial",
+        "source_original_img_idx": 23,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 24,
+        "kind": "initial",
+        "source_original_img_idx": 24,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 25,
+        "kind": "initial",
+        "source_original_img_idx": 25,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 26,
+        "kind": "initial",
+        "source_original_img_idx": 26,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 27,
+        "kind": "initial",
+        "source_original_img_idx": 27,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 28,
+        "kind": "initial",
+        "source_original_img_idx": 28,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 29,
+        "kind": "initial",
+        "source_original_img_idx": 29,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 30,
+        "kind": "initial",
+        "source_original_img_idx": 30,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 31,
+        "kind": "initial",
+        "source_original_img_idx": 31,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 32,
+        "kind": "initial",
+        "source_original_img_idx": 32,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 33,
+        "kind": "initial",
+        "source_original_img_idx": 33,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 34,
+        "kind": "initial",
+        "source_original_img_idx": 34,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 35,
+        "kind": "initial",
+        "source_original_img_idx": 35,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 36,
+        "kind": "initial",
+        "source_original_img_idx": 36,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 37,
+        "kind": "initial",
+        "source_original_img_idx": 37,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 38,
+        "kind": "initial",
+        "source_original_img_idx": 38,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 39,
+        "kind": "initial",
+        "source_original_img_idx": 39,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 40,
+        "kind": "initial",
+        "source_original_img_idx": 40,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 41,
+        "kind": "initial",
+        "source_original_img_idx": 41,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 42,
+        "kind": "initial",
+        "source_original_img_idx": 42,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 43,
+        "kind": "initial",
+        "source_original_img_idx": 43,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      },
+      {
+        "presented_img_idx": 44,
+        "kind": "initial",
+        "source_original_img_idx": 44,
+        "bbox_on_original": [
+          0,
+          0,
+          1700,
+          2200
+        ],
+        "display_size": [
+          1190,
+          1540
+        ],
+        "original_size": [
+          1700,
+          2200
+        ],
+        "initial_rescale": 0.7
+      }
+    ],
+    "turns": [
+      {
+        "message_idx": 1,
+        "type": "answer",
+        "start_s": 9.151624646037817,
+        "end_s": 39.102309573441744,
+        "time_to_first_token_s": 13.360717628151178,
+        "duration_s": 29.950684927403927,
+        "think": "",
+        "display_chunks": [
+          "Based",
+          " on",
+          " the",
+          " provided",
+          " report",
+          ",",
+          " **",
+          "Hillary",
+          " Clinton",
+          "**",
+          " has",
+          " a",
+          " higher",
+          " median",
+          " campaign",
+          " grade",
+          " than",
+          " Donald",
+          " Trump",
+          ".\n\n",
+          "Here",
+          " is",
+          " the",
+          " reasoning",
+          ":\n\n",
+          "1",
+          ".",
+          " ",
+          " **",
+          "The",
+          " Report",
+          "'s",
+          " Primary",
+          " Finding",
+          ":**",
+          " The",
+          " title",
+          " of",
+          " the",
+          " report",
+          ",",
+          " \"",
+          "Low",
+          " Marks",
+          " for",
+          " Major",
+          " Players",
+          " in",
+          " ",
+          "2",
+          "0",
+          "1",
+          "6",
+          " Election",
+          " –",
+          " Including",
+          " the",
+          " Winner",
+          ",\"",
+          " and",
+          " the",
+          " text",
+          " on",
+          " page",
+          " ",
+          "2",
+          " (",
+          "Image",
+          " ",
+          "2",
+          ")",
+          " establish",
+          " that",
+          " voters",
+          " gave",
+          " Trump",
+          " the",
+          " lowest",
+          " grades",
+          " of",
+          " any",
+          " winning",
+          " candidate",
+          " in",
+          " ",
+          "2",
+          "8",
+          " years",
+          ".\n",
+          "2",
+          ".",
+          " ",
+          " **",
+          "Grade",
+          " Distribution",
+          ":**",
+          " Page",
+          " ",
+          "2",
+          "7",
+          " (",
+          "Image",
+          " ",
+          "2",
+          "7",
+          ")",
+          " provides",
+          " a",
+          " detailed",
+          " breakdown",
+          " of",
+          " grades",
+          ".",
+          " For",
+          " Donald",
+          " Trump",
+          ",",
+          " ",
+          "3",
+          "0",
+          "%",
+          " received",
+          " an",
+          " A",
+          " or",
+          " B",
+          ",",
+          " ",
+          "1",
+          "9",
+          "%",
+          " received",
+          " a",
+          " C",
+          ",",
+          " ",
+          "1",
+          "5",
+          "%",
+          " received",
+          " a",
+          " D",
+          ",",
+          " and",
+          " ",
+          "3",
+          "5",
+          "%",
+          " received",
+          " an",
+          " F",
+          ".",
+          " His",
+          " average",
+          " grade",
+          " is",
+          " a",
+          " C",
+          "-",
+          ".\n",
+          "3",
+          ".",
+          " ",
+          " **",
+          "Clinton",
+          "'s",
+          " Grades",
+          ":**",
+          " Page",
+          " ",
+          "2",
+          "7",
+          " (",
+          "Image",
+          " ",
+          "2",
+          "7",
+          ")",
+          " shows",
+          " Hillary",
+          " Clinton",
+          "'s",
+          " grades",
+          ":",
+          " ",
+          "4",
+          "3",
+          "%",
+          " received",
+          " an",
+          " A",
+          " or",
+          " B",
+          ",",
+          " ",
+          "2",
+          "0",
+          "%",
+          " received",
+          " a",
+          " C",
+          ",",
+          " ",
+          "1",
+          "6",
+          "%",
+          " received",
+          " a",
+          " D",
+          ",",
+          " and",
+          " ",
+          "2",
+          "1",
+          "%",
+          " received",
+          " an",
+          " F",
+          ".",
+          " Her",
+          " average",
+          " grade",
+          " is",
+          " a",
+          " C",
+          ".\n",
+          "4",
+          ".",
+          " ",
+          " **",
+          "Comparison",
+          ":**",
+          " While",
+          " both",
+          " candidates",
+          " received",
+          " mostly",
+          " C",
+          "-",
+          " or",
+          " lower",
+          " grades",
+          ",",
+          " Clinton",
+          "'s",
+          " distribution",
+          " is",
+          " more",
+          " favorable",
+          ".",
+          " A",
+          " larger",
+          " percentage",
+          " of",
+          " voters",
+          " (",
+          "4",
+          "3",
+          "%)",
+          " gave",
+          " her",
+          " an",
+          " A",
+          " or",
+          " B",
+          " compared",
+          " to",
+          " Trump",
+          " (",
+          "3",
+          "0",
+          "%).",
+          " The",
+          " median",
+          " grade",
+          " would",
+          " fall",
+          " within",
+          " the",
+          " C",
+          " range",
+          " for",
+          " both",
+          ",",
+          " but",
+          " since",
+          " a",
+          " higher",
+          " percentage",
+          " of",
+          " voters",
+          " gave",
+          " Clinton",
+          " higher",
+          " grades",
+          " (",
+          "A",
+          "/B",
+          "),",
+          " her",
+          " overall",
+          " median",
+          " grade",
+          " is",
+          " higher",
+          " than",
+          " Trump",
+          "'s",
+          ".\n\n",
+          "Therefore",
+          ",",
+          " based",
+          " on",
+          " the",
+          " data",
+          " presented",
+          ",",
+          " Hillary",
+          " Clinton",
+          " has",
+          " a",
+          " higher",
+          " median",
+          " campaign",
+          " grade",
+          " than",
+          " Donald",
+          " Trump",
+          "."
+        ],
+        "tool_call_traces": [],
+        "answer": "Based on the provided report, **Hillary Clinton** has a higher median campaign grade than Donald Trump.\n\nHere is the reasoning:\n\n1.  **The Report's Primary Finding:** The title of the report, \"Low Marks for Major Players in 2016 Election – Including the Winner,\" and the text on page 2 (Image 2) establish that voters gave Trump the lowest grades of any winning candidate in 28 years.\n2.  **Grade Distribution:** Page 27 (Image 27) provides a detailed breakdown of grades. For Donald Trump, 30% received an A or B, 19% received a C, 15% received a D, and 35% received an F. His average grade is a C-.\n3.  **Clinton's Grades:** Page 27 (Image 27) shows Hillary Clinton's grades: 43% received an A or B, 20% received a C, 16% received a D, and 21% received an F. Her average grade is a C.\n4.  **Comparison:** While both candidates received mostly C- or lower grades, Clinton's distribution is more favorable. A larger percentage of voters (43%) gave her an A or B compared to Trump (30%). The median grade would fall within the C range for both, but since a higher percentage of voters gave Clinton higher grades (A/B), her overall median grade is higher than Trump's.\n\nTherefore, based on the data presented, Hillary Clinton has a higher median campaign grade than Donald Trump."
+      }
+    ]
+  }
+}

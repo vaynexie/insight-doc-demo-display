@@ -21,6 +21,19 @@
       "ground_truth": "$300"
     },
     {
+      "id": "062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6__lowconc",
+      "benchmark": "longdocurl",
+      "label": "LongDocURL · contest prize money (low-conc uncapped rerun)",
+      "question": "Calculate the total prize money for winners in the Senior King and Queen Contest and the Pet Photo Contest.",
+      "page_count": 84,
+      "path": "data/examples/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6__lowconc.json",
+      "insight_wall_time_s": 17.820430991239846,
+      "baseline_wall_time_s": 68.63787652365863,
+      "insight_answer": "$300.00",
+      "baseline_answer": "$150.00",
+      "ground_truth": "$300"
+    },
+    {
       "id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1",
       "benchmark": "longdocurl0507_highpage",
       "label": "LongDocURL highpage · canvas weight",
@@ -34,6 +47,19 @@
       "ground_truth": "\"C\""
     },
     {
+      "id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1__lowconc",
+      "benchmark": "longdocurl0507_highpage",
+      "label": "LongDocURL highpage · canvas weight (low-conc rerun)",
+      "question": "What are the maximum weight capacities for canvases on the M/20, M/25, and M/22 models, respectively?\n(A). 10kg, 8kg, 8kg\n(B). 8kg, 10kg, 10kg\n(C). 22lbs, 22lbs, 17.5lbs\n(D). 22lbs, 22lbs, 85.5lbs\nChoose the letter name in front of the right option from A, B, C, D.",
+      "page_count": 108,
+      "path": "data/examples/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1__lowconc.json",
+      "insight_wall_time_s": 32.12616953533143,
+      "baseline_wall_time_s": 79.83062395080924,
+      "insight_answer": "C",
+      "baseline_answer": "A",
+      "ground_truth": "C"
+    },
+    {
       "id": "055_mmlongbench_mmlongbench_289",
       "benchmark": "mmlongbench",
       "label": "MMLongBench-Doc · HOVER gap",
@@ -42,6 +68,19 @@
       "path": "data/examples/055_mmlongbench_mmlongbench_289.json",
       "insight_wall_time_s": 9.491574523970485,
       "baseline_wall_time_s": 27.21705498173833,
+      "insight_answer": "0.45",
+      "baseline_answer": "0.49",
+      "ground_truth": "0.45"
+    },
+    {
+      "id": "055_mmlongbench_mmlongbench_289__lowconc",
+      "benchmark": "mmlongbench",
+      "label": "MMLongBench-Doc · HOVER gap (low-conc rerun)",
+      "question": "What is the average performance gap between the ProgramFC performance and our proposed system in the HOVER dataset? Please write down the answer in float format with 2 decimals.",
+      "page_count": 10,
+      "path": "data/examples/055_mmlongbench_mmlongbench_289__lowconc.json",
+      "insight_wall_time_s": 6.394068544730544,
+      "baseline_wall_time_s": 6.4482106398791075,
       "insight_answer": "0.45",
       "baseline_answer": "0.49",
       "ground_truth": "0.45"
@@ -60,6 +99,19 @@
       "ground_truth": "26%"
     },
     {
+      "id": "048_mmlongbench_mmlongbench_344__lowconc",
+      "benchmark": "mmlongbench",
+      "label": "MMLongBench-Doc · Trump confidence (low-conc rerun)",
+      "question": "What is the proportion of people who say they are very confident in Trump's ability to handle an international crisis?",
+      "page_count": 28,
+      "path": "data/examples/048_mmlongbench_mmlongbench_344__lowconc.json",
+      "insight_wall_time_s": 7.387205170467496,
+      "baseline_wall_time_s": 12.268000008538365,
+      "insight_answer": "57% of Republicans/Republican leaners are very confident that Trump can handle an international crisis.",
+      "baseline_answer": "54%",
+      "ground_truth": "26%"
+    },
+    {
       "id": "053_mmlongbench_mmlongbench_842",
       "benchmark": "mmlongbench",
       "label": "MMLongBench-Doc · album volume gap",
@@ -73,6 +125,19 @@
       "ground_truth": "1194000"
     },
     {
+      "id": "053_mmlongbench_mmlongbench_842__lowconc",
+      "benchmark": "mmlongbench",
+      "label": "MMLongBench-Doc · album volume gap (low-conc rerun)",
+      "question": "What is the difference in total volume between the rank 1 and rank 19 top albums?",
+      "page_count": 36,
+      "path": "data/examples/053_mmlongbench_mmlongbench_842__lowconc.json",
+      "insight_wall_time_s": 12.498876303434372,
+      "baseline_wall_time_s": 33.494143418967724,
+      "insight_answer": "1,194,000",
+      "baseline_answer": "1,481 (in thousands)",
+      "ground_truth": "1194000"
+    },
+    {
       "id": "056_mmlongbench_mmlongbench_688",
       "benchmark": "mmlongbench",
       "label": "MMLongBench-Doc · campaign grade",
@@ -82,6 +147,19 @@
       "insight_wall_time_s": 19.335201101377606,
       "baseline_wall_time_s": 91.05294058378786,
       "insight_answer": "Clinton has the higher median campaign grade.",
+      "baseline_answer": "Hillary Clinton has a higher median campaign grade than Donald Trump.",
+      "ground_truth": "Clinton"
+    },
+    {
+      "id": "056_mmlongbench_mmlongbench_688__lowconc",
+      "benchmark": "mmlongbench",
+      "label": "MMLongBench-Doc · campaign grade (low-conc uncapped rerun)",
+      "question": "Who has a higher median campaign grade? Trump or Clinton?",
+      "page_count": 45,
+      "path": "data/examples/056_mmlongbench_mmlongbench_688__lowconc.json",
+      "insight_wall_time_s": 17.858795249834657,
+      "baseline_wall_time_s": 39.104616874828935,
+      "insight_answer": "Therefore Clinton has the higher median grade.",
       "baseline_answer": "Hillary Clinton has a higher median campaign grade than Donald Trump.",
       "ground_truth": "Clinton"
     },
@@ -99,6 +177,19 @@
       "ground_truth": "\"Not answerable\""
     },
     {
+      "id": "004_mmlongbench0507_highpage_mmlongbench_871__lowconc",
+      "benchmark": "mmlongbench0507_highpage",
+      "label": "MMLongBench-Doc highpage · Fig.4 efficiency (low-conc rerun)",
+      "question": "According to this paper, among nice different datasets in Fig 4, which one can reflect the highest efficiency?",
+      "page_count": 117,
+      "path": "data/examples/004_mmlongbench0507_highpage_mmlongbench_871__lowconc.json",
+      "insight_wall_time_s": 23.125749561935663,
+      "baseline_wall_time_s": 84.56702981702983,
+      "insight_answer": "The question is unanswerable from the provided document. Figure 4 and its caption compare datasets on depth (reasoning) and breadth (knowledge), not on “efficiency,” so the paper does not provide a basis to identify which dataset reflects the highest efficiency.",
+      "baseline_answer": "MMMU",
+      "ground_truth": "Not answerable"
+    },
+    {
       "id": "018_mmlongbench0507_highpage_mmlongbench_779",
       "benchmark": "mmlongbench0507_highpage",
       "label": "MMLongBench-Doc highpage · QK-norm spike",
@@ -110,6 +201,19 @@
       "insight_answer": "step 150k",
       "baseline_answer": "Therefore, the loss spikes at approximately step 100k when QK-Norm is not used.",
       "ground_truth": "\"150k\""
+    },
+    {
+      "id": "018_mmlongbench0507_highpage_mmlongbench_779__lowconc",
+      "benchmark": "mmlongbench0507_highpage",
+      "label": "MMLongBench-Doc highpage · QK-norm spike (low-conc rerun)",
+      "question": "At which step, the loss spikes when without QK-norm?",
+      "page_count": 27,
+      "path": "data/examples/018_mmlongbench0507_highpage_mmlongbench_779__lowconc.json",
+      "insight_wall_time_s": 10.907496919855475,
+      "baseline_wall_time_s": 18.70467404834926,
+      "insight_answer": "at about step 150k.",
+      "baseline_answer": "Therefore, the loss spikes at approximately step 125k when training without QK-norm.",
+      "ground_truth": "150k"
     },
     {
       "id": "035_mpdocvqa_mpdocvqa_63159",
