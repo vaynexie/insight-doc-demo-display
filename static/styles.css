@@ -216,11 +216,66 @@ body {
   cursor: zoom-in;
 }
 
-.pdf-thumb img {
-  width: 100%;
-  height: auto;
+.thumb-image-frame {
+  position: relative;
   display: block;
+  overflow: hidden;
+  aspect-ratio: 4 / 3;
   border-radius: 6px;
+  background: #0e1220;
+}
+
+.thumb-image-frame::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    linear-gradient(90deg, transparent, rgba(255, 255, 255, 0.08), transparent),
+    linear-gradient(135deg, #111827, #182033);
+  background-size: 220% 100%, 100% 100%;
+  animation: thumb-shimmer 1.2s ease-in-out infinite;
+}
+
+.thumb-image-frame.is-loaded::before,
+.thumb-image-frame.is-error::before {
+  display: none;
+}
+
+.thumb-image-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  display: block;
+  object-fit: contain;
+  opacity: 0;
+  transition: opacity 120ms ease;
+}
+
+.thumb-image-frame.is-loaded img {
+  opacity: 1;
+}
+
+.thumb-image-frame.is-error {
+  border: 1px dashed var(--danger);
+}
+
+.thumb-image-frame.is-error::after {
+  content: "Image unavailable";
+  position: absolute;
+  inset: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--danger);
+  font-size: 0.75rem;
+  text-align: center;
+  padding: 0.3rem;
+}
+
+@keyframes thumb-shimmer {
+  from { background-position: 180% 0, 0 0; }
+  to { background-position: -80% 0, 0 0; }
 }
 
 .pdf-thumb-label {
@@ -522,6 +577,17 @@ body {
   border: 1px solid var(--border);
 }
 
+.tool-image-frame img {
+  position: absolute;
+  inset: 0;
+  width: 100%;
+  height: 100%;
+  margin-top: 0;
+  border: 0;
+  border-radius: inherit;
+  object-fit: contain;
+}
+
 .tool-images-grid {
   margin-top: 0.45rem;
   display: grid;
@@ -541,12 +607,16 @@ body {
   padding: 0.3rem;
 }
 
-.tool-image-item.bbox-item img {
+.tool-image-frame {
+  margin-top: 0.4rem;
+}
+
+.tool-image-item.bbox-item .tool-image-frame {
   width: 100%;
   max-width: 180px;
 }
 
-.tool-image-item.crop-item img {
+.tool-image-item.crop-item .tool-image-frame {
   width: 100%;
   max-width: 360px;
 }

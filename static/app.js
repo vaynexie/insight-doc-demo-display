@@ -386,14 +386,47 @@
     return grid;
   }
 
-  function createToolImageElement(side, thumbUrl, fullUrl, label) {
+  function setImageFrameRatio(frame, size) {
+    if (!Array.isArray(size) || size.length !== 2) return;
+    const width = Number(size[0]);
+    const height = Number(size[1]);
+    if (width > 0 && height > 0) {
+      frame.style.aspectRatio = `${width} / ${height}`;
+    }
+  }
+
+  function createImageFrame(className, size) {
+    const frame = document.createElement("div");
+    frame.className = `${className} is-loading`;
+    setImageFrameRatio(frame, size);
+    return frame;
+  }
+
+  function createToolImageFrame(side, thumbUrl, fullUrl, label, displaySize) {
+    const frame = createImageFrame("thumb-image-frame tool-image-frame", displaySize);
     const img = document.createElement("img");
     img.alt = label;
     img.tabIndex = 0;
     img.setAttribute("role", "button");
     img.title = "Open at model-presented size";
     img.decoding = "async";
-    img.addEventListener("load", () => scrollSide(side), { once: true });
+    img.addEventListener(
+      "load",
+      () => {
+        frame.classList.remove("is-loading");
+        frame.classList.add("is-loaded");
+        scrollSide(side);
+      },
+      { once: true }
+    );
+    img.addEventListener(
+      "error",
+      () => {
+        frame.classList.remove("is-loading");
+        frame.classList.add("is-error");
+      },
+      { once: true }
+    );
     img.src = thumbUrl;
     img.addEventListener("click", () => openToolImageViewer(fullUrl, label));
     img.addEventListener("keydown", (event) => {
@@ -402,7 +435,8 @@
         openToolImageViewer(fullUrl, label);
       }
     });
-    return img;
+    frame.appendChild(img);
+    return frame;
   }
 
   function appendToolImages(side, body, items) {
@@ -419,7 +453,13 @@
       label.textContent = labelText;
       wrap.appendChild(label);
       wrap.appendChild(
-        createToolImageElement(side, assetUrl(item.thumb_src), assetUrl(item.full_src), labelText)
+        createToolImageFrame(
+          side,
+          assetUrl(item.thumb_src),
+          assetUrl(item.full_src),
+          labelText,
+          item.display_size
+        )
       );
       grid.appendChild(wrap);
     }
@@ -875,14 +915,33 @@
     thumb.type = "button";
     thumb.className = "pdf-thumb";
     thumb.title = `Page ${idx}`;
+    const frame = createImageFrame("thumb-image-frame pdf-thumb-image-frame", page.original_size);
     const img = document.createElement("img");
     img.alt = `Page ${idx}`;
     img.loading = "lazy";
+    img.decoding = "async";
+    img.addEventListener(
+      "load",
+      () => {
+        frame.classList.remove("is-loading");
+        frame.classList.add("is-loaded");
+      },
+      { once: true }
+    );
+    img.addEventListener(
+      "error",
+      () => {
+        frame.classList.remove("is-loading");
+        frame.classList.add("is-error");
+      },
+      { once: true }
+    );
     img.src = assetUrl(page.thumb || page.src);
     const label = document.createElement("div");
     label.className = "pdf-thumb-label";
     label.textContent = `P${idx}`;
-    thumb.appendChild(img);
+    frame.appendChild(img);
+    thumb.appendChild(frame);
     thumb.appendChild(label);
     thumb.addEventListener("click", () => openPdfViewer(page, idx));
     return thumb;
