@@ -1,7 +1,7 @@
 {
   "id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1",
   "benchmark": "longdocurl0507_highpage",
-  "label": "LongDocURL highpage · canvas weight",
+  "label": "LongDocURL highpage \u00b7 canvas weight",
   "question": "What are the maximum weight capacities for canvases on the M/20, M/25, and M/22 models, respectively?\n(A). 10kg, 8kg, 8kg\n(B). 8kg, 10kg, 10kg\n(C). 22lbs, 22lbs, 17.5lbs\n(D). 22lbs, 22lbs, 85.5lbs\nChoose the letter name in front of the right option from A, B, C, D.",
   "ground_truth": "\"C\"",
   "document_id": "016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 121.02093730866909,
-    "core_time_s": 104.20401724521071,
+    "wall_time_s": 37.947612,
+    "core_time_s": 20.766686,
     "extracted_answer": "C",
     "accuracy": 1.0,
     "pages": [
@@ -3211,10 +3211,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 16.41818872652948,
-        "end_s": 30.36214696802199,
-        "time_to_first_token_s": 7.12765378318727,
-        "duration_s": 13.94395824149251,
+        "start_s": 16.418189,
+        "end_s": 26.118349,
+        "time_to_first_token_s": 8.433593,
+        "duration_s": 9.70016,
         "think": "I need to read the canvas max weight for each model on their pages. I'll zoom into the top-left area of image 48 (M/20) to read the canvas capacity.",
         "display_chunks": [
           "I",
@@ -3329,9 +3329,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 30.36375223658979,
-            "end_s": 30.367583907209337,
-            "duration_s": 0.003831670619547367,
+            "start_s": 26.118349,
+            "end_s": 26.122181,
+            "duration_s": 0.003832,
             "ok": true,
             "arguments": {
               "label": "top-left corner showing M/20 header and the blue circle with canvas weight",
@@ -3376,7 +3376,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 108",
+            "label": "Crop \u00b7 image 108",
             "img_idx": 108,
             "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_01_crop_108_full.jpg",
             "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_01_crop_108_thumb.jpg",
@@ -3390,10 +3390,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 30.374650778248906,
-        "end_s": 60.1646323306486,
-        "time_to_first_token_s": 7.754403321072459,
-        "duration_s": 29.789981552399695,
+        "start_s": 26.372181,
+        "end_s": 29.057766,
+        "time_to_first_token_s": 0.050189,
+        "duration_s": 2.685585,
         "think": "I need to read the canvas max weight for M/25. I'll zoom into the top-left area of image 52 (M/25) to capture the blue circle with the canvas capacity.",
         "display_chunks": [
           "I",
@@ -3510,9 +3510,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 60.45098635740578,
-            "end_s": 60.45246828254312,
-            "duration_s": 0.0014819251373410225,
+            "start_s": 29.057766,
+            "end_s": 29.059248,
+            "duration_s": 0.001482,
             "ok": true,
             "arguments": {
               "label": "top-left corner showing M/25 header and the blue circle with canvas weight",
@@ -3557,7 +3557,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 109",
+            "label": "Crop \u00b7 image 109",
             "img_idx": 109,
             "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_02_crop_109_full.jpg",
             "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_02_crop_109_thumb.jpg",
@@ -3571,10 +3571,10 @@
       {
         "message_idx": 6,
         "type": "tool_call",
-        "start_s": 60.469820720143616,
-        "end_s": 89.91950990259647,
-        "time_to_first_token_s": 8.495728743262589,
-        "duration_s": 29.449689182452857,
+        "start_s": 29.309248,
+        "end_s": 35.371437,
+        "time_to_first_token_s": 0.120496,
+        "duration_s": 6.062189,
         "think": "I need the canvas max weight for M/22 (image 54). I'll zoom into the top-left corner of image 54 to read the blue circle with the canvas capacity.",
         "display_chunks": [
           "I",
@@ -3689,9 +3689,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 89.92134060245007,
-            "end_s": 89.92876433953643,
-            "duration_s": 0.007423737086355686,
+            "start_s": 35.371437,
+            "end_s": 35.37886,
+            "duration_s": 0.007424,
             "ok": true,
             "arguments": {
               "label": "top-left area showing M/22 header and the blue circle with canvas weight",
@@ -3736,7 +3736,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 110",
+            "label": "Crop \u00b7 image 110",
             "img_idx": 110,
             "full_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_03_crop_110_full.jpg",
             "thumb_src": "tool_images/016_longdocurl0507_highpage_longdocurl_free_gemini15_pro_4081367_50_79_1/insight_turn_03_crop_110_thumb.jpg",
@@ -3750,10 +3750,10 @@
       {
         "message_idx": 8,
         "type": "answer",
-        "start_s": 90.01029134634882,
-        "end_s": 121.01537752524018,
-        "time_to_first_token_s": 8.538438773714006,
-        "duration_s": 31.00508617889136,
+        "start_s": 35.62886,
+        "end_s": 37.947612,
+        "time_to_first_token_s": 0.070368,
+        "duration_s": 2.318752,
         "think": "",
         "display_chunks": [
           "Based",
@@ -3843,14 +3843,116 @@
         "tool_call_traces": [],
         "answer": "Based on the images, M/20 shows canvas max 10 kg (22 lbs), M/25 shows canvas max 10 kg (22 lbs), and M/22 shows canvas max 8 kg (17.5 lbs). These match option C: 22lbs, 22lbs, 17.5lbs. Therefore, choose C.\nC"
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 104.20401724521071,
+      "reconstructed_core_time_s": 20.766686,
+      "reconstructed_replay_wall_time_s": 21.529423,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 104.20401724521071,
+      "low_row_core_time_s": 18.85837034136057,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_highpage_rl_v4_ckpt800_rescale035_legacy_prompt_v2_hp_full6_090216/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_highpage_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/rl_v4_ckpt800_highpage_lowconc_legacy_prompt_v2_rescale025_035_05_07_1trial_overlap_20260730_144045/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800_highcap/full5_tool/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "lowconc_duration_split_by_global_speed_no_cache_prefix_clipped": 1,
+        "lowconc_duration_split_by_global_speed": 3
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 57712,
+          "generated_tokens": 109,
+          "prefill_tps": 6843.109455,
+          "decode_tps": 86.059,
+          "estimated_ttft_s": 8.433593,
+          "estimated_decode_s": 1.266567,
+          "estimated_duration_s": 9.70016,
+          "method": "lowconc_duration_split_by_global_speed_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 8020.074,
+          "replay_prefill_tps_before_no_cache_clip": 8020.074645,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 197,
+          "generated_tokens": 111,
+          "prefill_tps": 3925.162884,
+          "decode_tps": 42.119,
+          "estimated_ttft_s": 0.050189,
+          "estimated_decode_s": 2.635396,
+          "estimated_duration_s": 2.685585,
+          "method": "lowconc_duration_split_by_global_speed"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 206,
+          "generated_tokens": 109,
+          "prefill_tps": 1709.600319,
+          "decode_tps": 18.345,
+          "estimated_ttft_s": 0.120496,
+          "estimated_decode_s": 5.941693,
+          "estimated_duration_s": 6.062189,
+          "method": "lowconc_duration_split_by_global_speed"
+        },
+        {
+          "turn_index": 3,
+          "effective_prompt_tokens": 245,
+          "generated_tokens": 84,
+          "prefill_tps": 3481.696226,
+          "decode_tps": 37.36,
+          "estimated_ttft_s": 0.070368,
+          "estimated_decode_s": 2.248384,
+          "estimated_duration_s": 2.318752,
+          "method": "lowconc_duration_split_by_global_speed"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 7.195943,
+            "new_ttft_s": 8.433592,
+            "old_replay_prefill_tps": 8020.074645
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 8.433592,
+            "new_ttft_s": 8.433593,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 201.72712353710085,
-    "core_time_s": 129.59862184152007,
+    "wall_time_s": 161.681331,
+    "core_time_s": 89.556744,
     "extracted_answer": "A",
     "accuracy": 0.0,
     "pages": [
@@ -6993,10 +7095,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 72.12458656169474,
-        "end_s": 201.72326718457043,
-        "time_to_first_token_s": 79.29558587726206,
-        "duration_s": 129.5986806228757,
+        "start_s": 72.124587,
+        "end_s": 161.681331,
+        "time_to_first_token_s": 66.261022,
+        "duration_s": 89.556744,
         "think": "",
         "display_chunks": [
           "To",
@@ -7150,7 +7252,7 @@
           " ",
           "1",
           "7",
-          "½",
+          "\u00bd",
           " lbs",
           "\".",
           " This",
@@ -7216,7 +7318,7 @@
           " ",
           "1",
           "7",
-          "½",
+          "\u00bd",
           " lbs",
           "\".",
           " This",
@@ -7266,7 +7368,7 @@
           " ",
           "8",
           "kg",
-          " —",
+          " \u2014",
           " This",
           " matches",
           " our",
@@ -7306,7 +7408,7 @@
           "1",
           "0",
           "kg",
-          " —",
+          " \u2014",
           " This",
           " does",
           " not",
@@ -7333,7 +7435,7 @@
           ".",
           "5",
           "lbs",
-          " —",
+          " \u2014",
           " While",
           " this",
           " includes",
@@ -7413,7 +7515,7 @@
           ".",
           "5",
           "lbs",
-          " —",
+          " \u2014",
           " This",
           " is",
           " incorrect",
@@ -7465,8 +7567,65 @@
           "A"
         ],
         "tool_call_traces": [],
-        "answer": "To determine the maximum weight capacities for canvases on the M/20, M/25, and M/22 models, we need to examine the specifications provided in the product pages.\n\n1.  **M/20 Model (Image 48):** The product description page for M/20 (Image 48) shows a grey circle indicating \"Canvas max 10 kg 22 lbs\". This means the maximum canvas weight is 10 kg or 22 lbs.\n2.  **M/25 Model (Image 52):** The product description page for M/25 (Image 52) also shows a grey circle indicating \"Canvas max 8 kg 17½ lbs\". This means the maximum canvas weight is 8 kg or 17.5 lbs.\n3.  **M/22 Model (Image 54):** The product description page for M/22 (Image 54) shows a grey circle indicating \"Canvas max 8 kg 17½ lbs\". This means the maximum canvas weight is 8 kg or 17.5 lbs.\n\nNow, let's compare these values with the given options:\n\n-   Option A: 10kg, 8kg, 8kg — This matches our findings for M/20, M/25, and M/22.\n-   Option B: 8kg, 10kg, 10kg — This does not match.\n-   Option C: 22lbs, 22lbs, 17.5lbs — While this includes the correct weights, it lists them for M/20, M/25, and M/22 respectively, which is the reverse of what is asked. The question asks for M/20, then M/25, then M/22.\n-   Option D: 22lbs, 22lbs, 85.5lbs — This is incorrect as 85.5lbs is not listed for any of the models.\n\nThe correct option that lists the maximum canvas weights in the order M/20, M/25, M/22 is A.\n\nA"
+        "answer": "To determine the maximum weight capacities for canvases on the M/20, M/25, and M/22 models, we need to examine the specifications provided in the product pages.\n\n1.  **M/20 Model (Image 48):** The product description page for M/20 (Image 48) shows a grey circle indicating \"Canvas max 10 kg 22 lbs\". This means the maximum canvas weight is 10 kg or 22 lbs.\n2.  **M/25 Model (Image 52):** The product description page for M/25 (Image 52) also shows a grey circle indicating \"Canvas max 8 kg 17\u00bd lbs\". This means the maximum canvas weight is 8 kg or 17.5 lbs.\n3.  **M/22 Model (Image 54):** The product description page for M/22 (Image 54) shows a grey circle indicating \"Canvas max 8 kg 17\u00bd lbs\". This means the maximum canvas weight is 8 kg or 17.5 lbs.\n\nNow, let's compare these values with the given options:\n\n-   Option A: 10kg, 8kg, 8kg \u2014 This matches our findings for M/20, M/25, and M/22.\n-   Option B: 8kg, 10kg, 10kg \u2014 This does not match.\n-   Option C: 22lbs, 22lbs, 17.5lbs \u2014 While this includes the correct weights, it lists them for M/20, M/25, and M/22 respectively, which is the reverse of what is asked. The question asks for M/20, then M/25, then M/22.\n-   Option D: 22lbs, 22lbs, 85.5lbs \u2014 This is incorrect as 85.5lbs is not listed for any of the models.\n\nThe correct option that lists the maximum canvas weights in the order M/20, M/25, M/22 is A.\n\nA"
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 129.59862184152007,
+      "reconstructed_core_time_s": 89.556744,
+      "reconstructed_replay_wall_time_s": 89.556744,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 129.59862184152007,
+      "low_row_core_time_s": 89.15590902324766,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_highpage_base_no_tool_no_system_rescale07_legacy_prompt_v2_hp_full6_090216/base_no_tool_no_system/full6_highpage_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/base_no_tool_no_system_highpage_lowconc_legacy_prompt_v2_rescale025_035_05_07_1trial_overlap_20260730_144045/base_no_tool_no_system_highcap/full5_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "lowconc_duration_split_by_global_speed": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 214502,
+          "generated_tokens": 465,
+          "prefill_tps": 3237.227461,
+          "decode_tps": 19.961,
+          "estimated_ttft_s": 66.261022,
+          "estimated_decode_s": 23.295722,
+          "estimated_duration_s": 89.556744,
+          "method": "lowconc_duration_split_by_global_speed"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

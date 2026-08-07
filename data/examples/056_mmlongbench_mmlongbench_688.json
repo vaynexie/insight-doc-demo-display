@@ -1,7 +1,7 @@
 {
   "id": "056_mmlongbench_mmlongbench_688",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench-Doc · campaign grade",
+  "label": "MMLongBench-Doc \u00b7 campaign grade",
   "question": "Who has a higher median campaign grade? Trump or Clinton?",
   "ground_truth": "Clinton",
   "document_id": "056_mmlongbench_mmlongbench_688",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 19.335201101377606,
-    "core_time_s": 13.70708322711289,
+    "wall_time_s": 16.930656,
+    "core_time_s": 10.582367,
     "extracted_answer": "Clinton has the higher median campaign grade.",
     "accuracy": 1.0,
     "pages": [
@@ -1239,10 +1239,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 5.557852496393025,
-        "end_s": 9.50342218298465,
-        "time_to_first_token_s": 1.611729527823627,
-        "duration_s": 3.945569686591625,
+        "start_s": 5.557852,
+        "end_s": 10.009498,
+        "time_to_first_token_s": 2.645874,
+        "duration_s": 4.451646,
         "think": "I need to read the campaign grades bar chart (image 23) that compares Trump and Clinton's median/average grades. I'll zoom into the top-right area of image 23 where the bars are located.",
         "display_chunks": [
           "I",
@@ -1361,9 +1361,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 9.508710087276995,
-            "end_s": 9.573132618330419,
-            "duration_s": 0.06442253105342388,
+            "start_s": 10.009498,
+            "end_s": 10.036292,
+            "duration_s": 0.026794,
             "ok": true,
             "arguments": {
               "label": "top half with two stacked bar charts showing campaign grades (Trump vs Clinton)",
@@ -1408,7 +1408,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 40",
+            "label": "Crop \u00b7 image 40",
             "img_idx": 40,
             "full_src": "tool_images/056_mmlongbench_mmlongbench_688/insight_turn_01_crop_40_full.jpg",
             "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688/insight_turn_01_crop_40_thumb.jpg",
@@ -1422,10 +1422,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 9.60019928123802,
-        "end_s": 12.98224047664553,
-        "time_to_first_token_s": 0.19846770260483027,
-        "duration_s": 3.38204119540751,
+        "start_s": 10.286292,
+        "end_s": 12.659182,
+        "time_to_first_token_s": 0.181497,
+        "duration_s": 2.37289,
         "think": "I need a closer view of the top chart (Trump's grades) to determine which grade category is the median or the overall average, so I can compare it with Clinton's. I'll zoom into the upper portion showing \"Trump campaign grades at historic low...\" and the stacked bars for 2016.",
         "display_chunks": [
           "I",
@@ -1569,9 +1569,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 12.985161767341197,
-            "end_s": 13.00293904915452,
-            "duration_s": 0.017777281813323498,
+            "start_s": 12.659182,
+            "end_s": 12.670915,
+            "duration_s": 0.011732,
             "ok": true,
             "arguments": {
               "label": "upper half of image focusing on the 'Trump campaign grades at historic low' chart (top chart area)",
@@ -1616,7 +1616,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 41",
+            "label": "Crop \u00b7 image 41",
             "img_idx": 41,
             "full_src": "tool_images/056_mmlongbench_mmlongbench_688/insight_turn_02_crop_41_full.jpg",
             "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688/insight_turn_02_crop_41_thumb.jpg",
@@ -1630,10 +1630,10 @@
       {
         "message_idx": 6,
         "type": "tool_call",
-        "start_s": 13.018327991478145,
-        "end_s": 17.44643530715257,
-        "time_to_first_token_s": 0.2465844601392746,
-        "duration_s": 4.428107315674424,
+        "start_s": 12.920915,
+        "end_s": 14.830063,
+        "time_to_first_token_s": 0.484262,
+        "duration_s": 1.909148,
         "think": "I need to read the Clinton grades (the lower chart) to compare medians/overall grade distribution. I'll zoom into the bottom half of the same image where the \"Losing presidential candidates\" bars are shown.",
         "display_chunks": [
           "I",
@@ -1755,9 +1755,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 17.44831804651767,
-            "end_s": 17.468944245949388,
-            "duration_s": 0.020626199431717396,
+            "start_s": 14.830062,
+            "end_s": 14.831973,
+            "duration_s": 0.001911,
             "ok": true,
             "arguments": {
               "label": "bottom half showing 'Losing presidential candidates' stacked bar chart with grade labels and percentages",
@@ -1802,7 +1802,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 42",
+            "label": "Crop \u00b7 image 42",
             "img_idx": 42,
             "full_src": "tool_images/056_mmlongbench_mmlongbench_688/insight_turn_03_crop_42_full.jpg",
             "thumb_src": "tool_images/056_mmlongbench_mmlongbench_688/insight_turn_03_crop_42_thumb.jpg",
@@ -1816,10 +1816,10 @@
       {
         "message_idx": 8,
         "type": "answer",
-        "start_s": 17.487331978045404,
-        "end_s": 19.333390186540782,
-        "time_to_first_token_s": 0.16104012914001942,
-        "duration_s": 1.8460582084953785,
+        "start_s": 15.081973,
+        "end_s": 16.930656,
+        "time_to_first_token_s": 0.385319,
+        "duration_s": 1.848683,
         "think": "",
         "display_chunks": [
           "Based",
@@ -1873,7 +1873,7 @@
           ",",
           " while",
           " Clinton",
-          "’s",
+          "\u2019s",
           " ",
           "2",
           "0",
@@ -1910,7 +1910,7 @@
           ".",
           " Therefore",
           " Clinton",
-          "’s",
+          "\u2019s",
           " grades",
           " are",
           " higher",
@@ -1921,16 +1921,149 @@
           ")."
         ],
         "tool_call_traces": [],
-        "answer": "Based on the charts, Clinton has the higher median campaign grade. Trump's 2016 bar shows about 30% A/B, 19% C, 15% D, and 35% F, while Clinton’s 2016 bar shows about 43% A/B, 20% C, 16% D, and 21% F. Therefore Clinton’s grades are higher (median/overall)."
+        "answer": "Based on the charts, Clinton has the higher median campaign grade. Trump's 2016 bar shows about 30% A/B, 19% C, 15% D, and 35% F, while Clinton\u2019s 2016 bar shows about 43% A/B, 20% C, 16% D, and 21% F. Therefore Clinton\u2019s grades are higher (median/overall)."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 13.70708322711289,
+      "reconstructed_core_time_s": 10.582367,
+      "reconstructed_replay_wall_time_s": 11.372804,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 13.70708322711289,
+      "low_row_core_time_s": 13.865315048024058,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_rl_v4_ckpt800_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/mmlongbench_full_uncapped_insight_qwen_agent/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_first_turn_outlier_clipped_no_cache_prefix_clipped": 1,
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1,
+        "per_turn_lowconc_ttft_decode_incremental_clipped": 2
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 18106,
+          "generated_tokens": 113,
+          "prefill_tps": 6843.107419,
+          "decode_tps": 62.577,
+          "estimated_ttft_s": 2.645874,
+          "estimated_decode_s": 1.805772,
+          "estimated_duration_s": 4.451646,
+          "method": "per_turn_lowconc_ttft_decode_first_turn_outlier_clipped_no_cache_prefix_clipped",
+          "prefill_tps_before_first_turn_outlier_clip": 216895.195,
+          "prefill_tps_before_no_cache_clip": 17166.19,
+          "replay_prefill_tps_before_no_cache_clip": 17166.185667,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 1242,
+          "generated_tokens": 138,
+          "prefill_tps": 6843.088316,
+          "decode_tps": 62.974,
+          "estimated_ttft_s": 0.181497,
+          "estimated_decode_s": 2.191393,
+          "estimated_duration_s": 2.37289,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 8317.293,
+          "replay_prefill_tps_before_no_cache_clip": 8317.317029,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 1297,
+          "generated_tokens": 116,
+          "prefill_tps": 2678.302241,
+          "decode_tps": 81.41,
+          "estimated_ttft_s": 0.484262,
+          "estimated_decode_s": 1.424886,
+          "estimated_duration_s": 1.909148,
+          "method": "per_turn_lowconc_ttft_decode_incremental_clipped"
+        },
+        {
+          "turn_index": 3,
+          "effective_prompt_tokens": 1032,
+          "generated_tokens": 98,
+          "prefill_tps": 2678.300317,
+          "decode_tps": 66.969,
+          "estimated_ttft_s": 0.385319,
+          "estimated_decode_s": 1.463364,
+          "estimated_duration_s": 1.848683,
+          "method": "per_turn_lowconc_ttft_decode_incremental_clipped"
+        }
+      ],
+      "first_turn_outlier_policy": {
+        "applied": true,
+        "rule": "clip first-turn prefill only when speed is below 0.5*p10 or above 2*p90; incremental turns remain clipped to p10/p90"
+      },
+      "manual_timing_adjustments": [
+        {
+          "turn_index": 0,
+          "reason": "first_turn_prefill_tps_above_2x_global_p90",
+          "old_ttft_s": 0.083478,
+          "new_ttft_s": 1.054748,
+          "delta_s": 0.97127
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.054748,
+            "new_ttft_s": 2.645873,
+            "old_replay_prefill_tps": 17166.185667
+          },
+          {
+            "turn_index": 1,
+            "old_ttft_s": 0.149327,
+            "new_ttft_s": 0.181496,
+            "old_replay_prefill_tps": 8317.317029
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 2.645873,
+            "new_ttft_s": 2.645874,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          },
+          {
+            "turn_index": 1,
+            "old_ttft_s": 0.181496,
+            "new_ttft_s": 0.181497,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 91.05294058378786,
-    "core_time_s": 79.89664666354656,
+    "wall_time_s": 68.113738,
+    "core_time_s": 56.970884,
     "extracted_answer": "Hillary Clinton has a higher median campaign grade than Donald Trump.",
     "accuracy": 1.0,
     "pages": [
@@ -3101,10 +3234,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 11.142854110337794,
-        "end_s": 91.03962978720665,
-        "time_to_first_token_s": 12.017624202184379,
-        "duration_s": 79.89677567686886,
+        "start_s": 11.142854,
+        "end_s": 68.113738,
+        "time_to_first_token_s": 11.876337,
+        "duration_s": 56.970884,
         "think": "",
         "display_chunks": [
           "Based",
@@ -4007,6 +4140,63 @@
         "tool_call_traces": [],
         "answer": "Based on the provided document, we can compare the campaign grades for Donald Trump and Hillary Clinton.\n\nThe data is presented in several charts across different pages.\n\n1.  **Image 26 (Page 26)** contains a chart titled \"Voters grade the parties, press and pollsters quite negatively\". This chart shows the percentage of voters giving each candidate an A or B grade.\n    - For **Trump**, 30% received an A or B.\n    - For **Clinton**, 43% received an A or B.\n\n2.  **Image 27 (Page 27)** presents a chart titled \"Campaign grades 1988-2016\" which includes bar graphs for both winning and losing candidates. The top section shows the grades for winning presidential candidates.\n    - For **Trump (2016)**, the bar graph shows that 30% of voters gave him an A or B, 15% gave him a C, 22% gave him a D, and 35% gave him an F.\n    - For **Clinton (2016)**, the bar graph shows that 49% of voters gave her an A or B, 19% gave her a C, 26% gave her a D, and 28% gave her an F.\n\n3.  **Image 28 (Page 28)** provides a chart titled \"Both parties receive poor grades for their performance in the campaign\". This chart shows the grades for the Republican and Democratic Parties from 1988 to 2016. The text on this page notes that \"Clinton's overall grades are comparable to Romney's in 2012 and only slightly worse than McCain's in 2008.\" It also states that \"Overall, just 26% grade the Democratic Party at A or B, while 22% give the same grade to the GOP.\"\n\n4.  **Image 29 (Page 29)** discusses the record low grades for the media and pollsters, but not the candidates themselves.\n\nWhile the text on Image 28 mentions that Clinton's grades are \"comparable to Romney's in 2012,\" it does not directly state a median grade for either candidate. However, we can infer the median grade based on the distribution of grades shown in the charts on Image 26 and Image 27.\n\nThe median grade is the middle value when all grades are arranged in order. Since the data is presented as percentages for each letter grade category, we can calculate the median by finding the grade where half the respondents fall below and half above.\n\nFor **Trump**:\n- A/B: 30%\n- C: 15%\n- D: 22%\n- F: 35%\n\nIf we arrange these grades in order of increasing score, the cumulative percentages would be:\n- A/B: 30% (cumulative: 30%)\n- C: 15% (cumulative: 45%)\n- D: 22% (cumulative: 67%)\n- F: 35% (cumulative: 100%)\n\nThe median grade falls within the D range because the cumulative percentage reaches 67%, which is the first point where more than 50% of respondents have been accounted for. Therefore, the median grade for Trump is a D.\n\nFor **Clinton**:\n- A/B: 49%\n- C: 20%\n- D: 16%\n- F: 21%\n\nCumulative percentages:\n- A/B: 49% (cumulative: 49%)\n- C: 20% (cumulative: 69%)\n- D: 16% (cumulative: 85%)\n- F: 21% (cumulative: 100%)\n\nThe median grade for Clinton falls within the C range, as the cumulative percentage reaches 69%, which is the first point where more than 50% of respondents have been accounted for.\n\nComparing the two, Clinton's median grade (C) is higher than Trump's median grade (D).\n\nTherefore, **Hillary Clinton has a higher median campaign grade than Donald Trump**."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 79.89664666354656,
+      "reconstructed_core_time_s": 56.970884,
+      "reconstructed_replay_wall_time_s": 56.970884,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 79.89664666354656,
+      "low_row_core_time_s": 29.950642565265298,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/base_no_tool_no_system/mmlongbench_full_uncapped_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 73328,
+          "generated_tokens": 897,
+          "prefill_tps": 6174.294313,
+          "decode_tps": 19.892,
+          "estimated_ttft_s": 11.876337,
+          "estimated_decode_s": 45.094547,
+          "estimated_duration_s": 56.970884,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds. First-turn prefill speeds are also clipped only for severe outliers (<0.5*p10 or >2*p90).",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "048_mmlongbench_mmlongbench_344",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench-Doc · Trump confidence",
+  "label": "MMLongBench-Doc \u00b7 Trump confidence",
   "question": "What is the proportion of people who say they are very confident in Trump's ability to handle an international crisis?",
   "ground_truth": "26%",
   "document_id": "048_mmlongbench_mmlongbench_344",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 9.130329604260623,
-    "core_time_s": 5.647314426489174,
+    "wall_time_s": 9.273824,
+    "core_time_s": 5.299411,
     "extracted_answer": "26%",
     "accuracy": 1.0,
     "pages": [
@@ -872,10 +872,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 3.4535122625529766,
-        "end_s": 6.393226469866931,
-        "time_to_first_token_s": 0.6148359980434179,
-        "duration_s": 2.939714207313955,
+        "start_s": 3.453512,
+        "end_s": 6.787907,
+        "time_to_first_token_s": 1.874002,
+        "duration_s": 3.334395,
         "think": "I need to read the specific bar for \"Handle an international crisis\" in the chart on image 6. I'll zoom into the right-side chart area showing those bars.",
         "display_chunks": [
           "I",
@@ -987,9 +987,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 6.3958558943122625,
-            "end_s": 6.417614888399839,
-            "duration_s": 0.021758994087576866,
+            "start_s": 6.787907,
+            "end_s": 6.803138,
+            "duration_s": 0.015231,
             "ok": true,
             "arguments": {
               "label": "bar chart of Trump's ability on various issues (right side of page, center-right)",
@@ -1034,7 +1034,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 28",
+            "label": "Crop \u00b7 image 28",
             "img_idx": 28,
             "full_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_01_crop_28_full.jpg",
             "thumb_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_01_crop_28_thumb.jpg",
@@ -1048,10 +1048,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 6.428055031225085,
-        "end_s": 8.417211282998323,
-        "time_to_first_token_s": 0.09597178921103477,
-        "duration_s": 1.9891562517732382,
+        "start_s": 7.053138,
+        "end_s": 8.594587,
+        "time_to_first_token_s": 0.09328,
+        "duration_s": 1.541449,
         "think": "I will zoom into the middle-left area of the chart to read the exact numbers for the \"Handle an international crisis\" bar (focus on the dark brown 'Very' segment).",
         "display_chunks": [
           "I",
@@ -1163,9 +1163,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 8.420805457048118,
-            "end_s": 8.423183876089752,
-            "duration_s": 0.002378419041633606,
+            "start_s": 8.594587,
+            "end_s": 8.600257,
+            "duration_s": 0.00567,
             "ok": true,
             "arguments": {
               "label": "middle of the chart around the row labeled 'Handle an international crisis' (center)",
@@ -1210,7 +1210,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 29",
+            "label": "Crop \u00b7 image 29",
             "img_idx": 29,
             "full_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_02_crop_29_full.jpg",
             "thumb_src": "tool_images/048_mmlongbench_mmlongbench_344/insight_turn_02_crop_29_thumb.jpg",
@@ -1224,10 +1224,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 8.436274951323867,
-        "end_s": 9.129287204705179,
-        "time_to_first_token_s": 0.12683986965566874,
-        "duration_s": 0.6930122533813119,
+        "start_s": 8.850257,
+        "end_s": 9.273824,
+        "time_to_first_token_s": 0.05,
+        "duration_s": 0.423567,
         "think": "",
         "display_chunks": [
           "Based",
@@ -1260,14 +1260,97 @@
         "tool_call_traces": [],
         "answer": "Based on the chart, 26% of respondents say they are very confident in Trump's ability to handle an international crisis."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 5.647314426489174,
+      "reconstructed_core_time_s": 5.299411,
+      "reconstructed_replay_wall_time_s": 5.820312,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 5.647314426489174,
+      "low_row_core_time_s": 4.833641387522221,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_rl_v4_ckpt800_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/mmlongbench_full_uncapped_insight_qwen_agent/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1,
+        "per_turn_lowconc_ttft_decode": 2
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 12824,
+          "generated_tokens": 106,
+          "prefill_tps": 6843.109025,
+          "decode_tps": 72.583,
+          "estimated_ttft_s": 1.874002,
+          "estimated_decode_s": 1.460393,
+          "estimated_duration_s": 3.334395,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 12709.216,
+          "replay_prefill_tps_before_no_cache_clip": 12709.210412,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 543,
+          "generated_tokens": 106,
+          "prefill_tps": 5821.183533,
+          "decode_tps": 73.196,
+          "estimated_ttft_s": 0.09328,
+          "estimated_decode_s": 1.448169,
+          "estimated_duration_s": 1.541449,
+          "method": "per_turn_lowconc_ttft_decode"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 233,
+          "generated_tokens": 27,
+          "prefill_tps": 4660.0,
+          "decode_tps": 72.276,
+          "estimated_ttft_s": 0.05,
+          "estimated_decode_s": 0.373567,
+          "estimated_duration_s": 0.423567,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.009032,
+            "new_ttft_s": 1.874002,
+            "old_replay_prefill_tps": 12709.210412
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 43.21174896880984,
-    "core_time_s": 35.36045675817877,
+    "wall_time_s": 14.998392,
+    "core_time_s": 7.149567,
     "extracted_answer": "54%",
     "accuracy": 0.0,
     "pages": [
@@ -2090,10 +2173,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 7.84882496483624,
-        "end_s": 43.20932210236788,
-        "time_to_first_token_s": 8.132413359358907,
-        "duration_s": 35.36049713753164,
+        "start_s": 7.848825,
+        "end_s": 14.998392,
+        "time_to_first_token_s": 5.348368,
+        "duration_s": 7.149567,
         "think": "",
         "display_chunks": [
           "Based",
@@ -2225,6 +2308,63 @@
         "tool_call_traces": [],
         "answer": "Based on the provided document, specifically Image 6, which contains a chart titled \"Public more confident in Trump on trade, economy than immigration and dealing with Congress\", we can find the data for Trump's ability to handle an international crisis.\n\nThe chart shows the percentage of people who are \"Very\" confident in Trump's ability on various issues. For the category \"Handle an international crisis\", the bar corresponding to \"Very\" confidence has the number **54** next to it.\n\nTherefore, the proportion of people who say they are very confident in Trump's ability to handle an international crisis is **54%**."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 35.36045675817877,
+      "reconstructed_core_time_s": 7.149567,
+      "reconstructed_replay_wall_time_s": 7.149567,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 35.36045675817877,
+      "low_row_core_time_s": 7.0923592410981655,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/base_no_tool_no_system/mmlongbench_full_uncapped_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 51342,
+          "generated_tokens": 126,
+          "prefill_tps": 9599.56383,
+          "decode_tps": 69.953,
+          "estimated_ttft_s": 5.348368,
+          "estimated_decode_s": 1.801199,
+          "estimated_duration_s": 7.149567,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

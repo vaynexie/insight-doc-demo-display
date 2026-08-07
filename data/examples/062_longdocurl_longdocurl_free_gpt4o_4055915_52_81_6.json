@@ -1,7 +1,7 @@
 {
   "id": "062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6",
   "benchmark": "longdocurl",
-  "label": "LongDocURL · contest prize money",
+  "label": "LongDocURL \u00b7 contest prize money",
   "question": "Calculate the total prize money for winners in the Senior King and Queen Contest and the Pet Photo Contest.",
   "ground_truth": "$300",
   "document_id": "062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 20.177017881534994,
-    "core_time_s": 15.838761466555297,
+    "wall_time_s": 15.917539,
+    "core_time_s": 10.853532,
     "extracted_answer": "$300.00",
     "accuracy": 1.0,
     "pages": [
@@ -949,10 +949,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 4.259205583482981,
-        "end_s": 9.746799481101334,
-        "time_to_first_token_s": 1.514835486188531,
-        "duration_s": 5.487593897618353,
+        "start_s": 4.259206,
+        "end_s": 8.216752,
+        "time_to_first_token_s": 2.002599,
+        "duration_s": 3.957546,
         "think": "I need to read the prize amounts listed for the Senior King and Queen Contest and the Pet Photo Contest. I'll zoom into the top area of image 7 where those contest sections and their prizes are printed.",
         "display_chunks": [
           "I",
@@ -1079,9 +1079,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 9.750841258093715,
-            "end_s": 9.833651402965188,
-            "duration_s": 0.08281014487147331,
+            "start_s": 8.216752,
+            "end_s": 8.231596,
+            "duration_s": 0.014844,
             "ok": true,
             "arguments": {
               "label": "top half showing 'PET PHOTO CONTEST' and 'HORSESHOE PITCH CONTEST' sections (upper left/center)",
@@ -1126,7 +1126,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 30",
+            "label": "Crop \u00b7 image 30",
             "img_idx": 30,
             "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_01_crop_30_full.jpg",
             "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_01_crop_30_thumb.jpg",
@@ -1140,10 +1140,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 9.86817312054336,
-        "end_s": 13.15275024343282,
-        "time_to_first_token_s": 1.1861561192199588,
-        "duration_s": 3.284577122889459,
+        "start_s": 8.481596,
+        "end_s": 10.86289,
+        "time_to_first_token_s": 0.434607,
+        "duration_s": 2.381294,
         "think": "I need to read the prize amounts for Senior King and Senior Queen from the bottom area of the zoomed image (image 30). I'll zoom into the lower-right area where the Senior King and Queen prizes are listed.",
         "display_chunks": [
           "I",
@@ -1269,9 +1269,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 13.154573602601886,
-            "end_s": 13.170532027259469,
-            "duration_s": 0.015958424657583237,
+            "start_s": 10.86289,
+            "end_s": 10.893166,
+            "duration_s": 0.030276,
             "ok": true,
             "arguments": {
               "label": "bottom area showing 'SENIOR KING AND QUEEN CONTEST' with prize amounts (lower right)",
@@ -1316,7 +1316,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 31",
+            "label": "Crop \u00b7 image 31",
             "img_idx": 31,
             "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_02_crop_31_full.jpg",
             "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_02_crop_31_thumb.jpg",
@@ -1330,10 +1330,10 @@
       {
         "message_idx": 6,
         "type": "tool_call",
-        "start_s": 13.19570018351078,
-        "end_s": 17.711921048350632,
-        "time_to_first_token_s": 0.22303994745016098,
-        "duration_s": 4.516220864839852,
+        "start_s": 11.143166,
+        "end_s": 13.988741,
+        "time_to_first_token_s": 0.222349,
+        "duration_s": 2.845575,
         "think": "I need to see the prize amounts for Senior King and Queen (the area below the rules box) so I can add them to the Pet Photo Contest prizes (50 + 30 + 20 = 100). I'll request a zoom on the bottom center/right of the same image where the Senior King and Queen contest prize line is located.",
         "display_chunks": [
           "I",
@@ -1491,9 +1491,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 17.714295038953424,
-            "end_s": 17.723975804634392,
-            "duration_s": 0.009680765680968761,
+            "start_s": 13.988741,
+            "end_s": 13.998422,
+            "duration_s": 0.009681,
             "ok": true,
             "arguments": {
               "label": "bottom center/right showing the 'Senior King' and 'Senior Queen' prize lines beneath the Senior King and Queen Contest header",
@@ -1538,7 +1538,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 32",
+            "label": "Crop \u00b7 image 32",
             "img_idx": 32,
             "full_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_03_crop_32_full.jpg",
             "thumb_src": "tool_images/062_longdocurl_longdocurl_free_gpt4o_4055915_52_81_6/insight_turn_03_crop_32_thumb.jpg",
@@ -1552,10 +1552,10 @@
       {
         "message_idx": 8,
         "type": "answer",
-        "start_s": 17.73543926794082,
-        "end_s": 20.175293812528253,
-        "time_to_first_token_s": 0.14509255718439817,
-        "duration_s": 2.4398545445874333,
+        "start_s": 14.248422,
+        "end_s": 15.917539,
+        "time_to_first_token_s": 0.150407,
+        "duration_s": 1.669117,
         "think": "",
         "display_chunks": [
           "Based",
@@ -1623,7 +1623,7 @@
           "1",
           "0",
           "0",
-          " ×",
+          " \u00d7",
           " ",
           "2",
           " =",
@@ -1647,16 +1647,118 @@
           "."
         ],
         "tool_call_traces": [],
-        "answer": "Based on the document, Pet Photo Contest prizes are $50.00 + $30.00 + $20.00 = $100.00. Senior King and Queen each have a $100.00 prize (plus cap and shirt), so $100 × 2 = $200. Total for both contests is $300.00."
+        "answer": "Based on the document, Pet Photo Contest prizes are $50.00 + $30.00 + $20.00 = $100.00. Senior King and Queen each have a $100.00 prize (plus cap and shirt), so $100 \u00d7 2 = $200. Total for both contests is $300.00."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 15.838761466555297,
+      "reconstructed_core_time_s": 10.853532,
+      "reconstructed_replay_wall_time_s": 11.658333,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 15.838761466555297,
+      "low_row_core_time_s": 9.864234323613346,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_rl_v4_ckpt800_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/longdocurl_full_uncapped_insight_qwen_agent/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1,
+        "per_turn_lowconc_ttft_decode": 3
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 13704,
+          "generated_tokens": 121,
+          "prefill_tps": 6843.107382,
+          "decode_tps": 61.894,
+          "estimated_ttft_s": 2.002599,
+          "estimated_decode_s": 1.954947,
+          "estimated_duration_s": 3.957546,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 10610.368,
+          "replay_prefill_tps_before_no_cache_clip": 10610.367097,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 1388,
+          "generated_tokens": 120,
+          "prefill_tps": 3193.689931,
+          "decode_tps": 61.643,
+          "estimated_ttft_s": 0.434607,
+          "estimated_decode_s": 1.946687,
+          "estimated_duration_s": 2.381294,
+          "method": "per_turn_lowconc_ttft_decode"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 1193,
+          "generated_tokens": 152,
+          "prefill_tps": 5365.439017,
+          "decode_tps": 57.944,
+          "estimated_ttft_s": 0.222349,
+          "estimated_decode_s": 2.623226,
+          "estimated_duration_s": 2.845575,
+          "method": "per_turn_lowconc_ttft_decode"
+        },
+        {
+          "turn_index": 3,
+          "effective_prompt_tokens": 807,
+          "generated_tokens": 88,
+          "prefill_tps": 5365.441768,
+          "decode_tps": 57.944,
+          "estimated_ttft_s": 0.150407,
+          "estimated_decode_s": 1.51871,
+          "estimated_duration_s": 1.669117,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.291567,
+            "new_ttft_s": 2.002598,
+            "old_replay_prefill_tps": 10610.367097
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 2.002598,
+            "new_ttft_s": 2.002599,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 46.468526559881866,
-    "core_time_s": 35.606935853138566,
+    "wall_time_s": 41.471222,
+    "core_time_s": 30.611685,
     "extracted_answer": "$150.00",
     "accuracy": 0.0,
     "pages": [
@@ -2537,10 +2639,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 10.859536906704307,
-        "end_s": 46.46650023665279,
-        "time_to_first_token_s": 8.207053927704692,
-        "duration_s": 35.606963329948485,
+        "start_s": 10.859537,
+        "end_s": 41.471222,
+        "time_to_first_token_s": 12.080367,
+        "duration_s": 30.611685,
         "think": "",
         "display_chunks": [
           "Based",
@@ -2761,6 +2863,63 @@
         "tool_call_traces": [],
         "answer": "Based on the provided images, we can calculate the total prize money for the winners of the Senior King and Queen Contest and the Pet Photo Contest by summing the first-place prizes for each contest.\n\n1.  **Senior King and Queen Contest (Image 7):**\n    - The prize for 1st place is listed as `$100.00` plus a cap and shirt.\n    - Since the question asks for \"prize money,\" we will consider the monetary value, which is `$100.00`.\n\n2.  **Pet Photo Contest (Image 7):**\n    - The prize for 1st place is listed as `$50.00`.\n    - Again, we are calculating the monetary prize.\n\n**Total Prize Money:**\n\n$100.00 (Senior King and Queen) + $50.00 (Pet Photo) = **$150.00**\n\nThe total prize money for the winners in these two contests is **$150.00**."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 35.606935853138566,
+      "reconstructed_core_time_s": 30.611685,
+      "reconstructed_replay_wall_time_s": 30.611685,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 35.606935853138566,
+      "low_row_core_time_s": 52.78094589523971,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/base_no_tool_no_system/longdocurl_full_uncapped_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 55006,
+          "generated_tokens": 215,
+          "prefill_tps": 4553.338487,
+          "decode_tps": 11.602,
+          "estimated_ttft_s": 12.080367,
+          "estimated_decode_s": 18.531318,
+          "estimated_duration_s": 30.611685,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

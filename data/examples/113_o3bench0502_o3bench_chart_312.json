@@ -1,7 +1,7 @@
 {
   "id": "113_o3bench0502_o3bench_chart_312",
   "benchmark": "o3bench0502",
-  "label": "O3-Bench · Speakers customer",
+  "label": "O3-Bench \u00b7 Speakers customer",
   "question": "If the colors in Customers Sales Performance correspond to the same categories as in Customer Mix, which category has the worst performance in Speakers?\nA. Tech Spin\nB. Large Mart\nC. Globex\nD. Electronics R Us\nE. Circuit Village\nF. None of the above",
   "ground_truth": "E",
   "document_id": "113_o3bench0502_o3bench_chart_312",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 10.157057571224868,
-    "core_time_s": 9.72990913130343,
+    "wall_time_s": 8.495689,
+    "core_time_s": 7.288087,
     "extracted_answer": "Circuit Village",
     "accuracy": 1.0,
     "pages": [
@@ -108,10 +108,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 0.36004372127354145,
-        "end_s": 4.016524272970855,
-        "time_to_first_token_s": 0.13399558886885643,
-        "duration_s": 3.656480551697314,
+        "start_s": 0.360044,
+        "end_s": 3.233833,
+        "time_to_first_token_s": 0.409137,
+        "duration_s": 2.873789,
         "think": "I need to read the legend in the Customer Mix pie chart and map colors to categories, then see which color is smallest (worst performance) in the Speakers bar in the Customers Sales Performance chart. I'll zoom into the top-left Customer Mix area first.",
         "display_chunks": [
           "I",
@@ -234,9 +234,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 4.0356762846931815,
-            "end_s": 4.8282958548516035,
-            "duration_s": 0.792619570158422,
+            "start_s": 3.233833,
+            "end_s": 3.483833,
+            "duration_s": 0.25,
             "ok": true,
             "arguments": {
               "label": "top-left pie chart labeled 'Customer Mix' with legend below it",
@@ -281,7 +281,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 1",
+            "label": "Crop \u00b7 image 1",
             "img_idx": 1,
             "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_01_crop_1_full.jpg",
             "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_01_crop_1_thumb.jpg",
@@ -295,10 +295,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 4.86536003742367,
-        "end_s": 7.332404226996005,
-        "time_to_first_token_s": 0.18755087349563837,
-        "duration_s": 2.4670441895723343,
+        "start_s": 3.733833,
+        "end_s": 5.932261,
+        "time_to_first_token_s": 0.159258,
+        "duration_s": 2.198428,
         "think": "I need to see the Customers Sales Performance chart (Speakers bar) to identify which color is the smallest (worst performance). I'll zoom into the middle area where that chart is located.",
         "display_chunks": [
           "I",
@@ -419,9 +419,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 7.334046966396272,
-            "end_s": 7.3509839698672295,
-            "duration_s": 0.01693700347095728,
+            "start_s": 5.932261,
+            "end_s": 5.949198,
+            "duration_s": 0.016937,
             "ok": true,
             "arguments": {
               "label": "Customers Sales Performance chart in center-left of dashboard showing bars for Total Products, Projectors, Media Players, Speakers",
@@ -466,7 +466,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 2",
+            "label": "Crop \u00b7 image 2",
             "img_idx": 2,
             "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_02_crop_2_full.jpg",
             "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_02_crop_2_thumb.jpg",
@@ -480,10 +480,10 @@
       {
         "message_idx": 6,
         "type": "tool_call",
-        "start_s": 7.365043975412846,
-        "end_s": 9.238704471848905,
-        "time_to_first_token_s": 0.05956831946969032,
-        "duration_s": 1.8736604964360595,
+        "start_s": 6.199198,
+        "end_s": 7.774978,
+        "time_to_first_token_s": 0.079306,
+        "duration_s": 1.57578,
         "think": "I will zoom into the right side of the Speakers group to clearly see which colored bar is smallest (worst performance).",
         "display_chunks": [
           "I",
@@ -587,9 +587,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 9.24023316334933,
-            "end_s": 9.241421363316476,
-            "duration_s": 0.0011881999671459198,
+            "start_s": 7.774977,
+            "end_s": 7.776166,
+            "duration_s": 0.001188,
             "ok": true,
             "arguments": {
               "label": "rightmost section showing the four bars for 'Speakers' (close-up on colors and relative heights)",
@@ -634,7 +634,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 3",
+            "label": "Crop \u00b7 image 3",
             "img_idx": 3,
             "full_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_03_crop_3_full.jpg",
             "thumb_src": "tool_images/113_o3bench0502_o3bench_chart_312/insight_turn_03_crop_3_thumb.jpg",
@@ -648,10 +648,10 @@
       {
         "message_idx": 8,
         "type": "answer",
-        "start_s": 9.250056779943407,
-        "end_s": 10.156069850549102,
-        "time_to_first_token_s": 0.06564672011882067,
-        "duration_s": 0.9060130706056952,
+        "start_s": 7.855599,
+        "end_s": 8.495689,
+        "time_to_first_token_s": 0.033095,
+        "duration_s": 0.64009,
         "think": "",
         "display_chunks": [
           "Based",
@@ -694,14 +694,121 @@
         "tool_call_traces": [],
         "answer": "Based on the zoomed chart, in Speakers the yellow bar is the smallest. The Customer Mix legend shows yellow = Circuit Village, so Circuit Village has the worst performance in Speakers."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 9.72990913130343,
+      "reconstructed_core_time_s": 7.288087,
+      "reconstructed_replay_wall_time_s": 8.135645,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid_rescale035",
+      "high_row_core_time_s": 9.72990913130343,
+      "low_row_core_time_s": 8.134618473239243,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/standalone_o3bench_rl_v4_ckpt800_rescale025_035_05_1trial_legacy_prompt_v2_20260730/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/o3bench0502_insight_qwen_agent/rescale035/samples.jsonl",
+      "component_methods": {
+        "lowconc_r035_duration_split_by_global_speed": 4
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 1810,
+          "generated_tokens": 117,
+          "prefill_tps": 4423.946013,
+          "decode_tps": 47.471204,
+          "estimated_ttft_s": 0.409137,
+          "estimated_decode_s": 2.464652,
+          "estimated_duration_s": 2.873789,
+          "method": "lowconc_r035_duration_split_by_global_speed",
+          "source_prefill_tps_before_o3_r035_rebuild": 5266.472,
+          "source_decode_tps_before_o3_r035_rebuild": 56.512,
+          "low_r035_effective_prompt_tokens": 1810,
+          "low_r035_generated_tokens": 122,
+          "low_r035_generate_elapsed_s": 2.979116
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 837,
+          "generated_tokens": 115,
+          "prefill_tps": 5255.622951,
+          "decode_tps": 56.395507,
+          "estimated_ttft_s": 0.159258,
+          "estimated_decode_s": 2.03917,
+          "estimated_duration_s": 2.198428,
+          "method": "lowconc_r035_duration_split_by_global_speed",
+          "source_prefill_tps_before_o3_r035_rebuild": 4559.721,
+          "source_decode_tps_before_o3_r035_rebuild": 48.928,
+          "low_r035_effective_prompt_tokens": 816,
+          "low_r035_generated_tokens": 120,
+          "low_r035_generate_elapsed_s": 2.283091
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 484,
+          "generated_tokens": 98,
+          "prefill_tps": 6102.943031,
+          "decode_tps": 65.487281,
+          "estimated_ttft_s": 0.079306,
+          "estimated_decode_s": 1.496474,
+          "estimated_duration_s": 1.57578,
+          "method": "lowconc_r035_duration_split_by_global_speed",
+          "source_prefill_tps_before_o3_r035_rebuild": 3107.764,
+          "source_decode_tps_before_o3_r035_rebuild": 33.348,
+          "low_r035_effective_prompt_tokens": 489,
+          "low_r035_generated_tokens": 106,
+          "low_r035_generate_elapsed_s": 1.698761
+        },
+        {
+          "turn_index": 3,
+          "effective_prompt_tokens": 188,
+          "generated_tokens": 37,
+          "prefill_tps": 5680.616407,
+          "decode_tps": 60.956047,
+          "estimated_ttft_s": 0.033095,
+          "estimated_decode_s": 0.606995,
+          "estimated_duration_s": 0.64009,
+          "method": "lowconc_r035_duration_split_by_global_speed",
+          "source_prefill_tps_before_o3_r035_rebuild": 3107.764,
+          "source_decode_tps_before_o3_r035_rebuild": 33.348,
+          "low_r035_effective_prompt_tokens": 388,
+          "low_r035_generated_tokens": 65,
+          "low_r035_generate_elapsed_s": 1.134644
+        }
+      ],
+      "o3_low_source_correction": {
+        "applied": true,
+        "reason": "Insight demo side is rescale035; previous low-concurrency source was rescale07.",
+        "old_low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/standalone_o3bench_rl_v4_ckpt800_rescale07_10_1trial_legacy_prompt_v2_20260730/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/o3bench0502_insight_qwen_agent/rescale07/checkpoints/samples.jsonl",
+        "new_low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/standalone_o3bench_rl_v4_ckpt800_rescale025_035_05_1trial_legacy_prompt_v2_20260730/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/o3bench0502_insight_qwen_agent/rescale035/samples.jsonl"
+      },
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 20.99859287776053,
-    "core_time_s": 20.085431169718504,
+    "wall_time_s": 9.269571,
+    "core_time_s": 8.360233,
     "extracted_answer": "D. Electronics R Us",
     "accuracy": 0.0,
     "pages": [
@@ -741,10 +848,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 0.9093380998820066,
-        "end_s": 20.99479903653264,
-        "time_to_first_token_s": 3.386725743301213,
-        "duration_s": 20.085460936650634,
+        "start_s": 0.909338,
+        "end_s": 9.269571,
+        "time_to_first_token_s": 0.654985,
+        "duration_s": 8.360233,
         "think": "",
         "display_chunks": [
           "Based",
@@ -1009,7 +1116,7 @@
           "Tech",
           " Spin",
           ")",
-          " —",
+          " \u2014",
           " highest",
           " bar",
           "\n",
@@ -1022,7 +1129,7 @@
           "Large",
           " Mart",
           ")",
-          " —",
+          " \u2014",
           " second",
           " highest",
           "\n",
@@ -1036,7 +1143,7 @@
           "lob",
           "ex",
           ")",
-          " —",
+          " \u2014",
           " third",
           " highest",
           "\n",
@@ -1051,7 +1158,7 @@
           " R",
           " Us",
           ")",
-          " —",
+          " \u2014",
           " lowest",
           " bar",
           "\n",
@@ -1122,8 +1229,65 @@
           "."
         ],
         "tool_call_traces": [],
-        "answer": "Based on the provided dashboard, we need to determine which customer category has the worst performance in the \"Speakers\" product line.\n\n1.  **Identify the color coding for Customer Mix:**\n    - The \"Customer Mix\" pie chart (top left) uses colors to represent different customer categories.\n    - According to the legend below the chart:\n        - **Orange**: Tech Spin\n        - **Blue**: Large Mart\n        - **Green**: Globex\n        - **Purple**: Electronics R Us\n        - **Yellow**: Circuit Village\n\n2.  **Analyze the \"Customers Sales Performance\" chart:**\n    - This bar chart (middle row, second from left) shows sales performance for different product categories.\n    - The x-axis includes \"Total Products,\" \"Projectors,\" \"Media Players,\" and \"Speakers.\"\n    - The y-axis is in millions of dollars.\n    - For the \"Speakers\" category, there are four bars, each corresponding to one of the customer types, colored according to the same legend as the Customer Mix chart.\n\n3.  **Compare the performance in \"Speakers\":**\n    - Look at the \"Speakers\" section of the bar chart.\n    - The bars are colored:\n        - **Orange** (Tech Spin) — highest bar\n        - **Blue** (Large Mart) — second highest\n        - **Green** (Globex) — third highest\n        - **Purple** (Electronics R Us) — lowest bar\n    - The \"worst performance\" corresponds to the lowest bar, which is the purple one.\n\n4.  **Conclusion:**\n    - The purple bar represents \"Electronics R Us\".\n    - Therefore, Electronics R Us has the worst performance in Speakers.\n\nThe correct answer is **D. Electronics R Us**."
+        "answer": "Based on the provided dashboard, we need to determine which customer category has the worst performance in the \"Speakers\" product line.\n\n1.  **Identify the color coding for Customer Mix:**\n    - The \"Customer Mix\" pie chart (top left) uses colors to represent different customer categories.\n    - According to the legend below the chart:\n        - **Orange**: Tech Spin\n        - **Blue**: Large Mart\n        - **Green**: Globex\n        - **Purple**: Electronics R Us\n        - **Yellow**: Circuit Village\n\n2.  **Analyze the \"Customers Sales Performance\" chart:**\n    - This bar chart (middle row, second from left) shows sales performance for different product categories.\n    - The x-axis includes \"Total Products,\" \"Projectors,\" \"Media Players,\" and \"Speakers.\"\n    - The y-axis is in millions of dollars.\n    - For the \"Speakers\" category, there are four bars, each corresponding to one of the customer types, colored according to the same legend as the Customer Mix chart.\n\n3.  **Compare the performance in \"Speakers\":**\n    - Look at the \"Speakers\" section of the bar chart.\n    - The bars are colored:\n        - **Orange** (Tech Spin) \u2014 highest bar\n        - **Blue** (Large Mart) \u2014 second highest\n        - **Green** (Globex) \u2014 third highest\n        - **Purple** (Electronics R Us) \u2014 lowest bar\n    - The \"worst performance\" corresponds to the lowest bar, which is the purple one.\n\n4.  **Conclusion:**\n    - The purple bar represents \"Electronics R Us\".\n    - Therefore, Electronics R Us has the worst performance in Speakers.\n\nThe correct answer is **D. Electronics R Us**."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 20.085431169718504,
+      "reconstructed_core_time_s": 8.360233,
+      "reconstructed_replay_wall_time_s": 8.360233,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 20.085431169718504,
+      "low_row_core_time_s": 7.824522341601551,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/standalone_o3bench_base_no_tool_no_system_localmodel_rescale07_10_1trial_legacy_prompt_v2_20260730/base_no_tool_no_system_local/o3bench0502_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "lowconc_duration_split_by_global_speed": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 5156,
+          "generated_tokens": 374,
+          "prefill_tps": 7871.935999,
+          "decode_tps": 48.538,
+          "estimated_ttft_s": 0.654985,
+          "estimated_decode_s": 7.705248,
+          "estimated_duration_s": 8.360233,
+          "method": "lowconc_duration_split_by_global_speed"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

@@ -1,7 +1,7 @@
 {
   "id": "053_mmlongbench_mmlongbench_842",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench-Doc · album volume gap",
+  "label": "MMLongBench-Doc \u00b7 album volume gap",
   "question": "What is the difference in total volume between the rank 1 and rank 19 top albums?",
   "ground_truth": "1194000",
   "document_id": "053_mmlongbench_mmlongbench_842",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 14.294693729840219,
-    "core_time_s": 9.453588243573904,
+    "wall_time_s": 13.858536,
+    "core_time_s": 9.013343,
     "extracted_answer": "1,194,000",
     "accuracy": 1.0,
     "pages": [
@@ -1104,10 +1104,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 4.786035468801856,
-        "end_s": 8.690221254713833,
-        "time_to_first_token_s": 1.6384292552247643,
-        "duration_s": 3.9041857859119773,
+        "start_s": 4.786035,
+        "end_s": 10.564607,
+        "time_to_first_token_s": 3.952482,
+        "duration_s": 5.778572,
         "think": "I need to read the \"Total Volume (000)\" values for rank 1 and rank 19 from the top albums table on image 13. I'll zoom into the table area.",
         "display_chunks": [
           "I",
@@ -1226,9 +1226,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 8.692268268205225,
-            "end_s": 8.724837688729167,
-            "duration_s": 0.03256942052394152,
+            "start_s": 10.564607,
+            "end_s": 10.592073,
+            "duration_s": 0.027466,
             "ok": true,
             "arguments": {
               "label": "table of top albums (center of slide showing Rank, Artist, Title, Total Volume)",
@@ -1273,7 +1273,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 36",
+            "label": "Crop \u00b7 image 36",
             "img_idx": 36,
             "full_src": "tool_images/053_mmlongbench_mmlongbench_842/insight_turn_01_crop_36_full.jpg",
             "thumb_src": "tool_images/053_mmlongbench_mmlongbench_842/insight_turn_01_crop_36_thumb.jpg",
@@ -1287,10 +1287,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 8.747040217742324,
-        "end_s": 11.139260224997997,
-        "time_to_first_token_s": 0.1741340570151806,
-        "duration_s": 2.3922200072556734,
+        "start_s": 10.592073,
+        "end_s": 12.587574,
+        "time_to_first_token_s": 0.197492,
+        "duration_s": 1.995501,
         "think": "I need the rank 19 entry to read its total volume. I'll zoom into the table on image 14 where ranks 12, 15, 17, 19 are listed.",
         "display_chunks": [
           "I",
@@ -1408,9 +1408,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 11.141499483957887,
-            "end_s": 11.164745989255607,
-            "duration_s": 0.023246505297720432,
+            "start_s": 12.587575,
+            "end_s": 12.619266,
+            "duration_s": 0.031692,
             "ok": true,
             "arguments": {
               "label": "table of other notable successes showing ranks and Total Volume (center area)",
@@ -1455,7 +1455,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 37",
+            "label": "Crop \u00b7 image 37",
             "img_idx": 37,
             "full_src": "tool_images/053_mmlongbench_mmlongbench_842/insight_turn_02_crop_37_full.jpg",
             "thumb_src": "tool_images/053_mmlongbench_mmlongbench_842/insight_turn_02_crop_37_thumb.jpg",
@@ -1469,10 +1469,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 11.18913221731782,
-        "end_s": 14.28492951579392,
-        "time_to_first_token_s": 0.14347197115421295,
-        "duration_s": 3.0957972984761,
+        "start_s": 12.619266,
+        "end_s": 13.858536,
+        "time_to_first_token_s": 0.123482,
+        "duration_s": 1.23927,
         "think": "",
         "display_chunks": [
           "Based",
@@ -1521,7 +1521,7 @@
           "6",
           "0",
           "8",
-          " −",
+          " \u2212",
           " ",
           "4",
           "1",
@@ -1555,16 +1555,99 @@
           "."
         ],
         "tool_call_traces": [],
-        "answer": "Based on the table, rank 1 has total volume 1,608 (000) and rank 19 has 414 (000). The difference is 1,608 − 414 = 1,194 (thousands of units), i.e., 1,194,000."
+        "answer": "Based on the table, rank 1 has total volume 1,608 (000) and rank 19 has 414 (000). The difference is 1,608 \u2212 414 = 1,194 (thousands of units), i.e., 1,194,000."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 9.453588243573904,
+      "reconstructed_core_time_s": 9.013343,
+      "reconstructed_replay_wall_time_s": 9.072501,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 9.453588243573904,
+      "low_row_core_time_s": 9.285825526341796,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_rl_v4_ckpt800_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/mmlongbench_full_uncapped_insight_qwen_agent/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode": 2,
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 16350,
+          "generated_tokens": 113,
+          "prefill_tps": 4136.641229,
+          "decode_tps": 61.881,
+          "estimated_ttft_s": 3.952482,
+          "estimated_decode_s": 1.82609,
+          "estimated_duration_s": 5.778572,
+          "method": "per_turn_lowconc_ttft_decode"
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 1140,
+          "generated_tokens": 112,
+          "prefill_tps": 5772.385717,
+          "decode_tps": 62.291,
+          "estimated_ttft_s": 0.197492,
+          "estimated_decode_s": 1.798009,
+          "estimated_duration_s": 1.995501,
+          "method": "per_turn_lowconc_ttft_decode"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 845,
+          "generated_tokens": 79,
+          "prefill_tps": 6843.102638,
+          "decode_tps": 70.802,
+          "estimated_ttft_s": 0.123482,
+          "estimated_decode_s": 1.115788,
+          "estimated_duration_s": 1.23927,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 7933.619,
+          "replay_prefill_tps_before_no_cache_clip": 7933.601855,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 2,
+            "old_ttft_s": 0.106509,
+            "new_ttft_s": 0.123482,
+            "old_replay_prefill_tps": 7933.601855
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 43.511237144470215,
-    "core_time_s": 33.88067597337067,
+    "wall_time_s": 36.813412,
+    "core_time_s": 27.185179,
     "extracted_answer": "1,481,000",
     "accuracy": 0.0,
     "pages": [
@@ -2619,10 +2702,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 9.62823262065649,
-        "end_s": 43.50897967070341,
-        "time_to_first_token_s": 7.964048018679023,
-        "duration_s": 33.88074705004692,
+        "start_s": 9.628233,
+        "end_s": 36.813412,
+        "time_to_first_token_s": 22.446004,
+        "duration_s": 27.185179,
         "think": "",
         "display_chunks": [
           "Based",
@@ -2829,6 +2912,63 @@
         "tool_call_traces": [],
         "answer": "Based on the data presented in Image 13, \"THE TOP ALBUMS ACHIEVE SUCCESS IN DIFFERENT WAYS\", we can find the total volume for the albums at rank 1 and rank 19.\n\n-   **Rank 1 (Taylor Swift - '1989')**: The \"Total Volume (000)\" is listed as **1,608**.\n-   **Rank 19 (Drake - 'Nothing Was The Same')**: The \"Total Volume (000)\" is listed as **127**.\n\nTo find the difference, we subtract the volume of rank 19 from the volume of rank 1:\n\n1,608 - 127 = 1,481\n\nTherefore, the difference in total volume between the rank 1 and rank 19 top albums is **1,481,000** (since the unit is in thousands)."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 33.88067597337067,
+      "reconstructed_core_time_s": 27.185179,
+      "reconstructed_replay_wall_time_s": 27.185179,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 33.88067597337067,
+      "low_row_core_time_s": 26.92578847706318,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/base_no_tool_no_system/mmlongbench_full_uncapped_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 59956,
+          "generated_tokens": 201,
+          "prefill_tps": 2671.121327,
+          "decode_tps": 42.412,
+          "estimated_ttft_s": 22.446004,
+          "estimated_decode_s": 4.739175,
+          "estimated_duration_s": 27.185179,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

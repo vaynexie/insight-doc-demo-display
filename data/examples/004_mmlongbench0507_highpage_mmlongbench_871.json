@@ -1,7 +1,7 @@
 {
   "id": "004_mmlongbench0507_highpage_mmlongbench_871",
   "benchmark": "mmlongbench0507_highpage",
-  "label": "MMLongBench-Doc highpage · Fig.4 efficiency",
+  "label": "MMLongBench-Doc highpage \u00b7 Fig.4 efficiency",
   "question": "According to this paper, among nice different datasets in Fig 4, which one can reflect the highest efficiency?",
   "ground_truth": "\"Not answerable\"",
   "document_id": "004_mmlongbench0507_highpage_mmlongbench_871",
@@ -10,9 +10,9 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 60.149354747496545,
-    "core_time_s": 29.51947622653097,
-    "extracted_answer": "The question is unanswerable from the provided document. The paper’s Figure 4 plots depth (reasoning) vs breadth (knowledge), not “efficiency,” so it does not support identifying which dataset reflects the highest efficiency. (For reference, the figure does show MMMU at the top-right and other datasets lower-left, but that relates to depth/breadth, not efficiency.)",
+    "wall_time_s": 43.266093,
+    "core_time_s": 12.146071,
+    "extracted_answer": "The question is unanswerable from the provided document. The paper\u2019s Figure 4 plots depth (reasoning) vs breadth (knowledge), not \u201cefficiency,\u201d so it does not support identifying which dataset reflects the highest efficiency. (For reference, the figure does show MMMU at the top-right and other datasets lower-left, but that relates to depth/breadth, not efficiency.)",
     "accuracy": 1.0,
     "pages": [
       {
@@ -3453,10 +3453,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 30.582058870233595,
-        "end_s": 51.7264552526176,
-        "time_to_first_token_s": 6.875220529735088,
-        "duration_s": 21.144396382384002,
+        "start_s": 30.582059,
+        "end_s": 39.197612,
+        "time_to_first_token_s": 7.612037,
+        "duration_s": 8.615553,
         "think": "I need to read the comparison chart in Figure 4 that lists datasets and their efficiency. I'll zoom into the top-right area of image 4 where the table is located.",
         "display_chunks": [
           "I",
@@ -3560,9 +3560,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 51.72820415627211,
-            "end_s": 51.742561276070774,
-            "duration_s": 0.014357119798660278,
+            "start_s": 39.197612,
+            "end_s": 39.211969,
+            "duration_s": 0.014357,
             "ok": true,
             "arguments": {
               "label": "table at top right comparing datasets (Figure 4)",
@@ -3607,7 +3607,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 117",
+            "label": "Crop \u00b7 image 117",
             "img_idx": 117,
             "full_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_01_crop_117_full.jpg",
             "thumb_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_01_crop_117_thumb.jpg",
@@ -3621,10 +3621,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 51.76457776222378,
-        "end_s": 58.193404604680836,
-        "time_to_first_token_s": 4.263578767888248,
-        "duration_s": 6.428826842457056,
+        "start_s": 39.461969,
+        "end_s": 41.447167,
+        "time_to_first_token_s": 0.097706,
+        "duration_s": 1.985198,
         "think": "I need a closer view of the left plot area (the colored markers and their legend) to determine which dataset is positioned highest in efficiency (likely near top-left for high depth). I'll zoom into the left plot region.",
         "display_chunks": [
           "I",
@@ -3738,9 +3738,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 58.19505007658154,
-            "end_s": 58.21865635365248,
-            "duration_s": 0.02360627707093954,
+            "start_s": 41.447166,
+            "end_s": 41.470773,
+            "duration_s": 0.023606,
             "ok": true,
             "arguments": {
               "label": "left plot with colored markers and legend (depth vs breadth)",
@@ -3785,7 +3785,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 118",
+            "label": "Crop \u00b7 image 118",
             "img_idx": 118,
             "full_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_02_crop_118_full.jpg",
             "thumb_src": "tool_images/004_mmlongbench0507_highpage_mmlongbench_871/insight_turn_02_crop_118_thumb.jpg",
@@ -3799,10 +3799,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 58.24047739151865,
-        "end_s": 60.1478489600122,
-        "time_to_first_token_s": 0.2791374418884516,
-        "duration_s": 1.907371568493545,
+        "start_s": 41.720773,
+        "end_s": 43.266093,
+        "time_to_first_token_s": 0.164655,
+        "duration_s": 1.54532,
         "think": "",
         "display_chunks": [
           "The",
@@ -3818,7 +3818,7 @@
           ".",
           " The",
           " paper",
-          "’s",
+          "\u2019s",
           " Figure",
           " ",
           "4",
@@ -3834,10 +3834,10 @@
           "knowledge",
           "),",
           " not",
-          " “",
+          " \u201c",
           "eff",
           "iciency",
-          ",”",
+          ",\u201d",
           " so",
           " it",
           " does",
@@ -3885,16 +3885,107 @@
           ".)"
         ],
         "tool_call_traces": [],
-        "answer": "The question is unanswerable from the provided document. The paper’s Figure 4 plots depth (reasoning) vs breadth (knowledge), not “efficiency,” so it does not support identifying which dataset reflects the highest efficiency. (For reference, the figure does show MMMU at the top-right and other datasets lower-left, but that relates to depth/breadth, not efficiency.)"
+        "answer": "The question is unanswerable from the provided document. The paper\u2019s Figure 4 plots depth (reasoning) vs breadth (knowledge), not \u201cefficiency,\u201d so it does not support identifying which dataset reflects the highest efficiency. (For reference, the figure does show MMMU at the top-right and other datasets lower-left, but that relates to depth/breadth, not efficiency.)"
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 29.51947622653097,
+      "reconstructed_core_time_s": 12.146071,
+      "reconstructed_replay_wall_time_s": 12.684034,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 29.51947622653097,
+      "low_row_core_time_s": 8.505360433831811,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_highpage_rl_v4_ckpt800_rescale035_legacy_prompt_v2_hp_full6_090216/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_highpage_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/rl_v4_ckpt800_highpage_lowconc_legacy_prompt_v2_rescale025_035_05_07_1trial_overlap_20260730_144045/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800_highcap/full5_tool/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "lowconc_duration_split_by_global_speed_no_cache_prefix_clipped": 1,
+        "lowconc_duration_split_by_global_speed": 2
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 52090,
+          "generated_tokens": 98,
+          "prefill_tps": 6843.109144,
+          "decode_tps": 97.657,
+          "estimated_ttft_s": 7.612037,
+          "estimated_decode_s": 1.003516,
+          "estimated_duration_s": 8.615553,
+          "method": "lowconc_duration_split_by_global_speed_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 9100.849,
+          "replay_prefill_tps_before_no_cache_clip": 9100.848725,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 521,
+          "generated_tokens": 108,
+          "prefill_tps": 5332.323501,
+          "decode_tps": 57.219,
+          "estimated_ttft_s": 0.097706,
+          "estimated_decode_s": 1.887492,
+          "estimated_duration_s": 1.985198,
+          "method": "lowconc_duration_split_by_global_speed"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 878,
+          "generated_tokens": 79,
+          "prefill_tps": 5332.361605,
+          "decode_tps": 57.219,
+          "estimated_ttft_s": 0.164655,
+          "estimated_decode_s": 1.380665,
+          "estimated_duration_s": 1.54532,
+          "method": "lowconc_duration_split_by_global_speed"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 5.723642,
+            "new_ttft_s": 7.612036,
+            "old_replay_prefill_tps": 9100.848725
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 7.612036,
+            "new_ttft_s": 7.612037,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 124.36605489999056,
-    "core_time_s": 94.18742778897285,
+    "wall_time_s": 92.877345,
+    "core_time_s": 62.701738,
     "extracted_answer": "MMMU",
     "accuracy": 0.0,
     "pages": [
@@ -7298,10 +7389,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 30.17560728173703,
-        "end_s": 124.3630784675479,
-        "time_to_first_token_s": 81.89728852640837,
-        "duration_s": 94.18747118581086,
+        "start_s": 30.175607,
+        "end_s": 92.877345,
+        "time_to_first_token_s": 50.272248,
+        "duration_s": 62.701738,
         "think": "",
         "display_chunks": [
           "Based",
@@ -7634,6 +7725,63 @@
         "tool_call_traces": [],
         "answer": "Based on the information provided in the paper, particularly Figure 4 and its accompanying text, the dataset that reflects the highest efficiency is **MMMU**.\n\nHere's the reasoning:\n\n1.  **Figure 4 (Page 5)** presents a comparison between MMMU and other existing benchmarks on a two-dimensional plot.\n    *   The x-axis represents **Breadth (Knowledge)**, indicating the range of disciplines covered.\n    *   The y-axis represents **Depth (Reasoning)**, indicating the complexity and level of reasoning required.\n    *   The position of each benchmark on this plot shows its relative strength in breadth and depth.\n    *   **MMMU is positioned at the top-right corner of the plot**, which signifies it has both the highest breadth and the highest depth compared to all other benchmarks shown.\n\n2.  **The text on page 5 explicitly states**: \"MMMU excels in both its breadth to cover a wide range of disciplines and its depth to test LLMs' reasoning abilities.\" This directly supports the visual interpretation from Figure 4.\n\n3.  **The abstract on page 1 further reinforces this**: It states that MMMU is designed to evaluate models on \"massive multi-discipline tasks demanding college-level subject knowledge and deliberate reasoning,\" highlighting its focus on high-level, complex problems.\n\nTherefore, according to the paper's own analysis and visualization, MMMU is presented as the most comprehensive and challenging benchmark, which implies it tests the highest level of model capability, or efficiency, in terms of handling complex, multi-disciplinary reasoning tasks.\n\nThe answer is: **MMMU**"
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 94.18742778897285,
+      "reconstructed_core_time_s": 62.701738,
+      "reconstructed_replay_wall_time_s": 62.701738,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 94.18742778897285,
+      "low_row_core_time_s": 61.865391691215336,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_highpage_base_no_tool_no_system_rescale07_legacy_prompt_v2_hp_full6_090216/base_no_tool_no_system/full6_highpage_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/base_no_tool_no_system_highpage_lowconc_legacy_prompt_v2_rescale025_035_05_07_1trial_overlap_20260730_144045/base_no_tool_no_system_highcap/full5_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "lowconc_duration_split_by_global_speed": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 214496,
+          "generated_tokens": 327,
+          "prefill_tps": 4266.688054,
+          "decode_tps": 26.308,
+          "estimated_ttft_s": 50.272248,
+          "estimated_decode_s": 12.42949,
+          "estimated_duration_s": 62.701738,
+          "method": "lowconc_duration_split_by_global_speed"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

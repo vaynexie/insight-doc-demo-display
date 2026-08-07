@@ -1,7 +1,7 @@
 {
   "id": "055_mmlongbench_mmlongbench_289",
   "benchmark": "mmlongbench",
-  "label": "MMLongBench-Doc · HOVER gap",
+  "label": "MMLongBench-Doc \u00b7 HOVER gap",
   "question": "What is the average performance gap between the ProgramFC performance and our proposed system in the HOVER dataset? Please write down the answer in float format with 2 decimals.",
   "ground_truth": "0.45",
   "document_id": "055_mmlongbench_mmlongbench_289",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 9.491574523970485,
-    "core_time_s": 7.924277153797448,
+    "wall_time_s": 7.462743,
+    "core_time_s": 5.409867,
     "extracted_answer": "0.45",
     "accuracy": 1.0,
     "pages": [
@@ -350,10 +350,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 1.5462229549884796,
-        "end_s": 4.526570254936814,
-        "time_to_first_token_s": 0.5293865548446774,
-        "duration_s": 2.9803472999483347,
+        "start_s": 1.546223,
+        "end_s": 3.892862,
+        "time_to_first_token_s": 0.768365,
+        "duration_s": 2.346639,
         "think": "I need to read the table in image 5 showing F1 scores for different models (including ProgramFC and QACheck) on HOVER, then compute the average performance gap between ProgramFC and QACheck. I'll zoom into the top-left area of image 5 where the table is located.",
         "display_chunks": [
           "I",
@@ -491,9 +491,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 4.5286638317629695,
-            "end_s": 4.535714992322028,
-            "duration_s": 0.007051160559058189,
+            "start_s": 3.892862,
+            "end_s": 3.897303,
+            "duration_s": 0.004442,
             "ok": true,
             "arguments": {
               "label": "top-left quadrant containing the evaluation table with model names and F1 scores (Table 1)",
@@ -538,7 +538,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 10",
+            "label": "Crop \u00b7 image 10",
             "img_idx": 10,
             "full_src": "tool_images/055_mmlongbench_mmlongbench_289/insight_turn_01_crop_10_full.jpg",
             "thumb_src": "tool_images/055_mmlongbench_mmlongbench_289/insight_turn_01_crop_10_thumb.jpg",
@@ -552,10 +552,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 4.5459722289815545,
-        "end_s": 7.543844182044268,
-        "time_to_first_token_s": 0.06929444801062346,
-        "duration_s": 2.997871953062713,
+        "start_s": 4.147303,
+        "end_s": 5.714076,
+        "time_to_first_token_s": 0.061599,
+        "duration_s": 1.566773,
         "think": "I will zoom into the table area to read the HOVER 2-hop, 3-hop, and 4-hop scores for ProgramFC and QAcheck precisely.",
         "display_chunks": [
           "I",
@@ -682,9 +682,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 7.545964379794896,
-            "end_s": 7.5472010634839535,
-            "duration_s": 0.001236683689057827,
+            "start_s": 5.714077,
+            "end_s": 5.716288,
+            "duration_s": 0.002211,
             "ok": true,
             "arguments": {
               "label": "center of the table showing rows 'ProgramFC' and 'QACheck' with columns '2-hop', '3-hop', '4-hop' under HOVER",
@@ -729,7 +729,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 11",
+            "label": "Crop \u00b7 image 11",
             "img_idx": 11,
             "full_src": "tool_images/055_mmlongbench_mmlongbench_289/insight_turn_02_crop_11_full.jpg",
             "thumb_src": "tool_images/055_mmlongbench_mmlongbench_289/insight_turn_02_crop_11_thumb.jpg",
@@ -743,10 +743,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 7.552279349416494,
-        "end_s": 9.47986837849021,
-        "time_to_first_token_s": 0.09587313700467348,
-        "duration_s": 1.9275890290737152,
+        "start_s": 5.966288,
+        "end_s": 7.462743,
+        "time_to_first_token_s": 0.078035,
+        "duration_s": 1.496455,
         "think": "",
         "display_chunks": [
           "Based",
@@ -860,14 +860,106 @@
         "tool_call_traces": [],
         "answer": "Based on the table, ProgramFC scores are 54.27 (2-hop), 54.18 (3-hop), and 52.88 (4-hop) with an average of 53.78. QACheck scores are 55.67, 54.67, and 52.35 with an average of 54.23. The performance gap is 0.45 F1 points in favor of QACheck."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 7.924277153797448,
+      "reconstructed_core_time_s": 5.409867,
+      "reconstructed_replay_wall_time_s": 5.91652,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 7.924277153797448,
+      "low_row_core_time_s": 5.36993458494544,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_rl_v4_ckpt800_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/mmlongbench_full_uncapped_insight_qwen_agent/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1,
+        "per_turn_lowconc_ttft_decode": 1,
+        "per_turn_lowconc_ttft_decode_incremental_clipped": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 5258,
+          "generated_tokens": 132,
+          "prefill_tps": 6843.101911,
+          "decode_tps": 83.636,
+          "estimated_ttft_s": 0.768365,
+          "estimated_decode_s": 1.578274,
+          "estimated_duration_s": 2.346639,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 15133.784,
+          "replay_prefill_tps_before_no_cache_clip": 15133.766028,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 291,
+          "generated_tokens": 121,
+          "prefill_tps": 4724.102664,
+          "decode_tps": 80.389,
+          "estimated_ttft_s": 0.061599,
+          "estimated_decode_s": 1.505174,
+          "estimated_duration_s": 1.566773,
+          "method": "per_turn_lowconc_ttft_decode"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 209,
+          "generated_tokens": 108,
+          "prefill_tps": 2678.285385,
+          "decode_tps": 76.141,
+          "estimated_ttft_s": 0.078035,
+          "estimated_decode_s": 1.41842,
+          "estimated_duration_s": 1.496455,
+          "method": "per_turn_lowconc_ttft_decode_incremental_clipped"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 0.347435,
+            "new_ttft_s": 0.768364,
+            "old_replay_prefill_tps": 15133.766028
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 0.768364,
+            "new_ttft_s": 0.768365,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 27.21705498173833,
-    "core_time_s": 24.76971946656704,
+    "wall_time_s": 7.155174,
+    "core_time_s": 4.71088,
     "extracted_answer": "0.49",
     "accuracy": 0.0,
     "pages": [
@@ -1168,10 +1260,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 2.4442935530096292,
-        "end_s": 27.21404080092907,
-        "time_to_first_token_s": 7.555665065534413,
-        "duration_s": 24.76974724791944,
+        "start_s": 2.444294,
+        "end_s": 7.155174,
+        "time_to_first_token_s": 1.761448,
+        "duration_s": 4.71088,
         "think": "",
         "display_chunks": [
           "To",
@@ -1381,6 +1473,83 @@
         "tool_call_traces": [],
         "answer": "To calculate the average performance gap between ProgramFC and the proposed QACHECK system on the HOVER dataset, we need to examine Table 1 on Image 5.\n\n1.  **Identify the relevant scores:**\n    -   The score for the proposed system (QACHECK) on the HOVER dataset is listed as 54.67 (for the 3-hop setting).\n    -   The score for ProgramFC on the HOVER dataset is listed as 54.18 (for the 3-hop setting).\n\n2.  **Calculate the difference:**\n    -   Gap = QACHECK Score - ProgramFC Score\n    -   Gap = 54.67 - 54.18\n    -   Gap = 0.49\n\nThe average performance gap is 0.49. Since the question asks for the answer in float format with two decimals, the final answer is 0.49.\n\n0.49"
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 24.76971946656704,
+      "reconstructed_core_time_s": 4.71088,
+      "reconstructed_replay_wall_time_s": 4.71088,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 24.76971946656704,
+      "low_row_core_time_s": 4.518531661480665,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/full_uncapped_eval_20260805_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260805_112006/base_no_tool_no_system/mmlongbench_full_uncapped_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 18840,
+          "generated_tokens": 204,
+          "prefill_tps": 10695.745773,
+          "decode_tps": 69.166,
+          "estimated_ttft_s": 1.761448,
+          "estimated_decode_s": 2.949432,
+          "estimated_duration_s": 4.71088,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 11896.835,
+          "replay_prefill_tps_before_no_cache_clip": 11896.838497,
+          "no_cache_prefill_tps_cap": 10695.75,
+          "cache_hit_timing_clip": true
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.583614,
+            "new_ttft_s": 1.761447,
+            "old_replay_prefill_tps": 11896.838497
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.761447,
+            "new_ttft_s": 1.761448,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

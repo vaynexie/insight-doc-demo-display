@@ -1,7 +1,7 @@
 {
   "id": "034_mpdocvqa_mpdocvqa_4746",
   "benchmark": "mpdocvqa",
-  "label": "MPDocVQA · cellular telephone",
+  "label": "MPDocVQA \u00b7 cellular telephone",
   "question": "What is the Cellular Telephone No.?",
   "ground_truth": "859-497-4935",
   "document_id": "034_mpdocvqa_mpdocvqa_4746",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 11.932222220115364,
-    "core_time_s": 7.681193258613348,
+    "wall_time_s": 9.443896,
+    "core_time_s": 5.20416,
     "extracted_answer": "859-497-4935",
     "accuracy": 1.0,
     "pages": [
@@ -321,10 +321,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 4.223099386319518,
-        "end_s": 6.95718686375767,
-        "time_to_first_token_s": 0.3968865377828479,
-        "duration_s": 2.734087477438152,
+        "start_s": 4.223099,
+        "end_s": 7.496809,
+        "time_to_first_token_s": 1.654408,
+        "duration_s": 3.27371,
         "think": "I need to zoom into the top-left area of Image 8 where the contact phone numbers (Home Telephone, Cellular Telephone, Fax) are listed to read the Cellular Telephone No.",
         "display_chunks": [
           "I",
@@ -438,9 +438,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 6.959462797269225,
-            "end_s": 6.966613148339093,
-            "duration_s": 0.007150351069867611,
+            "start_s": 7.496809,
+            "end_s": 7.507742,
+            "duration_s": 0.010932,
             "ok": true,
             "arguments": {
               "label": "top-left quadrant showing mailing address and telephone numbers (Home Telephone No., Cellular Telephone No., Fax)",
@@ -485,7 +485,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 9",
+            "label": "Crop \u00b7 image 9",
             "img_idx": 9,
             "full_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_01_crop_9_full.jpg",
             "thumb_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_01_crop_9_thumb.jpg",
@@ -499,10 +499,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 6.975435454398394,
-        "end_s": 11.226817799732089,
-        "time_to_first_token_s": 0.12199052702635527,
-        "duration_s": 4.251382345333695,
+        "start_s": 7.507742,
+        "end_s": 9.023743,
+        "time_to_first_token_s": 0.078178,
+        "duration_s": 1.516001,
         "think": "I need a closer zoom on the handwritten phone numbers (Home, Cellular, Fax) to read the Cellular Telephone No. clearly.",
         "display_chunks": [
           "I",
@@ -605,9 +605,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 11.230694435536861,
-            "end_s": 11.237184146419168,
-            "duration_s": 0.006489710882306099,
+            "start_s": 9.023742,
+            "end_s": 9.029447,
+            "duration_s": 0.005705,
             "ok": true,
             "arguments": {
               "label": "handwritten phone numbers area showing Home Telephone No., Cellular Telephone No., and Fax Telephone No.",
@@ -652,7 +652,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 10",
+            "label": "Crop \u00b7 image 10",
             "img_idx": 10,
             "full_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_02_crop_10_full.jpg",
             "thumb_src": "tool_images/034_mpdocvqa_mpdocvqa_4746/insight_turn_02_crop_10_thumb.jpg",
@@ -666,10 +666,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 11.248800948262215,
-        "end_s": 11.929267367348075,
-        "time_to_first_token_s": 0.11307075805962086,
-        "duration_s": 0.6804664190858603,
+        "start_s": 9.029447,
+        "end_s": 9.443896,
+        "time_to_first_token_s": 0.070144,
+        "duration_s": 0.414449,
         "think": "",
         "display_chunks": [
           "Based",
@@ -702,14 +702,112 @@
         "tool_call_traces": [],
         "answer": "Based on the document image, the Cellular Telephone No. is 859-497-4935."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 7.681193258613348,
+      "reconstructed_core_time_s": 5.20416,
+      "reconstructed_replay_wall_time_s": 5.220797,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 7.681193258613348,
+      "low_row_core_time_s": 10.75392353348434,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/dude_mpdocvqa_eval_20260807_rl_v4_ckpt800_legacy_prompt_v2_lowconc_stdvllm_20260807_063228/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/mpdocvqa_full_insight_qwen_agent/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_first_turn_outlier_clipped": 1,
+        "per_turn_lowconc_ttft_decode": 1,
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 4431,
+          "generated_tokens": 108,
+          "prefill_tps": 2678.299428,
+          "decode_tps": 66.695,
+          "estimated_ttft_s": 1.654408,
+          "estimated_decode_s": 1.619302,
+          "estimated_duration_s": 3.27371,
+          "method": "per_turn_lowconc_ttft_decode_first_turn_outlier_clipped",
+          "prefill_tps_before_first_turn_outlier_clip": 642.154
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 342,
+          "generated_tokens": 97,
+          "prefill_tps": 4374.632249,
+          "decode_tps": 67.463,
+          "estimated_ttft_s": 0.078178,
+          "estimated_decode_s": 1.437823,
+          "estimated_duration_s": 1.516001,
+          "method": "per_turn_lowconc_ttft_decode"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 480,
+          "generated_tokens": 27,
+          "prefill_tps": 6843.065693,
+          "decode_tps": 78.419,
+          "estimated_ttft_s": 0.070144,
+          "estimated_decode_s": 0.344305,
+          "estimated_duration_s": 0.414449,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 7283.171,
+          "replay_prefill_tps_before_no_cache_clip": 7283.210682,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        }
+      ],
+      "first_turn_outlier_policy": {
+        "applied": true,
+        "rule": "clip first-turn prefill only when speed is below 0.5*p10 or above 2*p90; incremental turns remain clipped to p10/p90"
+      },
+      "manual_timing_adjustments": [
+        {
+          "turn_index": 0,
+          "reason": "first_turn_prefill_tps_below_0.5x_global_p10",
+          "old_ttft_s": 6.900209,
+          "new_ttft_s": 1.654408,
+          "delta_s": -5.245801
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 2,
+            "old_ttft_s": 0.065905,
+            "new_ttft_s": 0.070144,
+            "old_replay_prefill_tps": 7283.210682
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 19.121297534555197,
-    "core_time_s": 16.770745928399265,
+    "wall_time_s": 4.53038,
+    "core_time_s": 2.180831,
     "extracted_answer": "859-491-4935",
     "accuracy": 0.0,
     "pages": [
@@ -981,10 +1079,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 2.34954883903265,
-        "end_s": 19.120338769629598,
-        "time_to_first_token_s": 7.235558767803013,
-        "duration_s": 16.770789930596948,
+        "start_s": 2.349549,
+        "end_s": 4.53038,
+        "time_to_first_token_s": 1.542763,
+        "duration_s": 2.180831,
         "think": "",
         "display_chunks": [
           "Based",
@@ -1039,6 +1137,83 @@
         "tool_call_traces": [],
         "answer": "Based on the provided document, specifically **Image 8** which displays **Attachment 1: Burley Grower Profile**, the Cellular Telephone No. is listed as:\n\n**859-491-4935**"
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 16.770745928399265,
+      "reconstructed_core_time_s": 2.180831,
+      "reconstructed_replay_wall_time_s": 2.180831,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 16.770745928399265,
+      "low_row_core_time_s": 1.9990862905979156,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/dude_mpdocvqa_eval_20260807_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260807_063228/base_no_tool_no_system/mpdocvqa_full_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 16501,
+          "generated_tokens": 49,
+          "prefill_tps": 10695.745231,
+          "decode_tps": 76.794,
+          "estimated_ttft_s": 1.542763,
+          "estimated_decode_s": 0.638068,
+          "estimated_duration_s": 2.180831,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 11896.099,
+          "replay_prefill_tps_before_no_cache_clip": 11896.102136,
+          "no_cache_prefill_tps_cap": 10695.75,
+          "cache_hit_timing_clip": true
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.387093,
+            "new_ttft_s": 1.542762,
+            "old_replay_prefill_tps": 11896.102136
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.542762,
+            "new_ttft_s": 1.542763,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds. First-turn prefill speeds are also clipped only for severe outliers (<0.5*p10 or >2*p90).",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

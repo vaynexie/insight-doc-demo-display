@@ -1,7 +1,7 @@
 {
   "id": "035_mpdocvqa_mpdocvqa_63159",
   "benchmark": "mpdocvqa",
-  "label": "MPDocVQA · males in 21-A",
+  "label": "MPDocVQA \u00b7 males in 21-A",
   "question": "What is the number of males in 21-A?",
   "ground_truth": "2,485",
   "document_id": "035_mpdocvqa_mpdocvqa_63159",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 5.3188008069992065,
-    "core_time_s": 4.842168019153178,
+    "wall_time_s": 4.931612,
+    "core_time_s": 4.036498,
     "extracted_answer": "2,485",
     "accuracy": 1.0,
     "pages": [
@@ -147,10 +147,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 0.4430852923542261,
-        "end_s": 2.602162417024374,
-        "time_to_first_token_s": 0.1412196783348918,
-        "duration_s": 2.159077124670148,
+        "start_s": 0.443085,
+        "end_s": 2.448348,
+        "time_to_first_token_s": 0.289343,
+        "duration_s": 2.005263,
         "think": "I need to zoom into the demographic table on image 0 to read the \"Male\" count for tract 21-A. I'll request a zoom of the central table area.",
         "display_chunks": [
           "I",
@@ -282,9 +282,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 2.6038265004754066,
-            "end_s": 2.627782292664051,
-            "duration_s": 0.02395579218864441,
+            "start_s": 2.448348,
+            "end_s": 2.472304,
+            "duration_s": 0.023956,
             "ok": true,
             "arguments": {
               "label": "center table showing characteristics and census tract columns (Health District 21 and tracts 21-A, 21-B, 21-C, 21-D)",
@@ -329,7 +329,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 3",
+            "label": "Crop \u00b7 image 3",
             "img_idx": 3,
             "full_src": "tool_images/035_mpdocvqa_mpdocvqa_63159/insight_turn_01_crop_3_full.jpg",
             "thumb_src": "tool_images/035_mpdocvqa_mpdocvqa_63159/insight_turn_01_crop_3_thumb.jpg",
@@ -343,10 +343,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 2.641409708186984,
-        "end_s": 4.758378908969462,
-        "time_to_first_token_s": 0.08097162283957005,
-        "duration_s": 2.116969200782478,
+        "start_s": 2.641411,
+        "end_s": 4.263767,
+        "time_to_first_token_s": 0.137949,
+        "duration_s": 1.622356,
         "think": "I will zoom into the middle-left area of the table where the \"Male\" row and 21-A column values are located to read the number clearly.",
         "display_chunks": [
           "I",
@@ -461,9 +461,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 4.759763428941369,
-            "end_s": 4.7687296606600285,
-            "duration_s": 0.008966231718659401,
+            "start_s": 4.263767,
+            "end_s": 4.272733,
+            "duration_s": 0.008966,
             "ok": true,
             "arguments": {
               "label": "center-left region showing Sex rows (Male, Female) and columns for Health District 21 and 21-A",
@@ -508,7 +508,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 4",
+            "label": "Crop \u00b7 image 4",
             "img_idx": 4,
             "full_src": "tool_images/035_mpdocvqa_mpdocvqa_63159/insight_turn_02_crop_4_full.jpg",
             "thumb_src": "tool_images/035_mpdocvqa_mpdocvqa_63159/insight_turn_02_crop_4_thumb.jpg",
@@ -522,10 +522,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 4.78506807051599,
-        "end_s": 5.317558951675892,
-        "time_to_first_token_s": 0.08668958116322756,
-        "duration_s": 0.5324908811599016,
+        "start_s": 4.522733,
+        "end_s": 4.931612,
+        "time_to_first_token_s": 0.0548,
+        "duration_s": 0.408879,
         "think": "",
         "display_chunks": [
           "Based",
@@ -557,14 +557,92 @@
         "tool_call_traces": [],
         "answer": "Based on the table, under Sex: Male for tract 21-A the number is 2,485."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 4.842168019153178,
+      "reconstructed_core_time_s": 4.036498,
+      "reconstructed_replay_wall_time_s": 4.488527,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "missing",
+      "high_row_core_time_s": 4.842168019153178,
+      "low_row_core_time_s": null,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": null,
+      "component_methods": {
+        "global_lowconc_speed_fallback": 3
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 1980,
+          "generated_tokens": 126,
+          "prefill_tps": 6843.089344,
+          "decode_tps": 73.43,
+          "estimated_ttft_s": 0.289343,
+          "estimated_decode_s": 1.71592,
+          "estimated_duration_s": 2.005263,
+          "method": "global_lowconc_speed_fallback"
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 944,
+          "generated_tokens": 109,
+          "prefill_tps": 6843.108685,
+          "decode_tps": 73.43,
+          "estimated_ttft_s": 0.137949,
+          "estimated_decode_s": 1.484407,
+          "estimated_duration_s": 1.622356,
+          "method": "global_lowconc_speed_fallback"
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 375,
+          "generated_tokens": 26,
+          "prefill_tps": 6843.065693,
+          "decode_tps": 73.43,
+          "estimated_ttft_s": 0.0548,
+          "estimated_decode_s": 0.354079,
+          "estimated_duration_s": 0.408879,
+          "method": "global_lowconc_speed_fallback"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 0.289342,
+            "new_ttft_s": 0.289343,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 13.797935544513166,
-    "core_time_s": 9.81981695909053,
+    "wall_time_s": 6.824231,
+    "core_time_s": 2.847137,
     "extracted_answer": "2,435",
     "accuracy": 0.0,
     "pages": [
@@ -662,10 +740,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 3.9770939545705914,
-        "end_s": 13.796947465278208,
-        "time_to_first_token_s": 4.646185042336583,
-        "duration_s": 9.819853510707617,
+        "start_s": 3.977094,
+        "end_s": 6.824231,
+        "time_to_first_token_s": 2.191094,
+        "duration_s": 2.847137,
         "think": "",
         "display_chunks": [
           "Based",
@@ -724,6 +802,63 @@
         "tool_call_traces": [],
         "answer": "Based on the demographic table provided in Image 0, under the \"HEALTH DISTRICT 21\" column and the \"Sex\" category for \"Male\", the number listed for tract \"21-A\" is **2,435**."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 9.81981695909053,
+      "reconstructed_core_time_s": 2.847137,
+      "reconstructed_replay_wall_time_s": 2.847137,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 9.81981695909053,
+      "low_row_core_time_s": 3.0946707725524902,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/dude_mpdocvqa_eval_20260807_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260807_063228/base_no_tool_no_system/mpdocvqa_full_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 6042,
+          "generated_tokens": 53,
+          "prefill_tps": 2757.526605,
+          "decode_tps": 80.787,
+          "estimated_ttft_s": 2.191094,
+          "estimated_decode_s": 0.656043,
+          "estimated_duration_s": 2.847137,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

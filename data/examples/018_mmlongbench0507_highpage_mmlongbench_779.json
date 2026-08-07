@@ -1,7 +1,7 @@
 {
   "id": "018_mmlongbench0507_highpage_mmlongbench_779",
   "benchmark": "mmlongbench0507_highpage",
-  "label": "MMLongBench-Doc highpage · QK-norm spike",
+  "label": "MMLongBench-Doc highpage \u00b7 QK-norm spike",
   "question": "At which step, the loss spikes when without QK-norm?",
   "ground_truth": "\"150k\"",
   "document_id": "018_mmlongbench0507_highpage_mmlongbench_779",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 33.467253940179944,
-    "core_time_s": 29.944138292223215,
+    "wall_time_s": 8.945043,
+    "core_time_s": 4.964476,
     "extracted_answer": "step 150k",
     "accuracy": 1.0,
     "pages": [
@@ -843,10 +843,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 3.4395946161821485,
-        "end_s": 29.084146005101502,
-        "time_to_first_token_s": 4.290350184775889,
-        "duration_s": 25.644551388919353,
+        "start_s": 3.439595,
+        "end_s": 6.32278,
+        "time_to_first_token_s": 1.808389,
+        "duration_s": 2.883185,
         "think": "I need to zoom into Figure 5 (top of image 5) to read the step where loss spikes without QK-norm. I'll request a zoom on the top-center area containing the three plots.",
         "display_chunks": [
           "I",
@@ -965,9 +965,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 29.098101544193923,
-            "end_s": 29.118537384085357,
-            "duration_s": 0.020435839891433716,
+            "start_s": 6.32278,
+            "end_s": 6.343215,
+            "duration_s": 0.020436,
             "ok": true,
             "arguments": {
               "label": "the three small line plots at the top of the page showing training curves (Figure 5)",
@@ -1012,7 +1012,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 27",
+            "label": "Crop \u00b7 image 27",
             "img_idx": 27,
             "full_src": "tool_images/018_mmlongbench0507_highpage_mmlongbench_779/insight_turn_01_crop_27_full.jpg",
             "thumb_src": "tool_images/018_mmlongbench0507_highpage_mmlongbench_779/insight_turn_01_crop_27_thumb.jpg",
@@ -1026,10 +1026,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 29.145289841108024,
-        "end_s": 31.757026941515505,
-        "time_to_first_token_s": 0.29279144667088985,
-        "duration_s": 2.611737100407481,
+        "start_s": 6.593215,
+        "end_s": 8.077389,
+        "time_to_first_token_s": 0.071898,
+        "duration_s": 1.484174,
         "think": "I need a closer view of the middle plot (b) to read the x-axis tick labels and identify where the magenta curve spikes. I'll zoom into the center area of Image 27.",
         "display_chunks": [
           "I",
@@ -1141,9 +1141,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 31.761446363292634,
-            "end_s": 31.781982603482902,
-            "duration_s": 0.020536240190267563,
+            "start_s": 8.077389,
+            "end_s": 8.097926,
+            "duration_s": 0.020536,
             "ok": true,
             "arguments": {
               "label": "center region showing the middle training loss plot (plot b)",
@@ -1188,7 +1188,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 28",
+            "label": "Crop \u00b7 image 28",
             "img_idx": 28,
             "full_src": "tool_images/018_mmlongbench0507_highpage_mmlongbench_779/insight_turn_02_crop_28_full.jpg",
             "thumb_src": "tool_images/018_mmlongbench0507_highpage_mmlongbench_779/insight_turn_02_crop_28_thumb.jpg",
@@ -1202,10 +1202,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 31.821057468652725,
-        "end_s": 33.46623412333429,
-        "time_to_first_token_s": 0.4830017639324069,
-        "duration_s": 1.6451766546815634,
+        "start_s": 8.347926,
+        "end_s": 8.945043,
+        "time_to_first_token_s": 0.08507,
+        "duration_s": 0.597117,
         "think": "",
         "display_chunks": [
           "Based",
@@ -1240,14 +1240,121 @@
         "tool_call_traces": [],
         "answer": "Based on the plot, the loss spikes for the w/o QK-norm curve (black) at step 150k."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 29.944138292223215,
+      "reconstructed_core_time_s": 4.964476,
+      "reconstructed_replay_wall_time_s": 5.505448,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 29.944138292223215,
+      "low_row_core_time_s": 4.637879805639386,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_highpage_rl_v4_ckpt800_rescale035_legacy_prompt_v2_hp_full6_090216/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_highpage_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/rl_v4_ckpt800_highpage_lowconc_legacy_prompt_v2_rescale025_035_05_07_1trial_overlap_20260730_144045/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800_highcap/full5_tool/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "lowconc_duration_split_by_global_speed_no_cache_prefix_clipped": 2,
+        "lowconc_duration_split_by_global_speed": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 12375,
+          "generated_tokens": 113,
+          "prefill_tps": 6843.107318,
+          "decode_tps": 105.136,
+          "estimated_ttft_s": 1.808389,
+          "estimated_decode_s": 1.074796,
+          "estimated_duration_s": 2.883185,
+          "method": "lowconc_duration_split_by_global_speed_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 9797.889,
+          "replay_prefill_tps_before_no_cache_clip": 9797.890306,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 492,
+          "generated_tokens": 106,
+          "prefill_tps": 6843.027622,
+          "decode_tps": 75.056,
+          "estimated_ttft_s": 0.071898,
+          "estimated_decode_s": 1.412276,
+          "estimated_duration_s": 1.484174,
+          "method": "lowconc_duration_split_by_global_speed_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 6994.657,
+          "replay_prefill_tps_before_no_cache_clip": 6994.69711,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 449,
+          "generated_tokens": 29,
+          "prefill_tps": 5278.006348,
+          "decode_tps": 56.635,
+          "estimated_ttft_s": 0.08507,
+          "estimated_decode_s": 0.512047,
+          "estimated_duration_s": 0.597117,
+          "method": "lowconc_duration_split_by_global_speed"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.263027,
+            "new_ttft_s": 1.808388,
+            "old_replay_prefill_tps": 9797.890306
+          },
+          {
+            "turn_index": 1,
+            "old_ttft_s": 0.070339,
+            "new_ttft_s": 0.071897,
+            "old_replay_prefill_tps": 6994.69711
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 1.808388,
+            "new_ttft_s": 1.808389,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          },
+          {
+            "turn_index": 1,
+            "old_ttft_s": 0.071897,
+            "new_ttft_s": 0.071898,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 234.37937868572772,
-    "core_time_s": 228.04421270545572,
+    "wall_time_s": 29.130812,
+    "core_time_s": 22.798008,
     "extracted_answer": "Therefore, the loss spikes at approximately step 100k when QK-Norm is not used.",
     "accuracy": 0.0,
     "pages": [
@@ -2041,10 +2148,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 6.332803976722062,
-        "end_s": 234.37708862219006,
-        "time_to_first_token_s": 205.74907421320677,
-        "duration_s": 228.044284645468,
+        "start_s": 6.332804,
+        "end_s": 29.130812,
+        "time_to_first_token_s": 12.420908,
+        "duration_s": 22.798008,
         "think": "",
         "display_chunks": [
           "Based",
@@ -2305,6 +2412,63 @@
         "tool_call_traces": [],
         "answer": "Based on the provided document, specifically Figure 5b on page 6, we can determine when the training loss spikes for the Chameleon-7B model without QK-Norm.\n\n1.  **Figure 5b** is titled \"An ablation with Chameleon-7B with and without QK-Norm.\"\n2.  The legend indicates that the purple line represents the model *without* QK-Norm.\n3.  Observing this purple line, it shows a very steep decline in loss initially, but then at approximately step 100k, there is a sharp, significant spike upwards before continuing its downward trend.\n4.  The text on page 7 confirms this observation, stating: \"In Figure 5b, we show training loss curves for Chameleon-7B with and without QK-Norm, and the latter diverges after approximately 20% of a training epoch.\" While the exact step isn't given, the visual spike in Figure 5b occurs around step 100k, which corresponds to roughly 20% of an epoch (as mentioned in the text).\n\nTherefore, the loss spikes at approximately step 100k when QK-Norm is not used."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 228.04421270545572,
+      "reconstructed_core_time_s": 22.798008,
+      "reconstructed_replay_wall_time_s": 22.798008,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 228.04421270545572,
+      "low_row_core_time_s": 19.867972848005593,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_highpage_base_no_tool_no_system_rescale07_legacy_prompt_v2_hp_full6_090216/base_no_tool_no_system/full6_highpage_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/base_no_tool_no_system_highpage_lowconc_legacy_prompt_v2_rescale025_035_05_07_1trial_overlap_20260730_144045/base_no_tool_no_system_highcap/full5_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "lowconc_duration_split_by_global_speed": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 49501,
+          "generated_tokens": 255,
+          "prefill_tps": 3985.296405,
+          "decode_tps": 24.573,
+          "estimated_ttft_s": 12.420908,
+          "estimated_decode_s": 10.3771,
+          "estimated_duration_s": 22.798008,
+          "method": "lowconc_duration_split_by_global_speed"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }

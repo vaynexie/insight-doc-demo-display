@@ -1,7 +1,7 @@
 {
   "id": "033_mpdocvqa_mpdocvqa_55459",
   "benchmark": "mpdocvqa",
-  "label": "MPDocVQA · demat shares",
+  "label": "MPDocVQA \u00b7 demat shares",
   "question": "What is the total No. of Demat shares According to table B. Shareholding Pattern ?",
   "ground_truth": "70,70,518",
   "document_id": "033_mpdocvqa_mpdocvqa_55459",
@@ -10,8 +10,8 @@
     "side": "rl",
     "label": "InSight-doc-8B",
     "initial_rescale": 0.35,
-    "wall_time_s": 7.966210560873151,
-    "core_time_s": 7.200427993200719,
+    "wall_time_s": 5.848043,
+    "core_time_s": 4.571822,
     "extracted_answer": "70,70,518 (70,705,18)",
     "accuracy": 1.0,
     "pages": [
@@ -234,10 +234,10 @@
       {
         "message_idx": 2,
         "type": "tool_call",
-        "start_s": 0.7433205666020513,
-        "end_s": 3.784527115523815,
-        "time_to_first_token_s": 0.6886639511212707,
-        "duration_s": 3.041206548921764,
+        "start_s": 0.743321,
+        "end_s": 3.059268,
+        "time_to_first_token_s": 0.456372,
+        "duration_s": 2.315947,
         "think": "I need to read the \"B. Shareholding Pattern\" table on image 5, specifically the column showing total Demat shares. I'll zoom into the bottom area of image 5 where that table is located.",
         "display_chunks": [
           "I",
@@ -365,9 +365,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 3.7869551833719015,
-            "end_s": 3.793833317235112,
-            "duration_s": 0.006878133863210678,
+            "start_s": 3.059268,
+            "end_s": 3.070761,
+            "duration_s": 0.011493,
             "ok": true,
             "arguments": {
               "label": "bottom half showing table B. Shareholding Pattern with columns No. of shareholders and No. of shares (Physical & Demat)",
@@ -412,7 +412,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 6",
+            "label": "Crop \u00b7 image 6",
             "img_idx": 6,
             "full_src": "tool_images/033_mpdocvqa_mpdocvqa_55459/insight_turn_01_crop_6_full.jpg",
             "thumb_src": "tool_images/033_mpdocvqa_mpdocvqa_55459/insight_turn_01_crop_6_thumb.jpg",
@@ -426,10 +426,10 @@
       {
         "message_idx": 4,
         "type": "tool_call",
-        "start_s": 3.8035034332424402,
-        "end_s": 6.500357476994395,
-        "time_to_first_token_s": 0.08407034911215305,
-        "duration_s": 2.696854043751955,
+        "start_s": 3.320761,
+        "end_s": 4.86971,
+        "time_to_first_token_s": 0.055531,
+        "duration_s": 1.548949,
         "think": "I need a closer view of the bottom row (Total) in the Shareholding Pattern table to read the Demat total clearly.",
         "display_chunks": [
           "I",
@@ -537,9 +537,9 @@
         "tool_call_traces": [
           {
             "name": "image_zoom_in_tool",
-            "start_s": 6.501689312979579,
-            "end_s": 6.503910526633263,
-            "duration_s": 0.0022212136536836624,
+            "start_s": 4.86971,
+            "end_s": 4.891117,
+            "duration_s": 0.021407,
             "ok": true,
             "arguments": {
               "label": "bottom area showing the Total row and the No. of shares Demat column in the B. Shareholding Pattern table",
@@ -584,7 +584,7 @@
           },
           {
             "kind": "crop",
-            "label": "Crop · image 7",
+            "label": "Crop \u00b7 image 7",
             "img_idx": 7,
             "full_src": "tool_images/033_mpdocvqa_mpdocvqa_55459/insight_turn_02_crop_7_full.jpg",
             "thumb_src": "tool_images/033_mpdocvqa_mpdocvqa_55459/insight_turn_02_crop_7_thumb.jpg",
@@ -598,10 +598,10 @@
       {
         "message_idx": 6,
         "type": "answer",
-        "start_s": 6.513020526617765,
-        "end_s": 7.964685635641217,
-        "time_to_first_token_s": 0.6324575040489435,
-        "duration_s": 1.4516651090234518,
+        "start_s": 5.141117,
+        "end_s": 5.848043,
+        "time_to_first_token_s": 0.05,
+        "duration_s": 0.706926,
         "think": "",
         "display_chunks": [
           "Based",
@@ -643,14 +643,121 @@
         "tool_call_traces": [],
         "answer": "Based on the table, the Total No. of Demat shares is 70,70,518 (70,705,18)."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 7.200427993200719,
+      "reconstructed_core_time_s": 4.571822,
+      "reconstructed_replay_wall_time_s": 5.104722,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 7.200427993200719,
+      "low_row_core_time_s": 5.653618091717362,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_rl_v4_ckpt800_rescale035_legacy_prompt_v2_noproxy_20260804_124032/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/full6_tool/rescale035/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/dude_mpdocvqa_eval_20260807_rl_v4_ckpt800_legacy_prompt_v2_lowconc_stdvllm_20260807_063228/rl_v4_unans014_mc_false_e05_arxiv_struct1k_legacy_prompt_v2_ckpt800/mpdocvqa_full_insight_qwen_agent/rescale035/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 2,
+        "per_turn_lowconc_ttft_decode": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          2678.3,
+          17166.19
+        ],
+        "decode_tps": [
+          52.94,
+          81.41
+        ],
+        "fallback_prefill_tps": 6843.11,
+        "fallback_decode_tps": 73.43
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 3123,
+          "generated_tokens": 122,
+          "prefill_tps": 6843.10168,
+          "decode_tps": 65.606,
+          "estimated_ttft_s": 0.456372,
+          "estimated_decode_s": 1.859575,
+          "estimated_duration_s": 2.315947,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 16233.105,
+          "replay_prefill_tps_before_no_cache_clip": 16233.074304,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 1,
+          "effective_prompt_tokens": 380,
+          "generated_tokens": 102,
+          "prefill_tps": 6843.024617,
+          "decode_tps": 68.3,
+          "estimated_ttft_s": 0.055531,
+          "estimated_decode_s": 1.493418,
+          "estimated_duration_s": 1.548949,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 8208.957,
+          "replay_prefill_tps_before_no_cache_clip": 7600.0,
+          "no_cache_prefill_tps_cap": 6843.11,
+          "cache_hit_timing_clip": true
+        },
+        {
+          "turn_index": 2,
+          "effective_prompt_tokens": 232,
+          "generated_tokens": 36,
+          "prefill_tps": 4640.0,
+          "decode_tps": 54.801,
+          "estimated_ttft_s": 0.05,
+          "estimated_decode_s": 0.656926,
+          "estimated_duration_s": 0.706926,
+          "method": "per_turn_lowconc_ttft_decode"
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 6843.11,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 0.192385,
+            "new_ttft_s": 0.456371,
+            "old_replay_prefill_tps": 16233.074304
+          },
+          {
+            "turn_index": 1,
+            "old_ttft_s": 0.05,
+            "new_ttft_s": 0.05553,
+            "old_replay_prefill_tps": 7600.0
+          }
+        ],
+        "rounding_adjustments": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 0.456371,
+            "new_ttft_s": 0.456372,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          },
+          {
+            "turn_index": 1,
+            "old_ttft_s": 0.05553,
+            "new_ttft_s": 0.055531,
+            "reason": "round_up_to_preserve_no_cache_prefill_cap"
+          }
+        ]
+      }
+    }
   },
   "baseline": {
     "side": "base",
     "label": "Qwen3-VL-8B",
     "initial_rescale": 0.7,
-    "wall_time_s": 16.821841900236905,
-    "core_time_s": 15.783602542243898,
+    "wall_time_s": 3.538851,
+    "core_time_s": 2.501974,
     "extracted_answer": "70,54,965",
     "accuracy": 0.0,
     "pages": [
@@ -835,10 +942,10 @@
       {
         "message_idx": 1,
         "type": "answer",
-        "start_s": 1.0368767641484737,
-        "end_s": 16.820511831901968,
-        "time_to_first_token_s": 7.5059760911390185,
-        "duration_s": 15.783635067753494,
+        "start_s": 1.036877,
+        "end_s": 3.538851,
+        "time_to_first_token_s": 0.884183,
+        "duration_s": 2.501974,
         "think": "",
         "display_chunks": [
           "Based",
@@ -955,6 +1062,75 @@
         "tool_call_traces": [],
         "answer": "Based on the table \"B. Shareholding Pattern as on March 31, 2005\" found on Image 5, we can find the total number of Demat shares.\n\nThe table has a row labeled \"Total\" and a column labeled \"No. of shares Demat\". The value at the intersection of this row and column is **70,54,965**.\n\nTherefore, the total number of Demat shares according to the table is **70,54,965**."
       }
-    ]
+    ],
+    "timing_normalization": {
+      "applied": true,
+      "method": "component_speed_from_lowconcurrency",
+      "description": "Original trajectory text/tool calls retained; timing rebuilt from original high-concurrency component sizes and low-concurrency component speeds.",
+      "original_source_commit": "ee35b18",
+      "original_core_time_s": 15.783602542243898,
+      "reconstructed_core_time_s": 2.501974,
+      "reconstructed_replay_wall_time_s": 2.501974,
+      "high_trace_match_status": "exact_datasource_uid",
+      "low_trace_match_status": "exact_datasource_uid",
+      "high_row_core_time_s": 15.783602542243898,
+      "low_row_core_time_s": 1.8436981942504644,
+      "high_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/trace_full6_base_no_tool_no_system_rescale07_legacy_prompt_v2_noproxy_20260804_124233/base_no_tool_no_system/full6_no_tool_no_system/rescale07/samples.jsonl",
+      "low_sample_path": "/scratch/ywxzml3j/likaican/src/verl-qwen3-vl/workspace/dude_mpdocvqa_eval_20260807_base_no_tool_no_system_legacy_prompt_v2_lowconc_stdvllm_20260807_063228/base_no_tool_no_system/mpdocvqa_full_insight_qwen_agent_no_tool_no_system/rescale07/checkpoints/samples.jsonl",
+      "component_methods": {
+        "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped": 1
+      },
+      "speed_bounds": {
+        "prefill_tps": [
+          4286.11,
+          13026.02
+        ],
+        "decode_tps": [
+          19.76,
+          80.14
+        ],
+        "fallback_prefill_tps": 10695.75,
+        "fallback_decode_tps": 65.95
+      },
+      "per_turn": [
+        {
+          "turn_index": 0,
+          "effective_prompt_tokens": 9457,
+          "generated_tokens": 111,
+          "prefill_tps": 10695.749636,
+          "decode_tps": 68.612,
+          "estimated_ttft_s": 0.884183,
+          "estimated_decode_s": 1.617791,
+          "estimated_duration_s": 2.501974,
+          "method": "per_turn_lowconc_ttft_decode_no_cache_prefix_clipped",
+          "prefill_tps_before_no_cache_clip": 13107.778,
+          "replay_prefill_tps_before_no_cache_clip": 13107.778455,
+          "no_cache_prefill_tps_cap": 10695.75,
+          "cache_hit_timing_clip": true
+        }
+      ],
+      "no_cache_prefix_policy": {
+        "applied": true,
+        "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds the side fallback low-concurrency prefill throughput cap; TTFT is never shortened.",
+        "prefill_tps_cap": 10695.75,
+        "changed_turns": [
+          {
+            "turn_index": 0,
+            "old_ttft_s": 0.72148,
+            "new_ttft_s": 0.884183,
+            "old_replay_prefill_tps": 13107.778455
+          }
+        ]
+      }
+    }
+  },
+  "timing_normalization": {
+    "applied": true,
+    "method": "component_speed_from_lowconcurrency",
+    "description": "Low-concurrency variants removed. Original trajectories are retained and replay timings are rebuilt from component speeds: TTFT/prefill and decode speeds from low-concurrency traces, applied to original high-concurrency turn token counts. Incremental-turn speed outliers are clipped to global low-concurrency p10/p90 bounds.",
+    "no_cache_prefix_policy": {
+      "applied": true,
+      "rule": "Visible TTFT is lengthened when effective_prompt_tokens / TTFT exceeds each side fallback low-concurrency prefill throughput cap; TTFT is never shortened."
+    }
   }
 }
