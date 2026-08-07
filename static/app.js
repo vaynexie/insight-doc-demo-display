@@ -2,7 +2,6 @@
   "use strict";
 
   const DATA_BASE = "./data";
-  const DATA_VERSION = "20260806-6";
   const IMAGE_CACHE = new Map();
 
   const state = {
@@ -20,6 +19,7 @@
       activeRoundIndex: -1,
       zoomRounds: 0,
     },
+    pdfPages: [],
     pdfThumbsExpanded: false,
     pdfViewerObjectUrl: null,
   };
@@ -50,8 +50,7 @@
 
   function dataUrl(relPath) {
     const path = String(relPath).replace(/^\.\//, "");
-    const sep = path.includes("?") ? "&" : "?";
-    return `./${path}${sep}v=${DATA_VERSION}`;
+    return `./${path}`;
   }
 
   function sleep(ms, token) {
@@ -174,6 +173,30 @@
     }
     parts.push(`${example.page_count} pages`);
     return parts.join(" · ");
+  }
+
+  function exampleIdFromUrl() {
+    return new URLSearchParams(window.location.search).get("example");
+  }
+
+  function resolveExampleId(exampleId) {
+    if (!exampleId || !state.manifest?.examples) return null;
+    return state.manifest.examples.some((item) => item.id === exampleId) ? exampleId : null;
+  }
+
+  function defaultExampleId() {
+    return state.manifest?.default_example_id || state.manifest?.examples?.[0]?.id || null;
+  }
+
+  function setExampleUrl(exampleId, replace = false) {
+    const url = new URL(window.location.href);
+    url.searchParams.set("example", exampleId);
+    const nextUrl = `${url.pathname}${url.search}${url.hash}`;
+    if (replace) {
+      window.history.replaceState({}, "", nextUrl);
+    } else {
+      window.history.pushState({}, "", nextUrl);
+    }
   }
 
   function normalizeText(value) {
@@ -451,6 +474,16 @@
       const img = document.createElement("img");
       img.src = item.url;
       img.alt = item.label;
+      img.tabIndex = 0;
+      img.setAttribute("role", "button");
+      img.title = "Open at model-presented size";
+      img.addEventListener("click", () => openToolImageViewer(item.url, item.label));
+      img.addEventListener("keydown", (event) => {
+        if (event.key === "Enter" || event.key === " ") {
+          event.preventDefault();
+          openToolImageViewer(item.url, item.label);
+        }
+      });
       wrap.appendChild(label);
       wrap.appendChild(img);
       grid.appendChild(wrap);
@@ -758,57 +791,73 @@
 
   function setPdfThumbsExpanded(expanded) {
     state.pdfThumbsExpanded = expanded;
-    els.pdfThumbGrid.classList.toggle("collapsed", !expanded);
-    els.pdfThumbToggle.textContent = expanded ? "Show fewer pages" : "Show all pages";
-    els.pdfThumbToggle.classList.toggle("is-expanded", expanded);
-    els.pdfThumbToggle.setAttribute("aria-expanded", String(expanded));
+    renderPdfThumbGrid();
   }
 
   function updatePdfThumbToggle() {
-    const pageCount = els.pdfThumbGrid.querySelectorAll(".pdf-thumb").length;
-    const canExpand = pageCount > collapsedThumbLimit();
+    const canExpand = state.pdfPages.length > collapsedThumbLimit();
     els.pdfThumbToggle.hidden = !canExpand;
     if (!canExpand) {
-      els.pdfThumbGrid.classList.remove("collapsed");
+      state.pdfThumbsExpanded = false;
       els.pdfThumbToggle.classList.remove("is-expanded");
       els.pdfThumbToggle.setAttribute("aria-expanded", "false");
       return;
     }
-    setPdfThumbsExpanded(state.pdfThumbsExpanded);
+    els.pdfThumbToggle.textContent = state.pdfThumbsExpanded
+      ? "Show fewer pages"
+      : "Show all pages";
+    els.pdfThumbToggle.classList.toggle("is-expanded", state.pdfThumbsExpanded);
+    els.pdfThumbToggle.setAttribute("aria-expanded", String(state.pdfThumbsExpanded));
+  }
+
+  function createPdfThumb(page, idx) {
+    const thumb = document.createElement("button");
+    thumb.type = "button";
+    thumb.className = "pdf-thumb";
+    thumb.title = `Page ${idx}`;
+    const img = document.createElement("img");
+    img.alt = `Page ${idx}`;
+    img.loading = "lazy";
+    img.src = assetUrl(page.thumb || page.src);
+    const label = document.createElement("div");
+    label.className = "pdf-thumb-label";
+    label.textContent = `P${idx}`;
+    thumb.appendChild(img);
+    thumb.appendChild(label);
+    thumb.addEventListener("click", () => openPdfViewer(page, idx));
+    return thumb;
+  }
+
+  function renderPdfThumbGrid() {
+    els.pdfThumbGrid.innerHTML = "";
+    if (!state.pdfPages.length) {
+      els.pdfThumbGrid.textContent = "No pages available.";
+      els.pdfThumbToggle.hidden = true;
+      return;
+    }
+    const visibleCount = state.pdfThumbsExpanded
+      ? state.pdfPages.length
+      : Math.min(state.pdfPages.length, collapsedThumbLimit());
+    const fragment = document.createDocumentFragment();
+    for (let idx = 0; idx < visibleCount; idx += 1) {
+      fragment.appendChild(createPdfThumb(state.pdfPages[idx], idx));
+    }
+    els.pdfThumbGrid.appendChild(fragment);
+    updatePdfThumbToggle();
   }
 
   function renderPdfThumbnails(example) {
-    const pages = example?.insight?.pages || [];
-    els.pdfThumbGrid.innerHTML = "";
+    state.pdfPages = example?.insight?.pages || [];
     state.pdfThumbsExpanded = false;
     els.pdfThumbToggle.hidden = true;
-    if (!pages.length) {
-      els.pdfThumbGrid.textContent = "No pages available.";
-      return;
-    }
-    pages.forEach((page, idx) => {
-      const thumb = document.createElement("button");
-      thumb.type = "button";
-      thumb.className = "pdf-thumb";
-      thumb.title = `Page ${idx}`;
-      const img = document.createElement("img");
-      img.alt = `Page ${idx}`;
-      img.loading = "lazy";
-      img.src = assetUrl(page.thumb || page.src);
-      const label = document.createElement("div");
-      label.className = "pdf-thumb-label";
-      label.textContent = `P${idx}`;
-      thumb.appendChild(img);
-      thumb.appendChild(label);
-      thumb.addEventListener("click", () => openPdfViewer(page, idx));
-      els.pdfThumbGrid.appendChild(thumb);
-    });
-    updatePdfThumbToggle();
+    renderPdfThumbGrid();
   }
 
   function closePdfViewer() {
     els.pdfViewerModal.hidden = true;
+    delete els.pdfViewerModal.dataset.viewer;
     els.pdfViewerImage.src = "";
+    els.pdfViewerImage.alt = "Original PDF page";
     if (state.pdfViewerObjectUrl) {
       URL.revokeObjectURL(state.pdfViewerObjectUrl);
       state.pdfViewerObjectUrl = null;
@@ -817,15 +866,35 @@
 
   function openPdfViewer(page, pageIdx) {
     closePdfViewer();
+    els.pdfViewerModal.dataset.viewer = "pdf";
     els.pdfViewerCaption.textContent = `Loading page ${pageIdx}…`;
     els.pdfViewerModal.hidden = false;
     const url = assetUrl(page.src);
+    els.pdfViewerImage.alt = `Original PDF page ${pageIdx}`;
     els.pdfViewerImage.src = url;
     els.pdfViewerImage.onload = () => {
       els.pdfViewerCaption.textContent = `Page ${pageIdx} (original resolution)`;
     };
     els.pdfViewerImage.onerror = () => {
       els.pdfViewerCaption.textContent = `Page ${pageIdx} failed to load.`;
+    };
+  }
+
+  function openToolImageViewer(url, label) {
+    closePdfViewer();
+    els.pdfViewerModal.dataset.viewer = "tool";
+    els.pdfViewerCaption.textContent = `${label} · loading model-presented size…`;
+    els.pdfViewerModal.hidden = false;
+    els.pdfViewerImage.alt = label;
+    els.pdfViewerImage.src = url;
+    els.pdfViewerImage.onload = () => {
+      const width = els.pdfViewerImage.naturalWidth;
+      const height = els.pdfViewerImage.naturalHeight;
+      const size = width && height ? ` · ${width} × ${height}px` : "";
+      els.pdfViewerCaption.textContent = `${label}${size} · model-presented size`;
+    };
+    els.pdfViewerImage.onerror = () => {
+      els.pdfViewerCaption.textContent = `${label} failed to load.`;
     };
   }
 
@@ -839,12 +908,14 @@
     }
   }
 
-  async function loadExample(exampleId) {
+  async function loadExample(exampleId, options = {}) {
     state.loadToken += 1;
     const loadToken = state.loadToken;
     state.loadingExample = true;
     stopAndReset();
     syncControls();
+    state.pdfPages = [];
+    state.pdfThumbsExpanded = false;
     els.questionText.textContent = "Loading example…";
     els.pdfThumbGrid.textContent = "Loading pages…";
     els.pdfThumbToggle.hidden = true;
@@ -859,6 +930,9 @@
       state.example = example;
       state.exampleId = example.id;
       els.exampleSelect.value = example.id;
+      if (options.updateUrl) {
+        setExampleUrl(example.id, Boolean(options.replaceUrl));
+      }
       // Clear again in case a stale run wrote into the streams during fetch.
       resetStreams();
       renderPlainMarkdown(els.questionText, example.question || "");
@@ -881,8 +955,12 @@
     if (!res.ok) throw new Error(`Failed to load examples.json (${res.status})`);
     state.manifest = await res.json();
     populateExampleSelect(state.manifest);
-    const initialId = state.manifest.default_example_id || state.manifest.examples?.[0]?.id;
-    await loadExample(initialId);
+    const requestedId = exampleIdFromUrl();
+    const initialId = resolveExampleId(requestedId) || defaultExampleId();
+    await loadExample(initialId, {
+      updateUrl: Boolean(requestedId),
+      replaceUrl: true,
+    });
   }
 
   els.btnRun.addEventListener("click", () => {
@@ -898,10 +976,19 @@
   els.pdfThumbToggle.addEventListener("click", () => {
     setPdfThumbsExpanded(!state.pdfThumbsExpanded);
   });
-  window.addEventListener("resize", updatePdfThumbToggle);
+  window.addEventListener("resize", () => {
+    if (!state.loadingExample) renderPdfThumbGrid();
+  });
+  window.addEventListener("popstate", async () => {
+    if (!state.manifest) return;
+    const nextId = resolveExampleId(exampleIdFromUrl()) || defaultExampleId();
+    if (nextId && nextId !== state.exampleId) {
+      await loadExample(nextId, { updateUrl: false });
+    }
+  });
   els.exampleSelect.addEventListener("change", async () => {
     try {
-      await loadExample(els.exampleSelect.value);
+      await loadExample(els.exampleSelect.value, { updateUrl: true });
     } catch (err) {
       els.questionText.textContent = `Failed to load example: ${err.message}`;
     }

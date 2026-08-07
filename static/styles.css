@@ -200,18 +200,12 @@ body {
   grid-template-columns: repeat(12, minmax(0, 1fr));
 }
 
-.pdf-thumb-grid.collapsed .pdf-thumb:nth-child(n+25) {
-  display: none;
-}
-
 @media (max-width: 1100px) {
   .pdf-thumb-grid { grid-template-columns: repeat(8, minmax(0, 1fr)); }
-  .pdf-thumb-grid.collapsed .pdf-thumb:nth-child(n+17) { display: none; }
 }
 
 @media (max-width: 800px) {
   .pdf-thumb-grid { grid-template-columns: repeat(5, minmax(0, 1fr)); }
-  .pdf-thumb-grid.collapsed .pdf-thumb:nth-child(n+11) { display: none; }
 }
 
 .pdf-thumb {
@@ -298,6 +292,11 @@ body {
   position: relative;
 }
 
+.pdf-viewer-modal[data-viewer="tool"] .pdf-viewer-dialog {
+  width: fit-content;
+  max-width: calc(100vw - 2rem);
+}
+
 .pdf-viewer-close {
   position: absolute;
   top: 0.4rem;
@@ -321,6 +320,12 @@ body {
   height: auto;
   border-radius: 6px;
   border: 1px solid var(--border);
+}
+
+.pdf-viewer-modal[data-viewer="tool"] .pdf-viewer-image {
+  width: auto;
+  max-width: calc(100vw - 3.5rem);
+  max-height: calc(92vh - 4rem);
 }
 
 .panes {
@@ -532,6 +537,15 @@ body {
 .tool-image-item.crop-item img {
   width: 100%;
   max-width: 360px;
+}
+
+.tool-image-item img {
+  cursor: zoom-in;
+}
+
+.tool-image-item img:focus-visible {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
 }
 
 .tool-image-item .tool-image-label {
